@@ -1,7 +1,7 @@
 # deptno.github.io.wiki
 
 - [[hello wiki]]
-[[-]] [[mobile]]
+- [[mobile]]
 - [[terminal]]
 - [[dev-tools]]
 - [[language]]

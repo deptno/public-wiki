@@ -28,3 +28,7 @@ $ vim -c "24" file.txt
 - [[vimwiki]]
 - [[defx]]
 - [[floatterm]]
+- [[taskwiki]]
+
+## releated
+- [[neovim]]

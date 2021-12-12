@@ -15,4 +15,7 @@ String::new
 ```
 `new` associated function 이라고 불리며 타 언어의 static method 와 같다.
 
+## enum
+- Result
+- Ordering
 
