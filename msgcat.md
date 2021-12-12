@@ -1,3 +1,4 @@
 ```sh
-msgcat --color=test
+$ msgcat --color=test
 ```
+

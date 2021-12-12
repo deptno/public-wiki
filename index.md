@@ -5,3 +5,4 @@
 - [[terminal]]
 - [[dev-tools]]
 - [[language]]
+- [[error]]
