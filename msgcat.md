@@ -1,0 +1,3 @@
+```sh
+msgcat --color=test
+```
