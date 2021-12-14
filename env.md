@@ -1,1 +1,2 @@
 - `GREP_COLORS` - [[grep]] 색상 하이라이트 색상 변경`
+- GIT_SSH_COMMAND` - 'ssh -i ~/.ssh/id_rsa' 형태로 사용된다.

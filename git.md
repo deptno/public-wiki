@@ -185,3 +185,19 @@ $ git log --ancestry-path 93e9e47..branch/b
 ```
 $ git 
 ```
+
+## untracked 파일 지우기
+```
+git clean -fd
+```
+- `-f` : 파일
+- `-d` : 디렉토리
+
+## url 변경하기
+하드코딩된 url 때문에 다중 계정을 이용하는 경우 고통받을 수 있다.
+다중 계정은 로컬에서key 파일을 통해서 인증 정보를 관리할 텐데 이런 경우 ssh 가 사용된다.
+
+`[[.gitconfig-url]]` 을 설정한다.
+
+## releated
+- [[github]]

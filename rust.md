@@ -19,3 +19,6 @@ String::new
 - Result
 - Ordering
 
+
+## related
+- [[rust-vim]]

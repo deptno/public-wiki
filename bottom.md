@@ -1,6 +1,6 @@
 # bottom
 
-lang: rust
+lang: [[rust]]
 
 key
 - ?

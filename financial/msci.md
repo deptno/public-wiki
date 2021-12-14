@@ -1,0 +1,3 @@
+- msci-acwi-index : 글로벌 지수, 전세계 50개국 포함
+- msci-world-index : 선진국 지수, 미국·유럽 등 포함
+- msci-emf-index : 신흥시장 지수, 한국 포함
