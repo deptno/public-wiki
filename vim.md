@@ -56,6 +56,27 @@ $ vim -c "24" file.txt
 autocmd FileType vimwiki nmap x <Plug>VimwikiToggleListItem
 ```
 
+## 패턴 검색
+> `/` 로 시작
+
+```vim
+" 대소문자 구분 안함
+:set ignorecase
+" 대문자가 포함된 경우 구분 / 포함되지 않은 경우 구분 없이 검색
+:set smartcase
+```
+
+```vim
+# regexp
+/\v[SEARCH_TEXT]
+# 일반 문자열 검색
+/\V[SEARCH_TEXT]
+# 대소문자 구분 안함
+/\c[SEARCH_TEXT]
+# 대문자 구분
+/\C[SEARCH_TEXT]
+```
+
 ## plugins
 - [[vimwiki]]
 - [[defx]]
