@@ -4,7 +4,7 @@
 공식문서: https://git-scm.com/book/ko/v2
 
 ## by-command
-- git-show
+- [[git-show]]
 - git-apply
 - git-cherry-pick
 - git-diff

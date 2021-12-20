@@ -42,6 +42,19 @@ $ vim -c "24" file.txt
 :let @+ = expand("%:h")
 ```
 
+### 변수
+```vim
+" 확인
+:set clipboard?
+" prepend
+:set clipboard^=unnamed
+" append
+:set clipboard+=unnamed
+" override
+:set clipboard=unnamed
+```
+
+
 ## [[normal-mode]]
 - `gf` : 현재 윈도우에서 파일을 따라간다. 단 `@` 가 있는 경우 [[visual-mode]] 에서 따라가도록한다.
 

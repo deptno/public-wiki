@@ -12,3 +12,5 @@
 - [[theme]]
 
 - [[financial/index/financial]]
+
+- [[book/index|book]]
