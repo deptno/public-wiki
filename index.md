@@ -1,5 +1,6 @@
 # deptno.github.io.wiki
 
+## dev
 - [[hello wiki]]
 - [[mobile]]
 - [[terminal]]
@@ -11,6 +12,6 @@
 - [[unity]]
 - [[theme]]
 
-- [[financial/index/financial]]
-
-- [[book/index|book]]
+## indexes
+### [[financial/index/financial]]
+### [[book/index|book]]

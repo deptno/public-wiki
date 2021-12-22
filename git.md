@@ -30,7 +30,7 @@
   git diff [SHA0] [SHA1] [PATH]
   ```
 
-## 검색`
+## 검색
 https://stackoverflow.com/questions/2928584/how-to-grep-search-committed-code-in-the-git-history
 
 ```sh
@@ -39,7 +39,7 @@ git grep [REGEXP]
 
 ## 커밋 메시지 검색
 ```sh
-git log --grep=[REGEXP]`
+git log --grep=[REGEXP]
 ```
 ```sh
 $ git log --grep=aaaaaaaaa

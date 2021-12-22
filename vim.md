@@ -33,12 +33,11 @@ $ vim -c "24" file.txt
 #### 파일명 복사
 `+` 레지스터가 클립보드(mac)인걸 이용하여 아래와 같이 전달 한다.
 ```vim
+" 현재 파일 경로
 :let @+ = expand("%")
-```
-```vim
+" 절대경로
 :let @+ = expand("%:p")
-```
-```vim
+" 디렉토리 까지
 :let @+ = expand("%:h")
 ```
 
@@ -54,6 +53,11 @@ $ vim -c "24" file.txt
 :set clipboard=unnamed
 ```
 
+### 워킹 디렉토리 변경
+```vim
+" 현재 파일의 디렉토리로 변경
+cd %:p:h
+```
 
 ## [[normal-mode]]
 - `gf` : 현재 윈도우에서 파일을 따라간다. 단 `@` 가 있는 경우 [[visual-mode]] 에서 따라가도록한다.
