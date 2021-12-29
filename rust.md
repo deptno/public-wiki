@@ -1,5 +1,34 @@
 # rust
 
+## 정리 필요
+
+### module|모듈
+```rust
+// https://doc.rust-lang.org/rust-by-example/mod/visibility.html
+// 상위 모듈(parent or ancestor module) 에만 노출
+pub(in create::my_mod) fn private_function() {
+    println!("private_function");
+}
+// == private fn
+pub(self) fn function_name() {
+    println!("function_name");
+}
+// parent
+pub(super) fn function_name() {
+    println!("function_name");
+}
+// crate
+pub(crate) fn function_name() {
+    println!("function_name");
+}
+```
+
+모듈의 구조는 파일구조와 같다.
+`mod a;` 선언된 경우 `a.rs` 혹은 `a/mod.rs` 파일을 참조한다.
+
+### crete
+컴파일 단위
+
 ## 설치
 ```sh
 curl https://sh.rustup.rs -sSf | sh
@@ -47,12 +76,92 @@ rand = "0.6.1"
 ## 언어
 `cargo new` 를 통해 패키지가 생성되면 src/{main,lib}.rs 파일을 통해 실행파일 혹은 라이브러리 빌드 엔트리를 작성할 수 있다(둘다 가능).
 
+### 속성 attribute
+- #![allow(dead_code)] - 안쓰는 코드 경고 하지 않음
+- #![allow(unused)] - 안쓰는 변수 경고 하지 않음
+- #[allow(non_camel_case_types)] - 경고 안함
+
 ### use
 ```rust
 use std::io;
 ```
 
-### 변수 variable
+### type|타입 
+- primitive type
+  - bool
+  - char
+  - integer
+  - float
+  - unit - 튜플이지만 primitive type 이다.
+- compound type
+  - array
+  - slice, array 와는 다르게 컴파일타임에 length 를 알 수 없다.
+  - tuple
+  - struct
+  - enum
+
+### casting|캐스팅 
+- i <-> u 정수간의 변환은 해당 값을 표현하는 형식에 따라 그대로 적용된다.
+- floating <-> integer 변환은 floating 변수가 표현하는 근사값을 내림하여 정수 변환한다. `saturating cast`
+  - https://doc.rust-lang.org/rust-by-example/types/cast.html
+
+primitive 타입은 cast 를 통해서 변경된다.
+custom 타입은 trait `From` 이나 `Into` 를 통해서 변경된다.
+
+### 특성|trait 
+- Copy
+  - copy trait 이 구현되어 있는 경우, 변수 대입 이후에도 유효하다.
+  - drop trait 이 구현되어 있는 경우, copy trait annotation 을 할 수 없다.
+  - copy 가능한 타입
+    - 정수형 타입
+    - 부동 소수점 타입
+    - bool
+    - char
+    - copy 가능한 타입으로만 묶인 튜플
+#### 형변환
+- From
+  - String::from("hello") 와 같이 from 을 구현하여 타입 변환을 가능하게 한다.
+- Into
+  - From 의 짝으로 필요한 시점에 From 을 호출하도록한다.  
+  - `into` 메서드를 호출 하는 순간 대입할 변수의 타입에 맞춰서 `from` 을 역으로 호출한다.
+  ```rust
+  let x: i32 = 5;
+  let y: u32 = x.into(); // u32::from(x) 와 같은 표현
+  ```
+- TryFrom
+  From 과 같으나 실패할 수 있는 경우에 사용된다. 따라서 리턴 타입은 Result<T, E> 이다.
+- TryInto
+  TryFrom 의 짝으로 사용된다.
+  ```rust
+  x.try_into()
+  ```
+- ToString
+  - std::fmt::Display 을 구현하면 `to_string` 호출시 이를 통해 `String` 으로 변환된다.
+- FromStr
+  - `parse` 메서드 호출시 해당 타입에 구현되어있는 `FromStr` 을 통해 변환된다.
+  ```rust
+  let parsed: i32 = "5".parse().unwrap();
+  let turbo_parsed = "10".parse::<i32>().unwrap();
+  ```
+- 
+
+
+### 소유권
+#### & 참조
+참조는 소유권을 갖지 않는다.
+- 불편 참조는 여러개가 가능하다.
+- 가변 참조는 하나만 가능하다.
+- 불변 참조가 존재하는 경우 가변 참조는 불가능하다. -> 값이 변경되면 불변 참조의 값도 변경되어 물결성이 깨지기 때문
+
+#### 타입 변환
+&String[..] === &str
+
+#### impl
+  - enum
+    - 첫인수로 &self https://doc.rust-lang.org/rust-by-example/custom_types/enum.html
+    - 첫인수로 self https://doc.rust-lang.org/rust-by-example/custom_types/enum/testcase_linked_list.html
+
+### variable|변수 
 ```rust
 let x = 5; # 불변
 let x = 5.0; # 이전 변수는 가려진다(shadowing), 이전 타입 무시 가능. 사용되지 않는 변수는 컴파일러가 제거한다.
@@ -64,7 +173,7 @@ y = 1; # 타입 에러
 
 ```
 
-### 함수 function
+### function|함수 
 ```rust
 fn main() {
     println!("Hello, world!");
@@ -73,14 +182,40 @@ fn get_name() -> String;
 pub fn get_name<T: AType>(a: T) -> T;
 ```
 
+- 연관 함수 associated : 타입에 연관
+- 메서드 method : 인스턴스에 연관
+  - sugar
+    - stack : (&self) : (self: &Self)
+    - heap : (self) : (self: Self)
+    stack, heap 에따라 method 의 인자 타입이 달라지는지는 확인필요 [[@todo]]
+
+#### 클로저 closure
+인자는 기본적으로 참조 빌리기(& borrow) 시작하여 필요성이 요구될 때만 더 낮은 단계로 간다.
+https://doc.rust-lang.org/rust-by-example/fn/closures/capture.html
+
+non-copy 타입에 대해서 클로저를 선언하면 기본적으로 &로 참조된다.  
+하지만 mutable 행동(std::mem::drop 등을 사용)을 취하면 `move` 된다.  
+혹은 명시적으로 `move` 를 할 수 있다.
+
+`move` 된 이후는 소유권이 이동되었기 때문에 캡쳐된 변수를 더이상 사용할 수 없다.
+
+##### 입력 파라메터로서의 클로저 as input parameters
+3가지 trait 중 하나로 표현되어야 한다.
+- Fn (&T) - capture by reference
+- FnMut (&mut T) - captures by mutable reference
+- FnOnce (T) - captures by value
+
+FnOnce(via `move`) 는 Fn, FnMut 의 superset 이므로 언제나 사용이 가능하지만 상황에 맞는 가장 큰 제약을 주어야한다.
+
 #### 구문
 결괏값이 없다. 세미콜론으로 끝난다.
+
 #### 표현식
 결괏값이 있고 때문에 대입이 가능하다. 세미콜론으로 끝나지 않는다. `함수 리턴시 주의`
 - if 는 세미콜론으로 끝나는듯.
 - loop 도 break 문과 함께 값 리턴이 가능
 
-### 주속
+### 주석 comment
 //
 
 ### 데이터 타입

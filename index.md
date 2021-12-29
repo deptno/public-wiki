@@ -11,6 +11,11 @@
 - [[github]]
 - [[unity]]
 - [[theme]]
+- [[aws]]
+- [[port]]
+
+##
+- [[synology]]
 
 ## indexes
 ### [[financial/index/financial]]
