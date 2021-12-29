@@ -10,6 +10,7 @@
 - [[brew]]
 - [[bc]]
 - [[expr]]
+- [[ssh]]
 
 ## modern core-utils replacement
 - [[delta]] diff
