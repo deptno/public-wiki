@@ -11,6 +11,7 @@
 - [[bc]]
 - [[expr]]
 - [[ssh]]
+- [[faketime]]
 
 ## modern core-utils replacement
 - [[delta]] diff

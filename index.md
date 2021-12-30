@@ -17,6 +17,6 @@
 ##
 - [[synology]]
 
-## indexes
-### [[financial/index/financial]]
-### [[book/index|book]]
+##
+- [[financial/index/financial]]
+- [[book/index|book]]
