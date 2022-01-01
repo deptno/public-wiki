@@ -146,7 +146,7 @@ custom 타입은 trait `From` 이나 `Into` 를 통해서 변경된다.
 - 
 
 
-### 소유권
+### ownership|소유권
 #### & 참조
 참조는 소유권을 갖지 않는다.
 - 불편 참조는 여러개가 가능하다.
@@ -157,9 +157,18 @@ custom 타입은 trait `From` 이나 `Into` 를 통해서 변경된다.
 &String[..] === &str
 
 #### impl
-  - enum
-    - 첫인수로 &self https://doc.rust-lang.org/rust-by-example/custom_types/enum.html
-    - 첫인수로 self https://doc.rust-lang.org/rust-by-example/custom_types/enum/testcase_linked_list.html
+- enum
+  - 첫인수로 &self https://doc.rust-lang.org/rust-by-example/custom_types/enum.html
+  - 첫인수로 self https://doc.rust-lang.org/rust-by-example/custom_types/enum/testcase_linked_list.html
+#### ref 
+`&` borrow 와 같다.
+```rust
+  let c = 'Q';
+  let ref ref_c1 = c;
+  let ref_c2 = &c;
+```
+destructure 를 통해서 변수를 가져오는 경우에도 소유권은 이동된다. 
+`ref` 키워드를 prefix 로 사용하면 소유권 이동을 막을 수 있다. stack value 에서는 효과가 없다.
 
 ### variable|변수 
 ```rust
@@ -170,7 +179,6 @@ const CONSTANT: u32 = 100_000; # 항상 타입 지정
 
 let mut y = String::new(); # 가변
 y = 1; # 타입 에러
-
 ```
 
 ### function|함수 
