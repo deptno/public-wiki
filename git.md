@@ -15,7 +15,7 @@
 - git-check-ignore
 - git-status
 
-[[##]] 특정 커밋 내용 가져와서 적용
+## 특정 커밋 내용 가져와서 적용
   - https://stackoverflow.com/questions/5717026/how-to-git-cherry-pick-only-changes-to-certain-files
   ```sh
    git show [SHA] -- [FILE1] [FILE2] | git apply -
