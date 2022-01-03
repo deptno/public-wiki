@@ -3,6 +3,10 @@
 ```sh
 man vim
 ```
+```vim
+" ex command 결과보기
+:messages
+``````
 
 ## 열기 옵션
 ```sh

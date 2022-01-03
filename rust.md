@@ -288,6 +288,11 @@ println!("hello, world!");
 let foo = 5 // 불변
 let mut foo = 5 // 가변
 ```
+- cfg!
+- print!
+- println!
+- eprint!
+- eprintln!
 
 ### 연관 함수, associated function, static method
 ```rust
@@ -308,9 +313,107 @@ match guess.cmp(&secret_number) {
     Ordering::Greater => println!("Too big!"),
     Ordering::Equal => println!("You win!"),
 }
-
-
 ```
+
+#### std::str
+```rust
+fn main() {
+    let raw_str = r"Escapes don't work here: \x3F \u{211D}";
+    println!("{}", raw_str);
+
+    let quotes = r#"And then I said: "There is no escape!""#;
+    println!("{}", quotes);
+
+    let longer_delimiter = r###"A string with "# in it. And even "##!"###;
+    println!("{}", longer_delimiter);
+}
+```
+토큰으로 사용될 `#` 갯수는 제한이 없음
+
+#### std::collections:HashMap
+
+#### std::collections:HashSet
+HashMap<T, ()>
+##### methods
+- union
+- difference
+- intersection
+- symmetric_difference - xor
+
+#### std::rc::Rc  
+여러 소유권이 필요한 경우를 위해 reference count 사용된다.
+```rust https://doc.rust-lang.org/rust-by-example/std/rc.html
+use std::rc::Rc;
+
+fn main() {
+    let rc_examples = "Rc examples".to_string();
+    {
+        let rc_a: Rc<String> = Rc::new(rc_examples);
+        {
+            let rc_b: Rc<String> = Rc::clone(&rc_a);
+            // Two `Rc`s are equal if their inner values are equal
+            println!("rc_a and rc_b are equal: {}", rc_a.eq(&rc_b));
+            
+            // We can use methods of a value directly
+            println!("Length of the value inside rc_a: {}", rc_a.len());
+            println!("Value of rc_b: {}", rc_b);
+            println!("--- rc_b is dropped out of scope ---");
+        }
+    }
+}
+```
+#### std::rc::Rc  
+atomic refernece counted, 
+
+#### std::sync::mpsc
+multiple producer single consumer
+producer(tx) 가 여럿인 것은 허용된다.
+
+```rust
+use std::sync::mpsc::{Sender, Receiver};
+
+let (tx, rx): (Sender<i32>, Receiver<i32>) = mpsc::channel();
+let thread_tx = tx.clone();
+```
+```rust
+tx.send(1).unwrap(); // non-blocking send
+rx.recv().unwrap(); // blocking recv
+```
+
+#### std::path::Path
+- posix::Path
+- windows::path
+상황에 맞게 사용된다.
+`to_str` 메서드는 utf-8 이 아닌경우 실패할 수 있다(Option).
+
+#### std::fs::File 
+#### std::process::{Command, Stdio}
+#### std::Child
+실행중인 자식 프로세스의 핸들을 노출한다.
+- stdin
+- stdout
+- stderr
+```rust
+let process = match Command::new("wc")
+                            .stdin(Stdio::piped())
+                            .stdout(Stdio::piped())
+                            .spawn() {
+    Err(why) => panic!("couldn't spawn wc: {}", why),
+    Ok(process) => process,
+};
+```
+#### std::os::unix
+#### std::env
+- env::args
+#### foreign function interface : ffi
+```rust
+#[link(name = "mylib")]
+extern {
+  fn a(z: Complex) -> Complex;
+}
+```
+C 바인딩을 지원, `unsafe`
+
 #### 매크로 macro
 ```rust
 println!("hello, world!");
@@ -332,3 +435,4 @@ println!("{} {}", "hello", "world");
 ## related
 - [[rust-vim]]
 - [[book/the-rust-programming-language|러스트 프로그래밍 공식 가이드]]
+- [[valgrind]]

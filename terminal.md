@@ -12,6 +12,7 @@
 - [[expr]]
 - [[ssh]]
 - [[faketime]]
+- [[valgrind]]
 
 ## modern core-utils replacement
 - [[delta]] diff
