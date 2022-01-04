@@ -13,6 +13,7 @@
 - [[theme]]
 - [[aws]]
 - [[port]]
+- [[setup-terminal]]
 
 ##
 - [[synology]]
