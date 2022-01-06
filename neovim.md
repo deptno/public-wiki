@@ -8,4 +8,5 @@ python3 -m pip install --upgrade pynvim
 ```
 
 ## plugin
-[[taskwiki]]
+- [[taskwiki]]
+- [[defx]]

@@ -1,3 +1,5 @@
+# ios
+
 ## 이미지 파일 이슈
 
 ```sh
@@ -12,6 +14,7 @@ Link Binary With Libraries
 
 
 ## releated
+- [[xcode]]
 - [[fastlane]]
 - [[cert]]
 - [[git]]

@@ -1,7 +1,8 @@
 # deptno.github.io.wiki
 
-## dev
 - [[hello wiki]]
+
+## 개발
 - [[mobile]]
 - [[terminal]]
 - [[dev-tools]]
@@ -13,13 +14,13 @@
 - [[theme]]
 - [[aws]]
 - [[port]]
-- [[setup-terminal]]
+- [[shell]]
 
-##
+## 일반
 - [[synology]]
 - [[iphone]]
+- [[chrome]]
 
-
-##
+## 삶
 - [[financial/index/financial]]
 - [[book/index|book]]

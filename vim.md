@@ -104,6 +104,7 @@ autocmd FileType vimwiki nmap x <Plug>VimwikiToggleListItem
 - [[floatterm]]
 - [[taskwiki]]
 - [[vim-surround]]
+- [[vim-autoswap]]
 
 ## releated
 - [[neovim]]

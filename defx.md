@@ -1,5 +1,14 @@
 https://github.com/Shougo/defx.nvim
 
-- `sf`
+## 설치 후
+```
+:UpdateRemotePlugins
+```
+
+## 사용
+`sf`
+
+## related
+- [[neovim]]
 
 

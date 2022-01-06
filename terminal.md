@@ -15,8 +15,17 @@
 - [[faketime]]
 - [[valgrind]]
 - [[scp]]
+- [[jq]]
+- [[frum]]
 
 ## modern core-utils replacement
 - [[delta]] diff
 - [[exa]] ls
 - [[bottom|btm]] top
+- [[z]] cd
+
+## os
+- [[macos]]
+
+## setup
+- [[setup-terminal|맥 터미널 설정]]

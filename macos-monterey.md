@@ -1,5 +1,7 @@
+# macos-monterey
+## [[error]]
+macos 는 system call 이 걍 [[deprecated]] 되는구나
 
-## error
 ```sh
 fatal error: runtime: bsdthread_register error
 ```

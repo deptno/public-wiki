@@ -127,3 +127,7 @@ cd .vim/pack/_undefined/start
 git clone git@github.com:deptno/deptno.github.io.wiki
 git clone git@github.com:deptno/wiki # private
 ```
+
+## related
+- [[vim]]
+- [[neovim]]
