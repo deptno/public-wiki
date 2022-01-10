@@ -21,6 +21,7 @@
 - [[fg]]
 - [[bg]]
 - [[jobs]]
+- [[ripgrep]]
 
 ## modern core-utils replacement
 - [[delta]] diff

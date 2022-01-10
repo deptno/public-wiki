@@ -3,5 +3,10 @@
 ## dependencies
 - [[plenary|plenary.nvim]]
 
+
+### optional dependencies
+- [[nvim-treesitter|nvim-treesitter.nvim]] - syntax highlighting
+- [[ripgrep]]
+
 ## related
 - [[neovim]]

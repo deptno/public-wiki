@@ -11,6 +11,7 @@ python3 -m pip install --upgrade pynvim
 ## plugin
 - [[taskwiki]]
 - [[defx]]
+- [[nvim-web-devicons]]
 - [[nvim-treesitter]]
 - [[telescope|telescope.nvim]]
 
