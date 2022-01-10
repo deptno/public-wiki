@@ -4,3 +4,4 @@
 - [[flipper]]
 - [[scrcpy]]
 - [[adb]]
+- [[android-studio]]

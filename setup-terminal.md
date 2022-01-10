@@ -1,6 +1,6 @@
 # setup terminal
 
-macos
+[[macos]]
 
 ## brew
 > 애플실리콘(M1) 프로세서를 사용하는 경우에는 `brew` 대신 `arch -arm64 brew` 를 사용한다.
@@ -18,6 +18,7 @@ brew install exa
 brew install fzf
 brew install gpg
 brew install task
+brew install universal-ctags
 
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
@@ -27,6 +28,12 @@ brew install --cask webstorm
 brew install --cask android-studio
 brew install --cask notion
 brew install --cask blender
+```
+
+## python3
+
+```
+python3 -m pip install --upgrade pip
 ```
 
 ## tmux
@@ -40,6 +47,11 @@ git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k\
 git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+## xcode
+```sh
+xcode-select --install
 ```
 
 ## rust
@@ -122,12 +134,51 @@ mkdir -p .vim/pack/_undefined/start
 cd .vim/pack/_undefined/start
 ```
 
+#### zshrc 수정
+```sh
+mkdir -p /usr/local/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+```
+명령어를 덮어쓰기 위해서 필요한 디렉토리를 생성한 후 path를 추가한다.
+
+```sh
+ln -s nvim bin/vi
+ln -s nvim bin/vim
+```
+[[path|/usr/local/bin]] 를 먼저 둠으로써 [[vi]], [[vim]] 등을 [[neovim|nvim]] 로 대체하여 사용한다. 
+[[path|.gitconfig]] 등에서 사용하는 editor 설정은 alias 로는 작동하지 않기 때문.
+
 ### wiki
 ```sh
 git clone git@github.com:deptno/deptno.github.io.wiki
 git clone git@github.com:deptno/wiki # private
 ```
 
+### ruby
+시스템 루비(2.6.8 로가정)를 그대로 사용하고 [[env|$GEM_HOME]] 만 수정한다.
+
+[[chruby]] 를 사용하고 있지 않은 경우 디렉토리 생성이 필요할 수 있다.
+```sh
+mkdir -p ~/.gem/ruby/2.6.8
+```
+
+```sh
+echo "export GEM_HOME=~/.gem/ruby/2.6.8" >> ~/.zshrc
+source ~/.zshrc
+```
+
+[[react-native]] 프로젝트를 진행하는 경우는 아래와 같은 커맨드로 이어진다.
+```sh
+gem install bundler
+bundle install
+bundle exe pod install
+```
+
+### 설정
+- [[webstorm]]
+
 ## related
 - [[vim]]
 - [[neovim]]
+- [[macos]]
+- [[ruby]]

@@ -4,7 +4,7 @@
 공식문서: https://git-scm.com/book/ko/v2
 
 ## by-command
-- git-clone
+- [[git-clone]]
 - git-show
 - git-apply
 - git-cherry-pick
@@ -14,6 +14,8 @@
 - git-rebase
 - git-check-ignore
 - git-status
+- [[git-tag]]
+- [[git-sparse-checkout]]
 
 ## 특정 커밋 내용 가져와서 적용
   - https://stackoverflow.com/questions/5717026/how-to-git-cherry-pick-only-changes-to-certain-files

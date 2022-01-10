@@ -1,0 +1,4 @@
+# vi
+
+## related
+- [[vim]]

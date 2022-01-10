@@ -16,6 +16,9 @@
 - [[port]]
 - [[shell]]
 
+## os
+- [[macos]]
+
 ## 일반
 - [[synology]]
 - [[iphone]]

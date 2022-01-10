@@ -13,6 +13,10 @@ adb devices # 확인
 ```
 
 ## -
+[[react-native]] metro 연결시에 필요
 ```sh
 adb reverse tcp:8081 tcp:8081
 ```
+
+## related
+- [[android-studio]]

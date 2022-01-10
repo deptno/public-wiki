@@ -6,6 +6,7 @@
 - [[git]] 분산 버전 관리 시스템(DVCS)
 - [[taskwarrior|task]] 태스크 관리 시스템
 - [[vim]] 
+- [[neovim]]
 - [[tmux]]
 - [[cut]]
 - [[brew]]
@@ -17,15 +18,15 @@
 - [[scp]]
 - [[jq]]
 - [[frum]]
+- [[fg]]
+- [[bg]]
+- [[jobs]]
 
 ## modern core-utils replacement
 - [[delta]] diff
 - [[exa]] ls
 - [[bottom|btm]] top
 - [[z]] cd
-
-## os
-- [[macos]]
 
 ## setup
 - [[setup-terminal|맥 터미널 설정]]

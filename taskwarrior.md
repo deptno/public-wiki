@@ -12,6 +12,17 @@
 - `purge` : delete 된 task를 완전히 삭제한다.
 - `info` : 타스크 정보를 출력한다.
 
+### print
+- `history` : 테이블로 현황을 보여준다.
+- `ghistory` : 그래프로 현황을 보여준다.
+- `calendar` : 일정이 등록된 날들을 하이라이트하는 캘린더를 노출한다.
+- `timesheet` : 주단위로 리스팅
+- `burndown` : 번다운 차트를 보여준다. 여러 기간 옵션이 있다.
+
+#### list
+- `overdue` : duedate 이 지난 타스크
+- `newest` : 최신 등록순으로 나열
+
 ```sh
 task TASK_ID [COMMAND] [ARGS]
 ```

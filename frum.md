@@ -3,6 +3,8 @@
 ruby package manager
 rust 로 작성됨
 
+[[path|~/.frum]] 디렉토리에 환경이 저장된다.
+
 *2022-01-07*
 *결과적으로 되지 않아서 chruby + ruby-install 조합으로 갈아탐*
 - chruby@0.3.9
@@ -17,6 +19,7 @@ ruby -v
 frum install --list
 frum install 3.0.3
 frum local 3.0.3
+frum uninstall 3.0.3
 ruby -v
 ```
 

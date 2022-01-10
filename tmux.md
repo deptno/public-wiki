@@ -14,3 +14,8 @@ tmux 에서 ssh 로 들어가 다시 tmux 를 사용하는 경우에는 prefix2 
 ```tmux
 :attach -c ~/path
 ```
+
+## 설정 리로딩
+```tmux
+:source-file ~/.tmux.conf 
+```
