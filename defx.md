@@ -3,7 +3,7 @@
 https://github.com/Shougo/defx.nvim
 
 ## 설치 후
-```
+```vim
 :UpdateRemotePlugins
 ```
 

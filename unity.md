@@ -1,5 +1,8 @@
 # unity
 
+## 설치
+- [[unity-hub]]
+
 ## 에러 [[error]] [[macos-monterey]]
 - `process_symbols.sh`
 - ``fatal error: runtime: bsdthread_register error``
@@ -26,17 +29,24 @@ Command PhaseScriptExecution failed with a nonzero exit code
 n
 ```
 
-### 해결책
 [[macos-monterey]] 에서 [[deprecated]] 된 system call 을 사용해서 발생하는 문제
 
 > https://forum.unity.com/threads/xcode-build-issues-with-macos-monterey.1189546/
-  ```text
-  Here are what can be done:
-  1. Remove Unity Process symbols or Process symbols step from Build Phases in both Unity-iPhone and UnityFramework targets. upload_2021-11-10_14-9-12.png
 
-  2. Or you can empty this script:
-  /Applications/Unity/Hub/Editor/[UnityVersion]/PlaybackEngines/iOSSupport/Trampoline/process_symbols.sh. Remove everything except #!/bin/sh.
+```text
+Here are what can be done:
+1. Remove Unity Process symbols or Process symbols step from Build Phases in both Unity-iPhone and UnityFramework targets. upload_2021-11-10_14-9-12.png
 
-  BE AWARE: Crash stack traces in Unity Dashboard will become unreadable.
-  ```
+2. Or you can empty this script:
+/Applications/Unity/Hub/Editor/[UnityVersion]/PlaybackEngines/iOSSupport/Trampoline/process_symbols.sh. Remove everything except #!/bin/sh.
+
+BE AWARE: Crash stack traces in Unity Dashboard will become unreadable.
+```
   
+`process_symbols.sh` 파일에서 빌드 관련 내용을 주석 처리하던가
+[[usymtool]] 버전을 올려서 해결 2021.2.8
+
+## related
+- [[macos-monterey]]
+- [[fastlane]]
+- [[xcode]]

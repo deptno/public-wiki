@@ -11,6 +11,7 @@ man vim
 ## 열기 옵션
 ```sh
 $ vim -c "24" file.txt
+$ vim --clean "24" file.txt
 ```
 - `-c` : 첫 번째 파일이 열린 후 ex 명령어로 실행
 - `-R` : 읽기 전용으로 열기
@@ -18,10 +19,11 @@ $ vim -c "24" file.txt
 - `+/[TEXT]` : 텍스트를 검색하여 열기
 - `-` : stdin 으로 입력을 받는 경우`|` 사용으로 받는 경우등에 사용된다.
 - `-r` : 스왑파일 리스트 출력 [[vim-autoswap]] 참고
-- `-O` : 여러 파일을 제공하면 창을 분할하여 보여준다. 수직분할
+- `-O` : 여러 파일을 제공하면 창을 분할하여 보여준다. 수평/수직 분할(o/O)
   ```sh
-  $ vim -o $(git status -s | awk '{print $2}') # 상태가 변한 애들 모두 연다
+  $ vim -o $(git status -s | awk '{print $2}') # 상태가 변한 애들 모두 연다.
   ```
+- `--clean` : 플러그인 설정 로드 없이 연다.
 
 ## [[ex-mode]]
 - move 0 : 가장 위로 이동
@@ -96,6 +98,12 @@ autocmd FileType vimwiki nmap x <Plug>VimwikiToggleListItem
 /\c[SEARCH_TEXT]
 # 대문자 구분
 /\C[SEARCH_TEXT]
+```
+
+## 외부 프로그램
+- [[jq]]
+```vim
+:%!jq
 ```
 
 ## plugins

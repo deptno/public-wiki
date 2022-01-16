@@ -14,9 +14,14 @@ python3 -m pip install --upgrade pynvim
 - [[nvim-web-devicons]]
 - [[nvim-treesitter]]
 - [[telescope|telescope.nvim]]
+- [[gitsigns|gitsings.nvim]]
+- [[bufferline|bufferline.nvim]]
+- [[null-ls|null-ls.nvim]]
 
-@todo [[path|.config/nvim/pack]] 디렉토리 보고 정리
+### neovim lua 기반 플러그인 환경 설정
+- [[neovim-lua-plugins]]
 
 ## related
 - [[vim]]
 - [[python]]
+- [[neovim-lua-plugins]]

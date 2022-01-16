@@ -1,3 +1,7 @@
+# tmux
+
+- https://tmuxcheatsheet.com
+
 ## copy
 `ctrl + b` [ -> ctrl + space -> y
 
@@ -18,4 +22,18 @@ tmux 에서 ssh 로 들어가 다시 tmux 를 사용하는 경우에는 prefix2 
 ## 설정 리로딩
 ```tmux
 :source-file ~/.tmux.conf 
+```
+
+## 세션 생성
+```tmux
+:new -s session_name
+```
+
+## scroll back 저장
+- https://newbedev.com/write-all-tmux-scrollback-to-a-file
+
+```tmux
+:capture-pane -S -65536
+:save-buffer filename.txt
+:delete-buffer
 ```

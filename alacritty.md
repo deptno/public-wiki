@@ -10,17 +10,18 @@ m1 은 0.9 기준으로 빌드는 가능하나 [[brew]] 를 통해서는 지원�
 - https://github.com/alacritty/alacritty/tags - 안정화 버전 빌드를 원하면 태그를 사용
 
 ```sh
-git clone git@github.com:alacritty/alacritty.git && \
-cd alacritty && \
-rustup update && \
-rustup target add x86_64-apple-darwin && \
-rustup target add aarch64-apple-darwin && \ cargo check --target=x86_64-apple-darwin && \
-cargo check --target=aarch64-apple-darwin && \
-make dmg-universal && \
-mv /Applications/Alacritty{@x86_64}.app 
+git clone git@github.com:alacritty/alacritty.git
+cd alacritty
+git checkout v0.9.0
+rustup update
+rustup target add x86_64-apple-darwin aarch64-apple-darwin
+make app-universal
 cp -r target/release/osx/Alacritty.app /Applications/
-mv /Applications/Alacritty{@arm64}.app 
 ```
+
+post build 프로세스 있으므로 추가적으로 할 것이 있는지 확인한다.
+macos 기준으로는 별 의미를 찾지 못하겠다.
+- https://github.com/alacritty/alacritty/blob/master/INSTALL.md
 
 ```
 Permissions Links Size User   Date Modified    Name
@@ -56,16 +57,12 @@ drwxr-xr-x@     4    - deptno 2021-08-03 18:52    │  ├──  61
 .rw-r--r--@     1 666k deptno 2021-08-03 18:47    │  └──  alacritty.icns
 .rw-r--r--@     1 2.5k deptno 2021-08-03 18:47    └──  Info.plist
 ```
-빌드 후 결과를 비교해 보면
-```sh
-.rw-r--r--      1 4.3k deptno 2022-01-10 23:32    │  │  ├──  alacritty.fish
-.rw-r--r--      1 5.7k deptno 2022-01-10 23:32    │  │  ├──  alacritty.bash
-.rw-r--r--      1 4.7k deptno 2022-01-10 23:32    │  │  └──  _alacritty
-```
-이쪽에 퍼미션이 없는 것을 확인할 수 있다. 추가적으로 퍼미션을 부여한다.
-```sh
-chmod +x /Applications/Alacritty@arm64.app/Contents/Resources/completions/*
-```
+
+## error
+~/Document ~/Download ~/Desktop 등의 디렉토리에서 permission 에러가 나는 경우
+
+> [[system-preferences|시스템 환경설정]] -> 보안 및 개인 정보 보호 -> 파일 및 폴더
+에서 명령어 개별로 되어있는 경우가 있다면 제거한다. eg. zsh, exa, ls 등
 
 # relatead
 - [[rust]]

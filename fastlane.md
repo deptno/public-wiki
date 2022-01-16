@@ -2,7 +2,7 @@
 
 ## [[error]]
 
-### ``Invalid username and password combination. Used 'XXXX@XXXX.com' as the username.``
+### Invalid username and password combination. Used 'XXXX@XXXX.com' as the username.
 > 계정이슈
 ```sh
 [10:19:46]: fastlane finished with errors
@@ -21,7 +21,7 @@ fastlane fastlane-credentials remove --username XXXX@XXXX.com
 ```
 
 
-### 로그 확인
+### fatal error: runtime: bsdthread_register error
 ```sh
 ▸ Running script 'Unity Process symbols'
 
@@ -57,8 +57,10 @@ The following build commands failed:
 ```
 
 `/Users/deptno/Library/Logs/gym/[APP_NAME]-[APP_NAME].log` 형태로 로그가 저장되니 여기서 확인하면 된다.
+[[unity]] 항목 확인
 
 ## releated
 - [[ios]]
 - [[cert]]
 - [[github]]
+- [[unity]]

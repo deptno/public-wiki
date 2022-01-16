@@ -20,6 +20,9 @@ pmset -g therm
 defaults read ~/Library/Preferences/com.apple.HIToolbox.plist AppleSelectedInputSources | grep -i "keyboardlayout name" | sed 's/KeyboardLayout Name = (\s);/_/'
 ```
 
+## [[error]]
+- [[codesign|퍼미션을 계속 물어보는 경우]]
+
 ## versions
 - [[macos-monterey|몬터레이]]
 

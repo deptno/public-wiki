@@ -20,5 +20,9 @@ https://www.gnu.org/software/grep/manual/html_node/Environment-Variables.html
 
 grep 을 분리해서 여러번 파이프로 연결하는 경우 각각 다른 색상 부여도 가능함
 
+## 자매품
+- egrep - grep -E, 패턴을 escape 없이 정규식으로 처리하는 경우
+- fgrep - grep -F, 정규식을 사용하지 않고 처리하는 경우
+
 ## related
 - [[less]]

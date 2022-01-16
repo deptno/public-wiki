@@ -4,7 +4,7 @@
 - .frum
 - .rubies
 - .ruby-version
-- .finichy.js
+- .finicky.js
 - .gitconfig
 - .zshrc
 - Gemfile

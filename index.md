@@ -15,6 +15,8 @@
 - [[aws]]
 - [[port]]
 - [[shell]]
+- [[benchmark]]
+- [[codesign]]
 
 ## os
 - [[macos]]
@@ -23,6 +25,9 @@
 - [[synology]]
 - [[iphone]]
 - [[chrome]]
+- [[mpv]]
+- [[iina]]
+- [[finicky]]
 
 ## 삶
 - [[financial/index/financial]]

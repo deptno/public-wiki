@@ -1,3 +1,7 @@
+# taskwiki
+
+python 으로 작성된건 하나같이 버그가..
+
 ## issue
 taskwiki 가 [[tagbar]] 의 변수를 덮어쓰면서 tagbar 동작에 무리가 생김
 
@@ -6,3 +10,4 @@ taskwiki 가 [[tagbar]] 의 변수를 덮어쓰면서 tagbar 동작에 무리가
 ## related
 - [[vimwiki]]
 - [[taskwarrior]]
+- [[python]]

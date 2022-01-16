@@ -1,7 +1,5 @@
 # watchman
 
-
-
 ```sh
 brew install watchman
 ```

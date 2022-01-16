@@ -10,3 +10,6 @@ arch -arm64 brew install jq
 cat package.json | jq '.scripts'
 cat package.json | jq '.scripts.start'
 ```
+
+## related
+- [[vim]]

@@ -1,13 +1,19 @@
 # xcode
 
+## 빌드
+### 원격 빌드
+1. xcode 실행
+2. iPhone 을 케이블로 연결
+3. Window -> Devices and Simulators [shift + cmd + 2]
+4. Device 화면 상단의 `Connect via netowrk` 를 선택
+
 ## [[m1]] issue
 Application 의 XCode 정보보기에서 rosetta2 를 통해서 실행시킬수 있다.(Intel)
 
 react-native 프로젝트를 진행하는데 있어서 시도한 조합을 기록한다.
 
 ### 성공한 조합
-- alacritty(0.9 intel)
-- system ruby(2.6.8p universal)
+- alacritty(0.9 intel) system ruby(2.6.8p universal)
 - get install bundler(2.2.0 GEM_HOME 변경후 gem 을 통해 설치)
 - bundle install - 어차피 로컬 프로그램 설치일 뿐이지만, 역시나 [[arch-arm64|arch -arm64]] 옵션은 아무런 영향을 못미친다.
 - bundle exe pod install - 어차피 빌드를 로컬에서 하는 개념이지만 역시나 [[arch-arm64|arch -arm64]] 옵션은 아무런 영향을 못미친다.

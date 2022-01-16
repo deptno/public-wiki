@@ -21,13 +21,16 @@
 - [[fg]]
 - [[bg]]
 - [[jobs]]
-- [[ripgrep]]
+- [[apache-benchmark|ab]]
+- [[mpv]]
 
 ## modern core-utils replacement
 - [[delta]] diff
 - [[exa]] ls
 - [[bottom|btm]] top
 - [[z]] cd
+- [[ripgrep]] grep
+- [[fd]] find
 
 ## setup
 - [[setup-terminal|맥 터미널 설정]]

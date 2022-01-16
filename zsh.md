@@ -14,5 +14,8 @@ fi
 - n : non-zero length
 - z : length
 
+## plugins
+- [[zsh-syntax-highlighting]]
+
 ## related
 - [[shell-script|쉘스크립트]]
