@@ -23,6 +23,7 @@
 - [[jobs]]
 - [[apache-benchmark|ab]]
 - [[mpv]]
+- [[direnv]]
 
 ## modern core-utils replacement
 - [[delta]] diff

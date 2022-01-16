@@ -1,6 +1,7 @@
 # neovim-lua-plugins
 
-## 시작 설정 옮기기 전
+## lua 전환
+### 시작 설정 옮기기 전
 ```sh
 Permissions Links Size User   Date Modified    Git Name
 drwxr-xr-x      3    - deptno 2022-01-10 13:02  -N  .
@@ -35,6 +36,43 @@ drwxr-xr-x     14    - deptno 2022-01-05 02:16  -N    ├──  tagbar
 drwxr-xr-x     14    - deptno 2022-01-05 02:16  -N    ├──  vim-startify
 drwxr-xr-x     17    - deptno 2022-01-05 02:15  -N    └──  vimwiki
 ```
+
+### 전환 체크
+- [X] vim-rest-console
+  - [X] NTBBloodbath/rest.nvim.git
+- [ ] goyo.vim
+- [ ] limelight.vim
+- [ ] vim-unimpaired
+  - 필요성을 아직 못느낌
+- [ ] bufferline.nvim
+  - 써보니 일반 buffer 는 일반 에디터의 tab과 매치되지 않아 혼란 tab === tab
+- [X] null-ls.nvim
+- [X] gitsigns.nvim
+- [X] plenary.nvim
+- [X] telescope.nvim
+- [X] nvim-treesitter
+- [X] copilot.vim
+- [ ] vim-autoswap
+  - `vim.opt.swapfile` off 인 인하여 현재 필요 없다고 판단
+- [X] vim (dracula theme)
+- [.] defx.nvim
+  - [ ] defx-icons
+  - [ ] defx-git
+  - [X] nvim-tree 로 전환, python 종속성 에러가 너무 많이 남
+- [X] nvim-web-devicons
+- [X] nvim-nonicons
+- [X] galaxyline.nvim
+  - [X] lualine 으로 전환, 개발 비활성화 deprecated 된 api 호출로 워닝
+- [X] vim-surround
+- [X] vim-rhubarb
+- [X] vim-fugitive
+- [X] nvim-cmp
+- [X] rust-tools.nvim
+- [ ] rust.vim
+- [X] nvim-lspconfig
+- [X] tagbar
+- [X] vim-startify
+- [X] vimwiki
 
 ## related
 - [[setup-terminal|맥 터미널 설정]]

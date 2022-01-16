@@ -7,6 +7,8 @@
 - .finicky.js
 - .gitconfig
 - .zshrc
+- .envrc
+- .env
 - Gemfile
 - Gemfile.lock
 
