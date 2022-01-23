@@ -1,5 +1,8 @@
 # macos
 
+## app
+- [[karabiner-elements]]
+
 ## [[terminal|터미널]] 명령어 
 - [[pmset]]
 - defaults-read
