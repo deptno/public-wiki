@@ -19,6 +19,9 @@ react-native 프로젝트를 진행하는데 있어서 시도한 조합을 기�
 - bundle exe pod install - 어차피 빌드를 로컬에서 하는 개념이지만 역시나 [[arch-arm64|arch -arm64]] 옵션은 아무런 영향을 못미친다.
 - xcode(intel)
 
++
+- xcode(arm64) 로도 동일하게 성공했다. alacritty(0.9 arm64)
+
 intel 은 해당 빌드가 x86_64, rosetta2 를 통한 실행을 의미한다.
 
 `arch -arm64` 를 사용하지 않는다. 종속성에 이슈가 있는 것인지 native xcode 에서 빌드에 실패했다.
@@ -67,3 +70,4 @@ bundle exe pod install
 - [[bundler]]
 - [[react-native]]
 - [[cocoapods]]
+- [[unity]]

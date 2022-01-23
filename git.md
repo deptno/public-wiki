@@ -5,6 +5,7 @@
 
 ## by-command
 - [[git-clone]]
+- [[git-reset]]
 - git-show
 - git-apply
 - git-cherry-pick
@@ -202,5 +203,21 @@ git clean -fd
 
 `[[.gitconfig-url]]` 을 설정한다.
 
+## feature 브랜치 변경된 파일들 stage 화
+### reset 후
+```sh
+git switch feature
+git reset --mixed $(git merge-base master @)
+``````
+#### 1. 변경된 파일 모두 버퍼로
+`vim $(git diff --name-only)`
+#### 2. 상태값으로 필터
+`vim $(git status -s | grep "[^D] " | awk '{print $2}')`
+```
+
+### 보기만
+`vim $(git diff --name-status master.. | rg "[^D]\t" | awk '{print $[[2]]}')`
+
 ## releated
 - [[github]]
+- [[vim]]

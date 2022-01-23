@@ -1,8 +1,5 @@
 # vim
 
-```sh
-man vim
-```
 ```vim
 " ex command 결과보기
 :messages
@@ -24,8 +21,19 @@ $ vim --clean "24" file.txt
   $ vim -o $(git status -s | awk '{print $2}') # 상태가 변한 애들 모두 연다.
   ```
 - `--clean` : 플러그인 설정 로드 없이 연다.
+- `-M` : 수정 불가 전용으로 연다
 
-## [[ex-mode]]
+## registers
+- i : 최근 input text
+- : : 최근 명령어
+- % : 현재 파일명
+- # : 이전 버퍼명
+
+- [0-9] : 입력 모드에서 `ctrl + r + [0-9]` 로 접근가능
+- [az] : 매크로에 사용
+- [AZ] : 매크로에 append 가 가능 `:let @A=normal_command`
+
+## ex-mode
 - move 0 : 가장 위로 이동
 - move +1 : 현재 라인 아래로 이동
 - move -1 : 현재 라인 위로 이동

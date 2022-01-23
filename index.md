@@ -2,12 +2,15 @@
 
 - [[hello wiki]]
 
+## todo
+- [[error]]
+- [[@todo]]
+
 ## 개발
 - [[mobile]]
 - [[terminal]]
 - [[dev-tools]]
 - [[language]]
-- [[error]]
 - [[free]]
 - [[github]]
 - [[unity]]

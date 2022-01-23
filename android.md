@@ -5,3 +5,4 @@
 - [[scrcpy]]
 - [[adb]]
 - [[android-studio]]
+- [[react-native]]

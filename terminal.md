@@ -24,6 +24,10 @@
 - [[apache-benchmark|ab]]
 - [[mpv]]
 - [[direnv]]
+- [[localtunnel|lt]]
+
+## mobile
+- [[uri-scheme]]
 
 ## modern core-utils replacement
 - [[delta]] diff

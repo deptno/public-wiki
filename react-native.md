@@ -3,8 +3,22 @@
 ## 설정
 
 ## error
-XXApp 으로 이름 가정
+> XXApp 으로 이름 가정
 
+### The operation couldn’t be completed. Unable to locate a Java Runtime.
+```sh
+error Failed to install the app. Make sure you have the Android development environment set up: https://reactnative.dev/docs/environment-setup.
+Error: Command failed: ./gradlew app:installDefaultDebug -PreactNativeDevServerPort=8081
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+```
+-> 자바 설치
+```
+brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
+```
+- https://reactnative.dev/docs/environment-setup
+
+### xcrun: error: unable to find utility "simctl", not a developer tool or in PATH
 ```sh
 $ react-native run ios
 info Found Xcode workspace "XXApp.xcworkspace"
@@ -107,3 +121,4 @@ sysctl 을 통해서 변수를 확인할 수 있다.
 - [[android-studio]]
 - [[ruby]]
 - [[watchman]]
+- [[ios-deploy]]
