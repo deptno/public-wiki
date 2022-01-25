@@ -25,3 +25,4 @@ bundle exe pod install
 - [[ruby]]
 - [[ruby-gems|ruby gems]]
 - [[react-native]]
+- [[cocoapods]]

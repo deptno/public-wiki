@@ -7,5 +7,6 @@ $ brew install scrcpy
 $ scrcpy 
 ```
 
----
-
+## related
+- [[emulator]]
+- [[android]]

@@ -11,6 +11,10 @@ Message from debugger: Terminated due to signal 6
 ```
 Link Binary With Libraries
   LinkPresentation.framework - Optional
+  
+
+## files
+- [[path|~/Library/Developer/Xcode/DerivedData/]] - 시뮬레이터 관련 파일 관련
 
 
 ## releated

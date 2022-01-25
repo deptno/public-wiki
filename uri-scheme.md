@@ -7,6 +7,8 @@ npx uri-scheme list
 npx uri-scheme add <your scheme>
 npx uri-scheme remove <your scheme>
 npx uri-scheme open <your scheme>
+npx uri-scheme open --android <your scheme>
+npx uri-scheme open --ios <your scheme>
 ```
 
 ```sh

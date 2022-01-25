@@ -3,7 +3,7 @@
 ```vim
 " ex command 결과보기
 :messages
-``````
+```
 
 ## 열기 옵션
 ```sh
@@ -107,6 +107,16 @@ autocmd FileType vimwiki nmap x <Plug>VimwikiToggleListItem
 # 대문자 구분
 /\C[SEARCH_TEXT]
 ```
+
+## 정렬
+visual 모드에서 사용 예, 
+```vim
+:'<,'>sort   # 정렬
+:'<,'>sort!  # 역순 정렬
+:'<,'>sort n # 넘버 정렬
+```
+
+- https://webdevetc.com/blog/sort-text-in-vim/
 
 ## 외부 프로그램
 - [[jq]]

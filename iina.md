@@ -1,6 +1,6 @@
 # iina
 
-[[mpv]] frontend
+[[mpv]] frontend, 결과적으로 [[mpv]] 만으로도 충분해서 쓰지 않음
 
 ```sh
 brew install mpv-iina

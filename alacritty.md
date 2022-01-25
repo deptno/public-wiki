@@ -17,6 +17,7 @@ rustup update
 rustup target add x86_64-apple-darwin aarch64-apple-darwin
 make app-universal
 cp -r target/release/osx/Alacritty.app /Applications/
+cp extra/completions/_alacritty ${ZDOTDIR:-~}/.zsh_functions/_alacritty
 ```
 
 post build 프로세스 있으므로 추가적으로 할 것이 있는지 확인한다.
@@ -69,3 +70,4 @@ drwxr-xr-x@     4    - deptno 2021-08-03 18:52    │  ├──  61
 - [[brew]]
 - [[m1]]
 - [[nvim-treesitter]]
+- [[infocmp]]

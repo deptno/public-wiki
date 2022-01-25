@@ -17,5 +17,9 @@ fi
 ## plugins
 - [[zsh-syntax-highlighting]]
 
+## alias
+### git
+- gpristine - [[git-clean]] [[git-reset]] 조합으로 처리하던 것을 한번에 정리한다. [[git-clone]] 을 상태와 동일하게 돌린다.
+
 ## related
 - [[shell-script|쉘스크립트]]

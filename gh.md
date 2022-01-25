@@ -1,5 +1,13 @@
 # gh|github-cli
 
+## 명령어
+```sh
+gh repo view -w
+gh pr list
+gh pr view xxxx
+```
+
+## 다중 계정
 github cli 로 편리한 명령어 몇가지를 제공한다.
 다중 계정을 [[env|GH_CONFIG_DIR]] 을 통해서 지원할 수 있다.
 [[direnv]] 와 조합시 편히 사용이 가능하다.

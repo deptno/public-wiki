@@ -1,5 +1,8 @@
 # react-native
 
+```sh
+react-native run ios --device "phonename"
+```
 ## 설정
 
 ## error
@@ -122,3 +125,4 @@ sysctl 을 통해서 변수를 확인할 수 있다.
 - [[ruby]]
 - [[watchman]]
 - [[ios-deploy]]
+- [[flipper]]

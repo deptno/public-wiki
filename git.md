@@ -4,19 +4,29 @@
 공식문서: https://git-scm.com/book/ko/v2
 
 ## by-command
+- [[git-apply]]
+- [[git-branch]]
+- [[git-commit]]
+- [[git-check-ignore]]
+- [[git-cherry-pick]]
+- [[git-clean]]
 - [[git-clone]]
+- [[git-config]]
+- [[git-diff]]
+- [[git-grep]]
+- [[git-log]]
+- [[git-pull]]
+- [[git-rebase]]
 - [[git-reset]]
-- git-show
-- git-apply
-- git-cherry-pick
-- git-diff
-- git-log
-- git-grep
-- git-rebase
-- git-check-ignore
-- git-status
-- [[git-tag]]
+- [[git-merge-base]]
+- [[git-restore]]
+- [[git-show]]
 - [[git-sparse-checkout]]
+- [[git-status]]
+- [[git-tag]]
+
+## files
+- [[path|.gitconfig]]
 
 ## 특정 커밋 내용 가져와서 적용
   - https://stackoverflow.com/questions/5717026/how-to-git-cherry-pick-only-changes-to-certain-files
@@ -208,12 +218,11 @@ git clean -fd
 ```sh
 git switch feature
 git reset --mixed $(git merge-base master @)
-``````
+```
 #### 1. 변경된 파일 모두 버퍼로
 `vim $(git diff --name-only)`
 #### 2. 상태값으로 필터
 `vim $(git status -s | grep "[^D] " | awk '{print $2}')`
-```
 
 ### 보기만
 `vim $(git diff --name-status master.. | rg "[^D]\t" | awk '{print $[[2]]}')`

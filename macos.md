@@ -8,6 +8,7 @@
 - defaults-read
 - [[sysctl]]
 - [[uname]]
+- [[powermetrics]]
 
 
 ```sh

@@ -22,6 +22,7 @@
 #### list
 - `overdue` : duedate 이 지난 타스크
 - `newest` : 최신 등록순으로 나열
+- `due:today` : 오늘이 due day 인 것들 나열
 
 ```sh
 task TASK_ID [COMMAND] [ARGS]

@@ -1,5 +1,9 @@
 # flipper
 
+```sh
+brew install --cask flipper
+```
+
 ## [[error]]
 ### Failed to start flipper-server
 ```

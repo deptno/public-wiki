@@ -25,6 +25,19 @@
 - [[mpv]]
 - [[direnv]]
 - [[localtunnel|lt]]
+- [[kill]]
+- [[lsof]]
+- [[emulator]]
+- [[ctags]]
+- [[universal-ctags]]
+- [[neofetch]]
+- [[curl]]
+- [[terminal-notifier]]
+- [[awk]]
+
+### node
+- [[npm]]
+- [[yarn]]
 
 ## mobile
 - [[uri-scheme]]
@@ -34,7 +47,7 @@
 - [[exa]] ls
 - [[bottom|btm]] top
 - [[z]] cd
-- [[ripgrep]] grep
+- [[ripgrep|rg]] grep
 - [[fd]] find
 
 ## setup

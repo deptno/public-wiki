@@ -31,6 +31,7 @@
 - [[mpv]]
 - [[iina]]
 - [[finicky]]
+- [[raycast]]
 
 ## 삶
 - [[financial/index/financial]]

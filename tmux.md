@@ -3,7 +3,7 @@
 - https://tmuxcheatsheet.com
 
 ## copy
-`ctrl + b` [ -> ctrl + space -> y
+`ctrl + b`, [ -> ctrl + space -> y
 
 ## 중첩 tmux
 tmux 에서 ssh 로 들어가 다시 tmux 를 사용하는 경우에는 prefix2 + key 를 통해 사용할 수 있다.
@@ -24,9 +24,15 @@ tmux 에서 ssh 로 들어가 다시 tmux 를 사용하는 경우에는 prefix2 
 :source-file ~/.tmux.conf 
 ```
 
-## 세션 생성
+## 세션
 ```tmux
 :new -s session_name
+```
+```sh
+tmux attach
+tmux a
+tmux a -t 0
+tmux kill-session -t 0
 ```
 
 ## scroll back 저장

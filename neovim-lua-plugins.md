@@ -1,5 +1,10 @@
 # neovim-lua-plugins
 
+## 구조
+- [[path|~/.config/nvim/init.lua]]
+- [[path|~/.local/share/nvim/site/pack/*/start]] - 시작시 로딩
+- [[path|~/.local/share/nvim/site/pack/*/opt]] - 원하는 타이밍에 스크립트를 통해서 로딩
+
 ## lua 전환
 ### 시작 설정 옮기기 전
 ```sh
