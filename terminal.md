@@ -34,6 +34,8 @@
 - [[curl]]
 - [[terminal-notifier]]
 - [[awk]]
+- [[lnav]]
+- [[goaccess]]
 
 ### node
 - [[npm]]

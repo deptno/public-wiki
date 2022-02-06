@@ -56,6 +56,26 @@ $ gem install bundler:2.2.20
 ERROR:  While executing gem ... (Gem::FilePermissionError)
     You don't have write permissions for the /Library/Ruby/Gems/2.6.0 directory.
 ```
+### ffi
+```sh
+ ~/.gem/ruby/2.6.8/gems/ffi-1.13.1/lib  ls                                                                                      ok  17:54:54
+ffi          ffi.rb       ffi_c.bundle
+ ~/.gem/ruby/2.6.8/gems/ffi-1.13.1/lib  file ./ffi                                                                              ok  17:54:56
+./ffi: directory
+ ~/.gem/ruby/2.6.8/gems/ffi-1.13.1/lib  file ffi_c.bundle                                                                       ok  17:55:03
+ffi_c.bundle: Mach-O 64-bit bundle x86_64
+```
+```sh
+gem dependency -R
+Gem ffi-1.13.1
+  rake (~> 13.0, development)
+  rake-compiler (~> 1.0, development)
+  rake-compiler-dock (~> 1.0, development)
+  rspec (~> 2.14.1, development)
+  rubygems-tasks (~> 0.2.4, development)
+  Used by
+    ethon-0.12.0 (ffi (>= 1.3.0))
+```
 
 ## related
 - [[bundler]]

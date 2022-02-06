@@ -9,6 +9,8 @@ if [[ "A" = "" ]]; [[then]]
 fi
 if [[ "A" != "" ]]; then
 fi
+if [[ -z "$TMUX" ]]; then
+fi
 ```
 
 - n : non-zero length

@@ -2,7 +2,7 @@
 
 ```sh
 git show -sb
-git shob -s
+git show -s
 ```
 
 ## related

@@ -7,3 +7,4 @@ javascript runtime
 - [[nvm]]
 - [[npm]]
 - [[yarn]]
+- [[axios]]

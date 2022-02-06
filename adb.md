@@ -15,7 +15,7 @@ adb devices # 확인
 ## -
 [[react-native]] [[metro]] 연결시에 필요, 재부팅마다 해줘야하는듯
 ```sh
-adb reverse tcp:8081 tcp:8081
+adb [-s DEVICE_ID] reverse tcp:8081 tcp:8081
 ```
 
 ## related

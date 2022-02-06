@@ -13,6 +13,7 @@
 - [[git-clone]]
 - [[git-config]]
 - [[git-diff]]
+- [[git-fetch]]
 - [[git-grep]]
 - [[git-log]]
 - [[git-pull]]
