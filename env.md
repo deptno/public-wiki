@@ -12,3 +12,5 @@
 - `ANDROID_HOME`
 ## gh
 - `GH_CONFIG_DIR`
+## node
+- `NODE_OPTIONS`

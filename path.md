@@ -12,6 +12,7 @@
 - Gemfile
 - Gemfile.lock
 - ~/.config/nvim/init.lua
+- ~/.config/neomutt/neomuttrc
 
 ## dir
 - ./Pods/

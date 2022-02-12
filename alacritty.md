@@ -65,9 +65,12 @@ drwxr-xr-x@     4    - deptno 2021-08-03 18:52    │  ├──  61
 > [[system-preferences|시스템 환경설정]] -> 보안 및 개인 정보 보호 -> 파일 및 폴더
 에서 명령어 개별로 되어있는 경우가 있다면 제거한다. eg. zsh, exa, ls 등
 
+[[codesign]] 처리한다.
+
 # relatead
 - [[rust]]
 - [[brew]]
 - [[m1]]
 - [[nvim-treesitter]]
 - [[infocmp]]
+- [[codesign]]

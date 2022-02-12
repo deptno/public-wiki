@@ -20,6 +20,8 @@
 - [[shell]]
 - [[benchmark]]
 - [[codesign]]
+- [[node]]
+- [[load-test|부하테스트]]
 
 ## os
 - [[macos]]
@@ -36,3 +38,4 @@
 ## 삶
 - [[financial/index/financial]]
 - [[book/index|book]]
+- [[english]]

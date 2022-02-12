@@ -1,5 +1,4 @@
-# mutt (neomutt)
+# mutt
 
-guide: https://neomutt.org/guide/
-
-
+## related
+- [[neomutt]]

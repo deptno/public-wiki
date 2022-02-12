@@ -3,6 +3,8 @@
 ## app
 - [[karabiner-elements]]
 - [[marp]]
+- [[min]]
+- [[keycastr]]
 
 ## [[terminal|터미널]] 명령어 
 - [[pmset]]

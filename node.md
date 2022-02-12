@@ -2,6 +2,44 @@
 
 javascript runtime
 
+## options
+--max-old-space-size
+--max-new-space-size
+
+## [[error]]
+### ECONNRESET
+- [[axios]]
+```sh
+Error: Client network socket disconnected before secure TLS connection was established
+    at connResetException (internal/errors.js:609:14)
+    at TLSSocket.onConnectEnd (_tls_wrap.js:1536:19)
+    at Object.onceWrapper (events.js:421:28)
+    at TLSSocket.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21) {
+  code: 'ECONNRESET',
+```
+### memory [[leak]]
+- [[env|NODE_OPTIONS]]
+
+```sh
+cross-env NODEOPTIONS=--inspect` ts-node .
+```
+
+`inspect` 옵션으로 덤프를 생성해서 메모리 추적이 가능하다.
+
+#### 디버깅
+크롬에서 확인이가능
+- chrome://inspect/#devices
+
+접속 후 인스펙터를 열면 메모리 탭이 존재하고 여기서 실시간으로 증가와 감소 확인이 가능
+
+#### 부하 테스트
+- [[ngrinder]]
+
+특정 페이지를 지속적으로 해서 tps 측정이 가능하다.  
+이와 함께 크롬의 메모리 탭을 확인해서 레코딩을 걸고 부하테스트를 한 후 gc 가 돌고나서도 메모리가 원래되로 돌아오지 않는지 확인이 필요하다.  
+
 # related
 - [[javascript]]
 - [[nvm]]

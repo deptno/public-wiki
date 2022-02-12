@@ -36,6 +36,9 @@
 - [[awk]]
 - [[lnav]]
 - [[goaccess]]
+- dunst
+- [[neomutt]]
+- [[mutt]]
 
 ### node
 - [[npm]]
