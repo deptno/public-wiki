@@ -38,6 +38,14 @@ mailboxes +INBOX +[Gmail]/Sent +[Gmail]/Drafts "+[Gmail]/All Mail" +[Gmail]/Tras
 ```
 - [[path|~/.config/neomutt/mailcap]]
 
+## 어플리캐이션용 비밀번호 생성
+1. gmail.com
+2. 우상단 프로필 사진 클릭
+3. Manage Your Google Account
+4. Security
+5. Signing in to Google
+6. App passwords
+
 ## 사용법
 - j/k - 위아래 메일
 - v - 첨부파일 보기
