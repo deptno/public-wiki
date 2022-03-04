@@ -8,6 +8,14 @@ nvim +checkhealth
 python3 -m pip install --upgrade pynvim
 ```
 
+## [[error]]
+emoji 등 유니코드 캐릭터가 존재한 이후에는 yy 등 카피가 clipboard(reg *) 에 복사되지 않는 이슈
+
+- https://github.com/neovim/neovim/issues/11432#issuecomment-557868656
+```lua
+vim.cmd ":let $LANG='en_US.UTF-8'"
+```
+
 ## plugin
 - [[taskwiki]]
 - [[defx]]
