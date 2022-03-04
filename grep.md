@@ -14,7 +14,7 @@
 grep --color -E 'KEYWORD|$'
 ```
 
-[[ANSI color]] 변경시에는 [[env]] 설정 필요 `GREP_COLOR`
+[[ansi-color]] 변경시에는 [[env]] 설정 필요 `GREP_COLOR`
 ```sh
 GREP_COLOR='35;47' grep --color -E 'KEYWORD1|KEYWORD2|$'
 ```

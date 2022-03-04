@@ -65,6 +65,67 @@ override fun onCreate(savedlnstanceState: Bundle?) {
 }
 
 ```
+## Life Cycle|생명주기
+- 액티비티 시작
+- onCreate call setContentView
+- onStart
+- onResume
+- 액티비티 실행(setContentView 에서 지정한 UI)
+- onPause 포커스가 없는상태, 화면 분할 등 -> onResume
+- onStop 비활성화 상태, 홈 버튼을 눌러서 나간 상태 등-> onRestart -> onStart
+- onDestroy -> onCreate
+- 액티비티 종료
+[[@todo]] restart 등 추가 필요
+
+### 화면을 회전화는 경우
+onResume -> onPause -> onStop -> onSaveInstanceState -> onDestroy
+-> onCreate -> onStart -> onRestoreInstanceState -> onResume
+
+## Intent|인텐트
+인텐트를 통해 시스템에 액티비티의 생성을 요청한다.
+```kotlin
+val intent = Intent(this, MainActivity::class.java)
+intent.putExtra("key", "value")
+startActivity(intent)
+startActivityForResult(intent, intrequestCode)
+```
+생성 후 받는 쪽에서는 `getIntent` 를 통해서 인텐트를 얻고 인자를 가져올 수 있다.
+인텐트 실행시에 특정 앱을 지정하고싶다면 패키지를 설정한다.
+```kotlin
+intent.setPackage("com.google.android.apps.maps")
+```
+### error
+#### 없는 activity 를 지정한 경우(없는 intent)
+실행한 쪽에서 에러가 난다.
+
+### 액티비티 실행
+#### 명시적 
+앱의 내부에서는 명시적으로 클래스를 지정해서 실행, 암시적으로도 가능하나 권장된다.
+암시적으로는 실행할 수 없는 경우도 존재한다.
+```kotlin
+val intent = Intent(this, MainActivity::class.java)
+```
+#### 암시적
+외부에서 액티비티를 실행할 수 있도록 manifest 파일에 intent 설정을 해줘야한다.
+```
+<activity android:name=".oneActivity" />
+<activity android:name=".TwoActivity">
+  <intent-filter>
+    <actlon android:name="ACTION EDIT" />
+  </intent-filter>
+</activity>
+<service ... />
+<receiver ... />
+```
+
+### 인텐트 필터
+데이터 전달
+- <action /> - android:name 은 유일하지 않아도된다. 기능을 보여주는 이름을 사용하자. eg, android.intent.action.MAIN
+- <category /> - android:name -> android.intent.category.LAUNCHER
+- <data /> - 필요한 데이
+
+> 런처앱은 `android.intent.category.LAUNCHER` 카테고리의 `action.intent.action.MAIN` 을 가져와서 리스트업하는 액티비티다.
+
 
 
 ## Resource|리소스

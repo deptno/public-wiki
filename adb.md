@@ -10,6 +10,7 @@ adb tcpip 5555
 ```sh
 adb connect [IP] # 연결
 adb devices # 확인
+adb shell dumpsys activity activities > activity_dump.txt
 ```
 
 ## -

@@ -5,6 +5,7 @@
 gh repo view -w
 gh pr list
 gh pr view xxxx
+gh pr list --json number,title -q '.[] | [.number, .title] | @csv' | xsv table
 ```
 
 ## 다중 계정
@@ -33,6 +34,18 @@ plugins=(
 때문에 `external` 디렉토리에 들어오면 해당 디렉토리의 `.envrc` 를 통해서 부모의 [[env|GH_CONFIG_DIR]] 변수를 설정해서
 추가적인 로그인 정보를 제공하면 특정 폴더에서 다른 계정으로 사용이 가능하다.
 
+## template
+```sh
+gh pr list \
+  --json author,baseRefName,comments,number,title,mergeable,createdAt,isDraft,state \
+  --template \
+'{{tablerow "#" "createdAt" "draft" "state" "base" "mergeable" "author" "title"}}
+{{range .}}
+{{tablerow .number .createdAt (.isDraft | autocolor "green") .state .baseRefName .mergeable .author.login .title}}
+{{end}}'
+```
 ## related
 - [[direnv]]
 - [[github]]
+- [[jq]]
+- [[xsv]]

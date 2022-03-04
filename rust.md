@@ -426,6 +426,31 @@ println!("{} {}", "hello", "world");
     - expect(value: &str)
 - Ordering
 
+### ?
+`FromResidual` 이 구현된 타입에서 사용 가능, 제공되는 타입으로는 아래가 있음
+- Result<T, E>
+- Option<T>
+
+함수 결괏값으로 Error가 리턴되면 `해당 함수`를 `호출하는 함수`에서 리턴 처리한다.
+
+### dyn Trait, Trait Object
+
+### smart-pointer|스마트 포인터
+- Box<T>: usize 만 스택에 남기고 heap 에 저장한다.  
+- Rc<T>: 다중 소유권을 허용한다. Rc.clone()
+- Arc<T>: Rc의 thread save 버전
+- Mutex<T>: 공유 메모리에 접근을 제어한다.
+
+### array, slice, vec
+- arrray: [u8; 3] primitive 타입 fixed length
+- slice: &[..] array의 참조로 존재, ㅏㅏㅏk
+- vec: growing array, 항상 힙에 저정된다.
+
+### question
+- [[@todo]] match { Err(ref e) => ... }, ref를 붙이는 이유
+- iter vs into_iter
+
+장
 ---
 
 ## 용어
@@ -436,3 +461,4 @@ println!("{} {}", "hello", "world");
 - [[rust-vim]]
 - [[book/the-rust-programming-language|러스트 프로그래밍 공식 가이드]]
 - [[valgrind]]
+- [[functional]]

@@ -39,6 +39,7 @@
 - dunst
 - [[neomutt]]
 - [[mutt]]
+- [[xsv]]
 
 ### node
 - [[npm]]
