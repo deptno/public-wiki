@@ -20,10 +20,15 @@ There is already an open PR with papago search #888 started by @wooogle – it w
 Some feedback for your extension
 
 At the moment, Raycast doesn't support localization and only supports US English.
+-> I removed code related i18n.
 The name of the command needs to be understandable, check Naming convention
+-> I changed the name of the command to `Translator`.
 Do I need to register for a key before “history” and does that make any sense?
+-> No. You don't need to register for a key to use History. It isn't related.
 We do already have Google Translate so it makes sense to make the Papago translater and focus on that?
+-> Translation services are not accurate. so, It usually need to compare multiple service for betters understanding.
 Let me know your thoughts
+
 ```
 #### todo
 - [ ] i18n 제거
