@@ -25,6 +25,7 @@ vim.cmd ":let $LANG='en_US.UTF-8'"
 - [[gitsigns|gitsings.nvim]]
 - [[bufferline|bufferline.nvim]]
 - [[null-ls|null-ls.nvim]]
+- [[nlspsettings|nlspsettings.nvim]]
 
 ### neovim lua 기반 플러그인 환경 설정
 - [[neovim-lua-plugins]]

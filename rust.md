@@ -1,5 +1,8 @@
 # rust
 
+## 공부
+- [[node-to-rust]]
+
 ## 정리 필요
 
 ### module|모듈
