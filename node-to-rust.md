@@ -5,24 +5,25 @@
 
 ## Day 1: From nvm to rustup
 ## Day 2: From npm to cargo
-| npm              | cargo             |                    |
-|------------------|-------------------|--------------------|
-| init             | init              | 현재 디렉토리 기준 |
-|                  | new               | 디렉토리 함께 생성 |
-|                  | run               | build + execute    |
-| install          | add               |                    |
-| uninstall        | rm                |                    |
-| install --global | install           | ~/.cargo/bin       |
-| test             | test              |                    |
-| publish          | publish           |                    |
-| run [start]      | run --exmaple xxx | [[@todo]]          |
-| benchmarks       | bench             |                    |
-| build            | build             |                    |
-| -                | build --release   |                    |
-| clean            | clean             |                    |
-| docs             | doc               |                    |
-| -                | check             | tsc --noEmit       |
-| -                | clippy            | eslint |
+| npm                    | cargo             |                    |
+|------------------------|-------------------|--------------------|
+| init                   | init              | 현재 디렉토리 기준 |
+|                        | new               | 디렉토리 함께 생성 |
+|                        | run               | build + execute    |
+| install                | fetch             |                    |
+| install [package_name] | add               |                    |
+| uninstall              | rm                |                    |
+| install --global       | install           | ~/.cargo/bin       |
+| test                   | test              |                    |
+| publish                | publish           |                    |
+| run [start]            | run --exmaple xxx | [[@todo]]          |
+| benchmarks             | bench             |                    |
+| build                  | build             |                    |
+| -                      | build --release   |                    |
+| clean                  | clean             |                    |
+| docs                   | doc --open        |                    |
+| -                      | check             | tsc --noEmit       |
+| -                      | clippy            | eslint             |
 
 npm 과 달리 task runner 를 가지지 않았다. 때문에 여전이 [[makefile]] 이 사용된다.  
 저자는 `just` 를 추천

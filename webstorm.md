@@ -13,3 +13,4 @@ Webstorm -> Tools -> Terminal -> Run command using IDE(? [[@todo]])
 
 ## related
 - [[intellij]]
+- [[yarn]]

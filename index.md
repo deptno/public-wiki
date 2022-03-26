@@ -22,6 +22,12 @@
 - [[codesign]]
 - [[node]]
 - [[load-test|부하테스트]]
+- [[encoding]]
+- [[terraform]]
+
+## service
+- [[appsflyer]]
+- [[jira]]
 
 ## os
 - [[macos]]
@@ -39,3 +45,6 @@
 - [[financial/index/financial]]
 - [[book/index|book]]
 - [[english]]
+
+## 장비
+- [[microsoft-designer-compact-keyboard|마이크로스프트 디자이너 컴팩트 키보드]]

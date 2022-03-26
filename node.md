@@ -46,3 +46,4 @@ cross-env NODEOPTIONS=--inspect` ts-node .
 - [[npm]]
 - [[yarn]]
 - [[axios]]
+- [[iconv-lite]]
