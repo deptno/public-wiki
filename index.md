@@ -12,10 +12,8 @@
 - [[dev-tools]]
 - [[language]]
 - [[free]]
-- [[github]]
 - [[unity]]
 - [[theme]]
-- [[aws]]
 - [[port]]
 - [[shell]]
 - [[benchmark]]
@@ -26,6 +24,8 @@
 - [[terraform]]
 
 ## service
+- [[aws]]
+- [[github]]
 - [[appsflyer]]
 - [[jira]]
 
