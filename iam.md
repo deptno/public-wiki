@@ -39,5 +39,9 @@ ABAC 을 하면 태그를 통해서 접근을 제어하는 IAM Policy 를 작성
 - 동일 aws account 내에서는 두 policy 의 **합집합**으로 퍼미션이 결정된다.
 - 크로스 aws account 에서는 두 policy 의 **교집합**으로 퍼미션이 결정된다.
 
+## 계정 권한 부여를 위한 롤
+- iam:PassRole - 권한 부여
+- sts:AssumeRole
+
 ## reference
 - [AWS IAM과 친해지기 - 김태수](https://www.youtube.com/watch?v=c70glL9Znzs)

@@ -36,10 +36,11 @@
 - [[awk]]
 - [[lnav]]
 - [[goaccess]]
-- dunst
+- [[dunst]]
 - [[neomutt]]
 - [[mutt]]
 - [[xsv]]
+- [[difftastic]]
 
 ### node
 - [[npm]]

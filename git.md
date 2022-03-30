@@ -13,6 +13,7 @@
 - [[git-clone]]
 - [[git-config]]
 - [[git-diff]]
+- [[git-difftool]]
 - [[git-fetch]]
 - [[git-grep]]
 - [[git-log]]
@@ -25,6 +26,7 @@
 - [[git-sparse-checkout]]
 - [[git-status]]
 - [[git-tag]]
+- [[git-bisect]]
 
 ## files
 - [[path|.gitconfig]]
@@ -231,3 +233,4 @@ git reset --mixed $(git merge-base master @)
 ## releated
 - [[github]]
 - [[vim]]
+- [[tig]]
