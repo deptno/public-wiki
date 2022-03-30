@@ -6,3 +6,4 @@
 - [[cloudfront]]
 - [[s3]]
 - [[iam]]
+- [[route53]]
