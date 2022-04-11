@@ -1,5 +1,4 @@
 # deptno.github.io.wiki
-
 - [[hello wiki]]
 
 ## todo
@@ -22,6 +21,8 @@
 - [[load-test|부하테스트]]
 - [[encoding]]
 - [[terraform]]
+- [[cors]]
+- [[resposne-code]]
 
 ## service
 - [[aws]]
@@ -41,6 +42,7 @@
 - [[iina]]
 - [[finicky]]
 - [[raycast]]
+- smartthings
 
 ## 삶
 - [[financial/index/financial]]

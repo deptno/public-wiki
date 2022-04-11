@@ -65,6 +65,10 @@ bundle exe pod install
 
 `bundle exe pod install` 을하고 나면 xcode 에서 Pod 의 색이 정상화되고 이 후 빌드시에는 해당 에러 사라짐
 
+```text
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+```
+
 # related
 - [[ios]]
 - [[bundler]]

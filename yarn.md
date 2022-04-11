@@ -72,6 +72,16 @@ yarn config set nodeLinker node-modules
 }
 ```
 
+### error
+```sh
+Unknown Syntax Error: Command not found; did you mean:
+```
+workspace tool 이 있어야지 가능
+```sh
+# https://yarnpkg.com/api/modules/plugin_workspace_tools.html
+yarn plugin import workspace-tools
+```
+
 
 ## related
 - [[node]]
