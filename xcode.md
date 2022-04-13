@@ -69,8 +69,13 @@ bundle exe pod install
 error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
 ```
 
-# related
-- [[ios]]
+```
+Showing All Messages
+: The Legacy Build System will be removed in a future release. You can configure the selected build system and this deprecation message in File > Workspace Settings.
+```
+File -> Workspace settings... -> **Build System: New Build System (Default)** 로 변경
+
+# related [[ios]]
 - [[bundler]]
 - [[react-native]]
 - [[cocoapods]]
