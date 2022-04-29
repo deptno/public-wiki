@@ -1,0 +1,32 @@
+# speaking matrix speak 1 minute for office worker|직장인을 위한 1분 영어 말하기
+
+1. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/001.html
+2. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/002.html
+3. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/003.html
+4. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/004.html
+5. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/005.html
+6. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/006.html
+7. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/007.html
+8. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/008.html
+9. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/009.html
+10. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/010.html
+11. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/011.html
+12. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/012.html
+13. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/013.html
+14. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/014.html
+15. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/015.html
+16. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/016.html
+17. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/017.html
+18. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/018.html
+19. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/019.html
+20. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/020.html
+21. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/021.html
+22. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/022.html
+23. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/023.html
+24. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/024.html
+25. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/025.html
+26. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/026.html
+27. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/027.html
+28. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/028.html
+29. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/029.html
+30. https://vod.gilbut.co.kr/vod/category/eztok/pro_1min/030.html

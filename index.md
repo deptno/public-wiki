@@ -30,6 +30,7 @@
 - [[appsflyer]]
 - [[jira]]
 - [[domain]]
+- [[serverless]]
 
 ## os
 - [[macos]]
@@ -42,7 +43,7 @@
 - [[iina]]
 - [[finicky]]
 - [[raycast]]
-- smartthings
+- [[smartthings]]
 
 ## 삶
 - [[financial/index/financial]]

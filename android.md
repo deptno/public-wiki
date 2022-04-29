@@ -97,6 +97,10 @@ intent.setPackage("com.google.android.apps.maps")
 ### error
 #### 없는 activity 를 지정한 경우(없는 intent)
 실행한 쪽에서 에러가 난다.
+#### Coludn't sign in
+```text
+There was a problem communicating with Google servers.
+```
 
 ### 액티비티 실행
 #### 명시적 

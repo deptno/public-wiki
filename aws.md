@@ -9,3 +9,4 @@
 - [[route53]]
 - [[rds]]
 - [[sg]]
+- [[lambda]]

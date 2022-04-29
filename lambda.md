@@ -1,0 +1,5 @@
+# lambda
+
+## related
+- [[aws]]
+- [[serverless]]
