@@ -6,6 +6,11 @@ gh repo view -w
 gh pr list
 gh pr view xxxx
 gh pr list --json number,title -q '.[] | [.number, .title] | @csv' | xsv table
+gh pr list -S HASH # 커밋이 포함된 pr
+gh pr list -S HASH -s merged
+gh pr list -S --draft=true # 드래프트인 pr만 노출
+gh pr list -S 'draft:false' # 드래프트가 아닌 pr만 보여준다
+gh pr list -S 'draft:false' -s merged
 ```
 
 ## 다중 계정
@@ -44,6 +49,7 @@ gh pr list \
 {{tablerow .number .createdAt (.isDraft | autocolor "green") .state .baseRefName .mergeable .author.login .title}}
 {{end}}'
 ```
+
 ## related
 - [[direnv]]
 - [[github]]
