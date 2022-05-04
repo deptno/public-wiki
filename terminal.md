@@ -41,6 +41,7 @@
 - [[mutt]]
 - [[xsv]]
 - [[difftastic]]
+- [[sed]]
 
 ### node
 - [[npm]]
