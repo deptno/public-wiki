@@ -22,7 +22,7 @@
 - [[encoding]]
 - [[terraform]]
 - [[cors]]
-- [[resposne-code]]
+- [[response-code]]
 
 ## service
 - [[aws]]

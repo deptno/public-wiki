@@ -16,5 +16,5 @@ Access to XMLHttpRequest at 'https://XXX.com' from origin 'https://YYY.com' has 
 ## related
 - [[aws]]
 - [[s3]]
-- [[resposne-code]]
+- [[response-code]]
 - [[cors]]
