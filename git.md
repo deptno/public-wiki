@@ -230,6 +230,11 @@ git reset --mixed $(git merge-base master @)
 ### 보기만
 `vim $(git diff --name-status master.. | rg "[^D]\t" | awk '{print $[[2]]}')`
 
+## plumping 명령어
+- `git rev-parse`: 브랜치명이나 태그를 커밋 해시로 리턴한다.
+- `git rev-list`: git log 등의 레인지를 가지는 결과를 기반으로 커밋 해시만 뽑아낸다.
+  - `--abbrev-commit` 옵션 가능
+
 ## releated
 - [[github]]
 - [[vim]]

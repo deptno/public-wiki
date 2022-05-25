@@ -43,3 +43,11 @@ tmux kill-session -t 0
 :save-buffer filename.txt
 :delete-buffer
 ```
+
+## plugin
+- tpm - tmux plugin manager
+- tmux - theme, dracula/tmux, fork -> deptno/tmux
+- tmux-jump - easy move
+- tmux-open - open
+- tmux-thumbs - 환면에 있는 [[text]] 청크를 복사
+- tmux-resurrect - 세션 창 분할 저장

@@ -124,6 +124,12 @@ visual 모드에서 사용 예,
 :%!jq
 ```
 
+## 문법 검사
+
+```vim normal
+z=
+```
+
 ## plugins
 - [[vimwiki]]
 - [[defx]]
@@ -131,6 +137,13 @@ visual 모드에서 사용 예,
 - [[taskwiki]]
 - [[vim-surround]]
 - [[vim-autoswap]]
+
+## [[error]]
+```vim
+Vim:E117: Unknown function: netrw#CheckIfRemote
+```
+- https://github.com/tpope/vim-fugitive/issues/594#issuecomment-75315088
+
 
 ## releated
 - [[neovim]]

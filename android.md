@@ -111,7 +111,7 @@ val intent = Intent(this, MainActivity::class.java)
 ```
 #### 암시적
 외부에서 액티비티를 실행할 수 있도록 manifest 파일에 intent 설정을 해줘야한다.
-```
+```xml
 <activity android:name=".oneActivity" />
 <activity android:name=".TwoActivity">
   <intent-filter>

@@ -23,6 +23,7 @@
 - [[terraform]]
 - [[cors]]
 - [[response-code]]
+- [[react]]
 
 ## service
 - [[aws]]
@@ -44,6 +45,7 @@
 - [[finicky]]
 - [[raycast]]
 - [[smartthings]]
+- [[orgmode]]
 
 ## 삶
 - [[financial/index/financial]]
