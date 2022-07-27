@@ -50,5 +50,7 @@ DSM7
 3. 저장소 관리자 -> 저장소 -> 스토리지 풀  
    볼륨 제거 후 스토리지 풀도 함께 삭제한다.
   
-
-
+## related
+- [[exiftool]]
+- [[synology-photos]]
+- [[ssh]]

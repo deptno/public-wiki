@@ -75,6 +75,19 @@ Showing All Messages
 ```
 File -> Workspace settings... -> **Build System: New Build System (Default)** 로 변경
 
+### framework 업그레이드에 따른 에러
+```sh
+info Found Xcode workspace "ZigbangApp.xcworkspace"
+2022-06-07 16:19:51.718 simctl[24788:5981206] CoreSimulator detected version change.  Framework version (802.6.1) does not match existing job version (802.6).  Attempting to remove the stale service in order to add the expected version.
+error Could not get the simulator list from Xcode. Please open Xcode and try running project directly from there to resolve the remaining issues.
+SyntaxError: Unexpected token I in JSON at position 0
+    at JSON.parse (<anonymous>)
+info Run CLI with --verbose flag for more details.
+```
+```sh
+rm -rf ~/Library/Developer/Xcode/DerivedData/*
+```
+
 # related [[ios]]
 - [[bundler]]
 - [[react-native]]
