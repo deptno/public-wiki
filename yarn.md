@@ -81,6 +81,23 @@ workspace tool 이 있어야지 가능
 # https://yarnpkg.com/api/modules/plugin_workspace_tools.html
 yarn plugin import workspace-tools
 ```
+---
+#### The remote archive doesn't match the expected checksum
+```
+➤ YN0000: │ Some peer dependencies are incorrectly met; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code
+➤ YN0000: └ Completed in 0s 623ms
+➤ YN0000: ┌ Fetch step
+➤ YN0013: │ @ptomasroos/react-native-multi-slider@https://github.com/zigbang/react-native-multi-slider.git#commit=22a0d52e2edb40edb552c4e010cd629bc2e68e9c can't be found in the cache and will be fetched from GitHub
+➤ YN0013: │ multiple-cucumber-html-reporter@https://github.com/Seunghyum/multiple-cucumber-html-reporter.git#commit=e03908f469aa694900da40597ea31a9a0ca3d86f can't be found in the cache and will be fetched from GitHub
+➤ YN0013: │ @ptomasroos/react-native-multi-slider@git+https://github.com/zigbang/react-native-multi-slider.git#commit=22a0d52e2edb40edb552c4e010cd629bc2e68e9c can't be found in the cache and will be fetched from the remote r
+➤ YN0013: │ multiple-cucumber-html-reporter@https://github.com/Seunghyum/multiple-cucumber-html-reporter.git#commit=e03908f469aa694900da40597ea31a9a0ca3d86f can't be found in the cache and will be fetched from the remote rep
+➤ YN0018: │ @ptomasroos/react-native-multi-slider@git+https://github.com/zigbang/react-native-multi-slider.git#commit=22a0d52e2edb40edb552c4e010cd629bc2e68e9c: The remote archive doesn't match the expected checksum
+➤ YN0018: │ multiple-cucumber-html-reporter@https://github.com/Seunghyum/multiple-cucumber-html-reporter.git#commit=e03908f469aa694900da40597ea31a9a0ca3d86f: The remote archive doesn't match the expected checksum
+➤ YN0000: └ Completed in 5s 348ms
+➤ YN0000: Failed with errors in 5s 976ms
+$ YARN_CHECKSUM_BEHAVIOR=update yarn 
+```
+- https://yarnpkg.com/advanced/error-codes#yn0018---cache_checksum_mismatch
 
 
 ## related

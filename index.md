@@ -1,4 +1,4 @@
-[[#]] deptno.github.io.wiki
+# deptno.github.io.wiki
 - [[hello wiki]]
 
 ## todo

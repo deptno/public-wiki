@@ -18,6 +18,13 @@ adb shell dumpsys activity activities > activity_dump.txt
 ```sh
 adb [-s DEVICE_ID] reverse tcp:8081 tcp:8081
 ```
+### error
+```sh
+adb: error: device unauthorized.
+This adb server's $ADB_VENDOR_KEYS is not set
+Try 'adb kill-server' if that seems wrong.
+Otherwise check for a confirmation dialog on your device.
+```
 
 ## related
 - [[android-studio]]

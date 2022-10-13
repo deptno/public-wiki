@@ -118,6 +118,9 @@ watchman 을 설치하도록한다.
 
 sysctl 을 통해서 변수를 확인할 수 있다.
 
+### warning: Building targets in manual order is deprecated - choose Dependency Order in scheme settings instead, or set DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING in any of the targets in the current scheme to suppress this warning
+schema edit -> build -> dependency order
+
 ## related
 - [[mobile]]
 - [[xcode]]
