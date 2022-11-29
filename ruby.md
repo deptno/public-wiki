@@ -76,6 +76,165 @@ Gem ffi-1.13.1
   Used by
     ethon-0.12.0 (ffi (>= 1.3.0))
 ```
+### mac13 ventura
+```
+Installing json 2.6.2 with native extensions
+Installing unf_ext 0.0.8.2 with native extensions
+Installing ffi 1.15.5 with native extensions
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: /Users/deptno/.gem/ruby/2.6.8/gems/json-2.6.2/ext/json/ext/generator
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20221031-78847-d4qa86.rb extconf.rb
+creating Makefile
+
+current directory: /Users/deptno/.gem/ruby/2.6.8/gems/json-2.6.2/ext/json/ext/generator
+make "DESTDIR=" clean
+
+current directory: /Users/deptno/.gem/ruby/2.6.8/gems/json-2.6.2/ext/json/ext/generator
+make "DESTDIR="
+compiling generator.c
+In file included from generator.c:1:
+In file included from ./../fbuffer/fbuffer.h:5:
+In file included from /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby.h:33:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/ruby.h:24:10: fatal error: 'ruby/config.h'
+file not found
+#include "ruby/config.h"
+         ^~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/ruby.h:24:10: note: did not find header
+'config.h' in framework 'ruby' (loaded from '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks')
+1 error generated.
+make: *** [generator.o] Error 1
+
+make failed, exit code 2
+
+Gem files will remain installed in /Users/deptno/.gem/ruby/2.6.8/gems/json-2.6.2 for inspection.
+Results logged to /Users/deptno/.gem/ruby/2.6.8/extensions/universal-darwin-22/2.6.0/json-2.6.2/gem_make.out
+
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:99:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:51:in `block in make'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:43:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:43:in `make'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/ext_conf_builder.rb:62:in `block in build'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/tempfile.rb:295:in `open'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/ext_conf_builder.rb:29:in `build'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:185:in `block in build_extension'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/monitor.rb:235:in `mon_synchronize'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:181:in `build_extension'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:229:in `block in build_extensions'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:226:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:226:in `build_extensions'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/installer.rb:830:in `build_extensions'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/rubygems_gem_installer.rb:71:in `build_extensions'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/rubygems_gem_installer.rb:28:in `install'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/source/rubygems.rb:204:in `install'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/installer/gem_installer.rb:54:in `install'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/installer/gem_installer.rb:16:in `install_from_spec'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/installer/parallel_installer.rb:186:in `do_install'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/installer/parallel_installer.rb:177:in `block in worker_pool'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:62:in `apply_func'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:57:in `block in process_queue'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:54:in `loop'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:54:in `process_queue'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:91:in `block (2 levels) in create_threads'
+
+An error occurred while installing json (2.6.2), and Bundler cannot continue.
+
+In Gemfile:
+  cocoapods was resolved to 1.11.2, which depends on
+    cocoapods-core was resolved to 1.11.2, which depends on
+      algoliasearch was resolved to 1.27.5, which depends on
+        json
+
+
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    current directory: /Users/deptno/.gem/ruby/2.6.8/gems/unf_ext-0.0.8.2/ext/unf_ext
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20221031-78847-fkkg4h.rb extconf.rb
+checking for -lstdc++... *** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+        --with-opt-dir
+        --without-opt-dir
+        --with-opt-include
+        --without-opt-include=${opt-dir}/include
+        --with-opt-lib
+        --without-opt-lib=${opt-dir}/lib
+        --with-make-prog
+        --without-make-prog
+        --srcdir=.
+        --curdir
+        --ruby=/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/$(RUBY_BASE_NAME)
+        --with-static-libstdc++
+        --without-static-libstdc++
+        --with-stdc++lib
+        --without-stdc++lib
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:467:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
+You have to install development tools first.
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:546:in `block in try_link0'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/tmpdir.rb:93:in `mktmpdir'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:543:in `try_link0'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:570:in `try_link'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:789:in `try_func'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:1016:in `block in have_library'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:959:in `block in checking_for'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:361:in `block (2 levels) in postpone'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:331:in `open'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:361:in `block in postpone'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:331:in `open'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:357:in `postpone'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:958:in `checking_for'
+        from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/mkmf.rb:1011:in `have_library'
+        from extconf.rb:6:in `<main>'
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/deptno/.gem/ruby/2.6.8/extensions/universal-darwin-22/2.6.0/unf_ext-0.0.8.2/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in /Users/deptno/.gem/ruby/2.6.8/gems/unf_ext-0.0.8.2 for inspection.
+Results logged to /Users/deptno/.gem/ruby/2.6.8/extensions/universal-darwin-22/2.6.0/unf_ext-0.0.8.2/gem_make.out
+
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:99:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/ext_conf_builder.rb:47:in `block in build'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/tempfile.rb:295:in `open'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/ext_conf_builder.rb:29:in `build'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:185:in `block in build_extension'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/monitor.rb:235:in `mon_synchronize'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:181:in `build_extension'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:229:in `block in build_extensions'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:226:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/ext/builder.rb:226:in `build_extensions'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/installer.rb:830:in `build_extensions'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/rubygems_gem_installer.rb:71:in `build_extensions'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/rubygems_gem_installer.rb:28:in `install'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/source/rubygems.rb:204:in `install'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/installer/gem_installer.rb:54:in `install'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/installer/gem_installer.rb:16:in `install_from_spec'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/installer/parallel_installer.rb:186:in `do_install'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/installer/parallel_installer.rb:177:in `block in worker_pool'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:62:in `apply_func'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:57:in `block in process_queue'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:54:in `loop'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:54:in `process_queue'
+  /Users/deptno/.gem/ruby/2.6.8/gems/bundler-2.3.5/lib/bundler/worker.rb:91:in `block (2 levels) in create_threads'
+
+An error occurred while installing unf_ext (0.0.8.2), and Bundler cannot continue.
+
+In Gemfile:
+  fastlane was resolved to 2.210.1, which depends on
+    faraday-cookie_jar was resolved to 0.0.7, which depends on
+      http-cookie was resolved to 1.0.5, which depends on
+        domain_name was resolved to 0.5.20190701, which depends on
+          unf was resolved to 0.1.4, which depends on
+            unf_ext
+```
+-> [[chruby]] 를 사용해서 [[ruby]] 2.7.5 버전으로 업데이트
+-> [[bundler]] 2.3.8 버전 업데이트
+-> 해결
 
 ## related
 - [[bundler]]

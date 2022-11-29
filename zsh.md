@@ -18,6 +18,7 @@ fi
 
 ## plugins
 - [[zsh-syntax-highlighting]]
+- [[kubectl]]
 
 ## alias
 ### git

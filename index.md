@@ -25,6 +25,7 @@
 - [[cors]]
 - [[response-code]]
 - [[react]]
+- [[kubernetes]]
 
 ## service
 - [[aws]]
