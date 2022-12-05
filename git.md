@@ -8,6 +8,7 @@
 - [[git-branch]]
 - [[git-commit]]
 - [[git-check-ignore]]
+- [[git-checkout]]
 - [[git-cherry-pick]]
 - [[git-clean]]
 - [[git-clone]]
