@@ -2,3 +2,4 @@
 
 ## related
 - [[flipper]]
+- [[react-native-debugger]]

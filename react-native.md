@@ -129,3 +129,4 @@ schema edit -> build -> dependency order
 - [[watchman]]
 - [[ios-deploy]]
 - [[flipper]]
+- [[react-native-debugger]]

@@ -28,6 +28,7 @@
 - [[git-status]]
 - [[git-tag]]
 - [[git-bisect]]
+- [[git-credential-manager]]
 
 ## files
 - [[path|.gitconfig]]

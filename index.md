@@ -26,6 +26,7 @@
 - [[response-code]]
 - [[react]]
 - [[kubernetes]]
+- [[debug]]
 
 ## service
 - [[aws]]
@@ -48,6 +49,9 @@
 - [[raycast]]
 - [[smartthings]]
 - [[orgmode]]
+
+## session
+- [[eks-immersion-day]]
 
 ## 삶
 - [[financial/index/financial]]

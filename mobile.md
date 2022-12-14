@@ -5,3 +5,4 @@
 - [[uri-scheme]]
 - [[react-native]]
 - [[ios-deploy]]
+- [[react-native-debugger]]
