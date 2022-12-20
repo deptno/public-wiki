@@ -50,12 +50,14 @@
 - [[smartthings]]
 - [[orgmode]]
 
+## 책
+- [[book/index|book]]
+
 ## session
 - [[eks-immersion-day]]
 
 ## 삶
 - [[financial/index/financial]]
-- [[book/index|book]]
 - [[english]]
 - [[car]]
 
