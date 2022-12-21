@@ -8,6 +8,7 @@
 ysiw"
 
 - ys i w "
+- ys i w a # < 로 감싸짐
 - ys i p "
 - ys i t "
 - ys a w "
