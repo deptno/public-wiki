@@ -42,6 +42,9 @@
 - [[xsv]]
 - [[difftastic]]
 - [[sed]]
+- [[nslookup]]
+- [[ifconfig]]
+- [[ip]]
 
 ### node
 - [[npm]]

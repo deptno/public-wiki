@@ -993,6 +993,95 @@ exec /opt/bitnami/scripts/nginx/entrypoint.sh: exec format error
 ```shell
 kdelp --all
 ```
+  - resource 보장
+    - memory 는 보장받는다 노드의 물리적인 메모리가 부족한 경우 limits 는 보장받지 못한다.
+07. 07장: 쿠버네티스 서비스 사용하기 
+  - service
+    - service 가 label selector 를 가지면 endpoint 가 자동 생성
+      - 서비스 생성 후 endpoint 확인하는 습관
+    - 내부에서 도메인 이름으로 통신
+    - clusterIp 는 cluster 내에서 유효하며 한 node 에 국한되지 않는다
+    - nodePort 는 node 가 노출하는 실제 포트로 외부 접속이 가능하다
+    - nodePort 는 clusterIp 를 바라보고 각기 다른 노드에 퍼져있는 파드의 endpoint 로 리다이렉트
+    - nodePort 는 포트 제약이 있음 30000 ~ 32767
+    - nodePort 는 모든 노드에 대해서 포트 개방이 이루어진다
+  - endpoint
+    - https://i.stack.imgur.com/BGv4C.png 이미지 참조
+    - pod 의 ip:port 로 생각하면 된다
+  - cluster 내에서는 service 이름으로 통신이 가능
+  - 접근 구조
+    - loadBalancer 외부 요청
+      - nodePort
+        - clusterIp
+          - endpoint00
+          - endpoint01
+          - endpoint02
+      - nodePort
+        - clusterIp
+          - endpoint00
+          - endpoint01
+          - endpoint02
+      - nodePort
+        - clusterIp
+          - endpoint00
+          - endpoint01
+          - endpoint02
+  - dns 
+    - coredns 이중화 파드로 동작
+      - localdns coredns 의 캐시로 daemonset 으로 동작
+    - 요청시 [service].[namespace].svc.cluster.local 형태로 전달되며 같은 namespace 인경우 [service] 만으로 통신이 가능
+    - [[../nslookup]]
+  - kube-proxy 
+    - ipvs 
+      - ipvsadm 라우팅 테이블 확인
+    - iptables
+08. 08장: MetalLB를 이용한 로드밸런서 타입 서비스 구축 
+  - metallb 버전이 0.13.x 로 진입하면서 `configInline` 설정이 각 crd 로 변경되었다.
+  - 때문에 추가적인 crd 생성이 필요
+    - IPAddressPool 사용하지 않는 ip 대역대를 잡아둔다
+    - L2Advertisement LoadBalancer 가 생성되면 arp 를 통해서 외부 접속이 가능하도록 한다
+  - [[../kubetail]] 여러 파드의 로그 보기
+  - [[../k6]] 을 활용한 부하 테스트
+  - 단절 확인, 노드 중 어떤 노드를 reboot 해도 단절이 확인 됨
+```shell
+while true; do curl -I 192.168.64.50 --silent | grep -E 'Date|OK'; sleep 1; done
+```
+```shell
+$ ssh kube02
+$$ sudo reboot 
+```
+09. 09장: Traefik을 이용한 쿠버네티스 인그레스 구축 
+  - 설치
+```
+helm repo add traefik https://traefik.github.io/charts
+helm repo update
+helm pull traefik
+# 수정 후
+helm install traefik -f values.yml .
+```
+  - 별도의 crd 인 ingressroute 를 생성해서 라우팅 한다
+  - 기본적으로 lets-encrypt 를 지원한다
+  - [ ] tls 설정을 먹이면 http 접속이 먹통이 된다
+  - 대시보드도 제공된다 9000 포트
+  - 자체 인증서를 제공할 수도 있다. **생략**
+
+
+24. 24장: 쿠버네티스 노드 변경과 추가 
+  - ubuntu server 설치 + openssh
+```shell
+vi /etc/hosts # 노드 정보 추가
+vi inventory/mycluster/hosts.yml # host 정보 추가 + node 추가
+ansible-playbook -i inventory/mycluster/hosts.yml -b facts.yml
+ansible-playbook -i inventory/mycluster/hosts.yml -b scale.yml --limit=[nodename]
+```
+
+## architecture issue
+```shell
+exec /opt/bitnami/scripts/nginx/entrypoint.sh: exec format error
+```
+실습에 사용된 특정 image 들은 arm 에서 실행이 불가능하다.  
+x86 emulation 이 필요하다.
 
 ## related
 - [[../kubernetes|kubernetes]]
+- [[../kubespray]]

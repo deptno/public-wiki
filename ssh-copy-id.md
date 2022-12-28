@@ -15,6 +15,15 @@ Now try logging into the machine, with:   "ssh '[USER]@[HOST]'"
 and check to make sure that only the key(s) you wanted were added.
 ```
 
+## error
+```
+Permission denied (publickey).
+```
+- .ssh, .ssh/* permission 확인
+- /etc/hosts 에서 아는 호스트 인지 확인, ssh/config 에 있어도 됨
+- .ssh/config User 가 제대로 설정되어있는지 확인
+- .ssh/authorized_keys 에 제대로 pub 키가 들어가있는지 확인
+
 ## releated
 - [[ssh]]
 - [[scp]]
