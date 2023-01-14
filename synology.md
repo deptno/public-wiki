@@ -54,3 +54,4 @@ DSM7
 - [[exiftool]]
 - [[synology-photos]]
 - [[ssh]]
+- [[let's-encrypt]]

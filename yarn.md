@@ -82,7 +82,7 @@ workspace tool 이 있어야지 가능
 yarn plugin import workspace-tools
 ```
 ---
-#### The remote archive doesn't match the expected checksum
+The remote archive doesn't match the expected checksum
 ```
 ➤ YN0000: │ Some peer dependencies are incorrectly met; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code
 ➤ YN0000: └ Completed in 0s 623ms
@@ -98,7 +98,13 @@ yarn plugin import workspace-tools
 $ YARN_CHECKSUM_BEHAVIOR=update yarn 
 ```
 - https://yarnpkg.com/advanced/error-codes#yn0018---cache_checksum_mismatch
-
+  + 2023-01-06
+    - 실제로 위 방식을 해보니 해결이 되지만 다른 환경에서는 에러로 인식했다. 오직 나만 다른 체크섬이 생기는 상태
+    - https://github.com/yarnpkg/berry/issues/2399
+    - version v3.3.0 이상에서 해결 -> `yarn` 으로 `yarn.lock` 업데이트가 끝난 후에는 버전을 다시 내려도 정상적으로 작동됨
+```sh 
+yarn set version 3.3.1
+```
 
 ## related
 - [[node]]

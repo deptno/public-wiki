@@ -96,7 +96,7 @@ host ALIAS
 ssh-copy-id -i ~/.ssh/id_ed25519.pub HOSTNAME
 ```
 
-## gpg
+## [[gpg]]
 > password 등록시에는 `GPG_TTY=$(tty)` 가 필요, 외에도 tmux 와 다소 충돌이 있어서 사용하지 않기로 함
 ```sh
 gpg --full-generate-key # RSA(0)
@@ -182,3 +182,4 @@ bundle exe pod install
 - [[neovim]]
 - [[macos]]
 - [[ruby]]
+- [[gpg]]

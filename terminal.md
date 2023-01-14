@@ -45,6 +45,21 @@
 - [[nslookup]]
 - [[ifconfig]]
 - [[ip]]
+- [[hostname]]
+- [[hostnamectl]]
+- [[netplan]]
+- [[dhclient]]
+- [[nc]]
+- [[calicoctl]]
+- [[brctl]]
+- [[setcaps]]
+- [[authbind]]
+- [[alias]]
+- [[nmcli]]
+
+### file
+/etc/netplan
+/etc/sudoers
 
 ### node
 - [[npm]]

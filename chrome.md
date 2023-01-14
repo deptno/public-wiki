@@ -4,6 +4,8 @@
 |-----------------|---------|
 |                 |         |
 
+chrome://inspect/#devices
+
 ## related
 - [[browser|브라우저]]
-
+- [[node]]
