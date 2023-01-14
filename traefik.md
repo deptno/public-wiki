@@ -42,6 +42,9 @@ kubectl port-forward $(kubectl get pods --selector "app.kubernetes.io/name=traef
     - cert-manager 로 달성 가능
     
 ## tls
+
+tls 는 잘안되다가 자고 일어나니 되는 경향이 있어서 시간을 좀 가질 필요도 있다. 인증서 발급에 걸리는 시간으로 보임
+
 + https://doc.traefik.io/traefik/https/acme/#providers
 + https://doc.traefik.io/traefik/user-guides/crd-acme/
   - default 8000/8443
@@ -58,6 +61,12 @@ kubectl port-forward $(kubectl get pods --selector "app.kubernetes.io/name=traef
       port: 4443
 ```
 + https://traefik.io/blog/install-and-configure-traefik-with-helm/
+
+### [[synology]] nas
+dsm 7 기준
+제어판 -> 로그인 포털 -> `자동으로 HTTP 연결을 DSM 데스크톱의 HTTPS 로 리디렉션`
+을 해제하고 headless service 의 80 -> 5000(DSM 데스크톱 기본 포트) 로 연결하여 새로 발행한 인증서로 사용해야한다.
+
 ## error
 ```sh 
  tls: client offered only unsupported versions: [301]
@@ -336,3 +345,4 @@ ingress 를 수정해서 tls 프로세스를 밟 을 수 있도록 하면 접근
 - [[ingress]]
 - [[let's-encrypt]]
 - [[service]]
+- [[synology]]
