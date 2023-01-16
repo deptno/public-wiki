@@ -338,6 +338,9 @@ k[traefik-5b88b748d-ddhp5] time="2023-01-14T06:52:25Z" level=debug msg="Serving 
       --certificatesresolvers.letsencrypt.acme.tlsChallenge=true
 ```
 ingress 를 수정해서 tls 프로세스를 밟 을 수 있도록 하면 접근이 가능하다
+
+## CRD: IngressRoute 
+IngressRoute 는 참조할 service 가 있는 영역에 생성한다.
   
 ## related
 - [[kubernetes]]

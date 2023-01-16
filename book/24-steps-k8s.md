@@ -1064,10 +1064,40 @@ helm install traefik -f values.yml .
   - [ ] tls 설정을 먹이면 http 접속이 먹통이 된다
   - 대시보드도 제공된다 9000 포트
   - 자체 인증서를 제공할 수도 있다. **생략**
+10. 10장: 쿠버네티스 스토리지 
+  - [[../openebs|openebs]] 설치
+    - openebs-device - mount 되지 않은 device 를 사용
+    - openebs-hostpath - 특정 hostpath 를 사용
+    - pvc 생성
+```yaml
+apiVersion: v1
+kind: persistentVolumeClaim
+metadata:
+  name: default-pvc
+  namespace: default
+spec:
+  accessModes:
+  - ReadWriteOnce
+  volumeMode: FileSystem
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: "openebs-hostpath"
+```
+    - reclaim 정책이 기본으로 delete 라 pv 는 pvc 와 함께 제거됨
+    - kubestr 통한 iops 측정
 
+11. 11장: 스토리지 볼륨 스냅샷 사용하기 
+  - todo:
+12. 12장: 쿠버네티스 환경에서 공유 파일 스토리지 사용하기 
+  - todo:
+13. 13장: 하버를 이용한 로컬 컨테이너 이미지 저장소 구축 
+  - 컨테이너 레지스트리
+  - helm 설치
 
 24. 24장: 쿠버네티스 노드 변경과 추가 
   - ubuntu server 설치 + openssh
+  - helm chart 설치
 ```shell
 vi /etc/hosts # 노드 정보 추가
 vi inventory/mycluster/hosts.yml # host 정보 추가 + node 추가

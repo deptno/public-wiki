@@ -27,6 +27,7 @@
 - [[react]]
 - [[kubernetes]]
 - [[debug]]
+- [[postgresql]]
 
 ## service
 - [[aws]]
@@ -60,6 +61,7 @@
 - [[financial/index/financial]]
 - [[english]]
 - [[car]]
+- [[2023]]
 
 ## 장비
 - [[microsoft-designer-compact-keyboard|마이크로스프트 디자이너 컴팩트 키보드]]
