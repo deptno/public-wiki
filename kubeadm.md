@@ -102,6 +102,9 @@ keno
 ```
 
 swapoff 는 아래 명령어를 통해서 확인 가능하며 `sudo swapoff -a` 를 하면 리스트에 보이지 않는 것으로 확인이 가능하다
+- `cat /etc/swaps`
+- `free -h`
+- `blkid`
 ```sh 
 $ cat /proc/swaps
 Filename                                Type            Size          Used             Priority
