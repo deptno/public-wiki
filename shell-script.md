@@ -22,5 +22,21 @@ do
 done
 ```
 
+문자열 안에서 변수를 참조할 때 문자열은 홋 따옴표가 아닌 쌍따옴표여야 한다
+```
+touch script.sh
+chmod +x script.sh
+cat <<EOF > script.sh
+echo $1
+echo "helll $1"
+EOF
+$ script.sh arg1
+arg1
+arg1
+```
+
 ## shell
+- [[terminal]]
 - [[zsh]]
+- [[sed]]
+- [[tr]]

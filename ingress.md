@@ -6,3 +6,4 @@
 - [[kubernetes]]
 - [[traefik]]
 - [[service]]
+- [[forward-auth]]

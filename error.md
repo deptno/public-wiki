@@ -37,3 +37,40 @@ stack traceback:
         [string ":lua"]:1: in main chunk
 
 ```
+
+## too many open files
++ https://github.com/grafana/loki/issues/1153
+- [[kubernetes]]
+- [[promtail]]
+```sh
+level=error ts=2023-01-23T18:00:42.109504938Z caller=main.go:167 msg="error creating promtail" error="failed to make file target manager: too many open files"
+```
+  - [ ] host
+    - process 수정
+      process에 ulimit 설정으로 해결되지 않는 것으로 보임
+```sh 
+$ ps -ef | grep promtail
+deptno   4048974 4046594  0 17:47 pts/2    00:00:00 grep --color=auto promtail
+$ prlimit --nofile --output RESOURCE,SOFT,HARD --pid 4046594
+RESOURCE SOFT    HARD
+NOFILE   1024 1048576
+$ prlimit --nofile=4096 --pid 4046594
+$ prlimit --nofile --output RESOURCE,SOFT,HARD --pid 4046594
+RESOURCE SOFT HARD
+NOFILE   4096 4096
+```
+    - runtime 수정(docker, containerd 설정 /etc/docker/datmon.json, containerd 는 없는 것으로 보임)
+    - /etc/security/limits.conf 수정 -> 리붓, 적용을 안해봐서 파일 수정만으로는 일단 안되는 것 확인
+  - [X] container
+    initContainer 로 fs.inotify.max_user_instances 값을 128->512 변경으로 성공
+```yaml
+initContainer:
+ - name: init
+   image: docker.io/busybox:1.33
+   command:
+     - sh
+     - -c
+     - sysctl -w fs.inotify.max_user_instances=512
+   securityContext:
+     privileged: true
+```

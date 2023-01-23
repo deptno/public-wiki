@@ -341,7 +341,39 @@ ingress 를 수정해서 tls 프로세스를 밟 을 수 있도록 하면 접근
 
 ## CRD: IngressRoute 
 IngressRoute 는 참조할 service 가 있는 영역에 생성한다.
-  
+
+## error
+`LOG_LEVEL=trace` 를 환경변수로 주입해서 middleware 를 띄우고 로그를 확인
+### Error calling http
+- traefik pod log
+```sh
+time="2023-01-21T17:28:46Z" level=debug msg="Error calling http://forward-auth-google. Cause: Get \"http://forward-auth-google
+\": dial tcp: lookup forward-auth-google on 10.96.0.10:53: no such host" middlewareType=ForwardedAuthType middlewareName=test-
+forward-auth-google@kubernetescrd
+```
+- middleware pod 에 로그가 안찍히는 경우
+  traefik -> middleware 접근이 안되는 경우로 traefik, middleware 가 각기 다른 namespace에 존재할 때 발생
+  - traefik 에서 crossname 를 허용
+  - [X] forward-auth-google.[namespace] 를 통해서 접근하도록 설정
+- 로그인 후 서비스로 가지못하고 계속 로그인으로 리다이렉팅 되는 이슈
+  - 이미지 교체 `2.2.0` -> `latest`
+    + https://github.com/thomseddon/traefik-forward-auth/issues/198#issuecomment-902513612
+### Authenticating request
+```sh 
+time="2023-01-21T16:43:54Z" level=debug msg="Authenticating request" cookies="[]" handler=Auth host= method= proto= rule=defau
+lt source_ip= uri=
+time="2023-01-21T16:43:52Z" level=debug msg="Set CSRF cookie and redirected to provider login url" csrf_cookie="_forward_auth_
+csrf=e020b6a2d282deed96185016aea24fcf; Path=/; Expires=Sun, 22 Jan 2023 04:43:52 GMT; HttpOnly" handler=Auth host= login_url="
+```
+- `insecure_cookie=true` 제거로 해결되는 것으로 보임
+---
+```text
+400 오류: redirect_uri_mismatch
+```
+secret 에서 개행 제거하고 나서 나오기 시작
+---
+middleware 의 namespace 와 관계없이 ingressroute 의 namespace 를 보는 것 같다
+middleware.forwardAuth 를 설정할때 namespace 를 명시한다
 ## related
 - [[kubernetes]]
 - [[diary/2023-01-08]]
@@ -349,3 +381,4 @@ IngressRoute 는 참조할 service 가 있는 영역에 생성한다.
 - [[let's-encrypt]]
 - [[service]]
 - [[synology]]
+- [[forward-auth]]

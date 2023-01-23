@@ -14,7 +14,6 @@ curl 'http://192.168.0.222/api/xxx/lights/2/state' \\
   --data-raw '{"on":false}' \\
   --compressed \\
   --insecure
-
 ```
 
 ## options

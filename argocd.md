@@ -7,6 +7,21 @@
   - 각 헬름 자체는 해당 네임스페이스에 설치 될 것으로 생각됨
 - argocd cli 존재
 
+## install
+argocd 는 아직 helm chart 를 공식적으로 지원하지 않음, 때문에 manifest 를 통한 설치
+```sh
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+brew install argocd
+```
+
+## error
+- traefik tls termination
+  + https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#traefik-v22
+  - `argocd-server --insecure` 옵션으로 서버를 실행하고 IngressRoute 에서 tls 를 termination
+
 ## related
 - [[kubernetes]]
 - [[git]]
+- [[traefik]]

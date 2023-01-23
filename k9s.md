@@ -7,21 +7,32 @@ brew install k9s
 
 vim 에서와 같이 `:` 로 이동이 가능하다.
 
-| command | description             |
-| ------- | ----------------------- |
-| :q      | 종료                    |
-| :dp     | deployment              |
-| :svc    | service                 |
-| :sec    | secret                  |
-| :ns     | namespace               |
-| :po     | pod                     |
-| :pv     | persistent volume       |
-| :pvc    | persistent volume clame |
-| :cm     | config map              |
+| command             | description                          |
+| -------             | -----------------------              |
+| :q                  | 종료                                 |
+| :dp                 | deployment                           |
+| :svc                | service                              |
+| :sec                | secret                               |
+| :ns                 | namespace                            |
+| :po                 | pod                                  |
+| :pv                 | persistent volume                    |
+| :pvc                | persistent volume clame              |
+| :cm                 | config map                           |
+| :pu[lses]           | show graph                           |
+| :popeye             | show [[popeye]]                      |
+| :xray [type] [name] | show hierachy                        |
+| :sd                 | show dumps (log 에서 ctrl-s 로 저장) |
+
+- `:secret` -> `x` decrypt
 
 ## skin
 `$XDG_CONFIG_HOME/k9s/[context]_skin.yml` 위치에 파일을 만들고 skin 설정을 적용하면 해당 컨텍스트의 스킨이 적용된다.
 
+## plugin
+- [[metrics-server]] 를 설치하면 노드에 cpu, mem, pod 등의 정보를 얻어올 수 있다
+
 ## related
 - [[kubernetes]]
 - [[lens]]
+- [[metrics-server]]
+- [[popeye]]

@@ -29,7 +29,7 @@ kube-system   kube-proxy-qjdrl                          1/1     Running   8 (24m
 kube-system   kube-scheduler-pi0                        1/1     Running   792 (52m ago)     2d13h
 ```
 재시작을 보면 알겠지만 엄청나다
-kube-* pods 들과 kubelet 이 계속 내려갔는데 /etc/containerd/config.toml 이 직접적인 영향을 미쳤다.
+`kube-*` pods 들과 kubelet 이 계속 내려갔는데 /etc/containerd/config.toml 이 직접적인 영향을 미쳤다.
 kubelet 은 containerd 설정이 완전히 마쳐지면 kubeadm 통해서 실행해야한다. `systemctl status kubelet.service` 의 보이는 환경변수들이 없는 경우
 `ufw` 는 pi2 에 enable 되어있으나 정상적으로 동작중이다. 모니터링을 해당 것을 enable 처리 유지중이다 - kubespray 에서는 disable 권장
 - [ ] TODO: etcd 다중화
@@ -51,6 +51,7 @@ sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 
 # off swap
+# +2023-01-24 TODO: [[sed]] 는 부팅시 스왑 파티션 마운트를 막으려는 것 같지만 현재 맞지 않는 것으로 보임 아래 swap 을 처리해야 할 것으로 보임
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 sudo swapoff -a
 
@@ -100,6 +101,12 @@ helm install traefik traefik/traefik -n traefik
 keno
 ```
 
+swapoff 는 아래 명령어를 통해서 확인 가능하며 `sudo swapoff -a` 를 하면 리스트에 보이지 않는 것으로 확인이 가능하다
+```sh 
+$ cat /proc/swaps
+Filename                                Type            Size          Used             Priority
+/swap.img                               file            8388604       0-2
+```
 taint 를 제거해서 스케쥴 가능하게 만들면 traefik 파드가 뜨는데 성공한다
 ```yaml
   taints:
@@ -576,9 +583,28 @@ kubectl get configmap kubeadm-config -n kube-system
   - [ ] 해당 내용에 따르면 내용과 별 관련이 없다 해당 내용은 저장을 위한 것인지 아니면 혹시 renew 단계에서 에러를 일으키는 것인지 renew 로 테스트가 필요하다
 + https://blog.dudaji.com/kubernetes/2020/04/08/add-ip-to-kube-api-cert.html
   - 해당 링크에는 `kubeadm-config` 를 함께 수정한다
+  
+## reboot|재부팅 
+재부팅 후에는 kubectl 을 통해서 접근이 되지 않는다.
+```sh 
+systemctl status kubelet
+```
+을 보면 active 상태가 아닌 것을 확인할 수 있다  
+단순히 아래 커맨드로 복구가 가능하다
+```sh
+sudo sysctl --system
+```
+다만 영구적 설정이 되지 않는 경우에는 해당 커맨드를 재 실행해줘야한다
 
+예를 들어 /etc/fstab 에 swap mount 가 있어서 재부팅마다 swap 이 살아난다면 아래와 같이 처리해야한다
+```sh 
+$ cat /proc/swaps
+# 결과가 있는 경우
+$ sudo swapoff -a
+```
+- [ ] TODO: 자동화
 
-## related
+## [[related]]
 - [[raspberry-pi]]
 - [[kubelet]]
 - [[crictl]]

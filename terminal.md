@@ -56,6 +56,7 @@
 - [[authbind]]
 - [[alias]]
 - [[nmcli]]
+- [[tr]]
 
 ### file
 /etc/netplan

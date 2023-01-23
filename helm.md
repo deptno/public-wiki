@@ -18,5 +18,15 @@ helm delete [chart-name] # 차트 삭제
 helm get manifest [chart-name] # 설치 정보
 ```
 
+- example
+```se 
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo search prometheus-community
+helm pull prometheus-community/kube-prometheus-stack --untar
+# git add kube-prometheus-stack -m "add helm chart: kube-prometheus-stack"
+# vim kube-prometheus-stack/values.yaml
+helm upgrade prometheus kube-prometheus-stack --install --create-namespace -n prometheus [-f values.yaml]
+```
+
 # related
 - [[kubernetes]]
