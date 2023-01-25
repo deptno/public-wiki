@@ -7,3 +7,4 @@ v0.13.7
 
 ## related
 - [[kubernetes]]
+- [[kube-vip]]

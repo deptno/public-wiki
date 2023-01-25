@@ -21,3 +21,4 @@ $ ssh [HOST_NAME_ALIAS]
 ## related
 - [[scp]]
 - [[ssh-copy-id]]
+- [[ssh-keygen]]

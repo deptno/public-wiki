@@ -1,6 +1,8 @@
 # podman
 
-[[docker]] 의 oci 버전
+- [[docker]] 의 oci 버전
+- docker 와 달리 daemon 이 없다
+- docker 명령어와 호환 -> `alias docker=podman`
 
 ## command
 ```sh 

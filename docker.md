@@ -20,3 +20,4 @@ docker pull --platform [linux/amd64] [image-name]
 
 ## related
 - [[kubernetes]]
+- [[podman]]

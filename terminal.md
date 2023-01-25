@@ -13,6 +13,7 @@
 - [[bc]]
 - [[expr]]
 - [[ssh]]
+- [[ssh-keygen]]
 - [[faketime]]
 - [[valgrind]]
 - [[scp]]

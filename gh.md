@@ -11,6 +11,8 @@ gh pr list -S HASH -s merged
 gh pr list -S --draft=true # 드래프트인 pr만 노출
 gh pr list -S 'draft:false' # 드래프트가 아닌 pr만 보여준다
 gh pr list -S 'draft:false' -s merged
+gh dash # dashboard
+gh actions # action 관련 명령어
 ```
 
 ## 다중 계정
