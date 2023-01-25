@@ -50,6 +50,8 @@
 - [[raycast]]
 - [[smartthings]]
 - [[orgmode]]
+- [[mermaid]]
+- [[planuml]]
 
 ## 책
 - [[book/index|book]]
