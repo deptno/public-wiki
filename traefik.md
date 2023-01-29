@@ -376,7 +376,7 @@ middleware 의 namespace 와 관계없이 ingressroute 의 namespace 를 보는 
 middleware.forwardAuth 를 설정할때 namespace 를 명시한다
 ## related
 - [[kubernetes]]
-- [[diary/2023-01-08]]
+- [[diary:2023-01-08]]
 - [[ingress]]
 - [[let's-encrypt]]
 - [[service]]

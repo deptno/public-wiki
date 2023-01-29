@@ -100,7 +100,7 @@ EventListener > TriggerBinding > TriggerTemplate > PipelineRun > Pipeline > Task
 - [ ] results 실행 결과?
 
 ---
-- [[diary/2023-01-19]] 
+- [[diary:2023-01-19]] 
 - tutorial
   + https://tekton.dev/docs/how-to-guides/clone-repository/
     - `tkn hub install task git-clone` 에러가 나므로 `kubectl apply -f` 를 통한 직접 설치가 필요 2023-01-20 
