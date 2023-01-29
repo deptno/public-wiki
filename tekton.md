@@ -7,12 +7,17 @@
 ## 구조
 ```mermaid
 erDiagram
-  EXTERNAL-EVENT ||--|| EventListener : receive-from-external-event
+  EXTERNAL-EVENT ||--|| Service : receive-from-external-event
+  Service ||--|| EventListener : ""
+  EventListener ||--|{ TriggerGroups : ""
+  TriggerGroups ||--|{ Trigger: "by selector"
   Trigger ||--|| TriggerTemplate : ref-or-embed
-  Trigger ||--o{ TriggerBinding : optional
+  Trigger ||--o{ TriggerBinding : ""
+  Trigger ||--o{ Interceptor : ""
+  Interceptor ||--o{ TriggerBinding : "modify, filter, validate"
   Trigger ||--o| ServiceAccount : ref
-  EXTERNAL-EVENT ||--|| TriggerBinding : implicit-ref-body
-  EventListener ||--|{ Trigger : ""
+  EventListener ||--o{ TriggerBinding : "implicit ref event as body"
+  EventListener ||--o{ Interceptor : "implicit ref event as body"
   TriggerTemplate ||--|{ PipelineRun : embed
   EventListener ||--|| ServiceAccount : ref
   PipelineRun ||--o| ServiceAccount : ref
@@ -38,9 +43,9 @@ erDiagram
     ServiceAccount serviceAccountName
   }
   Resource {
-    kubernetesResource a
-    customResource a
-    kubernetesResource a
+    kubernetesResource o
+    customResource o
+    kubernetesResource o
   }
 ```
 
@@ -165,18 +170,153 @@ secrets:
 tekton hub 에 있는 `git-clone` task 로 확인 DONE: 2023-01-24
 
 ## 구현
-### github 연동
-- support github private repository
+### trigger 를 통한 github private 레포지터리 클론 파이프라인 실행
+`ssh-github` 아래와 같은 형태
+```
+Name:         ssh-github-deptno
+Namespace:    project-things
+Labels:       <none>
+Annotations:  tekton.dev/git-0: github.com
 
-예상 개념
-1. pipeline 생성
-2. task 생성 -> pod 화됨
-  - tekton hub 에서 검색
-  - 없으면 task 생성
-    - task(pod) 는 step(container)으로 구성
-3. event 정의
-4. event -> pipelinerun 실행 + service account 주입
-  - kubernetes 쪽에서 미리 어카운트 생성 및 권한 주입
+Type:  kubernetes.io/ssh-auth
+
+Data
+====
+ssh-privatekey:  411 bytes
+```
+
+`git-clone` task 는 hub에서 설치했다
+  + https://hub.tekton.dev/tekton/task/git-clone
+
+```sh 
+apiVersion: v1 
+kind: ServiceAccount
+metadata:
+  name: tt-sa
+secrets:
+  - name: ssh-github # `sh-privatekey` 를 데이터로 갖는다
+---
+apiVersion: rbac.authorization.k8s.io/v1 
+kind: RoleBinding
+metadata:
+  name: tt-rb
+  namespace: project-things
+subjects:
+- kind: ServiceAccount
+  name: tt-sa
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: tekton-triggers-eventlistener-roles
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: tt-crb
+subjects:
+- kind: ServiceAccount
+  name: tt-sa
+  namespace: project-things
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: tekton-triggers-eventlistener-clusterroles
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: EventListener
+metadata:
+  name: tt-ev
+spec:
+  serviceAccountName: tt-sa
+  triggers:
+  - triggerRef: tt-tr
+  resources:
+    kubernetesResource:
+      serviceType: ClusterIP
+      servicePort: 80
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: Trigger
+metadata:
+  name: tt-tr
+spec:
+  bindings:
+  - ref: tt-tb
+  template:
+    ref: tt-tt
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: TriggerBinding
+metadata:
+  name: tt-tb
+spec:
+  params:
+  - name: url
+    value: $(body.url)
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: TriggerTemplate
+metadata:
+  name: tt-tt
+spec:
+  params:
+  - name: url
+  resourceTemplates:
+  - apiVersion: tekton.dev/v1beta1
+    kind: PipelineRun
+    metadata:
+      generateName: tt-tt-pr
+    spec:
+      serviceAccountName: tt-sa
+      pipelineRef:
+        name: tt-pl
+      params:
+      - name: repo-url
+        value: $(tt.params.url)
+      workspaces:
+      - name: shared-data
+        emptyDir: {}
+---
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: tt-pl
+  namespace: project-things
+spec:
+  description: clone git repository
+  params:
+  - name: repo-url
+    type: string
+    description: https://github.com/[username]/[reponame].git
+  workspaces:
+  - name: shared-data
+    description: working directory
+  tasks:
+  - name: fetch-source
+    taskRef:
+      name: git-clone
+    params:
+    - name: url
+      value: $(params.repo-url)
+    workspaces:
+    - name: output
+      workspace: shared-data
+```
+
+- 실행
+```sh 
+$ curl -X POST \                                                                                                                                               ok  4s  16.15.0 node  1.59.0 rust  01:12:56
+  http://localhost:8080 \
+  -H 'Content-Type: application/json' \
+  -d '{ "url": "git@github.com:deptno/private-repo.git" }'
+{"eventListener":"tt-ev","namespace":"project-things","eventListenerUID":"54001b1f-1859-48a3-802b-d220a954f23c","eventID":"19375452-32d1-4650-aa03-beb73f7f7538"}
+$ tkn pr logs                                                                                                                                                      ok  16.15.0 node  1.59.0 rust  01:13:07
+? Select pipelinerun: tt-tt-prkbpb2 started 1 second ago
+Pipeline still running ...
+task fetch-source has failed: "step-clone" exited with code 1 (image: "gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init@sha256:28ff94e63e4058afc3f15b4c11c08cf3b54fa91faa646a4bbac90380cd7158df"); for logs run: kubectl -n project-things logs tt-tt-prkbpb2-fetch-source-pod -c step-clone
+
+[... logs]
+```
 
 ## error
 pipelinerun 을 통해서 pod 생성 후 계속 pending 상태라 보니 pvc 가 바운드되지 않는 문제
@@ -204,7 +344,19 @@ Events:
         storageClassName: openebs-hostpath
 ```
 + https://tekton.dev/docs/pipelines/workspaces/#using-persistent-volumes-within-a-pipelinerun
-
+---
+```sh 
+{
+    "severity": "fatal",
+    "timestamp": "2023-01-28T08:55:54.927Z",
+    "logger": "eventlistener",
+    "caller": "v2/main.go:205",
+    "message": "Start returned an error",
+    "error": "Timed out waiting on CaBundle to available for clusterInterceptor: Timed out waiting on CaBundle to available for Interceptor: clusterinterceptors. triggers.tekton.dev is forbidden: User \"system:serviceaccount:project-things:default\" cannot list resource \"clusterinterceptors\" in API group \"triggers.tekton.dev\" at the cluster scope"
+}
+```
+account 에 tekton에서 제공하는 ClusterRole, Role 이 제대로 되어 있는지 확인한다
+  + https://github.com/tektoncd/triggers/blob/main/examples/rbac.yaml
 ## releated
 - [[kubernetes]]
 - [[metrics-server]]

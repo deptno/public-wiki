@@ -63,6 +63,7 @@
 - [[financial/index/financial]]
 - [[english]]
 - [[car]]
+- [[ev]]
 - [[2023]]
 
 ## 장비
