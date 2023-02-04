@@ -4,6 +4,12 @@
 - init container
   설정을 위해 선실행되고 종료되는 컨테이너
   + https://kubernetes.io/ko/docs/concepts/workloads/pods/init-containers/
+## cronjob
+
+| 분 시 일 월 요일 |            |
+|------------------|------------|
+| `*/2 * * * *`    | 매 2분마다 |
+
 ## secret
 echo 를 사용하면 newline `\n` 이 붙게된다.
 - `echo -n` 을 사용
