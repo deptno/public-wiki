@@ -6,6 +6,19 @@
 brew install --cask docker 
 ```
 
+## arg vs env
+```Dockerfile
+ARG JS
+
+COPY ./$JS ./packages/$JS
+CMD node $JS
+```
+둘다 $JS 로 표현되고 있지만 사용되는 구문에 따라 ARG 가 참조될지 ENV 가 참조될지 결정된다
+
+- arg
+  - build time 에 사용되므로 COPY 등 이미지가 만들어지는 타이밍에 사용된다
+- env
+  - runtime 에 사용된된다. `CMD` 가 실행되는 타이밍은 runtime 이므로 env가 참조된다
 ## build
 ```sh
 docker build . -f [Dockerfile.custom]
