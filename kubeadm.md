@@ -597,6 +597,9 @@ systemctl status kubelet
 ```sh
 sudo sysctl --system
 ```
+- 2023-02-02 update
+  복구가 되지 않았고 `kubeadm init` 을 다시 해보았으나 swap 파티션을 이유로 뜨지 않았다
+  swap 파티션을 내리고 init 을 해도 되었을 것으로 생각되나 swap 파티션이 부팅시 뜨지 않게 한 후 reboot 을 하면 kubelet 이 정상적으로 부팅시에 시작된다
 다만 영구적 설정이 되지 않는 경우에는 해당 커맨드를 재 실행해줘야한다
 
 예를 들어 /etc/fstab 에 swap mount 가 있어서 재부팅마다 swap 이 살아난다면 아래와 같이 처리해야한다
@@ -605,7 +608,9 @@ $ cat /proc/swaps
 # 결과가 있는 경우
 $ sudo swapoff -a
 ```
-- [ ] TODO: 자동화
+- [X] DONE: 2023-02-02 자동화
+  - /etc/fstab 을 수정해서 swap 파티션이 뜨지 않도록 설정하면 리붓후 알아서 kubelet 이 뜬 것을 확인할 수 있다.
+
 
 ## [[related]]
 - [[raspberry-pi]]

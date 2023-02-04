@@ -58,6 +58,7 @@
 - [[alias]]
 - [[nmcli]]
 - [[tr]]
+- [[blkid]]
 
 ### file
 /etc/netplan

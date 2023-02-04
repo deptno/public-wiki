@@ -5,6 +5,7 @@ javascript runtime
 ## options
 --max-old-space-size
 --max-new-space-size
+--require
 
 ## [[error]]
 ### ECONNRESET

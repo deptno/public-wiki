@@ -6,6 +6,9 @@
 
 chrome://inspect/#devices
 
+## headless
+
 ## related
 - [[browser|브라우저]]
 - [[node]]
+- [[puppeteer]]

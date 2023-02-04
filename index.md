@@ -19,6 +19,7 @@
 - [[benchmark]]
 - [[codesign]]
 - [[node]]
+- [[nodejs]]
 - [[load-test|부하테스트]]
 - [[encoding]]
 - [[terraform]]
@@ -28,6 +29,7 @@
 - [[kubernetes]]
 - [[debug]]
 - [[postgresql]]
+- [[vite]]
 
 ## service
 - [[aws]]

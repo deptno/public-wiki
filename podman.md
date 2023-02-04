@@ -48,8 +48,17 @@ following command in your terminal session:
 
 Machine "start" started successfully
 ```
-
+## error
+### Error: failed to connect: dial tcp [::1]:61310: connect: connection refused
+```sh 
+$ podman run -ti fathyb/carbonyl https://youtube.com                                                         127 err  16.15.0 node  17:46:50
+Error: failed to connect: dial tcp [::1]:61310: connect: connection refused
+```
+---
+### docker build 보다 느림
+graph driver 에 대한 검색 결과가 노출되고 있음, docker 를 쓰는게 지금 마음이 편함
 
 ## related
 - [[docker]]
 - [[kubernetes]]
+- [[harbor]]
