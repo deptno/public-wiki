@@ -5,6 +5,7 @@
 :messages
 ```
 
+## [[font]] 설정
 ## 열기 옵션
 ```sh
 $ vim -c "24" file.txt
