@@ -6,6 +6,7 @@ javascript runtime
 --max-old-space-size
 --max-new-space-size
 --require
+--enable-source-maps
 
 ## [[error]]
 ### ECONNRESET

@@ -26,3 +26,5 @@ Error: net::ERR_NETWORK_CHANGED at https://example.com
 ## related
 - [[chrome]]
 - [[calico]]
+- [[kubernetes]]
+- [[pod]]

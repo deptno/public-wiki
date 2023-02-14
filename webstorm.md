@@ -4,6 +4,17 @@
   virtual text 와 같은 형태로 ghost 처럼 타입등의 힌트를 보여주는 기능
 - `shift`x2 `Create Command Line Launcher` -> OK
 
+## typescript
+### auto import
+[[yarn]] [[monorepo]] 에서 auto import 시에 타겟 모듈의 package.json.main 을 존중하지 않는 경우라면 해당 모듈의 `tsconfig.json` 에
+`baseUrl` 을 수정한다
+```json
+  "baseUrl": "./src"
+```
+
+## plugin
+[[intellij|##plugin]] 참조
+
 ## [[error]]
 
 ```sh

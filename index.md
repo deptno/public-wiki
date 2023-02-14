@@ -30,6 +30,7 @@
 - [[debug]]
 - [[postgresql]]
 - [[vite]]
+- [[random]]
 
 ## service
 - [[aws]]
@@ -38,6 +39,8 @@
 - [[jira]]
 - [[domain]]
 - [[serverless]]
+- [[datadog]]
+- [[slack]]
 
 ## os
 - [[macos]]

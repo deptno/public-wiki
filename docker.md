@@ -19,6 +19,12 @@ CMD node $JS
   - build time 에 사용되므로 COPY 등 이미지가 만들어지는 타이밍에 사용된다
 - env
   - runtime 에 사용된된다. `CMD` 가 실행되는 타이밍은 runtime 이므로 env가 참조된다
+  
+- **주의** 해야할 점은 사용을 해보니 `FROM` 절 전/후의 `ARG` 사용 용도가 다르다
+  - `FROM` **전**의 `ARG` 는 `FROM` 절에서 사용 가능하다
+  - `FROM` **전**의 `ARG` 는 `FROM` 후의 절에서 **사용 가능하지 않다**
+  - `FROM` **후**의 `ARG` 는 `FROM` 이 후 절에서 사용 가능하다
+  - `FROM` **후**의 `ARG` 는 `FROM` 절에서 **사용 가능하지 않다**
 ## build
 ```sh
 docker build . -f [Dockerfile.custom]
@@ -55,6 +61,22 @@ Error: building at STEP "RUN yarn --immutable": while running runtime: exit stat
 ```sh 
 [Warning] one or more build args were not consumed: [TARGETARCH TARGETOS TARGETPLATFORM]
 ```
+### `COPY packages ./packages` 컨텐츠 변경에도 캐시가 유지되는 문제
+```Dockerfile
+COPY packages ./packages
+```
+폴더안의 새로운 폴더가 생성되었음에도 불구하고 레이어가 캐시되는 문제가 있다.
+### `failed to solve with frontend dockerfile.v0: failed to create LLB definition: no build stage in current context`
+둘 중 하나 확인못함
+- [X] ENV 는 FROM 전에 갈수 없다
+  + https://qiita.com/kaizen_nagoya/items/1e8311a0ccda1413ef10
+- [ ] ARG 를 잘못 쓴 것으로 보인다
+- [ ] build 중 ctrl+c 로 취소하면서 문제가 생긴 것으로 보인데 빌드되다만 이미지를 삭제한다
+  - Docker desktop -> 우상단의 debug 아이콘 -> Clean / Purge data
+---
+### `ERROR [internal] load metadata for [image]:[tag]`
+`FROM` 절에서 참조할 수 없는 이미지를 참조한 경우
+
 
 ## related
 - [[kubernetes]]

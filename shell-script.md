@@ -35,6 +35,16 @@ arg1
 arg1
 ```
 
+## 조건문
+```
+if [ ! -z "$ENV_VAR"]
+then
+  echo $ENV_VAR
+elif
+  echo "empty"
+fi
+```
+
 ## shell
 - [[terminal]]
 - [[zsh]]

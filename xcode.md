@@ -87,8 +87,24 @@ info Run CLI with --verbose flag for more details.
 ```sh
 rm -rf ~/Library/Developer/Xcode/DerivedData/*
 ```
+### ld: symbol(s) not found for architecture x86_64
+시뮬레이터에서만 발생하고 실기기에서는 발생하지 않는다
+```sh
+❌  ld: symbol(s) not found for architecture x86_64
+❌  clang: error: linker command failed with exit code 1 (use -v to see invocation)
+error Failed to build iOS project. We ran "xcodebuild" command but it exited with error code 65. To debug build logs further, consider building your app with Xcode.app, by opening ZigbangApp.xcworkspace.
+info Run CLI with --verbose flag for more details.
+```
 
-# related [[ios]]
+terminal 이 arm 으로 실행된 경우
+- simulator 를 [[x86_64]] architecture 로 실행한다
+  ```sh 
+  arch x86_64 react-native run ios --simulator
+  ```
+- xcode 에서 Pods 의 `Build Settings` -> `Build Active Architectures Only` -> `Debug` -> `Any iOS Simulator SDK`에 `arm64` 값을 추가한다
+
+# related
+- [[ios]]
 - [[bundler]]
 - [[react-native]]
 - [[cocoapods]]

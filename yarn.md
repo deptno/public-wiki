@@ -107,6 +107,9 @@ yarn config set nodeLinker node-modules
 ```
 - nodeLinker: 를 통해 node_modules pnp 에서도 사용 가능하다.
 `node_modules` 이 없으면 2022-03-14 현재도 [[webstorm]] 에서 제대로 사용이 불가능하다.
+  + 2023-02-13 현재는 nodeLinker 없이 사용 가능 
+  
+[[ci]]
 
 
 ### nohoist
@@ -162,3 +165,4 @@ yarn set version 3.3.1
 ## related
 - [[node]]
 - [[npm]]
+- [[ci]]

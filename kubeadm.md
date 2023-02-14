@@ -2,7 +2,9 @@
 
 + https://kubernetes.io/docs/reference/setup-tools/kubeadm/
 
-k8s cluster 생성
+- [ ] TODO: kubeadm certs check-expiration [[diary:2024-01-01]]
+
+## k8s cluster 생성
 
 최종적으로는 성공한 스펙은 아래와 같다
 - control-plane 1 : arm64 raspberry-pi 4 4gb

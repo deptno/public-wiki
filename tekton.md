@@ -360,3 +360,4 @@ account 에 tekton에서 제공하는 ClusterRole, Role 이 제대로 되어 있
 ## releated
 - [[kubernetes]]
 - [[metrics-server]]
+- [[ci]]
