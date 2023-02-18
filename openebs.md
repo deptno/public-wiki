@@ -23,6 +23,16 @@ kubectl apply -f https://github.com/openebs/charts/blob/gh-pages/openebs-operato
 - openebs-device - mount 되지 않은 device 를 사용
 - openebs-hostpath - 특정 hostpath 를 사용
 
+## 참고
+- capacity 에 의한 용량 제한 이상으로 계속 데이터가 쌓임 20M 설정후 34M 확인
+
+
+## [[error]]
+```sh
+pod has unbound immediate PersistentVolumeClaims. preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod..
+```
+`volumeName` 을 지정하면 파드에 붙지 못한다. 자동으로 할당하도룩 두자
+
 ## related
 - [[kubernetes]]
 - [[book/24-steps-k8s]]

@@ -7,6 +7,13 @@ tsc --sourceMap=true
 node --enable-source-maps [source.js]
 ```
 
+## build clean
+[[vitest]] 테스트 중에 ts 와 빌드된 js 가 함께 있는 경우 js 를 먼저 읽는경우가 있어서 build 된 파일 제거 후 테스트가 필요했다.
+```sh
+tsc --build --clean
+```
+  + https://raghsonline.com/posts/typescript/typescript-clean-build/
+
 ## error
 ### compile option
 ```sh

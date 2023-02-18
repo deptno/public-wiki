@@ -59,6 +59,7 @@
 - [[nmcli]]
 - [[tr]]
 - [[blkid]]
+- [[date]]
 
 ### file
 /etc/netplan

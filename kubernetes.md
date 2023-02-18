@@ -1,13 +1,55 @@
 # kubernetes|쿠버네티스
 
+- TODO: sudo kubeadm certs check-expiration
 ## pod
 - init container
   설정을 위해 선실행되고 종료되는 컨테이너
   + https://kubernetes.io/ko/docs/concepts/workloads/pods/init-containers/
 ## cronjob
-| 분 시 일 월 요일 |            |
-|------------------|------------|
-| `*/2 * * * *`    | 매 2분마다 |
++ [[crontab]]
+
+| 분 시 일 월 요일 |                         |
+|------------------|-------------------------|
+| `*/2 * * * *`    | 매 2분마다              |
+| `1/2 * * * *`    | 매 2분마다(1분, 3분...) |
+
+- `successfulJobsHistoryLimit: [number]` 옵션을 크게 설정하면 worker node 의 cpu, mem 에 영향을 미친다
+- `suspend: [boolean]` 스케줄을 잠시 멈추는 것으로 보이는데 디플로이에할때 유용해 보임
+## storage
+`StorageSlass` 추가 없이 [[nfs]] mount 가 가능
+
+- 
+### error
+```sh 
+$ kdel pvc [pvc]
+persistentvolumeclaim "[pvc]" deleted
+^C # 멈춰서 강제 종료
+
+$ k get volumeattachments.storage.k8s.io
+No resources found # 사용 주체가 없다
+
+$ pvc get
+$ k get pvc
+NAME                         STATUS        VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS       AGE
+[pvc]                        Terminating   pvc-9d3a82a2-49bd-45e7-99b7-e68eb8b76f34   20M        RWO            openebs-hostpath   30h
+```
+삭제되지 않고 `Terminating` 상태에서 멈춘다
+```sh 
+kubectl patch pvc {PVC_NAME} -p '{"metadata":{"finalizers":null}}'
+```
+위 방식으로 삭제가 가능
+  + https://github.com/kubernetes/kubernetes/issues/69697#issuecomment-927319274
+- [[openebs]] 의 hostpath 인 경우 데이터는 살아 남으니 참고
+
+#### [[nfs]]
+```sh 
+mount: /var/lib/kubelet/pods/91f95da8-3cea-4f8a-a367-c2b11b3444b5/volumes/kubernetes.io~nfs/test-volume: bad option; for several filesystems (e.g. nfs, cifs) you might need a /sbin/mount.<type> helper program.                                                                                                                                 │
+```
+- [X] worker node 에 nfs-common 설치
+```sh 
+mount.nfs: failed to apply fstab options
+```
+- [X] 권한 이슈
 
 ## secret
 echo 를 사용하면 newline `\n` 이 붙게된다.
@@ -23,6 +65,7 @@ echo 를 사용하면 newline `\n` 이 붙게된다.
 |------|-----------------------------|
 | CSR  | Certificate Signing Request |
 
+### CertificateSigningRequest 을 통한 접근
 - CertificateSigningRequest 생성
 ```sh
 $ openssl genrsa -out user.key 2048
@@ -114,6 +157,8 @@ CertificateSigningRequest 한시간이 지나면 토큰이 만료되어 로그�
 $ kgp
 error: You must be logged in to the server (Unauthorized)
 ```
+### ServiceAccount 를 통한 접근
++ https://devopscube.com/kubernetes-kubeconfig-file/
 
 ### error
 ```sh

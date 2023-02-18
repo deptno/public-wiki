@@ -2,6 +2,8 @@
 
 DSM7
 
+## nfs
+-  기본 권한(비동기만 체크) 로 [[kubernetes]] 에서 pod 에서 mount 정상 동작 확인, 하위 폴더도 보임
 ## 인증서
 ### 발급
 
@@ -55,3 +57,4 @@ DSM7
 - [[synology-photos]]
 - [[ssh]]
 - [[let's-encrypt]]
+- [[kubernetes]]
