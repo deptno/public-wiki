@@ -125,9 +125,7 @@ yarn config set nodeLinker node-modules
 ```
 
 ## error
-```sh
-Unknown Syntax Error: Command not found; did you mean:
-```
+### Unknown Syntax Error: Command not found; did you mean:
 workspace tool 이 있어야지 가능
 ```sh
 # https://yarnpkg.com/api/modules/plugin_workspace_tools.html
@@ -138,7 +136,7 @@ yarn plugin import workspace-tools
 yarn plugin import @yarnpkg/plugin-workspace-tools
 ```
 ---
-The remote archive doesn't match the expected checksum
+### The remote archive doesn't match the expected checksum
 ```
 ➤ YN0000: │ Some peer dependencies are incorrectly met; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code
 ➤ YN0000: └ Completed in 0s 623ms
@@ -161,7 +159,16 @@ $ YARN_CHECKSUM_BEHAVIOR=update yarn
 ```sh 
 yarn set version 3.3.1
 ```
+### Error: Required unplugged package missing from disk. This may happen when switching branches without running installs (unplugged packages must be fully materialized on disk to work).
+`sharp` 모듈을 설치하면서 에러가 났다. `yarn` 을 안한 것은 아니고 이미지를 빌드하는 컴퓨터와 runtime 컨테이너의 아키텍쳐 차이가 발생하면서 모듈을 못찾는게 문제
+해당 모듈은 `.yarn/unplugged` 위치에 설치되는데 아마도 `node-gyp` 를 통해 네이티브 빌드가 들어가기 때문일 수 있을 것 같음
+`npm` 의 경우에는 `arch` 옵션을 지원하지만 `yarn` 은 이를 지원하지 않는데 아래 명령어를 통해서 해결
+설치시에는 기존에 설치된 모듈을 지우고 설치해야한다. 아마 멀티 플랫폼을 빌드를 하려면 각 플랫폼 별 인스톨 후에 `.yarn/unplugged` 디렉토리를 병합해야할 것으로 생각
 
+```sh 
+$ SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm_config_arch=x64 npm_config_platform=linux yarn add sharp
+```
+  + https://github.com/lovell/sharp/issues/2340#issuecomment-851029529
 ## related
 - [[node]]
 - [[npm]]

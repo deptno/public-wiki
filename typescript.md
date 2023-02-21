@@ -14,6 +14,19 @@ tsc --build --clean
 ```
   + https://raghsonline.com/posts/typescript/typescript-clean-build/
 
+## void vs undefined
+`void` 는 공허한 값으로 취급된다. 즉 값이 있다. 무슨 값인지는 모르겠으나 의미 없는 무언가를 리턴하며 이는 `unknown` 과 비슷한 성질을 가진다.
+`undefined` 는 `undefined` 로 취급된다
+
+```typescript
+const f1 = () => undefined {
+  return console.log()
+}
+```
+- `undefined` 는 `undefined` 타입을 가진다
+- console.log 의 반환 **값**은 `undefined` 이지만 **타입**은 `void` 을 가지기 때문에 타입에러가 발생한다
+- `unknown` 타입과 비슷하지만 다만 명시적으로 **의미가 없는 값의 타입** 정도로 이해한다
+
 ## error
 ### compile option
 ```sh

@@ -17,8 +17,6 @@
 - `suspend: [boolean]` 스케줄을 잠시 멈추는 것으로 보이는데 디플로이에할때 유용해 보임
 ## storage
 `StorageSlass` 추가 없이 [[nfs]] mount 가 가능
-
-- 
 ### error
 ```sh 
 $ kdel pvc [pvc]
@@ -40,6 +38,12 @@ kubectl patch pvc {PVC_NAME} -p '{"metadata":{"finalizers":null}}'
 위 방식으로 삭제가 가능
   + https://github.com/kubernetes/kubernetes/issues/69697#issuecomment-927319274
 - [[openebs]] 의 hostpath 인 경우 데이터는 살아 남으니 참고
+---
+```sh
+  Warning  FailedMount       24s (x7 over 56s)  kubelet            MountVolume.NewMounter initialization failed for volume "pv-static" : path "/var/openebs/local/some-directory" does not exist
+```
+해당 디렉토리는 수동으로 만들어준다
+
 
 #### [[nfs]]
 ```sh 
@@ -50,6 +54,13 @@ mount: /var/lib/kubelet/pods/91f95da8-3cea-4f8a-a367-c2b11b3444b5/volumes/kubern
 mount.nfs: failed to apply fstab options
 ```
 - [X] 권한 이슈
+### 0/1 nodes are available
+```sh
+  Warning  FailedScheduling  29s   default-scheduler  0/1 nodes are available: 1 Too many pods. preemption: 0/1 nodes are available: 1 No
+ preemption victims found for incoming pod..
+```
+무한루프에 의해서 cronjob 의 job 파드가 지속적으로 쌓이는 문제가 있었는데 파드가 160개 정도가되니 뜨질 못한다
+- TODO: 노드당 파드 갯수에 대해서 조사
 
 ## secret
 echo 를 사용하면 newline `\n` 이 붙게된다.
