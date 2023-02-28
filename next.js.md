@@ -1,4 +1,0 @@
-# next.js
-
-## related
-- [[react]]

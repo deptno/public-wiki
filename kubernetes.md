@@ -17,6 +17,23 @@
 - `suspend: [boolean]` 스케줄을 잠시 멈추는 것으로 보이는데 디플로이에할때 유용해 보임
 ## storage
 `StorageSlass` 추가 없이 [[nfs]] mount 가 가능
+
+### pv 
+#### access mode
+| AccessMode         | 약어 | node:pvc | pvc:pod | 비고    |
+| ------------------ | ---- | -------- | ------- | ------- |
+| ReadWriteOnce      | RWO  | 1:1      | 1:n     |         |
+| ReadOnlyMany       | ROX  | n:1      | 1:n     |         |
+| ReadWriteMany      | RWX  | n:1      | 1:n     | eg. nfs |
+| ReadWriteOncePod   | RWOP | 1:1      | 1:1     | 1.22+   |
+- 약어는 cli 에서 사용
+### pvc
+- pv:pvc 는 1:1 관계
+- pvc 는 namespace 오브젝트임으로 pv 의 access mode 와 무관하게 namespace 에 종속
+- ReadWriteOnce 는 **node 기준**으로 pod 는 하나의 pvc에 여럿 붙을 수 있음
+  - pvc - pod 1:n 이 가능
+  - pv - pvc 는 1:1 ReadWriteOnce 인경우
+  - local - pv 는 n:1 이 가능
 ### error
 ```sh 
 $ kdel pvc [pvc]
@@ -66,6 +83,14 @@ mount.nfs: failed to apply fstab options
 echo 를 사용하면 newline `\n` 이 붙게된다.
 - `echo -n` 을 사용
 - `- tr -d '\n'`
+```sh 
+# 파일로 부터 값 생성
+kubectl create secret generic [name] --from-file=[key]=[filename] --from-file=[key]=[filename]
+# 직접 입력한 값으로 부터 생성
+kubectl create secret generic [name] --from-literal=[key]=[base64 encoded value]
+# 기존 시크릿에 추가 혹은 값 변경
+kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}' 
+```
 
 ## authentication
 유저추가

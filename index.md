@@ -32,6 +32,9 @@
 - [[vite]]
 - [[random]]
 
+## web
+- navigator
+
 ## service
 - [[aws]]
 - [[github]]
@@ -41,6 +44,8 @@
 - [[serverless]]
 - [[datadog]]
 - [[slack]]
+- [[imgproxy]]
+- [[telegram]]
 
 ## os
 - [[macos]]

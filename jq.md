@@ -9,6 +9,7 @@ arch -arm64 brew install jq
 ```sh
 cat package.json | jq '.scripts'
 cat package.json | jq '.scripts.start'
+jq -n '{"json": "data"}' # formating
 ```
 
 ## format

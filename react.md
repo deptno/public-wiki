@@ -2,7 +2,7 @@
 
 ## error
 ### server-component
-[[next.js]] 13 에서 server-component 를 사용하고자 하는데 에러가 발생
+[[nextjs]] 13 에서 server-component 를 사용하고자 하는데 에러가 발생
 ```sh
 TypeError: fetch failed
     at Object.fetch (node:internal/deps/undici/undici:14062:11)

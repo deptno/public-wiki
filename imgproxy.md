@@ -12,3 +12,4 @@ helm upgrade imgproxy imgproxy --install --create-namespace -n imgproxy
 ## related
 - [[helm]]
 - [[kubernetes]]
+- [[nginx]]

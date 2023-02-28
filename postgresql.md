@@ -15,3 +15,4 @@
 
 ## related
 - [[kubernetes]]
+- [[psql]]

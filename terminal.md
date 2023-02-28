@@ -60,6 +60,7 @@
 - [[tr]]
 - [[blkid]]
 - [[date]]
+- [[cat]]
 
 ### file
 /etc/netplan

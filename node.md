@@ -1,12 +1,16 @@
 # node
 
-javascript runtime
+javascript runtime a.k.a node.js
 
 ## options
 --max-old-space-size
 --max-new-space-size
---require
+--require [file.js]
 --enable-source-maps
+--es-module-specifier-resolution=[node] # node 의 경우에는 esmodule 파일의 확장자를 명시하지 않아도 import 가 가능 node@19 부터는 제거될 예정
+
+## esmodule
+ 
 
 ## [[error]]
 ### ECONNRESET
