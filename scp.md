@@ -8,7 +8,7 @@ scp /path/to/local/file [USER]@[HOST]:/path/to/remote/dir
 ```
 
 ## options
-- `-r` recursive
+- `-r` recursive, directory 복사시 사용
 - `-p` preserve 수정 시간을 소스로 유지시킨다
 - `-i` identity file, password 대신 key file 지정
 - `-P` port 지정, 22 가 아닌경우 사용한다.

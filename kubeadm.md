@@ -37,6 +37,55 @@ kubelet 은 containerd 설정이 완전히 마쳐지면 kubeadm 통해서 실행
 - [ ] TODO: etcd 다중화
 - [ ] TODO: 외부 접속
 
+### 생성 후 조인
+- master node 에서 토큰 발급한다
+```sh 
+kubeadm token create --print-join-command
+```
+- join 하고자 하는 node 에서 붙여 넣는다
+- worker node 로 조인
+```sh 
+sudo kubeadm join 192.168.0.7:6443 --token [token] --discovery-token-ca-cert-hash [sha256]
+```
+- master node 로 조인
+```sh 
+sudo kubeadm join 192.168.0.7:6443 --token [token] --discovery-token-ca-cert-hash [sha256] --control-plane
+```
+  아래와 같은 에러가 발생한다
+####unable to add a new control plane instance to a cluster that doesn't have a stable controlPlaneEndpoint address 
+```sh 
+error execution phase preflight:
+One or more conditions for hosting a new control plane instance is not satisfied.
+
+unable to add a new control plane instance to a cluster that doesn't have a stable controlPlaneEndpoint address
+
+Please ensure that:
+* The cluster has a stable controlPlaneEndpoint address.
+* The certificates that must be shared among control plane instances are provided.
+
+
+To see the stack trace of this error execute with --v=5 or higher
+```
+```sh 
+pi@pi0:~$ sudo kubeadm join 192.168.0.7:6443 --token 8yau5m.x2sn6km9bbzszspa --discovery-token-ca-cert-hash sha256:68d77ed663014c8ee6c8b5fabff16aed05113eb821cc3c745cd0bb4bbff8daeb --control-plane --apiserver-advertise-address=192.168.0.7
+[preflight] Running pre-flight checks
+[preflight] Reading configuration from the cluster...
+[preflight] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -o yaml'
+error execution phase preflight:
+One or more conditions for hosting a new control plane instance is not satisfied.
+
+unable to add a new control plane instance to a cluster that doesn't have a stable controlPlaneEndpoint address
+
+Please ensure that:
+* The cluster has a stable controlPlaneEndpoint address.
+* The certificates that must be shared among control plane instances are provided.
+
+
+To see the stack trace of this error execute with --v=5 or higher
+```
+
+
+
 ## amd64 설치
 + 2023-01-14 
 
@@ -521,6 +570,7 @@ This node has joined the cluster:
 Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
 ```
 조인 후에 node 가 `Not ready` 상태
+
 ---
 ```sh 
 $ systemctl status kubelet
@@ -548,8 +598,8 @@ sudo sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/c
 sudo systemctl restart containerd
 sudo sysctl --system
 ```
-
 + https://beer1.tistory.com/5
+
 ---
 control-plane not ready
 ```sh 
@@ -558,6 +608,7 @@ NAME   STATUS     ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   O
 pi0    NotReady   control-plane   12m   v1.26.0   192.168.0.74   <none>        Ubuntu 22.04.1 LTS   5.15.0-1012-raspi   containerd://1.6.14
 ```
 cni 미 설치로 보이고 flannel 설치 후 해결되었다.
+
 ---
 coredns, kube-proxy, kube-scheduler pending
 ```sh 
@@ -572,6 +623,7 @@ kube-scheduler-pi0            0/1     CrashLoopBackOff    92 (24s ago)     16m
 ```
 Pod sandbox changed, it will be killed and re-created.
 - [ ] flannel 설치 이후 reboot, 그리고 kubelet 이 뜨지 않아서 강제 재시작을 함
+
 ---
 ```sh 
 Unable to connect to the server: x509: certificate is valid for kubernetes, kubernetes.default, kubernetes.default.svc, kubernetes.default.svc.cluster.local, [local master node name], not [external.cluster.domain]
@@ -613,8 +665,7 @@ $ sudo swapoff -a
 - [X] DONE: 2023-02-02 자동화
   - /etc/fstab 을 수정해서 swap 파티션이 뜨지 않도록 설정하면 리붓후 알아서 kubelet 이 뜬 것을 확인할 수 있다.
 
-
-## [[related]]
+## related
 - [[raspberry-pi]]
 - [[kubelet]]
 - [[crictl]]
