@@ -1,5 +1,7 @@
 # domain
 
+subdomain.SLD(second level domain).TLD(top level domain)
+
 ## 도메인 이전
 - AWS 에서 파는 도메인인 경우 이전 가능
 

@@ -33,6 +33,7 @@ kubectl port-forward $(kubectl get pods --selector "app.kubernetes.io/name=traef
   - 502 라우터는 매칭 O, 서비스 없음
   - 503 라우터는 매칭 O, 서버 없음
   - catchall 로 statuscode 변경 가능 + [[cloudfront]] 와 연동등에 유용
+  - http to https 옵션은 2.9.9 helm chart 를 기준으로 `redirectTo: https` 을 활성화 하면 된다
 - reload
   - file watch 이므로 컨피그가 변경되면 적용되나 컨피그에서 참조중인 tls 등 인증서 참조는 자동으로 변경되지 않는다
   - `touch` 사용하자

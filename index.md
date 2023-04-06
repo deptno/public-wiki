@@ -33,7 +33,9 @@
 - [[random]]
 
 ## web
-- navigator
+- [[navigator]]
+- [[console]]
+- [[seo]]
 
 ## service
 - [[aws]]

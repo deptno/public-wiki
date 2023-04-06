@@ -27,6 +27,17 @@ Error: Client network socket disconnected before secure TLS connection was estab
     at processTicksAndRejections (internal/process/task_queues.js:84:21) {
   code: 'ECONNRESET',
 ```
+### ERR_OSSL_EVP_UNSUPPORTED
+```
+Failed to construct transformer:  Error: error:0308010C:digital envelope routines::unsupported
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+```
+node18에서는 실행안되고 node 16에서 실행됨 어떤 것 때문인지는 찾아보지 않음
+
 ### memory [[leak]]
 - [[env|NODE_OPTIONS]]
 

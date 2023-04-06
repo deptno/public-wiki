@@ -55,6 +55,12 @@ kubectl patch pvc {PVC_NAME} -p '{"metadata":{"finalizers":null}}'
 위 방식으로 삭제가 가능
   + https://github.com/kubernetes/kubernetes/issues/69697#issuecomment-927319274
 - [[openebs]] 의 hostpath 인 경우 데이터는 살아 남으니 참고
+
+이때 pv 는 `Released` 상태가 되면 다른 pvc 와는 바인딩할 수 없다. pv 의 상태를 `Available` 로 바꾸기 위해서는 pv 를 수정하여 `claimRef` 를 제거해야한다
+```sh 
+kubectl patch pv [ PV_NAME ] -p '{"spec":{"claimRef": null}}'
+```
+
 ---
 ```sh
   Warning  FailedMount       24s (x7 over 56s)  kubelet            MountVolume.NewMounter initialization failed for volume "pv-static" : path "/var/openebs/local/some-directory" does not exist
@@ -90,6 +96,8 @@ kubectl create secret generic [name] --from-file=[key]=[filename] --from-file=[k
 kubectl create secret generic [name] --from-literal=[key]=[base64 encoded value]
 # 기존 시크릿에 추가 혹은 값 변경
 kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}' 
+# 시크릿 네임스페이스 복사
+kubectl get secret -n [ namespace ] [ secret name ] | kubectl neat | sed "s/namespace: .*/namespace: [ target namespace]/" | kubectl apply -f -
 ```
 
 ## authentication

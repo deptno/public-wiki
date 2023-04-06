@@ -5,6 +5,7 @@
   + https://www.postgresql.org/docs/current/sql-createrole.html
 ## helm chart
 + https://github.com/bitnami/charts/tree/main/bitnami/postgresql/
+- create database owner [ ROLE NAME ]
 
 ## trigger & event
 function 을 정의한다 정의한다 정의에 사용할 수 있는 언어는 아래와 같다

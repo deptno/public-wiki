@@ -43,3 +43,6 @@ curl -X POST \
   -d '{"chat_id": 1830393354, "text": "hello"' \
   "https://api.telegram.org/bot[token]/sendMessage"
 ```
+
+### error
+`entries` 에 url 이 **localhost** 로 되어있는 링크를 걸면 동작하지 않는다.

@@ -2,6 +2,11 @@
 
 - https://jhnyang.tistory.com/146
 
+```sh 
+set -e # error 가 나면 스크립트 에러와 함께 종료시킨다
+some error command || true # 해당 커맨드는 에러지만 무시할 수 있다
+```
+
 ## example
 ```sh
 function fx() {

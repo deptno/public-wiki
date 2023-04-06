@@ -153,6 +153,14 @@ module.exports = {
 EOF
 ```
 
+## config
+### standalone
+- next.js@13.2 standalone 적용 후
+  - image size: 465 -> 363 Mb 으로 빠짐 -> 22% down
+  - memory usage: @ 는 website 에 한번 접속 후의 상태
+    - 69@129Mi -> 24@65->83Mi 
+    - 69@117Mi -> 25@64->108Mi
+    - 최적화가 조금 더 들어가는건지 메모리 사용량이 빠짐
 ## error
 ### next.js 13 + next-auth
 signin 을 누르면 제대로 동작하지 않는이슈 브라우저에서는 아래 메시지가 찍힌다

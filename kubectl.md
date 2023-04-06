@@ -17,6 +17,8 @@ kubectl auth can-i [kubectl command]
 kubectl create secret generic db-user-pass \
     --from-literal=username=admin \
     --from-literal=password=$(openssl rand -base64 10 | tr -d '\n')
+    
+kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}' 
 ```
 
 ## related
