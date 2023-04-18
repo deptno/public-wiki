@@ -36,6 +36,7 @@
 - [[navigator]]
 - [[console]]
 - [[seo]]
+- [[pwa]]
 
 ## service
 - [[aws]]

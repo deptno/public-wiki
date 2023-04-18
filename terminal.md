@@ -61,6 +61,7 @@
 - [[blkid]]
 - [[date]]
 - [[cat]]
+- [[figlet]]
 
 ### file
 /etc/netplan

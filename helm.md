@@ -10,13 +10,26 @@ brew install helm
 helm repo list # 등록된 repo 리스팅
 helm repo add [repo-name] [repo-url]
 helm repo update # 차트 리스트 업데이트
+
 helm search repo [repo-name] # chart 검색
+
 helm install [name] -f [values.yaml]
+
 helm ls # 설치된 차트 리스트
-helm upgrade [chart-name] -f [values.yaml]
+
+helm upgrade CHART_NAME CHART_PATH [-f values.yaml] [--debug] [--dry-run] [--namespace NAMESPACE] [--create-namespace]
+helm upgrade -i [chart-name] . -f [values.yaml] # 없으면 인스톨, 이걸 주로 쓰게됨
+helm upgrade --install [chart-name] path/to/chart [-f values.yaml]
+helm upgrade --install [chart-name] path/to/chart [-f values.yaml]
+
 helm delete [chart-name] # 차트 삭제
+
 helm get manifest [chart-name] # 설치 정보
 ```
+
+## option
+- debug - verbose 로그
+- dry-run - 테스트
 
 - example
 ```se 
@@ -28,5 +41,9 @@ helm pull prometheus-community/kube-prometheus-stack --untar
 helm upgrade prometheus kube-prometheus-stack --install --create-namespace -n prometheus [-f values.yaml]
 ```
 
+## error
+- [[postgresql]]
+
 # related
 - [[kubernetes]]
+- [[postgresql]]
