@@ -25,6 +25,8 @@ for item in "${array_data[@]}"
 do
   echo fx $item
 done
+
+for item in {1..5}
 ```
 
 문자열 안에서 변수를 참조할 때 문자열은 홋 따옴표가 아닌 쌍따옴표여야 한다

@@ -31,6 +31,7 @@
 - [[postgresql]]
 - [[vite]]
 - [[random]]
+- eol
 
 ## web
 - [[navigator]]

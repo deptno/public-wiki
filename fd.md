@@ -1,7 +1,8 @@
 # fd
 
-find alternative
+[[find]] alternative
 
 ## related
 - [[telescope]]
 - [[rust]]
+- [[find]]

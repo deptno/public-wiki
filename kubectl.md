@@ -16,7 +16,11 @@ kubectl auth can-i [kubectl command]
 
 kubectl create secret generic db-user-pass \
     --from-literal=username=admin \
-    --from-literal=password=$(openssl rand -base64 10 | tr -d '\n')
+    --from-literal=password=$(openssl rand -base64 10 | tr -d '\n') # eol 제거
+    
+kubectl create secret generic db-user-pass --from-file=key=file
+    
+cat file-with-eol | tr -d '\n' | kubectl create secret generic db-user-pass --from-file=key=/dev/stdin # eol 제거
     
 kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}' 
 ```
@@ -24,3 +28,4 @@ kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}'
 ## related
 - [[kubernetes]]
 - [[random]]
+- [[eol]]
