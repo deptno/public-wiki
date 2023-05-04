@@ -113,8 +113,20 @@ NAME: postgresql
 LAST DEPLOYED: Tue Apr 18 12:27:39 2023
 ```
   - 그리고 포트포워딩(localhost 를 위해)도 확인하자
+### lock
+```shell
+SELECT pid, *
+FROM pg_locks l
+         JOIN pg_class t ON l.relation = t.oid AND t.relkind = 'r'
+where relname ='[TABLE_NAME]'
+```
+pid 확인해서 컨테이너 접속후
+```shell
+kill [PID]
+```
 
 ## related
 - [[kubernetes]]
 - [[psql]]
 - [[helm]]
+- [[sql]]

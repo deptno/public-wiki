@@ -28,3 +28,4 @@ jq -n '{"json": "data"}' # formating
 - [[vim]]
 - [[gh]]
 - [[xsv]]
+- [[yq]]

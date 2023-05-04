@@ -40,6 +40,22 @@ Error: initializing image from source docker://harbor.deptno.dev/test/hello-worl
 - image: thomseddon/traefik-forward-auth:latest
 - 자체 인증이 있기 때문에 forward-auth 를 제거했다.
 
+### traefik tls
+tarefik 에서 tls 발급에 실패하는 경우 harbor 에 접근하지 못해서 이미지 pull 이 실패하면서 모든 파드가 못뜨는 문제가 있다.
+
+```sh 
+$ sudo vi /etc/containerd/config.toml
+```
+```toml
+[plugins."io.containerd.grpc.v1.cri".registry.mirrors]
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."harbor.example.com"]
+    endpoint = ["http://harbor.example.com"]
+[plugins."io.containerd.grpc.v1.cri".registry.configs."harbor.example.com".tls]
+  insecure_skip_verify = true
+```
+```sh 
+sudo systemctl restart containerd
+```
 
 ## related
 - [[kubernetes]]

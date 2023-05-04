@@ -67,7 +67,6 @@ kubectl patch pv [ PV_NAME ] -p '{"spec":{"claimRef": null}}'
 ```
 해당 디렉토리는 수동으로 만들어준다
 
-
 #### [[nfs]]
 ```sh 
 mount: /var/lib/kubelet/pods/91f95da8-3cea-4f8a-a367-c2b11b3444b5/volumes/kubernetes.io~nfs/test-volume: bad option; for several filesystems (e.g. nfs, cifs) you might need a /sbin/mount.<type> helper program.                                                                                                                                 │
@@ -77,13 +76,18 @@ mount: /var/lib/kubelet/pods/91f95da8-3cea-4f8a-a367-c2b11b3444b5/volumes/kubern
 mount.nfs: failed to apply fstab options
 ```
 - [X] 권한 이슈
-### 0/1 nodes are available
+#### 0/1 nodes are available
 ```sh
   Warning  FailedScheduling  29s   default-scheduler  0/1 nodes are available: 1 Too many pods. preemption: 0/1 nodes are available: 1 No
  preemption victims found for incoming pod..
 ```
 무한루프에 의해서 cronjob 의 job 파드가 지속적으로 쌓이는 문제가 있었는데 파드가 160개 정도가되니 뜨질 못한다
 - TODO: 노드당 파드 갯수에 대해서 조사
+#### disk-pressure
+용량 부족이다. 2TB 디스크를 사용 중이었는데 나중에 확인해 보니 우분투 설치시에 100G 파티션을 사용하고 있었다.
+그마저도 /var/openebs/local, /var/lib/kubelet/pods/... 에도 데이터가 중첩으로 쌓이면서 50G 만에 발생했다.
+- [[lvextend]]
+- [[openebs]]
 
 ## secret
 echo 를 사용하면 newline `\n` 이 붙게된다.

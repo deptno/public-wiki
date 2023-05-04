@@ -1,5 +1,8 @@
 # git-rebase
 
+## 커밋 해시가 변경되지 않는 경우
+rebase -i @~n 을 통해 변경시에 커밋 메시지만을 변경하면 commit hash 는 변경되지 않는다
+
 ## error
 ```sh
 $ git rebase --abort

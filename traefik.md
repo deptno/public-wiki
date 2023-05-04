@@ -371,6 +371,42 @@ csrf=e020b6a2d282deed96185016aea24fcf; Path=/; Expires=Sun, 22 Jan 2023 04:43:52
 ```text
 400 오류: redirect_uri_mismatch
 ```
+### duplicate-certificate-limit
+- Unable to obtain ACME certificate for domains 429
+```sh 
+time="2023-05-02T17:18:53Z" level=error msg="Unable to obtain ACME certificate for domains \"example.com\": unable to generate a certificate for the domains [exmaple.com]: acme: error: 429 :: POST :: https://acme-v02.api.letsencrypt.org/acme/new-order :: urn:ietf:params:acme:error:rateLimited :: Error creating new order :: too many certificates (5) already issued for this exact set of domains in the last 168 hours: exmaple.com, retry after 2023-05-03T03:59:03Z: see https://letsencrypt.org/docs/duplicate-certificate-limit/" routerName=route-name-56fe52824516edf84cb6@kubernetescrd rule="Host(`example.com`)" ACME CA="https://acme-v02.api.letsencrypt.org/directory" providerName=letsencrypt.acme
+```
+  + https://letsencrypt.org/docs/duplicate-certificate-limit/
+  
+에러가 발생하는 시나리오
+1. traefik 을 통해서 cert를 발급한다
+2. persistent 설정이 없다면 traefik 은 시작하면서 이전에 발급한 cert 를 가져오지 못하고 새롭게 발급요청을한다
+3. 어떤 이유로 인해서 traefik 이 죽게되면 살아날 때마다 발급 요청을 하게된다.
+  - 이번 나의 경우에는 node 에 disk-pressure 가 발생하면서 traefik 이 죽었다 살았다를 반복하면서 발생했다
+  
+- [ ] persistent 를 설정해서 이전 발급을 기억하면 될것으로 보인다
+- [X] tls 가 터지는 경우 [[harbor]] 가 같이 뻗으면 image pull 이 실패하므로 모든 파드가 뻗게됨
+  - 문제가 심각하긴한데 기본적으로 인증서가 끊기는거 자체가 심각한 이슈고 이에 대해 플랜B 를 해둬야하는지는 생각해볼 문제
+    대응을 원한다면 insecure_registeries 관련 설정이 필요
+- too many certificates (5) already issued for this exact set of domains in the last 168 hours: exmaple.com, retry after 2023-05-03T03:59:03Z
+  - **retry after** 를 보면 언제부터 시도해야할지 가르처준다. 꼭 7일을 기다리는것이 아님에 주의
+
+```sh 
+time="2023-05-01T19:43:54Z" level=debug msg="http: TLS handshake error from 192.168.0.7:34578: remote error: tls: bad certificate"
+time="2023-05-01T19:43:58Z" level=debug msg="Serving default certificate for request: \"example.com\""
+```
+```sh 
+time="2023-05-01T19:45:46Z" level=error msg="Unable to obtain ACME certificate for domains \"example.com\": unable to generate a certificate for the domains [example.com]: acme: error: 429 :: POST :: https://acme-v02.api.letsencrypt.org/acme/new-order :: urn
+time="2023-05-01T19:45:46Z" level=debug msg="Serving default certificate for request: \"example.com\""
+time="2023-05-01T19:45:46Z" level=debug msg="http: TLS handshake error from 192.168.0.7:57734: remote error: tls: bad certificate"
+```
+### unable to generate a wildcard certificate in ACME provider for domain
+이거 일단 ipv6 지원이 되야하는 것으로 생각됨
+```sh 
+time="2023-05-02T18:43:33Z" level=error msg="Unable to obtain ACME certificate for domains \"example.com,*.example.com\"" rule="Host(`???.example.com`)" error="unable to generate a wildcard certificate in ACME provider for domain \"example.com,*.example.com\" : ACME needs a DNSChallenge" ACME CA=
+"https://acme-v02.api.letsencrypt.org/directory" providerName=letsencrypt.acme routerName=harbor-harbor-499b22a125e5ffa3fe26@kubernetescrd
+```
+---
 secret 에서 개행 제거하고 나서 나오기 시작
 ---
 middleware 의 namespace 와 관계없이 ingressroute 의 namespace 를 보는 것 같다

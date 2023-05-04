@@ -15,7 +15,7 @@ function fx() {
   
   echo $1
 }
-array_data = (
+array_data=(
   "a"
   "b"
   "c"
@@ -44,12 +44,33 @@ arg1
 
 ## 조건문
 ```
-if [ ! -z "$ENV_VAR"]
+if [ ! -z "$ENV_VAR"] # 혹은 [ -n "$ENV_VAR"]
 then
   echo $ENV_VAR
 elif
   echo "empty"
 fi
+```
+
+## 환경변수
+- IFS | internal field separator
+  - 어떤 결과를 가지고 `for x in $MULTILINE_VALUE` 형태의 코드를 작성하게 되면 공백마다 변수 `x` 에 들어가게된다
+  - 이때 라인을 구분자로 쓰고 싶다면 `IFS=$'\n'` 형태로 입력해주면된다
+
+```sh 
+IFS=$'\n'
+for script in $(cat shell_script_lines.sh); do
+  $script;
+done;
+```
+
+## 인자
+### 인자 > 환경변수 > 기본값
+```sh 
+if [ -n "$1" ]; then
+  NS=$1
+fi
+NS=${NS:="default-ns"}
 ```
 
 ## shell

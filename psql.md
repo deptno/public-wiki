@@ -13,3 +13,4 @@
 
 ## related
 - [[postgresql]]
+- [[sql]]

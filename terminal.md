@@ -18,6 +18,7 @@
 - [[valgrind]]
 - [[scp]]
 - [[jq]]
+- [[yq]]
 - [[frum]]
 - [[fg]]
 - [[bg]]
@@ -62,6 +63,10 @@
 - [[date]]
 - [[cat]]
 - [[figlet]]
+- [[df]]
+- [[du]]
+- [[lvextend]]
+- [[fdisk]]
 
 ### file
 /etc/netplan
