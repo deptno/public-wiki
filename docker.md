@@ -75,8 +75,19 @@ COPY packages ./packages
   - Docker desktop -> 우상단의 debug 아이콘 -> Clean / Purge data
 ---
 ### `ERROR [internal] load metadata for [image]:[tag]`
+항상 빌드되던 다커빌드시에 발생했는데 apt-get update 를 진행하는중에 발생했다. 좀 관련이 없어보이지만 결국 `docker system prune` 으로 해결되었다
+```sh 
+ERROR [internal] load metadata for [image]:[tag]
+```
+ 다른 빌드를 할때는 용량 부족에 대한 에러가 발생했다
+```sh 
+failed to register layer: Error processing tar file(exit status 1): write /home/pptruser/.cache/puppeteer/chrome/linux-113.0.5672.63/chrome-linux64/ClearKeyCdm/_platform_specific/linux_x64/libclearkeycdm.so: no space left on device
+```
 `FROM` 절에서 참조할 수 없는 이미지를 참조한 경우
-
+### At least one invalid signature was encountered.
+```sh 
+docker system prune
+```
 
 ## related
 - [[kubernetes]]

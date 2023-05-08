@@ -29,3 +29,4 @@ kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}'
 - [[kubernetes]]
 - [[random]]
 - [[eol]]
+- [[envsubst]]

@@ -406,6 +406,13 @@ time="2023-05-01T19:45:46Z" level=debug msg="http: TLS handshake error from 192.
 time="2023-05-02T18:43:33Z" level=error msg="Unable to obtain ACME certificate for domains \"example.com,*.example.com\"" rule="Host(`???.example.com`)" error="unable to generate a wildcard certificate in ACME provider for domain \"example.com,*.example.com\" : ACME needs a DNSChallenge" ACME CA=
 "https://acme-v02.api.letsencrypt.org/directory" providerName=letsencrypt.acme routerName=harbor-harbor-499b22a125e5ffa3fe26@kubernetescrd
 ```
+### 660 too open
+traefik 이 자기가 만든 acme.json 파일 퍼미션이 너무 열려있다고해서 수동으로 600 퍼미션으로 변경하고 리붓해서 해결
+  + chart@2.9.9
+- [X] 부팅때마다 660으로 설정되어 있어서 수정 필요
+  + https://github.com/traefik/traefik/issues/6825
+  - helm 차트에 주석으로 이미 되어있음 로컬 디바이스를 사용하면 생기는 것으로 보임
+  - initConatiner 로 시작하면서 퍼미션을 수정하는 방식
 ---
 secret 에서 개행 제거하고 나서 나오기 시작
 ---

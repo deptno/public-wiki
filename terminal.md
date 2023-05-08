@@ -67,6 +67,7 @@
 - [[du]]
 - [[lvextend]]
 - [[fdisk]]
+- [[envsubst]]
 
 ### file
 /etc/netplan

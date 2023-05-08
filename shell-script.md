@@ -45,6 +45,39 @@ arg1
 arg1
 ```
 
+## 할당
+```sh
+#!/usr/bin/env bash
+
+VAR=${1:-default_value}
+VAR=${1:+laternative_value}
+VAR=${1:?error messaage if not set}
+```
+
+이외에 `:-` 와 비슷한 `:=` 가 있다.
+변수값 대신 default 값을 제공하는 것은 동일하지만 변수 할당도 동시에 이루어진다
+
+```sh 
+VAR=
+
+echo "${VAR:-default_value}"  # default_value
+echo $VAR                     # 
+echo "${VAR:=default_value}"  # default_value
+echo $VAR                     # default_value
+```
+
+## 추출
+### parameter expansion
+`VAR%%@*`
+VAR 변수값 뒤에서부터 `@`를 찾을때까지 문자 제거
+
+```
+email="a@b.com"
+username=${email%%@*}
+
+echo "username: $username"  # 출력: username: a
+```
+
 ## 조건문
 ```
 if [ ! -z "$ENV_VAR"] # 혹은 [ -n "$ENV_VAR"]

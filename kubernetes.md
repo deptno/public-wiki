@@ -114,6 +114,8 @@ kubectl get secret -n [ namespace ] [ secret name ] | kubectl neat | sed "s/name
 | CSR  | Certificate Signing Request |
 
 ### CertificateSigningRequest 을 통한 접근
+- **주의** 
+  - 추후 RoleBinding 과 이어지는 부분은 yaml 안에서의 내용과는 상관없이 인증서 생성시에 지정하는 CN=User / O=Group 와 관계된다
 - CertificateSigningRequest 생성
 ```sh
 $ openssl genrsa -out user.key 2048
@@ -124,7 +126,7 @@ kind: CertificateSigningRequest
 metadata:
   name: user
 spec:
-  request: $(user.csr | base64)
+  request: $(cat user.csr | base64)
   signerName: kubernetes.io/kube-apiserver-client
   expirationSeconds: 3600
   usages:
@@ -133,6 +135,7 @@ EOF
 
 certificatesigningrequest.certificates.k8s.io/user created
 ```
+template 화 관련해서는 [[envsubst]] 참조
 - CertificateSigningRequest approve
 ```sh
 $ k get csr
@@ -221,6 +224,13 @@ CertificateSigningRequest 생성시에 발생하는데 `cat user.csr | base` 한
 미니쿠베에서 pv 는 `local` 은 지원되지 않으며 **hostPath** 만 지원한다.
 #### [[multipass]]
 multipass 를 사용하면 vm을 이용하여 실제와 같은 클러스터 구현이 가능하다.
+
+## error
+### annotate
+```sh
+error: --overwrite is false but found the following declared annotation(s):
+```
+kubectl annotate 시에 --overwrite 옵션을 추가하거나 --force를 추가해서 해결한다
 
 ## related
 - [[minikube]]
