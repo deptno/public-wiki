@@ -1,5 +1,5 @@
 # deptno.github.io.wiki
-- [[hello wiki]]
+- [[hello-wiki]]
 
 ## todo
 - [[error]]
