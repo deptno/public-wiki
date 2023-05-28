@@ -7,6 +7,11 @@
 + https://github.com/bitnami/charts/tree/main/bitnami/postgresql/
 - create database owner [ ROLE NAME ]
 
+## 함수
+- to_char - timestamp -> char
+- date_trunc - timestamp 값을 유지하되 추출하는 방식으로 하여 원하는 값만 추출(시간단위 절삭등)
+
+
 ## trigger & event
 function 을 정의한다 정의한다 정의에 사용할 수 있는 언어는 아래와 같다
 - c 

@@ -25,6 +25,7 @@
 - [[git-restore]]
 - [[git-show]]
 - [[git-sparse-checkout]]
+- [[git-stash]]
 - [[git-status]]
 - [[git-tag]]
 - [[git-bisect]]

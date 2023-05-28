@@ -180,8 +180,21 @@ Error: This action with HTTP GET is not supported by NextAuth.js
     "next": "13.1.6",
     "next-auth": "^4.19.2",
 ```
+### next-auth/src 를 참조해서 에러나는 경우
+참조가 src로 걸린건지 확인해서 수정할 것
+```sh
+./node_modules/.store/next-auth-virtual-8ec2bd5fde/node_modules/next-auth/src/core/lib/assert.ts:134:27
+Type error: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Adapter<boolean>'.
+  No index signature with a parameter of type 'string' was found on type 'Adapter<boolean>'.
 
-
+  132 |       "useVerificationToken",
+  133 |       "getUserByEmail",
+> 134 |     ].filter((method) => !adapter[method])
+      |                           ^
+  135 |
+  136 |     if (missingMethods.length) {
+  137 |       return new MissingAdapterMethods(
+```
 
 ## related
 - [[react]]
