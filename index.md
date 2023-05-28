@@ -75,7 +75,7 @@
 - [[eks-immersion-day]]
 
 ## 삶
-- [[financial/index/financial]]
+- [[financial/index|financial]]
 - [[english]]
 - [[car]]
 - [[ev]]
