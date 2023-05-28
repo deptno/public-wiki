@@ -3,6 +3,30 @@
 container registry
 + https://goharbor.io
 
+## private 레포지터리 사용
+```ssh
+docker build -t harbor.example.com/test/hello:latest
+docker login harbor.example.com
+docker push harbor.example.com/test/hello:latest
+```
+### kubernetes 에서 private 이미지 pull 하기
+1. harbor web 에 접속해서 robot 계정을 생성, project 안에서 설정해도 상관없고, 관련된 권한을 적절히 부여
+2. 생성된 token 을 password 로 사용하여 docker-registry secret 의 `password` 로 사용하여 계정 생성
+3. `pod.spec.imagePullSecrets` 에 명시
+
+```sh 
+kubectl create secret docker-registry harbor -bot \
+  --docker-server=https://harbor.example.com
+  --docker-username=[bot name]
+  --docker-password=[bot token]
+```
+```yaml
+containers:
+- name: hello
+  image: harbor.example.com/test/hello:latest
+imagePullSecrets:
+- name: harbor-bot
+```
 ## error
 ### image push, pull error
 ```sh
