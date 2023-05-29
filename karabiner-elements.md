@@ -10,6 +10,8 @@ Preferences -> Complex Modifications -> Add rule -> Import more rules rules from
 
 - Vi Style Arrows : `Fn + {h,j,k,l}` -> `← → ↓ ↑`
 - Vi Style Escape key mapping : `Ctrl + [` -> `Esc`
+- capslock 기능 포기하고 한영전환을 빨리하기
+  + https://mangoooooo.tistory.com/12
 
 ## related
 - [[macos]]
