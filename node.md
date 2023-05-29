@@ -84,6 +84,7 @@ cross-env NODEOPTIONS=--inspect ts-node .
 - [[nvm]]
 - [[npm]]
 - [[yarn]]
+- [[pnpm]]
 - [[axios]]
 - [[iconv-lite]]
 - [[chrome]]

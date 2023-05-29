@@ -33,6 +33,7 @@
 - [[random]]
 - [[eol]]
 - [[sql]]
+- [[pnpm]]
 
 ## web
 - [[navigator]]

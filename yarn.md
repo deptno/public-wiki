@@ -172,4 +172,5 @@ $ SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm_config_arch=x64 npm_config_platform=linux ya
 ## related
 - [[node]]
 - [[npm]]
+- [[pnpm]]
 - [[ci]]
