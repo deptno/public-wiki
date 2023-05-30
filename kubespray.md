@@ -1,7 +1,6 @@
 # kubespray
 
 ## setup
-
 3대 이상의 vm([[multipass]] 참고) 준비
 [[multipass]] 사용을 가정하기 때문에 ubuntu 를 기준으로 작성됨
 
@@ -206,11 +205,13 @@ fatal: [pi0]: FAILED! => {"changed": false, "msg": "modprobe: FATAL: Module dumm
 Failed to connect to the host via ssh: ssh: Could not resolve hostname pi2: Temporary failure in name resolution"
 ```
 /etc/hosts 나 dhcp 서버서 resolv가 안되는 것으로 보인다
+
 ---
 ```sh 
 the output has been hidden due to the fact that 'no_log: true' was specified for this result"
 ```
 설치시에 노드 중 다른 아키텍쳐가 있으면 발생하는 것으로 생각됨, eg) control-plane (arm) + worker node (x86) 조합
+
 ---
 ```sh 
 TASK [etcd : Configure | Wait for etcd cluster to be healthy] ***********************************************************************************************************************************************************************
