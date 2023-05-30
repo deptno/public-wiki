@@ -21,15 +21,14 @@
   - cmd
   
   - add, copy
-    add 는 기능이 더 많다.
+    - add 는 기능이 더 많다.
     - 압축된 파일을 add 하면서 해제도가능 
     - url 도 지원 가능 -> 빌드 캐시가 안될듯
   - entrypoint, cmd
     - entrypoint 는 변경되지 않으므로 보통 ex) node
     - cmd 는 오버라이딩이 됨, ex) node 의 파라메터
     
-- docker expect 로 구조 확인 가능
-**union mount system**
+- docker expect 로 구조 확인 가능 **union mount system**
 - docker network ls
   - bridge
   - host
@@ -70,7 +69,7 @@ iptables -t nat -S # port-forwarding 후 해보자
   - cordon 해당 노드에 파드를 띄우지 않도록 한다. 스케줄링 제거
   - drain 해당 노드의 파드를 다른 파드로 이동시킨다.
   - pod disruption budge
-    특정 파드 수는 유지하면서 파드 업데이트를 할 수 있다.
+  - 특정 파드 수는 유지하면서 파드 업데이트를 할 수 있다.
   - 특정 메타데이터를 주입하면 fargate 스케줄러에 의해서 따로 관리됨
   
 - network
@@ -118,7 +117,6 @@ iptables -t nat -S # port-forwarding 후 해보자
 - kubelet 은 worker node 에서 직접 확인이 가능
   
 - q&a
-  - 
 ```yaml
 alb.ingress.kubernetes.io/group.name: eks-demo-group
 alb.ingress.kubernetes.io/group.order: '1'

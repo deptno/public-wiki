@@ -74,8 +74,8 @@ $ vim --clean "24" file.txt
 cd %:p:h
 ```
 
-## [[normal-mode]]
-- `gf` : 현재 윈도우에서 파일을 따라간다. 단 `@` 가 있는 경우 [[visual-mode]] 에서 따라가도록한다.
+## normal-mode
+- `gf` : 현재 윈도우에서 파일을 따라간다. 단 `@` 가 있는 경우 visual-mode 에서 따라가도록한다.
 
 ## key-binding
 ### <Plug> [[question]]
