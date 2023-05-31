@@ -16,7 +16,7 @@ and check to make sure that only the key(s) you wanted were added.
 ```
 
 ## error
-```
+```sh
 Permission denied (publickey).
 ```
 - .ssh, .ssh/* permission 확인

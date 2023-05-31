@@ -13,7 +13,7 @@ https://github.com/Shougo/defx.nvim
 ## [[error]]
 [[nvim-treesitter]] 설치 후 defx 에 접근시 에러가 발생
 
-```
+```vim
 [defx] Vim(let):Error invoking '/Users/deptno/.local/share/nvim/site/p
 ack/_undefined/start/defx.nvim/rplugin/python3/defx:function:_defx_ini
 t' on channel 5 (python3-rplugin-host):^@no request handler registered
@@ -27,7 +27,7 @@ estart Neovim. See also :checkhealth.
 ```
 
 아래 명령어로 해결 가능
-```
+```vim
 :UpdateRemotePlugins
 ```
 

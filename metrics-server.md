@@ -13,7 +13,6 @@ kubectl top nodes
 ```sh
 $ kubectl top nodes
 Error from server (ServiceUnavailable): the server is currently unable to handle the request (get nodes.metrics.k8s.io)
-
 ```
 
 ```log 
@@ -22,12 +21,9 @@ date certificate for 192.168.0.x because it doesn't contain any IP SANs" node="5
 I0116 14:56:07.963441       1 server.go:187] "Failed probe" probe="metric-storage-ready" err="no metrics to serve"
 ```
 
-```
-
-```
 helm chart 의 values.yaml 에서 `defaultArgs` 에 아래 옵션을 추가한다
 
-```
+```sh
 --kubelet-insecure-tls
 ```
 

@@ -32,7 +32,7 @@ helm get manifest [chart-name] # 설치 정보
 - dry-run - 테스트
 
 - example
-```se 
+```sh
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo search prometheus-community
 helm pull prometheus-community/kube-prometheus-stack --untar

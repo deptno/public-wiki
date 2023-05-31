@@ -16,7 +16,7 @@ The operation couldn’t be completed. Unable to locate a Java Runtime.
 Please visit http://www.java.com for information on installing Java.
 ```
 -> 자바 설치
-```
+```sh
 brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 ```
 - https://reactnative.dev/docs/environment-setup

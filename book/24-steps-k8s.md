@@ -177,14 +177,14 @@ __23.3.2 파드 삭제 및 노드 종료 시 서비스 이상 여부 검증
       - multipass shell kube00
         - vi /etc/hosts
           - kube00
-```txt
+```text
 127.0.1.1 kube00 kube00 
 127.0.1.1 localhost
 ```
         - [ ] TODO: ip 자체를 할당할 경우 kubespray 설치 실패 재시도 필요
         - ssh kube01
     3. 타 인스턴스 접속을 위한 /etc/hosts
-```txt
+```text
 127.0.1.1 kube00 kube00
 192.168.64.5 kube00 kube00
 192.168.64.6 kube01 kube01
@@ -380,6 +380,7 @@ $ kgp busybox -o yaml | k neat > busybox-pod.yaml
 $ vi busybox-pod.yaml
 ```
 # ... 바로 완료되지 않고 살아있게 만들기 위해서 command 추가
+```yaml
 spec:
   containers:
   - image: busybox
@@ -388,7 +389,7 @@ spec:
     - "/bin/sh"
     - "-c"
     - "sleep inf"
-```yaml
+```
 ```shell
  ~/w/st/k8s-24-steps  kaf busybox-pod.yaml
  ~/w/st/k8s-24-steps  kaf busybox-pod.yaml                                            ok  11s  kubernetes-admin@cluster.local kube  16:11:46
@@ -1052,7 +1053,7 @@ $$ sudo reboot
 ```
 09. 09장: Traefik을 이용한 쿠버네티스 인그레스 구축 
   - 설치
-```
+```sh
 helm repo add traefik https://traefik.github.io/charts
 helm repo update
 helm pull traefik

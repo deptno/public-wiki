@@ -38,7 +38,8 @@
   - https://stackoverflow.com/questions/5717026/how-to-git-cherry-pick-only-changes-to-certain-files
   ```sh
    git show [SHA] -- [FILE1] [FILE2] | git apply -
-  ``` ```sh
+  ```
+  ```sh
    git cherry-pink -n [SHA]
   ```
 ## 특정 커밋 내용 확인
@@ -202,12 +203,12 @@ $ git log --ancestry-path 93e9e47..branch/b
 * (3시간 전) e21c75b
 * (3시간 전) c79629d
 ```
-```
+```sh
 $ git 
 ```
 
 ## untracked 파일 지우기
-```
+```sh
 git clean -fd
 ```
 - `-f` : 파일

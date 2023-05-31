@@ -4,7 +4,7 @@ guide: https://neomutt.org/guide/
 
 ## 설정
 - [[path|~/.config/neomutt/neomuttrc]]
-```
+```text
 # neomuttrc
 
 source external_config.muttrc

@@ -77,7 +77,7 @@ Gem ffi-1.13.1
     ethon-0.12.0 (ffi (>= 1.3.0))
 ```
 ### mac13 ventura
-```
+```sh
 Installing json 2.6.2 with native extensions
 Installing unf_ext 0.0.8.2 with native extensions
 Installing ffi 1.15.5 with native extensions

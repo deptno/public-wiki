@@ -1,6 +1,6 @@
 # jobs
 
-```
+```sh
 $ jobs                                                                                                                                   ok  11:18:52
 $ bg                                                                                                                                     ok  12:06:15
 bg: no current job
@@ -17,7 +17,7 @@ $ bg                                                                            
 $ fg # vim reopen
 ```
 
-```
+```sh
 bg %1 # 백그라운드에서 1을 실행한다. suspended -> running
 ```
 

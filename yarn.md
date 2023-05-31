@@ -44,7 +44,7 @@ yarn node [script.js]
 yarn add --force @workspace/package [package_name]
 ```
 
-```
+```sh
 yarn set version berry
 yarn init -w
 yarn plugin import @yarnpkg/plugin-workspace-tools
@@ -54,7 +54,7 @@ cd lib
 yarn init -y
 ```
 package.json
-```
+```json
 {
   "name": "tmp",
   "packageManager": "yarn@3.2.0",
@@ -65,7 +65,7 @@ package.json
 }
 ```
 [[packages/lib/package.json]]
-```
+```json
 {
   "name": "papago",
   "type": "module",
@@ -97,12 +97,12 @@ package.json
   아래 내용은 @yarnpkg/sdks 를 통해 해결이 가능하며 webstorm 도 현재 zero install 을 지원해서 유용하지 않다
   
 .yarnrc.yml
-```
+```text
 yarnPath: .yarn/releases/yarn-3.2.0.cjs
 nodeLinker: node-modules
 ```
 혹은
-```
+```sh
 yarn config set nodeLinker node-modules
 ```
 - nodeLinker: 를 통해 node_modules pnp 에서도 사용 가능하다.
@@ -115,7 +115,7 @@ yarn config set nodeLinker node-modules
 ### nohoist
 - https://classic.yarnpkg.com/blog/2018/02/15/nohoist/
 /package.json
-```
+```json
 {
   "workspaces": {
     "packages": [ "packages/*" ],
@@ -137,7 +137,7 @@ yarn plugin import @yarnpkg/plugin-workspace-tools
 ```
 ---
 ### The remote archive doesn't match the expected checksum
-```
+```sh
 ➤ YN0000: │ Some peer dependencies are incorrectly met; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code
 ➤ YN0000: └ Completed in 0s 623ms
 ➤ YN0000: ┌ Fetch step

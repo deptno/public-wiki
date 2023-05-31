@@ -4,7 +4,7 @@ container registry
 + https://goharbor.io
 
 ## private 레포지터리 사용
-```ssh
+```sh
 docker build -t harbor.example.com/test/hello:latest
 docker login harbor.example.com
 docker push harbor.example.com/test/hello:latest

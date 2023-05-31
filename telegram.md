@@ -37,7 +37,7 @@ curl https://api.telegram.org/bot[token]/getUpdates
         - 사설 인증서를 사용한다면 해당 인증서를 등록해야한다
       - 주소로 해당이벤트가 오면 해당 post 메시지를 핸들링 하면된다.
 5. 응답하기
-```
+```sh
 curl -X POST \
   -H "Content-Type: application/json" \
   -d '{"chat_id": 1830393354, "text": "hello"' \

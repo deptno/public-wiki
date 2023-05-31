@@ -58,7 +58,7 @@ ERROR   | No AVD specified. Use '@foo' or '-avd foo' to launch a virtual device 
 ___
 
 AVD Manager 에서 이미지를 API 32 -> 30 으로 다운그레이드 후 발생
-```s
+```sh
 01/09 17:19:54: Launching 'app' on Pixel_3a_API_32_arm64-v8a.
 Installation did not succeed.
 The application could not be installed: INSTALL_FAILED_CONTAINER_ERROR

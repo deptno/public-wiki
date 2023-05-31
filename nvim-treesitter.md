@@ -1,7 +1,7 @@
 # nvim-treesitter
 
 ## [[error]] [[m1]]
-```
+```vim
 Error detected while processing FileType Autocommands for "*":
 E5108: Error executing lua Failed to load parser: uv_dlopen: dlopen(/U
 sers/deptno/.config/nvim/pack/_undefined/start/nvim-treesitter/parser/
@@ -42,7 +42,7 @@ uname -m
 arm64
 ```
 확인 후에는 [[neovim]] 실행 후에 아래와 같이 명령어를 입력한다.
-```
+```vim
 :TSUninstall all
 :TSInstall all
 ```

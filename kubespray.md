@@ -38,7 +38,7 @@ vi inventory/pi/group_vars/k8s_cluster/k8s-cluster.yml # 설정은 kubespray 문
 ansible-playbook -i inventory/pi/hosts.yml --become --become-user=root -v cluster.yml
 ```
 
-```inventory/pi/hosts.yml
+```yaml inventory/pi/hosts.yml
 all:
   hosts:
     pi0:
@@ -71,7 +71,7 @@ all:
     calico_rr:
       hosts: {}
 ```
-```k8s-cluster.yml
+```yaml k8s-cluster.yml
 kube_proxy_strlct_arp: true # MetalLB 설정
 kubernetes audit: true
 ```
@@ -146,7 +146,7 @@ fatal: [kube03]: FAILED! => {"msg": "Missing sudo password"}
 - https://github.com/ansible/ansible/issues/71939#issuecomment-702185274
 유저에 대한 권한을 맨 아랫줄로 옮겨서 주니 해결됨 과 같은 상태가 되었으며 [[kubespray]] 가 정상 동작했다.
 
-```/etc/sudoers
+```text /etc/sudoers
 # User privilege specification
 root    ALL=(ALL:ALL) ALL
 # ! 문제 영역

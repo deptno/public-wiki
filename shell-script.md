@@ -33,7 +33,7 @@ TAG=$([ "$NS" = "production" ] && echo "latest" || echo "dev")
 ```
 
 문자열 안에서 변수를 참조할 때 문자열은 홋 따옴표가 아닌 쌍따옴표여야 한다
-```
+```sh
 touch script.sh
 chmod +x script.sh
 cat <<EOF > script.sh
@@ -71,7 +71,7 @@ echo $VAR                     # default_value
 `VAR%%@*`
 VAR 변수값 뒤에서부터 `@`를 찾을때까지 문자 제거
 
-```
+```sh
 email="a@b.com"
 username=${email%%@*}
 
@@ -79,7 +79,7 @@ echo "username: $username"  # 출력: username: a
 ```
 
 ## 조건문
-```
+```sh
 if [ ! -z "$ENV_VAR"] # 혹은 [ -n "$ENV_VAR"]
 then
   echo $ENV_VAR

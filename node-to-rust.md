@@ -157,7 +157,7 @@ std::prelue 에 선언된 것들은 `use` 선언 없이 사용이 가능하다.
   - `Try*` 은 실패가 가능하다. 리턴 타입은 `Result` 가 된다.
 3. Use crate
   - thiserror - 커스텀 에러, lib 에서 주로 사용
-  ```
+  ```rust
   #[derive(thiserror::Error, Debug)]
   enum MyError {
     #[error("Environment variable not found")]
@@ -219,7 +219,7 @@ Iterator, Array, Vec -> `::iter()`
 - smol
 - async-std
 
-```
+```rust
 fn sync_fx() -> String {
 }
 async fn async_fx() -> String { // impl Future<Output = String>
@@ -327,7 +327,7 @@ cli 에 인자를 넣어서 실행하려면 `--` 후에 인자를 입력한다.
 에러 형식을 변환하는 방법
 1. From, Into, TryFrom, TryInto
 2. .map_err
-```
+```rust
 fn fx() -> Result(Self, CustomError) {}
   #...
   .map_err(|e| CustomError::Something(e))?

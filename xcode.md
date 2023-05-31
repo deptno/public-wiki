@@ -25,7 +25,7 @@ react-native 프로젝트를 진행하는데 있어서 시도한 조합을 기�
 intel 은 해당 빌드가 x86_64, rosetta2 를 통한 실행을 의미한다.
 
 `arch -arm64` 를 사용하지 않는다. 종속성에 이슈가 있는 것인지 native xcode 에서 빌드에 실패했다.
-```
+```sh
 Undefined symbol: _pb_ostream_from_buffer
 Undefined symbol: _pb_encode
 Undefined symbol: _OBJC_METACLASS_$_GPBMessage
@@ -43,7 +43,7 @@ $ sudo xcode-select --switch /Applications/Xcode.app
 ```
 
 ### 팀설정
-```
+```sh
 ... .xcconfig:1:1: unable to open file (in target "XXApp" in project "XXApp")
 ```
 XXApp -> TARGETS -> XXApp -> Signing & Capabilities -> Team: `None`
@@ -69,7 +69,7 @@ bundle exe pod install
 error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
 ```
 
-```
+```text
 Showing All Messages
 : The Legacy Build System will be removed in a future release. You can configure the selected build system and this deprecation message in File > Workspace Settings.
 ```

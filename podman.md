@@ -11,14 +11,14 @@ podman image list
 podman system connection list
 ```
 ## install
-```su 
+```sh 
 $ brew install podman
 $ pod image list
 Cannot connect to Podman. Please verify your connection to the Linux system using `podman system connection list`, or try `podman machine init` and `podman machine start` to manage a new Linux VM
 Error: unable to connect to Podman socket: Get "http://d/v4.3.1/libpod/_ping": dial unix ///var/folders/yr/lb2jlrrd1fs7h6hn30n_ksvr0000gn/T/podman-run--1/podman/podman.sock: connect: no such file or directory
 ```
 manage 를 위한 vm 을 아래 명령어로 띄우도록한다
-```su 
+```sh
 $ podman machine init
 $ podman machine start start
  ~/w/sr/g/d/k8s-5950x  master ?1  podman machine start start                                                   125 err  16.15.0 node  03:42:55

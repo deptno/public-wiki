@@ -1,7 +1,7 @@
 # cloudfront
 
 ## [[error]]
-```
+```sh
 Access to XMLHttpRequest at 'https://XXX.com' from origin 'https://YYY.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 ```
 해당 메시지에서 받은 응답코드는 `200` 이었다.

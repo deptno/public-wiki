@@ -2,7 +2,7 @@
 
 remote <-> local 간의 파일 전송
 
-```ssh
+```sh
 scp -r [USER]@[HOST]:/path/to/remote/dir /path/to/local/dir
 scp /path/to/local/file [USER]@[HOST]:/path/to/remote/dir
 ```

@@ -6,7 +6,7 @@ brew install watchman
 [[react-native]]의 `Error: EMFILE: too many open files, watch` 에러를 잡는데 사용된다.
 시스템의 fd 제한을 우회하는데 아마도 symlink 를 건너 띔으로써 처리하는 것이 아닌가 한다. [[@todo]]
 
-```
+```sh
 $ ll -T ~/Library/Developer/Xcode/DerivedData/ | wc -l
   131025
 $ sysctl kern.maxfiles

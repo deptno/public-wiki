@@ -11,7 +11,7 @@ package.json
 ## extensions
 ### TT: Translator 2022-03-02 
 - https://github.com/raycast/extensions/pull/1009
-```
+```text
 Hi @deptno 👋
 
 Thanks for your contribution 🔥, well done! I have some comments for you:

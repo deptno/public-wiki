@@ -172,7 +172,7 @@ tekton hub 에 있는 `git-clone` task 로 확인 DONE: 2023-01-24
 ## 구현
 ### trigger 를 통한 github private 레포지터리 클론 파이프라인 실행
 `ssh-github` 아래와 같은 형태
-```
+```sh
 Name:         ssh-github-deptno
 Namespace:    project-things
 Labels:       <none>

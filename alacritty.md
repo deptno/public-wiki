@@ -24,7 +24,7 @@ post build 프로세스 있으므로 추가적으로 할 것이 있는지 확인
 macos 기준으로는 별 의미를 찾지 못하겠다.
 - https://github.com/alacritty/alacritty/blob/master/INSTALL.md
 
-```
+```sh
 Permissions Links Size User   Date Modified    Name
 drwxr-xr-x      3    - deptno 2022-01-10 23:35  Alacritty@arm64.app
 drwxr-xr-x      5    - deptno 2022-01-10 23:32 └──  Contents

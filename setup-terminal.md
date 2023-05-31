@@ -32,7 +32,7 @@ brew install --cask blender
 
 ## python3
 
-```
+```sh
 python3 -m pip install --upgrade pip
 ```
 

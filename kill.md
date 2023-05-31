@@ -1,6 +1,6 @@
 # kill
 
-```
+```sh
 kill -9 $(lsof -ti:8080)
 kill -2 $(lsof -ti:8080)
 ```

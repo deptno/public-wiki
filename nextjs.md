@@ -172,7 +172,7 @@ next dev --turbo
 [400] /api/auth/error (97ms)
 ```
 아래는 브라우저에서 찍히는 로그
-```txt
+```text
 Error: This action with HTTP GET is not supported by NextAuth.js
 ```
 `--turbo` 옵션을 빼니 동작한다. dynamic route 쪽에 문제가 있는 것으로 보인다. 버전 정보를 추가해 둔다.

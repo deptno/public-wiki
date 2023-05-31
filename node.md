@@ -28,7 +28,7 @@ Error: Client network socket disconnected before secure TLS connection was estab
   code: 'ECONNRESET',
 ```
 ### ERR_OSSL_EVP_UNSUPPORTED
-```
+```sh
 Failed to construct transformer:  Error: error:0308010C:digital envelope routines::unsupported
   opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
   library: 'digital envelope routines',
@@ -42,7 +42,7 @@ node18에서는 실행안되고 node 16에서 실행됨 어떤 것 때문인지�
 package.json 의 script에서 쉘스크립트를 실행하는 경우에 발생
 `#!/usr/bin/env bash`
 와 같이 최상단 라인에 쉘을 명시해주면 해결된다
-```
+```sh
 Internal Error: spawn Unknown system error -8
     at ChildProcess.spawn (node:internal/child_process:413:11)
     at Object.spawn (node:child_process:757:9)

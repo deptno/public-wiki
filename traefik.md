@@ -24,7 +24,7 @@ v2.9
     3. 환경 변수
 - installation
   - helm 으로 설치시 dashboard 까지 모두 설치됨
-```
+```sh
 kubectl port-forward $(kubectl get pods --selector "app.kubernetes.io/name=traefik" --output=name) 9000:9000
 ```
   - http://localhost:9000/dashboard/ **tail slash 가 필수다**
@@ -49,7 +49,7 @@ tls 는 잘안되다가 자고 일어나니 되는 경향이 있어서 시간을
 + https://doc.traefik.io/traefik/https/acme/#providers
 + https://doc.traefik.io/traefik/user-guides/crd-acme/
   - default 8000/8443
-```
+```yaml
   ports:
     - protocol: TCP
       name: web

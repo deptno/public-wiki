@@ -58,7 +58,7 @@ task +tag +tag -tag
 ### context
 > 자주쳐야하는 tag 혹은 project 등을 잠시 context에 넣어서 편하게 사용한다. read, write 모두에 사용될 수 있다.
 
-```
+```sh
 task context define CONTEXT_NAME +tag +VIRTUAL_TAG + project:PROJECT_NAME due:today project:deptno
 task context CONTEXT_NAME
 task context none # 해제
