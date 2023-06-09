@@ -31,7 +31,7 @@ vim 에서와 같이 `:` 로 이동이 가능하다.
 ## plugin
 - [[metrics-server]] 를 설치하면 노드에 cpu, mem, pod 등의 정보를 얻어올 수 있다
 
-## related
+## link
 - [[kubernetes]]
 - [[lens]]
 - [[metrics-server]]

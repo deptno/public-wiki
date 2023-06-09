@@ -4,5 +4,5 @@
 git status -s
 ```
 
-## related
+## link
 - [[git]]

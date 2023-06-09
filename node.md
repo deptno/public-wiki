@@ -79,7 +79,7 @@ cross-env NODEOPTIONS=--inspect ts-node .
 특정 페이지를 지속적으로 해서 tps 측정이 가능하다.  
 이와 함께 크롬의 메모리 탭을 확인해서 레코딩을 걸고 부하테스트를 한 후 gc 가 돌고나서도 메모리가 원래되로 돌아오지 않는지 확인이 필요하다.  
 
-# related
+# link
 - [[javascript]]
 - [[nvm]]
 - [[npm]]

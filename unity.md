@@ -46,7 +46,7 @@ BE AWARE: Crash stack traces in Unity Dashboard will become unreadable.
 `process_symbols.sh` 파일에서 빌드 관련 내용을 주석 처리하던가
 [[usymtool]] 버전을 올려서 해결 2021.2.8
 
-## related
+## link
 - [[macos-monterey]]
 - [[fastlane]]
 - [[xcode]]

@@ -1,4 +1,4 @@
 # elastic-search
 
-## related
+## link
 - [[loki]]

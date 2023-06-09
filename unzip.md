@@ -6,6 +6,6 @@ unzip compressed.zip # 현재 폴더에 압축해제
 unzip compressed.zip -d /path/to/unzip # 지정한 폴더에 압축해제
 ```
 
-## related
+## link
 - [[zip]]
 - [[archive]]

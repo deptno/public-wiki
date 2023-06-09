@@ -1,4 +1,4 @@
 # daisyui
 
-## related
+## link
 - tailwindcss

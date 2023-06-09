@@ -89,7 +89,7 @@ failed to register layer: Error processing tar file(exit status 1): write /home/
 docker system prune
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[podman]]
 - [[harbor]]

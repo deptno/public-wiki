@@ -4,5 +4,5 @@
 npm install -g ios-deploy
 ```
 
-## related
+## link
 - [[react-native]]

@@ -1,6 +1,6 @@
 # javascript
 
-## related
+## link
 - [[corepack]]
 - [[node]]
 - [[browser]]

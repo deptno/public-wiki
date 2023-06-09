@@ -22,6 +22,6 @@ The application /Applications/WebStorm.app cannot be opened for an unexpected re
 ```
 Webstorm -> Tools -> Terminal -> Run command using IDE(? [[@todo]])
 
-## related
+## link
 - [[intellij]]
 - [[yarn]]

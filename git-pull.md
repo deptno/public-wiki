@@ -9,6 +9,6 @@ git pull --rebase --autostash
 git pull --all
 ```
 
-## related
+## link
 - [[git]]
 - [[git-fetch]]

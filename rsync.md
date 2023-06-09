@@ -14,6 +14,6 @@ rsync -avz -e ssh /path/to/source-folder user@remote-server:/path/to/destination
 -h human readable
 -z zip
 
-## related
+## link
 - [[terminal]]
 - [[cp]]

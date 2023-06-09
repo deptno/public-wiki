@@ -24,7 +24,7 @@ curl 'http://192.168.0.222/api/xxx/lights/2/state' \\
 - X, - PUT 등 메소드 지정
 - d @filename,  - json 등을 body 보낼때 사용
 
-## related
+## link
 - [[terminal]]
 - [[http]]
 - [[request]]

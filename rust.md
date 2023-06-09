@@ -460,7 +460,7 @@ println!("{} {}", "hello", "world");
 - 프레류드 (Prelude)  
   모든 러스트 프로그램에 정의된 특별한 영역으로 해당 프로그램 또는 크레이트가 외부로 노출하는 타입을 명시한 모듈
 
-## related
+## link
 - [[rust-vim]]
 - [[book/the-rust-programming-language|러스트 프로그래밍 공식 가이드]]
 - [[valgrind]]

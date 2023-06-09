@@ -1,5 +1,5 @@
 # goaccess
 
-## related
+## link
 - [[log]]
 - [[lnav]]

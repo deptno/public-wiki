@@ -54,7 +54,7 @@ kubectl apply -f storage-classes.yaml
 ```
 
 
-## related
+## link
 - [[kubernetes]]
 - [[docker]]
 - [[jobs]]

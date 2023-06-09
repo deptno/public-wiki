@@ -2,5 +2,5 @@
 
 - [[chrome|크롬]]
 
-## related
+## link
 - [[navigator]]

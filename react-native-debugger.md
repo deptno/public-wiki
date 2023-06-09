@@ -6,6 +6,6 @@ async-stroage 사용시에 키, 밸류 목록을 보기 위해서는 콘솔에 �
 showAsyncStorageContentInDev()
 ```
 
-## related
+## link
 - [[react-native]]
 - [[debug]]

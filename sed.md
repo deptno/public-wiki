@@ -17,6 +17,6 @@ $ echo "/hello/world" | sed 's|/hello/||'
 world
 ```
 
-## related
+## link
 - [[terminal]]
 - [[tr]]

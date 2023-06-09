@@ -6,6 +6,6 @@ zip -r compressed.zip a b c # 디렉토리까지 압축
 zip compressed.zip * -x '*.git*' # *.git* 제외
 ```
 
-## related
+## link
 - [[archive]]
 - [[unzip]]

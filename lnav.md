@@ -15,6 +15,6 @@
 - / : regexp
   - n/N next/prev match
   
-## related
+## link
 - [[log]]
 - [[goaccess]]

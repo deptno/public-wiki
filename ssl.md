@@ -1,4 +1,4 @@
 # ssl
 
-## related
+## link
 - [[localtunnel]]

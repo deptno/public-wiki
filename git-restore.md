@@ -4,5 +4,5 @@
 git restore --staged [path]
 ```
 
-## related
+## link
 - [[git]]

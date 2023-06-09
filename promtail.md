@@ -11,7 +11,7 @@ level=error ts=2023-01-23T19:04:06.750841317Z caller=client.go:390 component=cli
 ```
 [[loki]] `auth_enabled: false` 설정으로 disabled 처리
 
-## related
+## link
 - [[loki]]
 - [[fluentd]]
 - [[logstash]]

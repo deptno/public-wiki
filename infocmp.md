@@ -8,7 +8,7 @@ infocmp
 infocmp alacritty
 ```
 
-## related
+## link
 - [[terminal]]
 - [[macos]]
 - [[alacritty]]

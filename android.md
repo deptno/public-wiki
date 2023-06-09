@@ -139,7 +139,7 @@ val intent = Intent(this, MainActivity::class.java)
 - res/layout/activity_main.xml - 세로 모드에서 사용
 - res/layout/`land`/activity_main.xml - 가로 모드에서 사용
 
-## related
+## link
 - [[flipper]]
 - [[scrcpy]]
 - [[adb]]

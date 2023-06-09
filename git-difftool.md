@@ -1,5 +1,5 @@
 # git-difftool
 
-## related
+## link
 - [[git]]
 - [[difftastic]]

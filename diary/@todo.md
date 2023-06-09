@@ -1,5 +1,5 @@
 # @todo
 
 
-## related
+## link
 - [[../@todo|public todo]]

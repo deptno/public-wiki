@@ -2,6 +2,6 @@
 
 a.k.a `rg`
 
-## related
+## link
 - [[telescope]]
 - [[terminal]]

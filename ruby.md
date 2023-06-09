@@ -236,7 +236,7 @@ In Gemfile:
 -> [[bundler]] 2.3.8 버전 업데이트
 -> 해결
 
-## related
+## link
 - [[bundler]]
 - [[ruby-gems]]
 - [[frum]]

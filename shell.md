@@ -2,5 +2,5 @@
 
 - [[zsh]]
 
-## related
+## link
 - [[shell-script]]

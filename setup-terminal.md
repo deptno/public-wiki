@@ -177,7 +177,7 @@ bundle exe pod install
 ### 설정
 - [[webstorm]]
 
-## related
+## link
 - [[vim]]
 - [[neovim]]
 - [[macos]]

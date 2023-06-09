@@ -41,6 +41,6 @@ localleader = ;
 :now: `Space` 로 현재 날자 삽입
 
 
-## related
+## link
 - [[neovim]]
 - [[neovim-lua-plugins]]

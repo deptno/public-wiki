@@ -25,6 +25,6 @@ scp 명령어가 실패했는데 이 때는 -O 옵션을 추가해서 성공했�
   + https://stackoverflow.com/questions/74311661/subsystem-request-failed-on-channel-0-scp-connection-closed-macbook
 ---
 
-## related
+## link
 - [[ssh]]
 - [[port]]

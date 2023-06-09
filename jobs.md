@@ -21,6 +21,6 @@ $ fg # vim reopen
 bg %1 # 백그라운드에서 1을 실행한다. suspended -> running
 ```
 
-## related
+## link
 - [[fg]]
 - [[bg]]

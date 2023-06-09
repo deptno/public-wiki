@@ -5,6 +5,6 @@ gui 기반 k8s 매니징 툴
 brew install --cask lens
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[k9s]]

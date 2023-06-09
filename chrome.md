@@ -8,7 +8,7 @@ chrome://inspect/#devices
 
 ## headless
 
-## related
+## link
 - [[browser|브라우저]]
 - [[node]]
 - [[puppeteer]]

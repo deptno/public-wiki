@@ -8,5 +8,5 @@
 ## reference
 - diary:yyyy-MM-dd 다이어리 참조
 
-## related
+## link
 - [[vim]]

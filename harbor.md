@@ -81,7 +81,7 @@ $ sudo vi /etc/containerd/config.toml
 sudo systemctl restart containerd
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[book/24-steps-k8s]]
 - [[quay]]

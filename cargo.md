@@ -36,5 +36,5 @@ cargo add package_name
 cargo rm package_name
 ```
 
-# related
+# link
 - [[rust]]

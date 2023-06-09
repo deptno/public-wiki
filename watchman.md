@@ -19,6 +19,6 @@ ll
 어디까지가 watch의 범위인지는 확인해보지 않았으나 커널의 환경설정을 넘어선다.
 - [ ] @todo node 의 fs.watcher api 가 symlink 에 대해서 어떻게 동작하는지 알아보자
 
-## related
+## link
 - [[react-native]]
 - [[sysctl]]

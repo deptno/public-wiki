@@ -12,6 +12,6 @@ git fetch origin master:master
 ```
 
 
-## related
+## link
 - [[git]]
 - [[git-pull]]

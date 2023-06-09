@@ -1,6 +1,6 @@
 # grafana
 
-## related
+## link
 - [[kubernetes]]
 - [[prometheus]]
 - [[loki]]

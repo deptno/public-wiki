@@ -10,6 +10,6 @@ corepack enable
 
 yarn 2(berry) 포함
 
-## related
+## link
 - [[node]]
 - [[yarn]]

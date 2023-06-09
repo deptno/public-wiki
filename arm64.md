@@ -2,6 +2,6 @@
 
 Apple Sillicon M1
 
-## related
+## link
 - [[x86_64]]
 - universal

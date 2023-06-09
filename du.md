@@ -8,7 +8,7 @@ du -sh # sum 파일별 -> 폴더별
 du -sh --max-depth=1 # 디렉토리 내부로 들어가지않고 루트레벨에서 처리
 ```
 
-## related
+## link
 - [[terminal]]
 - [[df]]
 - [[lvm]]

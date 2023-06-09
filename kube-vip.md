@@ -1,4 +1,4 @@
 # kube-vip
 
-## related
+## link
 - [[metallb]]

@@ -3,5 +3,5 @@
 - nginx ingress
 - [[traefik]]
 
-## related
+## link
 - [[ingress]]

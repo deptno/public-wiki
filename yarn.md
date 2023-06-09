@@ -169,7 +169,7 @@ yarn set version 3.3.1
 $ SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm_config_arch=x64 npm_config_platform=linux yarn add sharp
 ```
   + https://github.com/lovell/sharp/issues/2340#issuecomment-851029529
-## related
+## link
 - [[node]]
 - [[npm]]
 - [[pnpm]]

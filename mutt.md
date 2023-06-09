@@ -1,4 +1,4 @@
 # mutt
 
-## related
+## link
 - [[neomutt]]

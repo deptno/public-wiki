@@ -418,7 +418,7 @@ secret 에서 개행 제거하고 나서 나오기 시작
 ---
 middleware 의 namespace 와 관계없이 ingressroute 의 namespace 를 보는 것 같다
 middleware.forwardAuth 를 설정할때 namespace 를 명시한다
-## related
+## link
 - [[kubernetes]]
 - [[diary:2023-01-08]]
 - [[ingress]]

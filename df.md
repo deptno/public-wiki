@@ -8,7 +8,7 @@ du -h . # 현재 경로의 파티션
 du -h .
 ```
 
-## related
+## link
 - [[terminal]]
 - [[du]]
 - [[lvm]]

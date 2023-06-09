@@ -21,6 +21,6 @@ sudo sysctl -w kern.maxfiles=10485760
 sudo sysctl -w kern.maxfilesperproc=1048576
 ```
 
-## related
+## link
 - [[macos]]
 - [[watchman]]

@@ -21,7 +21,7 @@ brew install argocd
   + https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#traefik-v22
   - `argocd-server --insecure` 옵션으로 서버를 실행하고 IngressRoute 에서 tls 를 termination
 
-## related
+## link
 - [[kubernetes]]
 - [[git]]
 - [[traefik]]

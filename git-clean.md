@@ -7,6 +7,6 @@ git clean -fd [path]
 - `-f` : 파일
 - `-d` : 디렉토리
 
-## related
+## link
 - [[git]]
 - [[zsh]]

@@ -3,5 +3,5 @@
 SFMono Nerd Font
 Light
 
-## related
+## link
 - [[vim]]

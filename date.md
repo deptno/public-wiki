@@ -4,5 +4,5 @@
 date '+%Y%m%d-%H%M'
 ```
 
-## related
+## link
 - [[terminal]]

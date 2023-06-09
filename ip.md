@@ -22,7 +22,7 @@ ip l[ink] set [eth0] down
 - `-6`  filter ipv6
 - `-s`  show statistics
 
-# related
+# link
 - [[ifconfig]]
 - [[netplan]]
 - [[dhclient]]

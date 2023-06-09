@@ -238,7 +238,7 @@ error: --overwrite is false but found the following declared annotation(s):
 ```
 kubectl annotate 시에 --overwrite 옵션을 추가하거나 --force를 추가해서 해결한다
 
-## related
+## link
 - [[minikube]]
 - [[kubectl]]
 - [[helm]]

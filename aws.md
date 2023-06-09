@@ -1,6 +1,6 @@
 # aws
 
-## related
+## link
 - [[pinpoint]]
 - [[awscli]]
 - [[cloudfront]]

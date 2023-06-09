@@ -2,7 +2,7 @@
 
 [[find]] alternative
 
-## related
+## link
 - [[telescope]]
 - [[rust]]
 - [[find]]

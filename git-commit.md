@@ -5,5 +5,5 @@
 - -v 변경사항을 표시
 - --no-verify 훅 무시
 
-## related
+## link
 - [[git]]

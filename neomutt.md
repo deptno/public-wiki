@@ -50,7 +50,7 @@ mailboxes +INBOX +[Gmail]/Sent +[Gmail]/Drafts "+[Gmail]/All Mail" +[Gmail]/Tras
 - j/k - 위아래 메일
 - v - 첨부파일 보기
 
-## related
+## link
 - [[mutt]]
 - [[finicky]]
 - [[email]]

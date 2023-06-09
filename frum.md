@@ -38,7 +38,7 @@ frum uninstall [VERSION]
 frum install [VERSION]
 ```
 
-## related
+## link
 - [[ruby]]
 - [[rust]]
 - [[chruby]]

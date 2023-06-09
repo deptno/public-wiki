@@ -7,6 +7,6 @@ aws s3 cp [--profile=PROFILE] s3://bucket/path/ . --recursive --exclude "*" --in
 ```
 pagination, 1000 개 이슈가 존재하는 듯 [[@todo]]
 
-## related
+## link
 - [[aws]]
 - [[terminal]]

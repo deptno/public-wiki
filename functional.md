@@ -17,5 +17,5 @@
 | fold      |   | o    |    | https://egghead.io/lessons/rust-rustlings-iterators4-implementing-factorial-with-iterators |                                                                                           |
 | product   |   | o    |    | https://egghead.io/lessons/rust-rustlings-iterators4-implementing-factorial-with-iterators |
 
-## related
+## link
 - [[rust]]

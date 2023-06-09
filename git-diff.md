@@ -8,5 +8,5 @@ git diff --staged [path]
 git diff --diff-algorithm=histogram master..
 ```
 
-## related
+## link
 - [[git]]

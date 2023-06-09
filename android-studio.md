@@ -1013,7 +1013,7 @@ Mapping new ns http://schemas.android.com/sdk/android/repo/sys-img2/02 to old ns
 - @todo 업그레이드 할 것인지
 
 
-## related
+## link
 - [[android]]
 - [[react-native]]
 - [[xcode]]

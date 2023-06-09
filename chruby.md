@@ -33,5 +33,5 @@ arch-arm64 ruby-install 3.1.0
 ruby-install ruby 2.7.5
 ```
 
-## related
+## link
 - [[ruby-install]]

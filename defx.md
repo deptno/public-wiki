@@ -31,6 +31,6 @@ estart Neovim. See also :checkhealth.
 :UpdateRemotePlugins
 ```
 
-## related
+## link
 - [[neovim]]
 - [[nvim-treesitter]]

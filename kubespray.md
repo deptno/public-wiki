@@ -279,7 +279,7 @@ fatal: [pi0]: FAILED! => {
 - [X] `declare IPS` 로 control-plane ip 설정 -> 실패
 - [ ] `ansible-playbook [....] --private-key=~/.ssh/[private key]
 - [ ] 해결 안됨
-## related
+## link
 - [[multipass]]
 - [[kubectl]]
 - [[sudo]]

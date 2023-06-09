@@ -4,6 +4,6 @@
 $ msgcat --color=test
 ```
 
-## related
+## link
 - [[terminal]]
 

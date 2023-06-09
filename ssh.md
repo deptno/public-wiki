@@ -18,7 +18,7 @@ host [HOST_NAME_ALIAS]
 $ ssh [HOST_NAME_ALIAS]
 ```
 
-## related
+## link
 - [[scp]]
 - [[ssh-copy-id]]
 - [[ssh-keygen]]

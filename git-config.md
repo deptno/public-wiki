@@ -6,5 +6,5 @@
   defaultBranch = main
 ```
 
-## related
+## link
 - [[git]]

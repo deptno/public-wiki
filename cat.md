@@ -6,5 +6,5 @@ cat <<EOF > [filename]
 EOF
 ```
 
-## related
+## link
 - terminal

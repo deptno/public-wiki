@@ -1,5 +1,5 @@
 # debug
 
-## related
+## link
 - [[flipper]]
 - [[react-native-debugger]]

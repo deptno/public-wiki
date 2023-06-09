@@ -2,5 +2,5 @@
 
 bridge control
 
-## related
+## link
 - [[terminal]]

@@ -62,6 +62,6 @@ $ CFLAGS="-Wno-error=implicit-function-declaration" arch -arm64 ruby-install rub
 
 [[arch-arm64|arch -arm64]] 옵션은 [[m1]] 프로세서일때 필요하다.
 
-## related
+## link
 - [[ruby]]
 - [[chruby]]

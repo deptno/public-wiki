@@ -17,6 +17,6 @@ sudo kpf awesome-svc 80:8000
 
 sudo 뒤에 ` `이 포함되어 alias 가 생성되었기 때문에 다음 명령어도 이를 받아들인다
 
-## related
+## link
 - [[terminal]]
 - [[sudo]]

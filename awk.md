@@ -4,5 +4,5 @@
 stream | awk '{print $2}'
 ```
 
-## related
+## link
 - [[terminal]]

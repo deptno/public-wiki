@@ -7,7 +7,7 @@ direnv 가 지원하는 환경 파일이 있는 디렉토리 밑으로 진입시
 - .envrc - shell script
 - .env - `ENV=VALUE` 라인들의 집합
 
-## related
+## link
 - [[dotenv]]
 - [[path|.envrc]]
 - [[path|.env]]

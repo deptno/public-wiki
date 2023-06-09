@@ -25,7 +25,7 @@ cat file-with-eol | tr -d '\n' | kubectl create secret generic db-user-pass --fr
 kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}' 
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[random]]
 - [[eol]]

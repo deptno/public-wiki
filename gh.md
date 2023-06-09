@@ -52,7 +52,7 @@ gh pr list \
 {{end}}'
 ```
 
-## related
+## link
 - [[direnv]]
 - [[github]]
 - [[jq]]

@@ -7,5 +7,5 @@ lsp 서버들 정보를 json 으로 관리
 ```
 `U` 모든 lsp 서버 업데이트
 
-## related
+## link
 - [[neovim]]

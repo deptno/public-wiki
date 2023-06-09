@@ -12,5 +12,5 @@ ab -c 50 -n 10000 https://url.com
 - -t : time limit
 - -r : request rate
 
-## related
+## link
 - [[benchmark]]

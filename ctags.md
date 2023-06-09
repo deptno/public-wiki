@@ -1,4 +1,4 @@
 # ctags
 
-## related
+## link
 - [[universal-ctags]]

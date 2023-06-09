@@ -9,7 +9,7 @@ helm pull imgproxy/imgproxy --untar
 helm upgrade imgproxy imgproxy --install --create-namespace -n imgproxy
 ```
 
-## related
+## link
 - [[helm]]
 - [[kubernetes]]
 - [[nginx]]

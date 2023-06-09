@@ -2,5 +2,5 @@
 
 - text to diagram
 
-## related
+## link
 - [[mermaid]]

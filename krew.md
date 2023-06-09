@@ -13,5 +13,5 @@ kubectl df-pv # pv 용량 모니터링
 
 ns, ctx 같은경우 fzf 와 연동됨
 
-## related
+## link
 - [[kubernetes]]

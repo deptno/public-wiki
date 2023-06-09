@@ -16,6 +16,6 @@
 
 [[postgresql]] 에서 사용가능 한 옵션
 
-## related
+## link
 - [[postgresql]]
 - [[psql]]

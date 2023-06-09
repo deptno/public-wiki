@@ -22,6 +22,6 @@ $ git rebase --onto F D H
 #             D---E---H---I (HEAD)                          E---H (HEAD)
 ```
 
-## related
+## link
 - [[git]]
 

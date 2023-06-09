@@ -1,4 +1,4 @@
 # vi
 
-## related
+## link
 - [[vim]]

@@ -6,5 +6,5 @@ git reset --soft # staged
 git reset --hard # clear
 ```
 
-## related
+## link
 - [[git]]

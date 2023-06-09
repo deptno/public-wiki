@@ -2,7 +2,7 @@
 
 터미널 기반 csv -> table 뷰어
 
-# related
+# link
 - [[rust]]
 - [[gh]]
 - [[jq]]

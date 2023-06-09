@@ -7,9 +7,9 @@ fatal error: runtime: bsdthread_register error
 ```
 https://github.com/golang/go/wiki/MacOS12BSDThreadRegisterIssue
 
-## related issue
+## link issue
 - [[unity]]
 
-## related
+## link
 - [[macos]]
 

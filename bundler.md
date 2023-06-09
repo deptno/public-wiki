@@ -21,7 +21,7 @@ bundle install
 bundle exe pod install
 ```
 
-## related
+## link
 - [[ruby]]
 - [[ruby-gems|ruby gems]]
 - [[react-native]]

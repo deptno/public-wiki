@@ -2,5 +2,5 @@
 
 alias [[kubernetes]]
 
-## related
+## link
 - [[kubernetes]]

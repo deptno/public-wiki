@@ -1113,6 +1113,6 @@ exec /opt/bitnami/scripts/nginx/entrypoint.sh: exec format error
 실습에 사용된 특정 image 들은 arm 에서 실행이 불가능하다.  
 x86 emulation 이 필요하다.
 
-## related
+## link
 - [[../kubernetes|kubernetes]]
 - [[../kubespray]]

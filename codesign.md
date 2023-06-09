@@ -10,7 +10,7 @@ codesign --remove-signature /Applications/Alacritty.app && \
 sudo codesign --force --deep --sign - /Applications/Alacritty.app
 ```
 
-## related
+## link
 - [[macos]]
 - [[alacritty]]
 - [[rust]]

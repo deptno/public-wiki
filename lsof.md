@@ -6,5 +6,5 @@ lsof -i tcp:8080
 lsof -t -i tcp:8080 # process id only
 ```
 
-## related
+## link
 - [[kill]]

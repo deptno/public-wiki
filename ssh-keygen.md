@@ -4,7 +4,7 @@
 ssh-keygen -t ed25519 -C [email]
 ```
 
-## related
+## link
 - [[terminal]]
 - [[ssh]]
 - [[tekton]]

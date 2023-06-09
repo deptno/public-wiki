@@ -15,6 +15,6 @@ $ cat hello.txt | USER=deptno envsubst
 hello deptno
 ```
 
-# related
+# link
 - [[terminal]]
 - [[kubectl]]

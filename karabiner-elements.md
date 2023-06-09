@@ -13,5 +13,5 @@ Preferences -> Complex Modifications -> Add rule -> Import more rules rules from
 - capslock 기능 포기하고 한영전환을 빨리하기
   + https://mangoooooo.tistory.com/12
 
-## related
+## link
 - [[macos]]

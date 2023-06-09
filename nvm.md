@@ -12,5 +12,5 @@ nvm use 14 # 14 로 사용할 버전을 변경
 echo '16' > .nvmrc # 해당 파일이 있는 곳에서는 해당 버전을 사용
 ```
 
-## related
+## link
 - [[node]]

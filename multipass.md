@@ -14,5 +14,5 @@ multipass launch [name by find command]
 multipass mount $HOME [name of vm]{{:/pass}} # https://multipass.run/docs/share-data-with-an-instance
 ```
 
-## related
+## link
 - [[kubespray]]

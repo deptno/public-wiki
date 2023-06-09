@@ -24,7 +24,7 @@ TypeError: fetch failed
 ```
 api 를 localhost 로 접근하면 에러난다 `127.0.0.1` 로 바꿔서 해결, localhost 가 ipv6 로 resolve 되면서 문제가 생기는 것으로 보인다.
  + https://github.com/node-fetch/node-fetch/issues/1624#issuecomment-1233424362
-## related
+## link
 - [[react-native]]
 - [[recoil]]
 - [[state-management|상태관리]]

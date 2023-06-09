@@ -6,7 +6,7 @@ openssl rand -base64 9
 gpg --gen-random --armor 1 3 
 ```
 
-## related
+## link
 - [[password]]
 - [[terminal]]
 - [[kubectl]]

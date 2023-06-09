@@ -2,6 +2,6 @@
 
 https://github.com/nvim-lua/plenary.nvim
 
-## related
+## link
 - [[neovim]]
 - [[telescope|telescope.nvim]]

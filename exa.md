@@ -5,5 +5,5 @@
 - -D - 디렉토리만 표시
 - -L{\d} - 디렉토리 레벨 설정
 
-## related
+## link
 - [[terminal]]

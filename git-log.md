@@ -8,6 +8,6 @@
 - --author
 - --ancestry-path [[sha1..sha2]]
 
-## related
+## link
 - [[git]]
 - [[.gitconfig]]

@@ -6,7 +6,7 @@ dhcp
 dhclient [-4] [-6] [-v] -r [eht0]
 ```
 
-# related
+# link
 - [[terminal]]
 - [[ip]]
 - [[ifconfig]]

@@ -4,6 +4,6 @@
 brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 ```
 
-## related
+## link
 - [[language]]
 - [[android]]

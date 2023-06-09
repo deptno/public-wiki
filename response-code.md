@@ -3,6 +3,6 @@
 - 응답없음
 - 403
 
-## related
+## link
 - [[cloudfront]]
 - [[cors]]

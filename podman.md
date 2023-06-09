@@ -58,7 +58,7 @@ Error: failed to connect: dial tcp [::1]:61310: connect: connection refused
 ### docker build 보다 느림
 graph driver 에 대한 검색 결과가 노출되고 있음, docker 를 쓰는게 지금 마음이 편함
 
-## related
+## link
 - [[docker]]
 - [[kubernetes]]
 - [[harbor]]

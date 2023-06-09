@@ -12,7 +12,7 @@ bundle exe pod deintegrate
 bundle exe pod --repo-update
 ```
 
-## related
+## link
 - [[xcode]]
 - [[bundler]]
 - [[ios]]

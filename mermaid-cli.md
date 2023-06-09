@@ -2,5 +2,5 @@
 
 + https://github.com/mermaid-js/mermaid-cli
 
-## related
+## link
 - [[mermaid]]

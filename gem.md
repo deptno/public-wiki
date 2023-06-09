@@ -20,7 +20,7 @@ gem cleanup
 - `GEM_HOME`
 - `GEM_ROOT`
 
-## related
+## link
 - [[ruby]]
 - [[ruby-gems|ruby gems]]
 - [[bundler]]

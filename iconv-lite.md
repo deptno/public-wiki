@@ -9,6 +9,6 @@ fetch.buffer().then((buffer) => {
 })
 ```
 
-## related
+## link
 - [[node]]
 - [[encoding]]

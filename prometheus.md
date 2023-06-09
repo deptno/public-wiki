@@ -10,7 +10,7 @@ helm pull prometheus-community/kube-prometheus-stack --untar
 helm upgrade --install --create-namespace -n prometheus . 
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[grafana]]
 - [[loki]]

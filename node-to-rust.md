@@ -371,7 +371,7 @@ Tokio 는 자체 **Sync** crate 를 가지고 있다.
 
 
 
-## related
+## link
 - [[node]]
 - [[rust]]
 - [[monorepo]]

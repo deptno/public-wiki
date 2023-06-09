@@ -11,6 +11,6 @@ git push origin :branch_name
 git push origin --delete branch_name
 ```
 
-## related
+## link
 - [[git]]
 - [[git-branch]]

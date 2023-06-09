@@ -12,5 +12,5 @@ brew install duti
 duti -s com.apple.mail mail
 ```
 
-## related
+## link
 - [[mpv]]

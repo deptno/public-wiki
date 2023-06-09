@@ -12,5 +12,5 @@ project = "B2C" and (assignee in ("deptno") OR participants in ("deptno")) ORDER
 (assignee = "deptno" OR Participants in (deptno)) AND project = "PROJECT_NAME" AND created > startOfMonth("-6M") ORDER BY created DESC
 ```
 
-## related
+## link
 - [[jira]]

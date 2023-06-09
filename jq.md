@@ -24,7 +24,7 @@ jq -n '{"json": "data"}' # formating
 ... | jq '.[] | [.name, .version] | @text'
 ```
 
-## related
+## link
 - [[vim]]
 - [[gh]]
 - [[xsv]]

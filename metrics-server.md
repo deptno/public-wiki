@@ -28,7 +28,7 @@ helm chart 의 values.yaml 에서 `defaultArgs` 에 아래 옵션을 추가한�
 ```
 
 
-## related
+## link
 - [[kubernetes]]
 - [[k9s]]
 - [[tekton]]

@@ -111,6 +111,6 @@ kubectl edit ippools.crd.projectcalico.org default-ipv4-ippool`
 ipipMode: CrossSubnet
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[calicoctl]]

@@ -46,5 +46,5 @@ subsets:
 
 service 에는 ping 을 할 수 없다. [[curl]], wget 등으로 접근을 확인한다
 
-## related
+## link
 - [[kubernetes]]

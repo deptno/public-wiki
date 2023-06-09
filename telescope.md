@@ -8,5 +8,5 @@
 - [[nvim-treesitter|nvim-treesitter.nvim]] - syntax highlighting
 - [[ripgrep]]
 
-## related
+## link
 - [[neovim]]

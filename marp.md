@@ -3,5 +3,5 @@
 markdown slide
 - https://github.com/marp-team/marp
 
-## related
+## link
 - [[macos]]

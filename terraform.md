@@ -55,5 +55,5 @@ Error: go@1.14: An unsatisfied requirement failed this build.
 ```
 
 
-## related
+## link
 - [[isc]]

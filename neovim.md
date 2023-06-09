@@ -30,7 +30,7 @@ vim.cmd ":let $LANG='en_US.UTF-8'"
 ### neovim lua 기반 플러그인 환경 설정
 - [[neovim-lua-plugins]]
 
-## related
+## link
 - [[vim]]
 - [[python]]
 - [[neovim-lua-plugins]]

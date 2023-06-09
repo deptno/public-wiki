@@ -5,5 +5,5 @@ git show -sb
 git show -s
 ```
 
-## related
+## link
 - [[git]]

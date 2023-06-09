@@ -665,7 +665,7 @@ $ sudo swapoff -a
 - [X] DONE: 2023-02-02 자동화
   - /etc/fstab 을 수정해서 swap 파티션이 뜨지 않도록 설정하면 리붓후 알아서 kubelet 이 뜬 것을 확인할 수 있다.
 
-## related
+## link
 - [[raspberry-pi]]
 - [[kubelet]]
 - [[crictl]]

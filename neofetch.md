@@ -6,5 +6,5 @@
 brew install neofetch
 ```
 
-## related
+## link
 - [[terminal]]

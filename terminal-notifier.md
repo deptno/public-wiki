@@ -7,5 +7,5 @@ brew install terminal-notifier
 build | temrinal-notifier -sound default
 ```
 
-## related
+## link
 - [[terminal]]

@@ -26,5 +26,5 @@ git fetch --no-tags --depth 1 origin BRANCH
 git checkout --force BRNACH
 ```
 
-## related
+## link
 - [[git]]

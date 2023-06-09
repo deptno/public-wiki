@@ -2,6 +2,6 @@
 
 [[jobs]] 참조
 
-## related
+## link
 - [[jobs]]
 - [[bg]]

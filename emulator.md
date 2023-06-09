@@ -7,6 +7,6 @@ emulator -help
 emulator -list-avds
 ```
 
-## related
+## link
 - [[android]]
 - [[adb]]

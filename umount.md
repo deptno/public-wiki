@@ -4,6 +4,6 @@
 umount [local/mount/path]
 ```
 
-## related
+## link
 - [[mount]]
 - [[nfs]]

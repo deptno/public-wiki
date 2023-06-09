@@ -23,7 +23,7 @@ Error: net::ERR_NETWORK_CHANGED at https://example.com
   - 환경은 [[calico]] 를 사용하고 있었다.
   - timeout 은 1초로도 충분했다.
 
-## related
+## link
 - [[chrome]]
 - [[calico]]
 - [[kubernetes]]

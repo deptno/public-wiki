@@ -9,6 +9,6 @@ brew install --cask git-credential-manager-core
 git credential-manager
 ```
 
-## related
+## link
 - [[git]]
 - [[github]]

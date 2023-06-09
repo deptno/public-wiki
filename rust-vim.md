@@ -8,7 +8,7 @@ let g:rust_clip_command = 'pbcopy'
 - :RustFmt
 - :RustPlay - 
 
-## related
+## link
 
 - vim-syntastic/syntastic
 

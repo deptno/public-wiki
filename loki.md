@@ -50,7 +50,7 @@ s Response: \"at least 2 live replicas required, could only find 1\\n\" ws: fals
 ser-Agent: promtail/2.7.1; "
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[prometheus]]
 - [[grafana]]

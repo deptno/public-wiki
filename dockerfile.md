@@ -15,7 +15,7 @@
 |   | VOLUME          | spec.volumes, spec.containers[].volumeMounts      |
 |   | USER            | spec.containers[].securityContext.runAsUser       |
 
-## related
+## link
 - [[docker]]
 - [[kubernetes]]
 - [[monorepo]]

@@ -15,6 +15,6 @@ brew install --cask proxyman
 2. 설정에서 설치
 3. 프록시맨에서 `Enable only this domain` 설정을 해줘야지 됨
 
-## related
+## link
 - [[ios]]
 - [[android]]

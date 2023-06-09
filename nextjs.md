@@ -196,7 +196,7 @@ Type error: Element implicitly has an 'any' type because expression of type 'str
   137 |       return new MissingAdapterMethods(
 ```
 
-## related
+## link
 - [[react]]
 - [[tailwindcss]]
 - [[yarn]]

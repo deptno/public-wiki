@@ -4,5 +4,5 @@
 git checkout [BRANCH] -- [[path/to]]
 ```
 
-## related
+## link
 - [[git]]

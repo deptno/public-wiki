@@ -86,5 +86,5 @@ echo \
 #### error
 [[kubeadm]] 참조
 
-## related
+## link
 - [[kubeadm]]

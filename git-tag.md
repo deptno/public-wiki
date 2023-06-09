@@ -6,5 +6,5 @@ git tag -a [TAGNAME]
 git tag [TAGNAME]
 ```
 
-## related
+## link
 - [[git]]

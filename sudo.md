@@ -10,7 +10,7 @@ visudo
 vi /etc/sudoers
 ```
 
-## related
+## link
 - [[terminal]]
 - [[kubespray#error]]
 - [[alias]]

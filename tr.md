@@ -24,7 +24,7 @@ $ echo '"/hello/UPPERCASE"' | tr -d '"/a-z"'
 UPPERCASE
 ```
 
-## related
+## link
 - [[terminal]]
 - [[sed]]
 - [[shell-script]]

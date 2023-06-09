@@ -21,6 +21,6 @@ kubetail -n # current namespace pods
 kubetail -n [namespace]
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[stern]]

@@ -26,6 +26,6 @@ Try 'adb kill-server' if that seems wrong.
 Otherwise check for a confirmation dialog on your device.
 ```
 
-## related
+## link
 - [[android-studio]]
 - [[emulator]]

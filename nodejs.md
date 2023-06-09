@@ -1,4 +1,4 @@
 # nodejs
 
-## related
+## link
 - [[node]]

@@ -33,6 +33,6 @@ pod has unbound immediate PersistentVolumeClaims. preemption: 0/1 nodes are avai
 ```
 `volumeName` 을 지정하면 파드에 붙지 못한다. 자동으로 할당하도룩 두자
 
-## related
+## link
 - [[kubernetes]]
 - [[book/24-steps-k8s]]

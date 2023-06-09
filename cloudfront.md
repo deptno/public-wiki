@@ -13,7 +13,7 @@ Access to XMLHttpRequest at 'https://XXX.com' from origin 'https://YYY.com' has 
 
 - https://aws.amazon.com/ko/premiumsupport/knowledge-center/no-access-control-allow-origin-error/#The_CloudFront_distribution.27s_cache_behavior_allows_the_OPTIONS_method_for_HTTP_requests
 
-## related
+## link
 - [[aws]]
 - [[s3]]
 - [[response-code]]

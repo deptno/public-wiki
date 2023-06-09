@@ -2,5 +2,5 @@
 
 + https://cron.help
 
-## related
+## link
 - [[kubernetes]]

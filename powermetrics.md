@@ -4,5 +4,5 @@
 sudo powermetrics --samplers thermal,cpu_power
 ```
 
-## related
+## link
 - [[macos]]

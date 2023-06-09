@@ -124,5 +124,5 @@ key 1 도 선택해서 subkey 도 함께 갱신해주도록한다. 이후에는 
 
 
 
-## related
+## link
 - [[setup-terminal]]

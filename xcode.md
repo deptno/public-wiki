@@ -103,7 +103,7 @@ terminal 이 arm 으로 실행된 경우
   ```
 - xcode 에서 Pods 의 `Build Settings` -> `Build Active Architectures Only` -> `Debug` -> `Any iOS Simulator SDK`에 `arm64` 값을 추가한다
 
-# related
+# link
 - [[ios]]
 - [[bundler]]
 - [[react-native]]

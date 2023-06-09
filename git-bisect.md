@@ -32,5 +32,5 @@ bisect run success
 `xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx is the first bad commit` 을 보고 에러를 추정할 수 잇다.
 
 
-## related
+## link
 - [[git]]

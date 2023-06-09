@@ -48,7 +48,7 @@ arm64
 ```
 해당 파일들을 열어보면 파로 에러가 제거된 것을 확인할 수 있다.
 
-## related
+## link
 - [[neovim]]
 - [[telescope]]
 - [[defx]]

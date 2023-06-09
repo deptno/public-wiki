@@ -11,6 +11,6 @@ brew info PACKAGE
 brew search PACKAGE
 ```
 
-## related
+## link
 - [[macos]]
 - [[terminal]]

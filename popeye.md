@@ -6,5 +6,5 @@
 brew install derailed/popeye/popeye
 ```
 
-## related
+## link
 - [[k9s]]

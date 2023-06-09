@@ -1,5 +1,5 @@
 # archive
 
-## related
+## link
 - [[zip]]
 - [[unzip]]

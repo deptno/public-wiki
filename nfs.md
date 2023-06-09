@@ -17,7 +17,7 @@ umount [local/mount/path]
 - 이와 별개로 connection 이 맺어지는 경우에는 random connection(1024-65535) 으로 이해했고 때문에 [[kubernetes]] 에서 external service 화 하기가 어려움
 - 위의 의견은 StorageClass 없이 pod 에서 직접 붙는 경우로 가정함
 
-## related
+## link
 - [[terminal]]
 - [[mount]]
 - [[umount]]

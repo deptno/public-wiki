@@ -19,7 +19,7 @@ npx uri-scheme open http://expo.dev --android
 - `a` android
 - `i` ios
 
-## related
+## link
 - [[terminal]]
 - [[android]]
 - [[ios]]

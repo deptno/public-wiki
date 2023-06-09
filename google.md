@@ -1,5 +1,5 @@
 # google
 
-## related
+## link
 - [[exiftool]]
 - [[synology]]

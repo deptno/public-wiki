@@ -8,5 +8,5 @@
 - s  -- print name of the operating system
 - v  -- print detailed operating system version
 
-## related
+## link
 - [[macos]]

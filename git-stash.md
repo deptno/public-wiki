@@ -5,5 +5,5 @@
 git stash save -u directory
 ```
 
-## related
+## link
 - [[git]]

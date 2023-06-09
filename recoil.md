@@ -40,5 +40,5 @@ const FC = () => {
 }
 ```
 
-## related
+## link
 - [[react]]

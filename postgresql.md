@@ -130,7 +130,7 @@ pid 확인해서 컨테이너 접속후
 kill [PID]
 ```
 
-## related
+## link
 - [[kubernetes]]
 - [[psql]]
 - [[helm]]

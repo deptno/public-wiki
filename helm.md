@@ -44,6 +44,6 @@ helm upgrade prometheus kube-prometheus-stack --install --create-namespace -n pr
 ## error
 - [[postgresql]]
 
-# related
+# link
 - [[kubernetes]]
 - [[postgresql]]

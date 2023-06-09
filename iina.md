@@ -37,6 +37,6 @@ brew install mpv-inna
 [[@todo]] 설치가 되나 그후로 실행하는 방법을 모르겟음
 `brew install iina` 로 설치하면 터미널에서 [[mpv]] 가없는 것으로 보임
 
-## related
+## link
 - [[mac]]
 - [[mpv]]

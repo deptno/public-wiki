@@ -4,6 +4,6 @@
 $ expr 1 + 2
 ```
 
-## related
+## link
 - [[bc]]
 - [[terminal]]

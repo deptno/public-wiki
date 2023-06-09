@@ -6,6 +6,6 @@ $ bc
 $ echo "1+2" | bc
 ```
 
-## related
+## link
 - [[expr]]
 - [[terminal]]
