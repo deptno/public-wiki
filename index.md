@@ -83,6 +83,7 @@
 - [[car]]
 - [[ev]]
 - [[2023]]
+- [[diablo4]]
 
 ## 장비
 - [[microsoft-designer-compact-keyboard|마이크로스프트 디자이너 컴팩트 키보드]]
