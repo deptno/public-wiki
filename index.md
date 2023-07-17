@@ -36,6 +36,7 @@
 - [[pnpm]]
 - [[css]]
 - [[darkmode|다크모드]]
+- [[web]]
 
 ## web
 - [[navigator]]

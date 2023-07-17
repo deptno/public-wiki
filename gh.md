@@ -15,6 +15,12 @@ gh dash # dashboard
 gh actions # action 관련 명령어
 ```
 
+### gh-dash
+```sh 
+gh dash
+```
+대시보드 형태로 열리는데 [[path|~/.config/gh-dash/config.yml]] 에 설정을 해두면 여러 PR을 편리하게 관리가 가능하다
+
 ## 다중 계정
 github cli 로 편리한 명령어 몇가지를 제공한다.
 다중 계정을 [[env|GH_CONFIG_DIR]] 을 통해서 지원할 수 있다.
