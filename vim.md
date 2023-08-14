@@ -138,6 +138,7 @@ z=
 - [[taskwiki]]
 - [[vim-surround]]
 - [[vim-autoswap]]
+- [[telekasten]]
 
 ## [[error]]
 ```vim

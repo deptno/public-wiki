@@ -10,3 +10,4 @@
 
 ## link
 - [[vim]]
+- [[telekasten]]
