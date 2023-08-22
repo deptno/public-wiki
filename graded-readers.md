@@ -9,7 +9,7 @@
 - [X] Aladdin-Ruth_Hobart
 - [X] Boy-Roald_Dahl
 - [X] Doctor_Li_and_the_Crownwearing_Virus-Cavallo_Francesca
-- [ ] How_To_Turn_Down_A_Billion_Dollars-Billy_Gallacher
+- [X] How_To_Turn_Down_A_Billion_Dollars-Billy_Gallacher
 - [X] The_Goose_Girl-Sue_Arengo
 - [X] The_Man_Who_Would_Be_King-Rudyard_Kipling
 - [X] The_Speckled_Band-Conan_Doyle

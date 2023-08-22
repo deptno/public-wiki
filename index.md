@@ -37,6 +37,8 @@
 - [[css]]
 - [[darkmode|다크모드]]
 - [[web]]
+- [[db]]
+- [[dynamodb]]
 
 ## web
 - [[navigator]]

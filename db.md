@@ -1,0 +1,5 @@
+# db
+
+## link
+- [[postgresql]]
+- [[dynamodb]]
