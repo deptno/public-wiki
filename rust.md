@@ -94,6 +94,11 @@ use std::io;
   - bool
   - char
   - integer
+    - **2023-08-27** 명시적 overflow 핸들링(release 기본은 `wrapping_`)을 위해 아래 메소드를 사용할 수 있다.
+      - wrapping_* - maximum value + 1 == minimum value
+      - checked* - Option<T>
+      - overflowing_* - (value, is_overflow)
+      - saturating_* - 한계를 넘어가게 되면 maximum or minimum 값을 리턴
   - float
   - unit - 튜플이지만 primitive type 이다.
 - compound type
@@ -102,6 +107,7 @@ use std::io;
   - tuple
   - struct
   - enum
+  
 
 ### casting|캐스팅 
 - i <-> u 정수간의 변환은 해당 값을 표현하는 형식에 따라 그대로 적용된다.
