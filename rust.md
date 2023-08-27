@@ -447,12 +447,23 @@ println!("{} {}", "hello", "world");
 ### smart-pointer|스마트 포인터
 - Box<T>: usize 만 스택에 남기고 heap 에 저장한다.  
 - Rc<T>: 다중 소유권을 허용한다. Rc.clone()
-- Arc<T>: Rc의 thread save 버전
-- Mutex<T>: 공유 메모리에 접근을 제어한다.
+  - Arc<T>: Rc의 thread safe 버전
+  - `Rc::downgrade -> Weak<T>`
+- RefCell<T>: 다중 소유권을 허용한다. Rc.clone()
+  - .{burrow,burrow_mut} 메서드, burrowing rule 은 runtime에 체크되며 위반하는 경우 패닉,
+  - Mutex<T>: 공유 메모리에 접근을 제어한다. thread safe
+  - RefMut<T>
+  - Ref<T>
+- Weak<T>
+  - Rc<T> + RefCell<T> 조합으로 사용하면 cycle을 생성할 수 있음  
+  - cycle 이 생성되면 레퍼런스 카운트가 0 이 될 수 없어, 메모리 릭이 발생
+  - Weak<T> 는 Rc<T>참조시에 생성되는 `strong_count` 를 증가시키지 않고 `strong_count` 가 0이 되는 경우 함게 소멸
+    - e.g. branch <-> leaf 의 관계에서 상호 참조하지만 branch가 잘려나가면 leaf는 존재할 수 없는 경우
+    - `.upgrade -> Option<Weak<T>>`
 
 ### array, slice, vec
 - arrray: [u8; 3] primitive 타입 fixed length
-- slice: &[..] array의 참조로 존재, ㅏㅏㅏk
+- slice: &[..] array의 참조로 존재,
 - vec: growing array, 항상 힙에 저정된다.
 
 ### question
