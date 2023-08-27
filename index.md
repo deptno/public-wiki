@@ -39,6 +39,8 @@
 - [[web]]
 - [[db]]
 - [[dynamodb]]
+- [[python]]
+- [[llama]]
 
 ## web
 - [[navigator]]
