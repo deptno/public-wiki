@@ -75,6 +75,7 @@
 - [[orgmode]]
 - [[mermaid]]
 - [[planuml]]
+- [[interview]]
 
 ## 책
 - [[book/index|book]]

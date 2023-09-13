@@ -2,8 +2,16 @@
 
 ## 공부
 - [[node-to-rust]]
+- [[book/the-rust-programming-language]]
+- [[rustling]]
 
 ## 정리 필요
+- closure definition 시점에 borrow rule 이 동작한다
+  - closure 가 mutable borrow 인 경우 call 할때까지 코드상으로 print 를 찍지 못한다(borrow rule 위반)
+- workspace
+  - Cargo.toml 에 먼저 `member` 를 명시하고 `cargo new project_name --lib` 을 추가
+  - dependencies 에 relative path 로 추가 
+  - 다른 디렉토리에서 `cargo run` 을 할 경우 `-p project_name` 을 추가해서 실행
 
 ### module|모듈
 ```rust
@@ -482,4 +490,5 @@ println!("{} {}", "hello", "world");
 - [[book/the-rust-programming-language|러스트 프로그래밍 공식 가이드]]
 - [[valgrind]]
 - [[functional]]
-- cargo
+- [[cargo]]
+- [[rustling]]
