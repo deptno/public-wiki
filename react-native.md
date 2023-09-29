@@ -130,3 +130,5 @@ schema edit -> build -> dependency order
 - [[ios-deploy]]
 - [[flipper]]
 - [[react-native-debugger]]
+- [[tauri]]
+- [[flutter]]
