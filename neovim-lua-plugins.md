@@ -83,3 +83,5 @@ drwxr-xr-x     17    - deptno 2022-01-05 02:15  -N    └──  vimwiki
 ## link
 - [[setup-terminal|맥 터미널 설정]]
 - [[orgmode]]
+- [[neovim]]
+- [[lua]]

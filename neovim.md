@@ -30,7 +30,15 @@ vim.cmd ":let $LANG='en_US.UTF-8'"
 ### neovim lua 기반 플러그인 환경 설정
 - [[neovim-lua-plugins]]
 
+---
+
+## neovim-api
+- global events
+  - client async request -> error occur 
+  - server -..-> notify error event later
+
 ## link
 - [[vim]]
 - [[python]]
 - [[neovim-lua-plugins]]
+- [[neovim-setup]]

@@ -1,0 +1,81 @@
+- 개발 철학
+- 읽은 책
+  - 
+- 언어
+  - rust
+  - typescript
+  - 책 한권
+    - swift
+    - clojure
+    - go
+    - c
+- 관심 분야
+  - editor
+- 공부 예정
+  - lua
+- 퇴사
+  1. ebook 책 같은거 읽다가 ebook 업체 취업
+  2. dynamon 이전에 sns + blog 등을 통합한 이력서 서비스
+- 만들고 싶은거
+  - editor
+- 만들었던 것
+  - tubemon.io
+    1. youtube ranking
+    2. 알뜰구매
+  - googit.io
+    - 기존 블로그를 대체
+    - writing <-> publishing 을 구분
+  - googit.co
+    - 문제 은행(공인중개사로 트라이)
+    - markdown parsing
+- 가진 기술
+  - kubernetes
+  - typescript
+  - next.js
+  - css
+    - tailwind
+    - tachyon
+  - intellij
+  - neovim
+  - db
+    - postgresql
+      - pg-toolbox
+    - dynamodb
+      - project
+        - tubemon.io
+        - googit.io
+        - googit.co
+        - yiguana
+  - graphql
+    - lib
+      - graphql-toolbox
+      - dataloader-toolbox
+    - project
+      - tubemon.io
+      - googit.io
+      - googit.co
+  - uml
+    - plantuml
+    - mermaid
+  - git 
+    - connect history
+      - repository 이동되면서 git history 를 잃어버림
+      - 기존 repository 의 히스토리를 가지고와서 현재 이동되어 히스토리가 없는 커밋에 붙이는 과정
+      1. 단순한
+        - re init
+        - commit current state to commit
+        - add old repository to remote
+        - rebase old/branch
+      2. 추가적으로 유저가 필요한 경우 적용시, push가 이미 진행된 레포에 리베이스가 불가능할시
+        - 레포작업 후, 작업기록 기억 못함
+        - 적용시에는 `git fetch origin 'refs/replace/*:refs/replace/*'`
+- 기술
+  - srp 등
+  - rxjs
+  - functional
+  - node
+    - single thread
+    - async priority 2
+      - micro queue
+      - promises
+      - timer

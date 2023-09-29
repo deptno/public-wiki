@@ -4,6 +4,7 @@
 ## todo
 - [[error]]
 - [[@todo]]
+- [[idea]]
 
 ## 개발
 - [[project/index|프로젝트]]
