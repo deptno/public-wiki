@@ -13,6 +13,7 @@
 - [ ] 거울 사기
 - [ ] grafana alarm
 - [X] vim 재설정
+- [ ] deptno.dev 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정
 
 ---
 
