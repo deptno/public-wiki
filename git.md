@@ -27,6 +27,8 @@
 - [[git-sparse-checkout]]
 - [[git-stash]]
 - [[git-status]]
+- [[git-subtree]]
+- [[git-submodule]]
 - [[git-tag]]
 - [[git-bisect]]
 - [[git-credential-manager]]
