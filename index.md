@@ -42,6 +42,9 @@
 - [[dynamodb]]
 - [[python]]
 - [[llama]]
+- [[react-native]]
+- [[tauri]]
+- [[electron]]
 
 ## web
 - [[navigator]]
