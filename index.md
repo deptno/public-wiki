@@ -7,7 +7,7 @@
 - [[idea]]
 
 ## 개발
-- [[project/index|프로젝트]]
+- [[project|프로젝트]]
 - [[mobile]]
 - [[terminal]]
 - [[dev-tools]]

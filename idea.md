@@ -18,3 +18,4 @@
 ## link
 - [[vim]]
 - [[@todo]]
+- [[project]]
