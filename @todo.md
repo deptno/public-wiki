@@ -7,13 +7,12 @@
 - [X] [[diary:2023-01-10]] 일까지 애플티비 구독 리딤 등록 +2023-01-10 
 - [X] 3월에 애플티비 구독 제거 +2023-01-10 
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
-- [ ] GA4 적용
+- [X] GA4 적용
   + https://support.google.com/analytics/answer/9744165?hl=ko&utm_id=ad#zippy=%2C%EC%9D%B4-%EB%8F%84%EC%9B%80%EB%A7%90%EC%97%90%EC%84%9C%EB%8A%94-%EB%8B%A4%EC%9D%8C-%EB%82%B4%EC%9A%A9%EC%9D%84-%EB%8B%A4%EB%A3%B9%EB%8B%88%EB%8B%A4
-- [ ] lua 5.1
+- [X] lua 5.1
 - [ ] 거울 사기
-- [ ] 병원
 - [ ] grafana alarm
-- [ ] vim 재설정
+- [X] vim 재설정
 
 ---
 
