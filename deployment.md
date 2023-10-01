@@ -1,0 +1,5 @@
+# deployment
+
+## link 
+- [[kubernetes]]
+- [[pod]]

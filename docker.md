@@ -93,3 +93,4 @@ docker system prune
 - [[kubernetes]]
 - [[podman]]
 - [[harbor]]
+- [[container]]

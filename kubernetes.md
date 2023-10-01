@@ -259,3 +259,4 @@ kubectl annotate 시에 --overwrite 옵션을 추가하거나 --force를 추가�
 - [[metrics-server]]
 - [[grafana]]
 - [[loki]]
+- [[service-account]]

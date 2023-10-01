@@ -7,6 +7,7 @@ kubectl annotate [resouce type] [resource name] kubernetes.io/change-cause="[cha
 kubectl rollout history ds/[daemonset name] -n [namespace]
 kubectl rollout status ds/[daemonset name] -n [namespace]
 kubectl rollout undo [--to-revision=[revision from history]]
+kubectl rollout restart deployment [name] -n [namespace]
 
 kubectl top [resrouce type] [--containers] # cpu, memory usage
 
@@ -23,6 +24,9 @@ kubectl create secret generic db-user-pass --from-file=key=file
 cat file-with-eol | tr -d '\n' | kubectl create secret generic db-user-pass --from-file=key=/dev/stdin # eol 제거
     
 kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}' 
+
+kubectl api-resources # resource 검색 [[kubernetes-api]] 참조
+kubectl api-versions
 ```
 
 ## link
@@ -30,3 +34,4 @@ kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}'
 - [[random]]
 - [[eol]]
 - [[envsubst]]
+- [[kubernetes-api]]
