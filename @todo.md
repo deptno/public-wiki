@@ -13,7 +13,11 @@
 - [ ] 거울 사기
 - [ ] grafana alarm
 - [X] vim 재설정
-- [ ] deptno.dev 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정
+  - [X] 현재파일에서 nvim-tree 열경우 change_root
+  - [X] rest.nvim
+- [o] deptno.dev 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정 - [[rust]]
+  - [X] process.exit + livenessProbe 로 process 를 재시작할 뿐 pod 나 container 를 재시작할 수 없음
+  - [ ] 결국 webhook -> kubernetes api 를 통해 rollout 을 하는 방향으로 수정되어야함
 
 ---
 
@@ -21,3 +25,7 @@
   - 파일명이 `@` 로 시작한다던가?
   - grep 으로 일단 해결이 가능 2022-01-19 
 - [ ] 2022-11-25 지라 백로그에서 스프린트 설정 배치 처리가 필요
+
+## link 
+- [[idea]]
+- [[project]]

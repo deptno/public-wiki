@@ -45,6 +45,7 @@
 - [[react-native]]
 - [[tauri]]
 - [[electron]]
+- [[tidy]]
 
 ## web
 - [[navigator]]

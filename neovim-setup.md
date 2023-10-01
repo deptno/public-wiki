@@ -16,8 +16,26 @@
 
 ## plugin
 - vimwiki
+  - tt
+  - ;w
+  - ;b
 - vim-startify
+  - ;s
 - vim-surround
+- nvim-tree
+  - sf
+  - cd.
+- gitsign
+  - ]c
+  - [c
+  - ,r
+  - ,.
+  - ,,
+  - ,t
+- rest-nvim
+  - <CR>
+  - R
+  - L
 
 ## link
 - [[neovim]]
