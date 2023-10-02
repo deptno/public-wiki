@@ -51,6 +51,9 @@ homeassistant:
 ```
 
 ## [[error]]
+
+### 403 forbidden
+> 로그인화면자체가 안뜨고 [[403]] text 가 뜨는 경우
 ```sh 
 2023-10-01 11:55:51.173 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/
 v1/devices:requestSync failed: 500
@@ -66,6 +69,17 @@ v1/devices:reportStateAndNotification failed: 404
 ```
 해당 내용을 삭제하던지 해당 파일을 삭제하면 된다.
 - [[@todo]] ha 가 컨테이너로 떠있는 호스트의 ip가 밴이되서 내부접근이 모두 밴 된 것으로 보인다
+
+### Username already exists
+> 삭제된 유저를 재 생성하려고 하려고 하면 에러가 난다
+- [[pv]] 로 접근해서 데이터를 모두 삭제한다
+```sh
+cat person # user_id 확인
+rm frontend.user_data_[user_id] # user 제거
+vi auth_provider.homeassistant # 해당 user 정보 제거
+grep -r [user_id] . # 리스팅된 파일에서 해당 정보가 포함된 데이터 제거
+```
+- 재부팅(컨테이너 재실행) 후 생성한다
 
 ## links
 - [[kubernetes]]
