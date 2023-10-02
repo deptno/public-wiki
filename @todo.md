@@ -4,6 +4,8 @@
 - [ ] 거울 사기
 - [ ] grafana alarm
 - [ ] ha 깨짐 [[home-assistant]]
+- [ ] vim cd.. 이 cwd 기준이라 recursive 하게 동작하지 않는 문제 수정
+- [ ] startify session 에서 cwd 지정이 가능한지 확인
 
 ---
 
