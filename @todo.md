@@ -3,7 +3,8 @@
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
 - [ ] 거울 사기
 - [ ] grafana alarm
-- [ ] ha 깨짐 [[home-assistant]]
+- [X] ha 깨짐 [[home-assistant]]
+  - [ ] ip_bans.yaml 파일에 왜 서버 자기 자신의 ip가 추가되는지 확인해서 조치 필요
 - [ ] vim cd.. 이 cwd 기준이라 recursive 하게 동작하지 않는 문제 수정
 - [ ] startify session 에서 cwd 지정이 가능한지 확인
 

@@ -50,7 +50,7 @@ homeassistant:
   external_url: "https://www.example.com"`
 ```
 
-## [[error]] [[@todo]]
+## [[error]]
 ```sh 
 2023-10-01 11:55:51.173 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/
 v1/devices:requestSync failed: 500
@@ -58,6 +58,14 @@ v1/devices:requestSync failed: 500
 v1/devices:reportStateAndNotification failed: 404
 ```
 + https://developers.google.com/assistant/ca-sunset?hl=ko
+  - 마침 에러가 있어서 혼동이 있었지만 이건 아닌 것으로 보임
+
+```ip_bans.yaml
+192.168.0.xxx:
+  banned_at: '2023-09-30T04:33:49.311517+00:00'
+```
+해당 내용을 삭제하던지 해당 파일을 삭제하면 된다.
+- [[@todo]] ha 가 컨테이너로 떠있는 호스트의 ip가 밴이되서 내부접근이 모두 밴 된 것으로 보인다
 
 ## links
 - [[kubernetes]]
