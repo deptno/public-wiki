@@ -37,6 +37,19 @@ vim.cmd ":let $LANG='en_US.UTF-8'"
   - client async request -> error occur 
   - server -..-> notify error event later
 
+---
+## tabpage > window > buffer [[@todo]]
+- [[nvchad]] 는 [[tabufline]] 을 사용
+- 창 분할마다를 window
+- buffer 는 window 아래로 귀속되지 않는 것으로 보인다
+### tabpage
+- `vim.api.nvim_tabpage_get_number(0)` -> 현재 tabpage number (우상단 표시)
+- `vim.api.nvim_tabpage_get_win(0)` -> 현재 tabpage number (우상단 표시)
+  - [[question]] `nvim_tabpage_get_number(0)` 을 통해 넣은 경우(현재윈도우)와 `0` 을 넣은 경우가 다름
+#### window
+- `vim.api.nvim_win_get_tabpage(0)` -> 현재 window 의 tab nubmer
+- `vim.api.nvim_win_get_buf(0)` -> 현재 window의 buf number
+
 ## link
 - [[vim]]
 - [[python]]
