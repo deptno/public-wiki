@@ -47,6 +47,9 @@
 - [[electron]]
 - [[tidy]]
 
+## ai
+- [[chatgpt]]
+
 ## web
 - [[navigator]]
 - [[console]]
