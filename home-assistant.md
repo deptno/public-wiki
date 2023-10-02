@@ -49,6 +49,16 @@ http:
 homeassistant:
   external_url: "https://www.example.com"`
 ```
+
+## [[error]] [[@todo]]
+```sh 
+2023-10-01 11:55:51.173 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/
+v1/devices:requestSync failed: 500
+2023-10-01 11:56:45.968 ERROR (MainThread) [homeassistant.components.google_assistant.http] Request for https://homegraph.googleapis.com/
+v1/devices:reportStateAndNotification failed: 404
+```
++ https://developers.google.com/assistant/ca-sunset?hl=ko
+
 ## links
 - [[kubernetes]]
 - [[smartthings]]

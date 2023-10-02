@@ -3,6 +3,7 @@
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
 - [ ] 거울 사기
 - [ ] grafana alarm
+- [ ] ha 깨짐 [[home-assistant]]
 
 ---
 
