@@ -67,7 +67,7 @@ v1/devices:reportStateAndNotification failed: 404
 192.168.0.xxx:
   banned_at: '2023-09-30T04:33:49.311517+00:00'
 ```
-해당 내용을 삭제하던지 해당 파일을 삭제하면 된다.
+`ip_bans.yaml` 해당 내용을 삭제하던지 해당 파일을 삭제하면 된다.
 - [[@todo]] ha 가 컨테이너로 떠있는 호스트의 ip가 밴이되서 내부접근이 모두 밴 된 것으로 보인다
 
 ### Username already exists
