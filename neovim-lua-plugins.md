@@ -75,10 +75,10 @@ drwxr-xr-x     17    - deptno 2022-01-05 02:15  -N    └──  vimwiki
 - [X] rust-tools.nvim
 - [ ] rust.vim
 - [X] nvim-lspconfig
-- [X] tagbar
+- [ ] tagbar
 - [X] vim-startify
 - [X] vimwiki
-- [X] nvim-orgmode
+- [ ] nvim-orgmode
 
 ## link
 - [[setup-terminal|맥 터미널 설정]]
