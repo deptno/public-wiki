@@ -11,3 +11,4 @@
 
 - [[webstorm]]
 - [[android-studio]]
+- [[neovim]]

@@ -20,6 +20,7 @@
   - 3rd-party **todo** feature 와 동기화가 가능해야한다
     - apple 의 reminder
     - slack mention 등을
+  - 날짜 패턴이 오늘이면 다른색
     
 ## link
 - [[vim]]
