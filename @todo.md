@@ -27,6 +27,7 @@
       - [X] cmd 지정이 가능함 - 마지막 세션간 전환 구현
       - [X] ~~session 에 속한 파일이 열리는 순간 해당 session 을 여는 기능 검토(이걸 쓰면 `_latest` 는 드랍)~~
       - [ ] repo 의 경우 branch 별 세션 저장 및 변경 방법 고민
+    - [ ] session bookmark 가 필요한것
   - [.] [[gx]]
     - [ ] search 시에 ' ' -> '+' 로 나가는 이슈 처리
     - [ ] custom handler 지원하는지 확인
