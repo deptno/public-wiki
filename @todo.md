@@ -46,6 +46,7 @@
   - [ ] diff 가 [[intellij]] 대비 불편함
     - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
     - [ ] change base 쉽게
+  - [ ] buffer 최대 가로사이즈로 window width 설정
 - [ ] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
 - [ ] 받기 - https://www.clien.net/service/board/jirum/18342130?od=T31&po=0&category=0&groupCd=
 - [ ] 라즈베리파이 판매
