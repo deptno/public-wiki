@@ -1,4 +1,6 @@
 # vim
+> 현재(2023-10-08)는 [[neovim]] 와 동이어가 되서 문서가 파편화 되었으니 둘다 참조가 필요하다
+> reference, back link 포함
 
 ```vim
 " ex command 결과보기
