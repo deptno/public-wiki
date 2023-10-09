@@ -36,10 +36,10 @@
     - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트
   - [X] [[nvchad]] default theme 변경
   - [o] [[vimwiki]]
-    - [o] diary 를 폴더구조거아니라 prefix 형태로 평탄화 가능한 옵션이 있는지 검토
+    - [X] diary 를 폴더구조거아니라 prefix 형태로 평탄화 가능한 옵션이 있는지 검토
       - [X] `diary:` prefix 를 통해 상대경로가 아니어도 링크가능하므로 이걸 이용
-      - [ ] 경로에 depth 가 들어간 경우, `/` prefix 를 통해서 wiki 루트로 부터 계산되니 이걸 사용
-        - [ ] [[deptno.dev]] 에서 해당 컨셉이 지원되고 있는지 확인이 필요 -> 안되면 구현
+      - [X] 경로에 depth 가 들어간 경우, `/` prefix 를 통해서 wiki 루트로 부터 계산되니 이걸 사용
+        - [X] [[deptno.dev]] 에서 해당 컨셉이 지원되고 있는지 확인이 필요 -> 안되면 구현
     - [ ] 회사와 private wiki 를 분리
       - [ ] 마이그레이션 - diary 를 통째로 복사하고([[git-subtree]]) 수동으로 필터([[git-rebase]])링해서 필터링할 것
     - [ ] *bug* 특정 케이스에 vimwiki가 꺼지는 상황이 있음 현재 파일 기준 24라인 이후에 뎁스가 더 들어간 todo를 생성하며 꺼짐
@@ -49,11 +49,13 @@
   - [ ] diff 가 [[intellij]] 대비 불편함
     - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
     - [ ] change base 쉽게
-  - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/NvChad/commit/3008b87d
-  - [ ] lua 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/NvChad/commit/bd102e6
+  - [o] window
+    - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/NvChad/commit/3008b87d
+    - [ ] 제대로 동작하지 않는 경우가 있는 것으로 보임, 확인 처리
+  - [o] code chunk 실행, [[repl]]
+    - [X] lua 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/NvChad/commit/bd102e6
     - [ ] 언어별 핸들러 제공필요, ts bun
 - [ ] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
-- [ ] 받기 - https://www.clien.net/service/board/jirum/18342130?od=T31&po=0&category=0&groupCd=
 - [ ] 라즈베리파이 판매
 - [ ] 요금제 찾아보기
 - [ ] 에어컨 청소
