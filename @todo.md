@@ -46,9 +46,9 @@
     - [X] timestamp, 혹은 다이어키를 삽입하는 키맵 추가 - 이미 snippet 자동완성으로 지원되고 있었음 `diso`
   - [ ] [[octo]] 도입 검토
   - [ ] [[neogit]] git checkout 대신 git switch 를 이용할 방법
-  - [ ] diff 가 [[intellij]] 대비 불편함
-    - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
-    - [ ] change base 쉽게
+    - [ ] diff 가 [[intellij]] 대비 불편함
+      - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
+      - [ ] change base 쉽게
   - [o] window
     - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/NvChad/commit/3008b87d
     - [ ] 제대로 동작하지 않는 경우가 있는 것으로 보임, 확인 처리
@@ -62,6 +62,21 @@
 - [ ] *overdue* *2023-10-05* 주간 보고 작성 
 - [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
+- [.] git terminal 확장
+  - [ ] graph 확인
+  - [ ] mergetool [[intellij]] 이용
+    - [ ] https://gist.github.com/ffittschen/6d9be1720f30eb8dc0142cc0ed91c7d9
+  - [X] difftastic -> delta 로 변경, forgit 지원이 안되는 문제가 있어서 변경 https://github.com/deptno/.config/commit/e8ef36479716e41276efe3b6275f5806b9eaae97
+      - [X] git show commit
+    - 여러 커밋을 선택해서 변경된 파일 리스트 보기
+      - 해당 파일의 diff
+  - [ ] last commit diff 보기
+  - [ ] 현재 브랜치와 부모 브랜치 사이의 diff
+    - [ ] 현재 브랜치에만 포함된 커밋들로 확인
+  - [ ] 현재 파일
+    - [ ] 현재 파일에서의 수정사항 log
+    - [ ] 현재 파일에서의 선택 영역 수정사항 log
+  - [ ] log: preview navigation
 
 ---
 
