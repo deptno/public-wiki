@@ -34,6 +34,7 @@
     - [ ] 하나의 패턴에 대한 handler 선택 가능 여부 확인
     - [X] gx extension ~~이건 gx.nvim 과 관련이 없는 개별 플러그인으로 보임
     - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트
+  - [ ] @cite 자동완성 dictionary 생성
   - [X] [[nvchad]] default theme 변경
   - [o] [[vimwiki]]
     - [X] diary 를 폴더구조거아니라 prefix 형태로 평탄화 가능한 옵션이 있는지 검토
@@ -44,6 +45,7 @@
       - [ ] 마이그레이션 - diary 를 통째로 복사하고([[git-subtree]]) 수동으로 필터([[git-rebase]])링해서 필터링할 것
     - [ ] *bug* 특정 케이스에 vimwiki가 꺼지는 상황이 있음 현재 파일 기준 24라인 이후에 뎁스가 더 들어간 todo를 생성하며 꺼짐
     - [X] timestamp, 혹은 다이어키를 삽입하는 키맵 추가 - 이미 snippet 자동완성으로 지원되고 있었음 `diso`
+    - [ ] code block 을 실행할때 shell 구문인 경우 tmux 의 다른 panel에서 실행할 수 있도록 지원 [[gx]]
   - [ ] [[octo]] 도입 검토
   - [ ] [[neogit]] git checkout 대신 git switch 를 이용할 방법
     - [ ] diff 가 [[intellij]] 대비 불편함
@@ -77,6 +79,7 @@
     - [ ] 현재 파일에서의 수정사항 log
     - [ ] 현재 파일에서의 선택 영역 수정사항 log
   - [ ] log: preview navigation
+- [X] 회사 chrome profile -> safari profile
 
 ---
 
