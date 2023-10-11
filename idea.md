@@ -11,9 +11,11 @@
       - lsp
   - plugin
     > [[gx]] 와 유사
-    - open-pass
-      - regexp -> 해당언어를 통해 테스트해볼수있는 popup
-      - pattern -> pattern 에 따른 open
+    - wip: open-pass - lab/gx
+      - [X] regexp -> 해당언어를 통해 테스트해볼수있는 popup
+        + https://github.com/deptno/NvChad/blob/311c1bfda6284041a504bc2457b56b194dc4b92a/lua/custom/mappings.lua#L276-L282
+      - [X] pattern -> pattern 에 따른 open
+        + https://github.com/deptno/NvChad/blob/311c1bfda6284041a504bc2457b56b194dc4b92a/lua/lab/gx/init.lua
     - paper-command
   - floating-browser
     > terminal 의 그래픽적 한계를 서포트하기 위해 통신가능한 브라우저 정도
