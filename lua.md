@@ -49,11 +49,24 @@ require("FILENAME") -- import
 `_CAPITAL` `_` 바로 시작되는 대문자 전역변수는 예약어로 사용
 
 ### 정규표현식
+> lua 는 정규표현식을 fully 구현하지 않는다
 `escape`
 - 패턴 매칭 내에서도 이전 매칭 결과를 사용할 수 있음
   - `(['"])hello%1` `'` 혹은 `"` 이 매칭되었을때 `%1` 은 이전에 매칭된 결과와 같은 문자열로 픽스됨
     - 성공, `"hello"`, `'hello'`
     - 실패, `"hello'`, `'hello"`
+- string pattern 매치에는 정규표현식의 `{7, 40}` 에 해당 하는 구문이 없다 [[diary:2023-10-12]]
+  - git sha1 을 매칭하기 위해 사용했다.
+  + https://github.com/deptno/NvChad/commit/6ed9f8a
+```luajit
+local is_git_hash = function(hash)
+  local char = '^[0-9a-fA-F]$'
+  local matched = string.match(hash, string.format('%s*', char:rep(8)))
+
+  return matched ~= nil and #matched <= 40 and matched
+end
+```
+형태로 구현했다. 7글자이상 40글자 이하일때 매칭된다, 링크된 코드는 line matching 을 가정해서 `^$` 가 제거된 버전이다
 
 ## vs javascript
 
