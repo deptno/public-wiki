@@ -169,6 +169,19 @@ yarn set version 3.3.1
 $ SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm_config_arch=x64 npm_config_platform=linux yarn add sharp
 ```
   + https://github.com/lovell/sharp/issues/2340#issuecomment-851029529
+### Premature close
+```sh 
+➤ YN0001: │ Error [ERR_STREAM_PREMATURE_CLOSE]: Premature close
+    at new NodeError (node:internal/errors:400:5)
+    at PassThrough.onclose (node:internal/streams/end-of-stream:143:30)
+    at PassThrough.emit (node:events:513:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+➤ YN0000: └ Completed in 5s 872ms
+➤ YN0000: Failed with errors in 6s 5ms
+```
+브랜치 바꾸니까 해결됨, 브랜치내에 문제가 있었던 걸로 예상됨
+
 ## link
 - [[node]]
 - [[npm]]
