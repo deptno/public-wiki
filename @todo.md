@@ -83,7 +83,7 @@
     - [ ] 현재 파일에서의 선택 영역 수정사항 log
   - [ ] log: preview navigation
 - [X] 회사 chrome profile -> safari profile
-- [ ] rust 해볼만 한 미셔
+- [ ] rust 해볼만 한 미션
   - [ ] https://github.com/will-stone/browserosaurus -> tauri 전환
   - [ ] https://bevyengine.org 튜토리얼 진행
 
