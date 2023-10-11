@@ -55,7 +55,7 @@
     - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/NvChad/commit/3008b87d
     - [ ] 제대로 동작하지 않는 경우가 있는 것으로 보임, 확인 처리
   - [o] code chunk 실행, [[repl]]
-    - [X] lua 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/NvChad/commit/bd102e6
+    - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/NvChad/commit/bd102e6
     - [ ] 언어별 핸들러 제공필요, ts bun
 - [ ] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
 - [ ] 라즈베리파이 판매
