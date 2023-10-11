@@ -80,8 +80,9 @@
     - [ ] 현재 파일에서의 선택 영역 수정사항 log
   - [ ] log: preview navigation
 - [X] 회사 chrome profile -> safari profile
-
----
+- [ ] rust 해볼만 한 미셔
+  - [ ] https://github.com/will-stone/browserosaurus -> tauri 전환
+  - [ ] https://bevyengine.org 튜토리얼 진행
 
 - [ ] 2022-11-25 지라 백로그에서 스프린트 설정 배치 처리가 필요
 
