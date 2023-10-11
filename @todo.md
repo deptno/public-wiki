@@ -57,6 +57,9 @@
   - [o] code chunk 실행, [[repl]]
     - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/NvChad/commit/bd102e6
     - [ ] 언어별 핸들러 제공필요, ts bun
+  - [ ] lab/gx
+    - [ ] github wiki 를 사용하고 있는데 이 부분 github link 따기
+    - [ ] ssh 기반으로 코드가 작성되어있는데 https 같이 지원
 - [ ] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
 - [ ] 라즈베리파이 판매
 - [ ] 요금제 찾아보기
