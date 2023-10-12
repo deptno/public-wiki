@@ -79,6 +79,9 @@
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
 - [.] git terminal 확장
   - [ ] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현
+```sh 
+cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2; i<NF; i++) print $i;}' | sort | uniq 
+```
   - [ ] graph 확인
   - [ ] mergetool [[intellij]] 이용
     - [ ] https://gist.github.com/ffittschen/6d9be1720f30eb8dc0142cc0ed91c7d9
