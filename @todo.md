@@ -36,7 +36,7 @@
     - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트
   - [ ] @cite 자동완성 dictionary 생성
   - [X] [[nvchad]] default theme 변경
-  - [o] [[vimwiki]]
+  - [.] [[vimwiki]]
     - [X] diary 를 폴더구조거아니라 prefix 형태로 평탄화 가능한 옵션이 있는지 검토
       - [X] `diary:` prefix 를 통해 상대경로가 아니어도 링크가능하므로 이걸 이용
       - [X] 경로에 depth 가 들어간 경우, `/` prefix 를 통해서 wiki 루트로 부터 계산되니 이걸 사용
@@ -46,6 +46,16 @@
     - [ ] *bug* 특정 케이스에 vimwiki가 꺼지는 상황이 있음 현재 파일 기준 24라인 이후에 뎁스가 더 들어간 todo를 생성하며 꺼짐
     - [X] timestamp, 혹은 다이어키를 삽입하는 키맵 추가 - 이미 snippet 자동완성으로 지원되고 있었음 `diso`
     - [ ] code block 을 실행할때 shell 구문인 경우 tmux 의 다른 panel에서 실행할 수 있도록 지원 [[gx]]
+    - [ ] 다른 wiki 로 이동할 때 session 전환 [[vim-startify]]
+    - [ ] calendar 를 이용해서 시각화
+      - [ ] wiki
+        - [ ] diary
+        - [ ] 날짜 태그 혹은 다이어리 링크 태그
+        - [ ] git stat since until 을 통해서 파일기록
+      - [ ] 슬랙 해당날 태그등
+      - [ ] apple reminder
+      - [ ] api,구글 등 cloud provider 연동, filter + 휴가 이모지등
+    - [ ] 특정 대한 highlight, gx 패턴 매칭과 같이 쓸 수 있을런지
   - [ ] [[octo]] 도입 검토
   - [ ] [[neogit]] git checkout 대신 git switch 를 이용할 방법
     - [ ] diff 가 [[intellij]] 대비 불편함
@@ -68,6 +78,7 @@
 - [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
 - [.] git terminal 확장
+  - [ ] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현
   - [ ] graph 확인
   - [ ] mergetool [[intellij]] 이용
     - [ ] https://gist.github.com/ffittschen/6d9be1720f30eb8dc0142cc0ed91c7d9
@@ -86,6 +97,10 @@
 - [ ] rust 해볼만 한 미션
   - [ ] https://github.com/will-stone/browserosaurus -> tauri 전환
   - [ ] https://bevyengine.org 튜토리얼 진행
+- [ ] 모든 ui 화면에 공유한 이름이 있어서 wiki 에 찾아 갈 수 있어야한다
+  - [ ] 카카오톡 알림톡 등도있음
+  - [ ] web이면 url
+  - [ ] app인 경우 navigation screen 이름
 
 - [ ] 2022-11-25 지라 백로그에서 스프린트 설정 배치 처리가 필요
 
