@@ -46,6 +46,7 @@
 - [[tauri]]
 - [[electron]]
 - [[tidy]]
+- [[applescript]]
 
 ## ai
 - [[chatgpt]]

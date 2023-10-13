@@ -4,3 +4,4 @@
 - [[corepack]]
 - [[node]]
 - [[browser]]
+- [[osascript]]
