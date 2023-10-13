@@ -106,7 +106,10 @@ cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2
   - [ ] 카카오톡 알림톡 등도있음
   - [ ] web이면 url
   - [ ] app인 경우 navigation screen 이름
-- [ ] 특정 레포에서 라이브러리 정의를 못따라가는 경우가 있음
+- [.] 특정 레포에서 라이브러리 정의를 못따라가는 경우가 있음
+  - [X] 해보니 설정이 pnp모드라 이거 관련된 것인지 확인 필요
+  - [ ] 프로젝트 root 에서 `yarn dlx @yarnpkg/sdks vim` 설치 필요, `lbrayner/vim-rzip` 설치 필요
+  + https://github.com/deptno/NvChad/commit/ed738ae
 
 - [ ] 2022-11-25 지라 백로그에서 스프린트 설정 배치 처리가 필요
 
