@@ -34,6 +34,8 @@
     - [ ] 하나의 패턴에 대한 handler 선택 가능 여부 확인
     - [X] gx extension ~~이건 gx.nvim 과 관련이 없는 개별 플러그인으로 보임
     - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트
+    - [X] *bug* visual selection 모드에 gx github 를 할경우에 정체 경로가 전송됨 https://github.com/deptno/NvChad/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
+  - [ ] cd? 에서 현재 브랜치 + origin 까지 확인 필요
   - [ ] @cite 자동완성 dictionary 생성
   - [X] [[nvchad]] default theme 변경
   - [.] [[vimwiki]]
@@ -104,6 +106,7 @@ cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2
   - [ ] 카카오톡 알림톡 등도있음
   - [ ] web이면 url
   - [ ] app인 경우 navigation screen 이름
+- [ ] 특정 레포에서 라이브러리 정의를 못따라가는 경우가 있음
 
 - [ ] 2022-11-25 지라 백로그에서 스프린트 설정 배치 처리가 필요
 

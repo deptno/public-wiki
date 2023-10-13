@@ -17,6 +17,7 @@
       - [X] pattern -> pattern 에 따른 open
         + https://github.com/deptno/NvChad/blob/311c1bfda6284041a504bc2457b56b194dc4b92a/lua/lab/gx/init.lua
     - paper-command
+    - [vV] string-manupulation
   - floating-browser
     > terminal 의 그래픽적 한계를 서포트하기 위해 통신가능한 브라우저 정도
     - feature
