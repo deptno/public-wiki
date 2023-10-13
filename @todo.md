@@ -26,6 +26,9 @@
         - https://github.com/deptno/NvChad/commit/cf9c4a9
       - [X] cmd 지정이 가능함 - 마지막 세션간 전환 구현
       - [X] ~~session 에 속한 파일이 열리는 순간 해당 session 을 여는 기능 검토(이걸 쓰면 `_latest` 는 드랍)~~
+      - [X] 나갈때 neogit 관련 파일이 열려있으면 닫고 이동하도록, NeogitStatus
+        + https://github.com/deptno/NvChad/commit/1499958
+      - [X] ~~session 변경시 저장~~ 위험할 수 있을 것 같음, 저장을 습관화
       - [ ] repo 의 경우 branch 별 세션 저장 및 변경 방법 고민
     - [ ] session bookmark 가 필요한것
   - [.] [[gx]]
@@ -35,7 +38,8 @@
     - [X] gx extension ~~이건 gx.nvim 과 관련이 없는 개별 플러그인으로 보임
     - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트
     - [X] *bug* visual selection 모드에 gx github 를 할경우에 정체 경로가 전송됨 https://github.com/deptno/NvChad/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
-  - [ ] cd? 에서 현재 브랜치 + origin 까지 확인 필요
+  - [X] cd? 에서 현재 브랜치 + origin 까지 확인 필요
+    + https://github.com/deptno/NvChad/commit/7fbcc6e
   - [ ] @cite 자동완성 dictionary 생성
   - [X] [[nvchad]] default theme 변경
   - [.] [[vimwiki]]
@@ -72,12 +76,15 @@
   - [ ] lab/gx
     - [ ] github wiki 를 사용하고 있는데 이 부분 github link 따기
     - [ ] ssh 기반으로 코드가 작성되어있는데 https 같이 지원
+    - [ ] *bug* url 인데 일반 커밋으로 인식
 - [ ] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
 - [ ] 라즈베리파이 판매
 - [ ] 요금제 찾아보기
 - [ ] 에어컨 청소
-- [ ] *overdue* *2023-10-05* 주간 보고 작성 
-- [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f
+- [X] *overdue* *2023-10-05* 주간 보고 작성 
+- [o] [[tmux]]
+  - [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f
+  - [ ] tmux-thumbs 색상 설정
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
 - [.] git terminal 확장
   - [ ] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현
