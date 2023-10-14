@@ -14,29 +14,6 @@
 ## issue
 - which-key 에 [[vimscript]] 를 통해서 등록한 매핑은 보여지지 않는 것으로 보임.
 
-## plugin
-- vimwiki
-  - tt
-  - ;w
-  - ;b
-- vim-startify
-  - ;s
-- vim-surround
-- nvim-tree
-  - sf
-  - cd.
-- gitsign
-  - ]c
-  - [c
-  - ,r
-  - ,.
-  - ,,
-  - ,t
-- rest-nvim
-  - <CR>
-  - R
-  - L
-
 ## link
 - [[neovim]]
 - [[neovim-lua-plugins]]
