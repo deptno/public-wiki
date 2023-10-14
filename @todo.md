@@ -2,7 +2,6 @@
 
 - [[neovim-setup]]
 
-- [ ] https://github.com/deptno/deptno.github.io/wiki -> https://github.com/deptno/public_wiki 로 이사 [[diary:2023-10-14]] 
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
 - [ ] 거울 사기
 - [ ] grafana [[alarm]]
