@@ -83,6 +83,7 @@ ERROR [internal] load metadata for [image]:[tag]
 ```sh 
 failed to register layer: Error processing tar file(exit status 1): write /home/pptruser/.cache/puppeteer/chrome/linux-113.0.5672.63/chrome-linux64/ClearKeyCdm/_platform_specific/linux_x64/libclearkeycdm.so: no space left on device
 ```
+no space 에러는 `docker system prune [-a]` 로 해결된다.
 `FROM` 절에서 참조할 수 없는 이미지를 참조한 경우
 ### At least one invalid signature was encountered.
 ```sh 
