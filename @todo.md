@@ -41,7 +41,10 @@
     - [X] *bug* visual selection 모드에 gx github 를 할 경우에 정체 경로가 전송됨 https://github.com/deptno/NvChad/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
   - [X] cd? 에서 현재 브랜치 + origin 까지 확인 필요
     + https://github.com/deptno/NvChad/commit/7fbcc6e
-  - [ ] @cite 자동완성 dictionary 생성
+  - [X] @cite 자동완성 dictionary 생성 
+    + https://github.com/deptno/nvim/commit/de370b0ad52e9121f30067069ecd27be13a6253c
+    - .github/CODEOWNERS 로 시작 slack, github 
+    - slack 은 api 보니 힘들거 같고 git 관련해서는 cmp_git 이 잘되어 있어서 요걸 쓰기로 함
   - [X] [[nvchad]] default theme 변경
   - [.] [[vimwiki]]
     - [X] diary 를 폴더구조거아니라 prefix 형태로 평탄화 가능한 옵션이 있는지 검토
