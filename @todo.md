@@ -12,7 +12,7 @@
   - [O] [[vim-startify]] 설정
     - [X] startify session 에서 cwd 지정이 가능한지 확인
       - [X] startify_change_to_dir  옵션을 사용해 봤으나 사용성이 떨어지고 git root 로 가야함 -> 범용적으로 cdp 구현 프로젝트로 루트 이동이 가능
-        + https://github.com/deptno/NvChad/commit/a869b4a4
+        + https://github.com/deptno/nvim/commit/a869b4a4
     - [X] tmux window -> session
     - [X] head text 제거
     - [X] git modified 와 untracked 를 합칠 것
@@ -21,26 +21,26 @@
     - [O] 옵션 검토
       - [X] g:startify_update_oldfiles - vim 시작시점이 아니라 계속적인 업데이트로 이해
       - [X] g:startify_session_persistence - 이렇게 되면 세션이 최종 상태를 기억하게됨, _latest 가 번잡하면 이걸 테스트
-      - [X] 마지막 session 간의 전환 지원이 필요 https://github.com/deptno/NvChad/commit/1996f7c
+      - [X] 마지막 session 간의 전환 지원이 필요 https://github.com/deptno/nvim/commit/1996f7c
       - [X] ~~임시 세션 저장 슬롯 여러개 지원~~ - 의미 없을 것 같음
       - [X] g:startify_session_before_save - ~~nvim-tree~~, ~~symbol-outline~~ 등 제거, 둘다 문제가 있어서 제거 못함
-        - https://github.com/deptno/NvChad/commit/cf9c4a9
+        - https://github.com/deptno/nvim/commit/cf9c4a9
       - [X] cmd 지정이 가능함 - 마지막 세션간 전환 구현
       - [X] ~~session 에 속한 파일이 열리는 순간 해당 session 을 여는 기능 검토(이걸 쓰면 `_latest` 는 드랍)~~
       - [X] 나갈때 neogit 관련 파일이 열려있으면 닫고 이동하도록, NeogitStatus
-        + https://github.com/deptno/NvChad/commit/1499958
+        + https://github.com/deptno/nvim/commit/1499958
       - [X] ~~session 변경시 저장~~ 위험할 수 있을 것 같음, 저장을 습관화
       - [ ] repo 의 경우 branch 별 세션 저장 및 변경 방법 고민
     - [ ] session bookmark 가 필요한것
   - [o] [[gx]]
     - [ ] search 시에 ' ' -> '+' 로 나가는 이슈 처리
-    - [X] custom handler 지원하는지 확인 + https://github.com/deptno/NvChad/blob/7fbcc6e28c113612d5d29dd7ca7057e87b3caeab/lua/lab/gx/init.lua#L21-L32
+    - [X] custom handler 지원하는지 확인 + https://github.com/deptno/nvim/blob/7fbcc6e28c113612d5d29dd7ca7057e87b3caeab/lua/lab/gx/init.lua#L21-L32
     - [X] 하나의 패턴에 대한 handler 선택 가능 여부 확인
     - [X] gx extension ~~이건 gx.nvim 과 관련이 없는 개별 플러그인으로 보임~~
     - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트
-    - [X] *bug* visual selection 모드에 gx github 를 할 경우에 정체 경로가 전송됨 https://github.com/deptno/NvChad/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
+    - [X] *bug* visual selection 모드에 gx github 를 할 경우에 정체 경로가 전송됨 https://github.com/deptno/nvim/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
   - [X] cd? 에서 현재 브랜치 + origin 까지 확인 필요
-    + https://github.com/deptno/NvChad/commit/7fbcc6e
+    + https://github.com/deptno/nvim/commit/7fbcc6e
   - [X] @cite 자동완성 dictionary 생성 
     + https://github.com/deptno/nvim/commit/de370b0ad52e9121f30067069ecd27be13a6253c
     - .github/CODEOWNERS 로 시작 slack, github 
@@ -72,10 +72,10 @@
       - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
       - [ ] change base 쉽게
   - [o] window
-    - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/NvChad/commit/3008b87d
+    - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/nvim/commit/3008b87d
     - [ ] 제대로 동작하지 않는 경우가 있는 것으로 보임, 확인 처리
   - [o] code chunk 실행, [[repl]]
-    - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/NvChad/commit/bd102e6
+    - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/nvim/commit/bd102e6
     - [ ] 언어별 핸들러 제공필요, ts bun
   - [ ] lab/gx
     - [ ] github wiki 를 사용하고 있는데 이 부분 github link 따기
@@ -122,7 +122,7 @@ cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2
 - [.] 특정 레포에서 라이브러리 정의를 못따라가는 경우가 있음
   - [X] 해보니 설정이 pnp모드라 이거 관련된 것인지 확인 필요
   - [ ] 프로젝트 root 에서 `yarn dlx @yarnpkg/sdks vim` 설치 필요, `lbrayner/vim-rzip` 설치 필요
-  + https://github.com/deptno/NvChad/commit/ed738ae
+  + https://github.com/deptno/nvim/commit/ed738ae
 
 - [ ] 2022-11-25 지라 백로그에서 스프린트 설정 배치 처리가 필요
 
