@@ -11,13 +11,16 @@
     - 당분간 수동
     - [X] gollum webhook event 가 있어서 위키도 이벤트를 받을 수 있음
       + https://github.com/deptno/deptno.dev/commit/7f2d0cd8a65973b35476f131dfe13442ae468d04
-- [ ] https://github.com/deptno/deptno.github.io/wiki -> https://github.com/deptno/public_wiki 로 이사 [[diary:2023-10-14]] 
-  - [ ] rename directory
-  - [ ] git remote 변경
-  - [ ] vimwiki directory 설정 변경
-  - [ ] zsh alias 변경
-  - [ ] deptno.dev 에서바라보는 directory 설정 변경
-  - [ ] github hook url 확인
+- [X] https://github.com/deptno/deptno.github.io/wiki -> https://github.com/deptno/public_wiki 로 이사 [[diary:2023-10-14]] 
+  - [X] rename directory
+  - [X] git remote 변경
+  - [X] vimwiki directory 설정 변경 + https://github.com/deptno/nvim/commit/ab2f2af6
+  - [X] zsh alias ~~변경~~ -> 제거로 처리 + https://github.com/deptno/.config/commit/f0e915b
+  - [X] deptno.dev 에서바라보는 directory 설정 변경 + https://github.com/deptno/deptno.dev/commit/2b5af1a
+  - [X] github hook url 확인
+    - [X] 추가 - https://github.com/deptno/public-wiki/settings/hooks -> 동작 확인됨
+    - [X] 제거 - https://github.com/deptno/deptno.github.io/settings/hooks/419255020
+  - [X] kubernetes cluster 수정 + https://github.com/deptno/cluster-amd64/commit/73a434d
 
 ## why
 - 나이가 들면서 잊어버리는 속도가 점점 빨라진다.
