@@ -12,6 +12,12 @@
     - [X] gollum webhook event 가 있어서 위키도 이벤트를 받을 수 있음
       + https://github.com/deptno/deptno.dev/commit/7f2d0cd8a65973b35476f131dfe13442ae468d04
 - [ ] https://github.com/deptno/deptno.github.io/wiki -> https://github.com/deptno/public_wiki 로 이사 [[diary:2023-10-14]] 
+  - [ ] rename directory
+  - [ ] git remote 변경
+  - [ ] vimwiki directory 설정 변경
+  - [ ] zsh alias 변경
+  - [ ] deptno.dev 에서바라보는 directory 설정 변경
+  - [ ] github hook url 확인
 
 ## why
 - 나이가 들면서 잊어버리는 속도가 점점 빨라진다.
