@@ -33,6 +33,7 @@ cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2
 ```
   - [ ] graph 확인
   - [ ] mergetool [[intellij]] 이용
+    + https://www.jetbrains.com/help/webstorm/working-with-the-ide-features-from-command-line.html#arguments
     - [ ] https://gist.github.com/ffittschen/6d9be1720f30eb8dc0142cc0ed91c7d9
   - [X] difftastic -> delta 로 변경, forgit 지원이 안되는 문제가 있어서 변경 https://github.com/deptno/.config/commit/e8ef36479716e41276efe3b6275f5806b9eaae97
       - [X] git show commit
