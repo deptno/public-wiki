@@ -61,8 +61,9 @@
   - [X] gx extension ~~이건 gx.nvim 과 관련이 없는 개별 플러그인으로 보임~~
   - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트(다중 매치시 다중)
   - [X] *bug* visual selection 모드에 gx github 를 할 경우에 정체 경로가 전송됨 https://github.com/deptno/nvim/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
-- [X] cd? 에서 현재 브랜치 + origin 까지 확인 필요
-  + https://github.com/deptno/nvim/commit/7fbcc6e
+- [ ] cd?
+  - [X] 현재 브랜치 + origin 까지 확인 필요 + https://github.com/deptno/nvim/commit/7fbcc6e
+  - [ ] 현재 파일의 정보고 같이 보는게 좋겠음
 - [X] @cite 자동완성 dictionary 생성 
   + https://github.com/deptno/nvim/commit/de370b0ad52e9121f30067069ecd27be13a6253c
   - .github/CODEOWNERS 로 시작 slack, github 
@@ -102,6 +103,7 @@
   - [ ] ssh 기반으로 코드가 작성되어있는데 https 같이 지원
   - [ ] *bug* url 인데 일반 커밋으로 인식
   - [ ] [[wip]] *bug* url 에 `.` 들어간경우 제거됨 i.e. https://github.com/deptno/deptno.dev/commit/2b5af1a
+  - [ ] [vV] current file 기준으로 gx 를 열어줘야하는데 cwd 기준으로 열어주고있음
 
 ## link
 - [[neovim]]
