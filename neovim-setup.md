@@ -99,9 +99,9 @@
 - [o] code chunk 실행, [[repl]]
   - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/nvim/commit/bd102e6
   - [ ] 언어별 핸들러 제공필요, ts bun
-- [o] lab/gx
-  - [ ] github wiki 를 사용하고 있는데 이 부분 github link 따기
-  - [ ] ssh 기반으로 코드가 작성되어있는데 https 같이 지원
+- [O] lab/gx
+  - [X] github wiki 를 사용하고 있는데 이 부분 github link 따기 -> wiki repo 를 일반레포로 전환하고 wiki 는 drop, needs 없음
+  - [X] ssh 기반으로 코드가 작성되어있는데 https 같이 지원 -> 테스트 해보니 이미 됨
   - [ ] *bug* url 인데 일반 커밋으로 인식
   - [X] *bug* cd 정보에 `]` 마지막 괄호가 빠짐 + https://github.com/deptno/nvim/commit/10c043d0
   - [X] *bug* url 에 `.` 들어간경우 제거됨 i.e. + https://github.com/deptno/nvim/commit/c27ad96
