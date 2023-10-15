@@ -19,6 +19,7 @@
 
 - [ ] navigate window ctrl+w + {h,j,k,l}
 - [ ] resize window ctrl+{H,J,K,L}
+- [X] luaJIT 참조하도록 설정 + https://github.com/deptno/nvim/commit/85619c9
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
 - [X] vim cd.. 이 ~~cwd 기준이라 recursive 하게 동작하지 않는 문제~~ 수정
   - [X] vim cd.. cwd 기준이 아니라 현재 파일 기준이라 동작하지 않는 것으로 cwd 기준으로 수정 필요
