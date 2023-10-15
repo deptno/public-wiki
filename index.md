@@ -1,4 +1,4 @@
-# deptno.github.io.wiki
+# [public-wiki](http://github.com/deptno/public-wiki) 
 - [[hello-wiki]]
 
 ## todo
