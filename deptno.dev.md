@@ -4,10 +4,13 @@
 > github 에 존재하는 wiki를 쓰고 있었는데 github 에서 wiki를 버렸다 생각될 정도로 구성이 수상하다. 일단 이를 깃 레포지터리로 이용하는 것은 유지하되, 편하게 접근하고 읽을 수 있도록 시스템이 필요했다.
 
 ## todo [[@todo]]
-- [O] [[deptno.dev]] 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정 - [[rust]]
+- [ ] `diary:` 등의 prefix 처리
+- [X] encoded uri 가 노출되는 문제, i.e. @todo -> %40todo + https://github.com/deptno/deptno.dev/commit/420d203
+- [X] history, edit 기능이 wiki 와 달라서 처리 필요 + https://github.com/deptno/deptno.dev/commit/312682a
+- [X] [[deptno.dev]] 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정
   - [X] process.exit + livenessProbe 로 process 를 재시작할 뿐 pod 나 container 를 재시작할 수 없음
   - [X] 결국 [[webhook]] -> [[kubernetes-api]] 를 통해 rollout 을 하는 방향으로 수정되어야함
-  - [o] 생각해 보니 서버가 아닌 wiki 의 레포가 일반 레포가 아닌 wiki repo 여서 이벤트를 ~~받을 수 없음~~
+  - [X] 생각해 보니 서버가 아닌 wiki 의 레포가 일반 레포가 아닌 wiki repo 여서 이벤트를 ~~받을 수 없음~~
     - 당분간 수동
     - [X] gollum webhook event 가 있어서 위키도 이벤트를 받을 수 있음
       + https://github.com/deptno/deptno.dev/commit/7f2d0cd8a65973b35476f131dfe13442ae468d04
