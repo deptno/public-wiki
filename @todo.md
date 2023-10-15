@@ -37,8 +37,12 @@ cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2
     - [ ] https://gist.github.com/ffittschen/6d9be1720f30eb8dc0142cc0ed91c7d9
   - [X] difftastic -> delta 로 변경, forgit 지원이 안되는 문제가 있어서 변경 https://github.com/deptno/.config/commit/e8ef36479716e41276efe3b6275f5806b9eaae97
       - [X] git show commit
-    - 여러 커밋을 선택해서 변경된 파일 리스트 보기
-      - 해당 파일의 diff
+  - [.] diff
+    - [ ] difftool 로 [[intellij]] 적용
+    - [X] delta 적용 + `--ignore-all-space`
+    - [ ] fzf
+      - [ ] log -> 상세로 이어질 수 있도록
+      - [ ] 여러 커밋을 선택해서 변경된 파일 리스트 보기
   - [ ] last commit diff 보기
   - [ ] 현재 브랜치와 부모 브랜치 사이의 diff
     - [ ] 현재 브랜치에만 포함된 커밋들로 확인

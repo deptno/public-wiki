@@ -88,9 +88,8 @@
     - [ ] api,구글 등 cloud provider 연동, filter + 휴가 이모지등
 - [ ] [[octo]] 도입 검토
 - [ ] [[neogit]] git checkout 대신 git switch 를 이용할 방법
-  - [ ] diff 가 [[intellij]] 대비 불편함
-    - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
-    - [ ] change base 쉽게
+  - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
+  - [ ] change base 쉽게
 - [o] window
   - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/nvim/commit/3008b87d
   - [ ] 제대로 동작하지 않는 경우가 있는 것으로 보임, 확인 처리
@@ -101,7 +100,7 @@
   - [ ] github wiki 를 사용하고 있는데 이 부분 github link 따기
   - [ ] ssh 기반으로 코드가 작성되어있는데 https 같이 지원
   - [ ] *bug* url 인데 일반 커밋으로 인식
-  - [ ] *bug* url 에 `.` 들어간경우 제거됨 i.e. https://github.com/deptno/deptno.dev/commit/2b5af1a
+  - [ ] [[wip]] *bug* url 에 `.` 들어간경우 제거됨 i.e. https://github.com/deptno/deptno.dev/commit/2b5af1a
 
 ## link
 - [[neovim]]
