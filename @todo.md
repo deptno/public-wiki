@@ -21,12 +21,13 @@
 
 ## 맥
 - [X] 회사 chrome profile -> safari profile
+- [ ] bruno 설치 테스트 rest-nvim 이 불안정해서 대체 할지 검토
 
 ## 터미널
 - [o] [[tmux]]
   - [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f
   - [ ] tmux-thumbs 색상 설정
-- [.] git terminal 확장
+- [.] [[git]] terminal 확장
   - [ ] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현
 ```sh 
 cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2; i<NF; i++) print $i;}' | sort | uniq 

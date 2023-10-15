@@ -4,7 +4,9 @@
 > github 에 존재하는 wiki를 쓰고 있었는데 github 에서 wiki를 버렸다 생각될 정도로 구성이 수상하다. 일단 이를 깃 레포지터리로 이용하는 것은 유지하되, 편하게 접근하고 읽을 수 있도록 시스템이 필요했다.
 
 ## todo [[@todo]]
-- [ ] `diary:` 등의 prefix 처리
+- [ ] 최근 수정된 파일 목록
+- [X] ~~`diary:` 등의 prefix 처리~~ -> 해보니 이미 처리했었나봄
+- [X] frontend revision 노출 + https://github.com/deptno/deptno.dev/commit/6b3c35b
 - [X] encoded uri 가 노출되는 문제, i.e. @todo -> %40todo + https://github.com/deptno/deptno.dev/commit/420d203
 - [X] history, edit 기능이 wiki 와 달라서 처리 필요 + https://github.com/deptno/deptno.dev/commit/312682a
 - [X] [[deptno.dev]] 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정
