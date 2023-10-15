@@ -99,11 +99,11 @@
 - [o] code chunk 실행, [[repl]]
   - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/nvim/commit/bd102e6
   - [ ] 언어별 핸들러 제공필요, ts bun
-- [.] lab/gx
+- [o] lab/gx
   - [ ] github wiki 를 사용하고 있는데 이 부분 github link 따기
   - [ ] ssh 기반으로 코드가 작성되어있는데 https 같이 지원
   - [ ] *bug* url 인데 일반 커밋으로 인식
-  - [ ] [[wip]] *bug* url 에 `.` 들어간경우 제거됨 i.e. https://github.com/deptno/deptno.dev/commit/2b5af1a
+  - [X] *bug* url 에 `.` 들어간경우 제거됨 i.e. https://github.com/deptno/nvim/commit/c27ad96
   - [X] [vV] current file 기준으로 gx 를 열어줘야하는데 cwd 기준으로 열어주고있음 + https://github.com/deptno/nvim/commit/93c4c13
 
 ## link
