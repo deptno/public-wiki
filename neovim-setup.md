@@ -15,7 +15,6 @@
 - which-key 에 [[vimscript]] 를 통해서 등록한 매핑은 보여지지 않는 것으로 보임.
 
 ## 개선사항 [[@todo]]
-
 > [[@todo]] 에서 이관
 
 - [ ] navigate window ctrl+w + {h,j,k,l}
@@ -102,6 +101,7 @@
 - [O] lab/gx
   - [X] github wiki 를 사용하고 있는데 이 부분 github link 따기 -> wiki repo 를 일반레포로 전환하고 wiki 는 drop, needs 없음
   - [X] ssh 기반으로 코드가 작성되어있는데 https 같이 지원 -> 테스트 해보니 이미 됨
+  - [ ] *bug* [n] repoisotyr 이름에 `.` 들어간경우 유지 필요 i.e. deptno.dev
   - [ ] *bug* url 인데 일반 커밋으로 인식
   - [X] *bug* cd 정보에 `]` 마지막 괄호가 빠짐 + https://github.com/deptno/nvim/commit/10c043d0
   - [X] *bug* url 에 `.` 들어간경우 제거됨 i.e. + https://github.com/deptno/nvim/commit/c27ad96
