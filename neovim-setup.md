@@ -92,9 +92,10 @@
 - [ ] [[neogit]] git checkout 대신 git switch 를 이용할 방법
   - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
   - [ ] change base 쉽게
-- [o] window
+- [.] window
   - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/nvim/commit/3008b87d
   - [ ] 제대로 동작하지 않는 경우가 있는 것으로 보임, 확인 처리
+  - [ ] layout 설정이 가능했으면 좋겠다. predefine 된 레이아웃으로 변경할 수 있는 플러그인부터 검색
 - [o] code chunk 실행, [[repl]]
   - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/nvim/commit/bd102e6
   - [ ] 언어별 핸들러 제공필요, ts bun
