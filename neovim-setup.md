@@ -103,7 +103,8 @@
   - [ ] github wiki 를 사용하고 있는데 이 부분 github link 따기
   - [ ] ssh 기반으로 코드가 작성되어있는데 https 같이 지원
   - [ ] *bug* url 인데 일반 커밋으로 인식
-  - [X] *bug* url 에 `.` 들어간경우 제거됨 i.e. https://github.com/deptno/nvim/commit/c27ad96
+  - [X] *bug* cd 정보에 `]` 마지막 괄호가 빠짐 + https://github.com/deptno/nvim/commit/10c043d0
+  - [X] *bug* url 에 `.` 들어간경우 제거됨 i.e. + https://github.com/deptno/nvim/commit/c27ad96
   - [X] [vV] current file 기준으로 gx 를 열어줘야하는데 cwd 기준으로 열어주고있음 + https://github.com/deptno/nvim/commit/93c4c13
 
 ## link
