@@ -19,6 +19,7 @@
 
 - [ ] navigate window ctrl+w + {h,j,k,l}
 - [ ] resize window ctrl+{H,J,K,L}
+- [ ] [[html]] 작성하는데 [[zen-coding]] 가 안먹는다 플러그인 찾자
 - [X] luaJIT 참조하도록 설정 + https://github.com/deptno/nvim/commit/85619c9
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
 - [X] vim cd.. 이 ~~cwd 기준이라 recursive 하게 동작하지 않는 문제~~ 수정
