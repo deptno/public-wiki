@@ -18,19 +18,20 @@
 
 > [[@todo]] 에서 이관
 
-- session 
-  - startify-session 문제점
-    - sesion 이동시에 tag stack 이나 이동 스택은 살아있음
-      - ctrl+t, ctrl-o 등으로 해당 스택을 이동하는 경우 이전 session 의 파일들을 불러오게되면서 session 영역이 혼탁해짐
-      - [[comparison:tagstack-vs-jump]]
-      - [[vimwiki]] 에서 링크 이동에 tag stack 이 사용되지 않는 문제
-      - session 이동시에는 tagstack 세트로 변경되어야한다
 - [ ] navigate window ctrl+w + {h,j,k,l}
 - [ ] resize window ctrl+{H,J,K,L}
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
 - [X] vim cd.. 이 ~~cwd 기준이라 recursive 하게 동작하지 않는 문제~~ 수정
   - [X] vim cd.. cwd 기준이 아니라 현재 파일 기준이라 동작하지 않는 것으로 cwd 기준으로 수정 필요
 - [O] [[vim-startify]] 설정
+  - [ ] startify-session 문제점
+    - sesion 이동시에 tag stack 이나 이동 스택은 살아있음
+      - ctrl+t, ctrl-o 등으로 해당 스택을 이동하는 경우 이전 session 의 파일들을 불러오게되면서 session 영역이 혼탁해짐
+      - [[comparison:tagstack-vs-jump]]
+      - [[vimwiki]] 에서 링크 이동에 tag stack 이 사용되지 않는 문제
+        - [ ] ctrl+i 가 `VimwikiNextLink` 로 동작하지 않도록 제거
+      - session 이동시에는 tagstack, jumps 가 세트로 변경되어야한다
+      - [ ] session 대체제 부터 찾아보기
   - [X] startify session 에서 cwd 지정이 가능한지 확인
     - [X] startify_change_to_dir  옵션을 사용해 봤으나 사용성이 떨어지고 git root 로 가야함 -> 범용적으로 cdp 구현 프로젝트로 루트 이동이 가능
       + https://github.com/deptno/nvim/commit/a869b4a4
