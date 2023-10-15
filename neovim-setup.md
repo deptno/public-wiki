@@ -58,7 +58,7 @@
   - [X] custom handler 지원하는지 확인 + https://github.com/deptno/nvim/blob/7fbcc6e28c113612d5d29dd7ca7057e87b3caeab/lua/lab/gx/init.lua#L21-L32
   - [X] 하나의 패턴에 대한 handler 선택 가능 여부 확인
   - [X] gx extension ~~이건 gx.nvim 과 관련이 없는 개별 플러그인으로 보임~~
-  - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트
+  - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트(다중 매치시 다중)
   - [X] *bug* visual selection 모드에 gx github 를 할 경우에 정체 경로가 전송됨 https://github.com/deptno/nvim/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
 - [X] cd? 에서 현재 브랜치 + origin 까지 확인 필요
   + https://github.com/deptno/nvim/commit/7fbcc6e
@@ -86,7 +86,6 @@
     - [ ] 슬랙 해당날 태그등
     - [ ] apple reminder
     - [ ] api,구글 등 cloud provider 연동, filter + 휴가 이모지등
-  - [ ] 특정 대한 highlight, gx 패턴 매칭과 같이 쓸 수 있을런지
 - [ ] [[octo]] 도입 검토
 - [ ] [[neogit]] git checkout 대신 git switch 를 이용할 방법
   - [ ] diff 가 [[intellij]] 대비 불편함
