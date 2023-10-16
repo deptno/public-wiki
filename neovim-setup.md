@@ -56,13 +56,6 @@
     - [X] ~~session 변경시 저장~~ 위험할 수 있을 것 같음, 저장을 습관화
     - [ ] repo 의 경우 branch 별 세션 저장 및 변경 방법 고민
   - [ ] session bookmark 가 필요한것
-- [o] [[gx]]
-  - [ ] search 시에 ' ' -> '+' 로 나가는 이슈 처리
-  - [X] custom handler 지원하는지 확인 + https://github.com/deptno/nvim/blob/7fbcc6e28c113612d5d29dd7ca7057e87b3caeab/lua/lab/gx/init.lua#L21-L32
-  - [X] 하나의 패턴에 대한 handler 선택 가능 여부 확인
-  - [X] gx extension ~~이건 gx.nvim 과 관련이 없는 개별 플러그인으로 보임~~
-  - [ ] visual 모드에 진입시 gx 가능 영역들에 대한 하이라이트(다중 매치시 다중)
-  - [X] *bug* visual selection 모드에 gx github 를 할 경우에 정체 경로가 전송됨 https://github.com/deptno/nvim/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
 - [ ] cd?
   - [X] 현재 브랜치 + origin 까지 확인 필요 + https://github.com/deptno/nvim/commit/7fbcc6e
   - [ ] 현재 파일의 정보고 같이 보는게 좋겠음
@@ -101,7 +94,7 @@
 - [o] code chunk 실행, [[repl]]
   - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/nvim/commit/bd102e6
   - [ ] 언어별 핸들러 제공필요, ts bun
-- [X] lab/gx
+- [O] lab/gx [[gx]]
   - [X] github wiki 를 사용하고 있는데 이 부분 github link 따기 -> wiki repo 를 일반레포로 전환하고 wiki 는 drop, needs 없음
   - [X] ssh 기반으로 코드가 작성되어있는데 https 같이 지원 -> 테스트 해보니 이미 됨
   - [X] *bug* [n] repository 이름에 `.` 들어간경우 유지 필요 i.e. deptno.dev -> https://github.com/deptno/nvim/commit/6833181
@@ -109,6 +102,11 @@
   - [X] *bug* cd 정보에 `]` 마지막 괄호가 빠짐 + https://github.com/deptno/nvim/commit/10c043d0
   - [X] *bug* url 에 `.` 들어간경우 제거됨 i.e. + https://github.com/deptno/nvim/commit/c27ad96
   - [X] [vV] current file 기준으로 gx 를 열어줘야하는데 cwd 기준으로 열어주고있음 + https://github.com/deptno/nvim/commit/93c4c13
+  - [X] custom handler 지원하는지 확인 + https://github.com/deptno/nvim/blob/7fbcc6e28c113612d5d29dd7ca7057e87b3caeab/lua/lab/gx/init.lua#L21-L32
+  - [X] *bug* visual selection 모드에 gx github 를 할 경우에 정체 경로가 전송됨 https://github.com/deptno/nvim/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
+  - [ ] *feat* image open
+  - [ ] *feat* image vV 번역
+  - [ ] *feat* image vV search
 
 ## link
 - [[neovim]]
