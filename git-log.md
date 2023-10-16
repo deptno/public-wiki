@@ -13,6 +13,10 @@
 git log [sha1]^..[sha1] --first-parent | tail -1 # 최초 포함된 머지커밋
 git log [sha1]^..[sha1] --first-parent --merges  # 트리
 git log [sha1]^..[sha1] --first-parent --merges --simplify-by-decoration # 브랜치 포함 순서 트리
+
+# 검색
+git log --grep pattern
+git log --grep pattern -i # case insensitive 
 ```
 
 ## link
