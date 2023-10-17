@@ -17,8 +17,9 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] navigate window ctrl+w + {h,j,k,l}
-- [ ] resize window ctrl+{H,J,K,L}
+- [ ] bookmark 문자 컬럼 노출
+- [X] navigate window ctrl+w + {h,j,k,l} -> 원래 됨 ctrl+{h,j,k,l}
+- [X] resize window ctrl+{H,J,K,L} -> 생각보다 메커님이 복잡 윈도우 사용
 - [ ] emoji 관련 nvim-cmp 플러그인도 찾자
 - [ ] [[html]] 작성하는데 [[zen-coding]] 가 안먹는다 플러그인 찾자
 - [X] luaJIT 참조하도록 설정 + https://github.com/deptno/nvim/commit/85619c9
@@ -34,6 +35,8 @@
         - [ ] ctrl+i 가 `VimwikiNextLink` 로 동작하지 않도록 제거
       - session 이동시에는 tagstack, jumps 가 세트로 변경되어야한다
       - [ ] session 대체제 부터 찾아보기
+      - [ ] session auto load 가 `Session.vim` 에서만 동작하는데 이 부분에 대한 처리 필요
+        - [ ] session directory 기준으로 autoload 를 할 수 있는지 확인 필요, https://github.com/mhinz/vim-startify/blob/4e089dffdad46f3f5593f34362d530e8fe823dcf/plugin/startify.vim#L36-L50
   - [X] startify session 에서 cwd 지정이 가능한지 확인
     - [X] startify_change_to_dir  옵션을 사용해 봤으나 사용성이 떨어지고 git root 로 가야함 -> 범용적으로 cdp 구현 프로젝트로 루트 이동이 가능
       + https://github.com/deptno/nvim/commit/a869b4a4
@@ -111,3 +114,4 @@
 ## link
 - [[neovim]]
 - [[neovim-lua-plugins]]
+- [[vim-session]]
