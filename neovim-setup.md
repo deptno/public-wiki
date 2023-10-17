@@ -17,10 +17,11 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- [ ] symbol, 찾기 단축키
 - [ ] bookmark 문자 컬럼 노출
 - [X] navigate window ctrl+w + {h,j,k,l} -> 원래 됨 ctrl+{h,j,k,l}
 - [X] resize window ctrl+{H,J,K,L} -> 생각보다 메커님이 복잡 윈도우 사용
-- [ ] emoji 관련 nvim-cmp 플러그인도 찾자
+- [X] emoji 관련 nvim-cmp 플러그인도 찾자 + https://github.com/deptno/nvim/commit/6b24994
 - [ ] [[html]] 작성하는데 [[zen-coding]] 가 안먹는다 플러그인 찾자
 - [X] luaJIT 참조하도록 설정 + https://github.com/deptno/nvim/commit/85619c9
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
