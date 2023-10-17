@@ -10,6 +10,7 @@
 
 ## 일상
 - [ ] 거울 사기
+- [ ] 주방 조명
 - [ ] 라즈베리파이 판매
 - [ ] 요금제 찾아보기
 - [ ] 에어컨 청소
@@ -21,7 +22,7 @@
 
 ## 맥
 - [X] 회사 chrome profile -> safari profile
-- [ ] 링크별 브라우저 선택
+- [X] 링크별 브라우저 선택
   1. [[finicky]] {safari,chrome-profile}
   2. safari-profile, 설정에 있음
 - [ ] bruno 설치 테스트 rest-nvim 이 불안정해서 대체 할지 검토
@@ -30,11 +31,8 @@
 - [o] [[tmux]]
   - [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f
   - [ ] tmux-thumbs 색상 설정
-- [.] [[git]] terminal 확장
-  - [ ] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현
-```sh 
-cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2; i<NF; i++) print $i;}' | sort | uniq 
-```
+- [X] [[git]] terminal 확장
+  - [X] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현 -> 불필요, cmp_git 으로 대체 가능
   - [ ] graph 확인
   - [ ] mergetool [[intellij]] 이용
     + https://www.jetbrains.com/help/webstorm/working-with-the-ide-features-from-command-line.html#arguments
@@ -58,8 +56,6 @@ cat .github/CODEOWNERS | grep -v '^#' | grep -E '@[A-z0-9_-]+' | awk '{ for (i=2
   - [X] 해보니 설정이 pnp모드라 이거 관련된 것인지 확인 필요
   - [X] 프로젝트 root 에서 `yarn dlx @yarnpkg/sdks vim` 설치 필요, `lbrayner/vim-rzip` 설치 필요
   + https://github.com/deptno/nvim/commit/ed738ae
-
-- [ ] 2022-11-25 지라 백로그에서 스프린트 설정 배치 처리가 필요
 
 ## 러스트
 - [ ] rust 해볼만 한 미션
