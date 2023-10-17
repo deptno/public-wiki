@@ -9,4 +9,5 @@ vim 은 이동해 관해서 두가지 스택으로 관리를 한다.
 ```
 
 ## link
-- [[neovim-setup]]
+- [[vim]]
+- [[vim-session]]

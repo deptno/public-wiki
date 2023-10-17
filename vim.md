@@ -150,4 +150,6 @@ Vim:E117: Unknown function: netrw#CheckIfRemote
 
 
 ## releated
+- [[vim-session]]
+- [[comparison:tagstack-vs-jump]]
 - [[neovim]]
