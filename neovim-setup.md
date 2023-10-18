@@ -18,7 +18,7 @@
 > [[@todo]] 에서 이관
 
 - [ ] symbol, 찾기 단축키
-- [ ] bookmark 문자 컬럼 노출 - marks.nvim
+- [X] bookmark 문자 컬럼 노출 - marks.nvim + https://github.com/deptno/nvim/commit/e2c36dd
 - [X] navigate window ctrl+w + {h,j,k,l} -> 원래 됨 ctrl+{h,j,k,l}
 - [X] resize window ctrl+{H,J,K,L} -> 생각보다 메커님이 복잡 윈도우 사용
 - [X] emoji 관련 nvim-cmp 플러그인도 찾자 + https://github.com/deptno/nvim/commit/6b24994
@@ -68,7 +68,11 @@
   - .github/CODEOWNERS 로 시작 slack, github 
   - slack 은 api 보니 힘들거 같고 git 관련해서는 cmp_git 이 잘되어 있어서 요걸 쓰기로 함
 - [X] [[nvchad]] default theme 변경
+- [ ] 파일 네비게이션
+  - [ ] 파일 이동간에 git_root 를 lcd 혹 cwd 설정
+  - [ ] 혹은 git_root 가 다른 파일 이동에는 tabpage 전환, tabpage 마다 root
 - [.] [[vimwiki]]
+  - [ ] diary 간 이동할때 buffer 가 계속 늘어나지 않도록 조치
   - [X] diary 를 폴더구조거아니라 prefix 형태로 평탄화 가능한 옵션이 있는지 검토
     - [X] `diary:` prefix 를 통해 상대경로가 아니어도 링크가능하므로 이걸 이용
     - [X] 경로에 depth 가 들어간 경우, `/` prefix 를 통해서 wiki 루트로 부터 계산되니 이걸 사용
