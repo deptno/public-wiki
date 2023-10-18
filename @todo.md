@@ -5,7 +5,7 @@
 ## 클러스터
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
 - [ ] grafana [[alarm]]
-- [X] ha 깨짐 [[home-assistant]]
+- [ ] ha 깨짐 [[home-assistant]]
   - [ ] ip_bans.yaml 파일에 왜 서버 자기 자신의 ip가 추가되는지 확인해서 조치 필요
 
 ## 일상
@@ -26,12 +26,15 @@
   1. [[finicky]] {safari,chrome-profile}
   2. safari-profile, 설정에 있음
 - [ ] bruno 설치 테스트 rest-nvim 이 불안정해서 대체 할지 검토
+- [ ] [[finicky]] 에서 proxy 한 링크를 모두 기록해서 fuzzy 로 사용
 
 ## 터미널
 - [o] [[tmux]]
   - [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f
   - [ ] tmux-thumbs 색상 설정
-- [X] [[git]] terminal 확장
+- [.] [[git]] terminal 확장
+  - [ ] 해당 시점 이후의 브랜치목록
+  - [ ] author 별 브랜치 목록, 시간 역순
   - [X] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현 -> 불필요, cmp_git 으로 대체 가능
   - [ ] graph 확인
   - [ ] mergetool [[intellij]] 이용

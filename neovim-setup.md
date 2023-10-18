@@ -18,7 +18,7 @@
 > [[@todo]] 에서 이관
 
 - [ ] symbol, 찾기 단축키
-- [ ] bookmark 문자 컬럼 노출
+- [ ] bookmark 문자 컬럼 노출 - marks.nvim
 - [X] navigate window ctrl+w + {h,j,k,l} -> 원래 됨 ctrl+{h,j,k,l}
 - [X] resize window ctrl+{H,J,K,L} -> 생각보다 메커님이 복잡 윈도우 사용
 - [X] emoji 관련 nvim-cmp 플러그인도 찾자 + https://github.com/deptno/nvim/commit/6b24994
@@ -109,8 +109,10 @@
   - [X] custom handler 지원하는지 확인 + https://github.com/deptno/nvim/blob/7fbcc6e28c113612d5d29dd7ca7057e87b3caeab/lua/lab/gx/init.lua#L21-L32
   - [X] *bug* visual selection 모드에 gx github 를 할 경우에 정체 경로가 전송됨 https://github.com/deptno/nvim/commit/e9cb8368620e2561a4ac5d5826b8bfb9f3de68b2
   - [ ] *feat* image open
-  - [ ] *feat* image vV 번역
-  - [ ] *feat* image vV search
+  - [X] *feat* vV 번역 + https://github.com/deptno/nvim/commit/8f847e6
+  - [X] *feat* vV search + https://github.com/deptno/nvim/commit/d55c9c2
+  - [X] *feat* n search + https://github.com/deptno/nvim/commit/a25066f
+  - [X] *feat* n find files + https://github.com/deptno/nvim/commit/aeae45c
 
 ## link
 - [[neovim]]
