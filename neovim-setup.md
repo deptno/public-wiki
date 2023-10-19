@@ -21,7 +21,7 @@
 - [ ] plugin 추가
   - [ ] nvim-ufo
   - [ ] tabscope
-- [ ] blankline 설정
+- [X] blankline 설정 + https://github.com/deptno/nvim/commit/94f9410d
 - [ ] gitsign change-base telescope 로 전환
 - [X] telescope layout 변경 + https://github.com/deptno/nvim/commit/60ed157
 - [ ] nvchad pull
