@@ -17,6 +17,15 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- [ ] quickfix vs loclist 차이 알아보기
+- [ ] plugin 추가
+  - [ ] nvim-ufo
+  - [ ] tabscope
+- [ ] blankline 설정
+- [ ] gitsign change-base telescope 로 전환
+- [X] telescope layout 변경 + https://github.com/deptno/nvim/commit/60ed157
+- [ ] nvchad pull
+- [ ] bookmark: 이슈별 그룹지정, 이슈리스트 J 로 테스트해보자
 - [ ] symbol, 찾기 단축키
 - [X] bookmark 문자 컬럼 노출 - marks.nvim + https://github.com/deptno/nvim/commit/e2c36dd
 - [X] navigate window ctrl+w + {h,j,k,l} -> 원래 됨 ctrl+{h,j,k,l}
@@ -117,6 +126,9 @@
   - [X] *feat* vV search + https://github.com/deptno/nvim/commit/d55c9c2
   - [X] *feat* n search + https://github.com/deptno/nvim/commit/a25066f
   - [X] *feat* n find files + https://github.com/deptno/nvim/commit/aeae45c
+  - [ ] *bug* vV github permalink 에서 Line 을 못 얻어 옴, 어느 순간 부터 인지
+  - [ ] *bug* vV github permalink 를 가져올대 현재 커밋이 아닌 해당 영역 log들의 순서상 최신으로 하는 것이 좋아보임
+  - [X] *bug* vV papago 깨짐
 
 ## link
 - [[neovim]]
