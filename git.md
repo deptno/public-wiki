@@ -5,6 +5,7 @@
 
 ## by-command
 - [[git-apply]]
+- [[git-add]]
 - [[git-branch]]
 - [[git-commit]]
 - [[git-check-ignore]]
