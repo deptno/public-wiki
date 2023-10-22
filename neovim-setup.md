@@ -128,9 +128,11 @@
   - [X] *feat* vV search + https://github.com/deptno/nvim/commit/d55c9c2
   - [X] *feat* n search + https://github.com/deptno/nvim/commit/a25066f
   - [X] *feat* n find files + https://github.com/deptno/nvim/commit/aeae45c
-  - [ ] *bug* vV github permalink 에서 Line 을 못 얻어 옴, 어느 순간 부터 인지
-  - [ ] *bug* vV github permalink 를 가져올대 현재 커밋이 아닌 해당 영역 log들의 순서상 최신으로 하는 것이 좋아보임
+  - [X] *bug* vV github permalink 에서 Line 을 못 얻어 옴, 어느 순간 부터 인지 + https://github.com/deptno/nvim/commit/b253387
+    - multiple gx 에서 선택하는 수간 mode가 normal 로 인식되면서 생기는 문제
+  - [ ] *feat* vV github permalink 를 가져올대 현재 커밋이 아닌 해당 영역 log들의 순서상 최신으로 하는 것이 좋아보임
   - [X] *bug* vV papago 깨짐
+  - [ ] *feat* filetype 별 gx enable 여부
 
 ## link
 - [[neovim]]
