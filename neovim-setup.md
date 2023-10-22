@@ -17,10 +17,12 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] quickfix vs loclist 차이 알아보기
-- [ ] plugin 추가
-  - [ ] nvim-ufo
-  - [ ] tabscope
+- [X] quickfix vs loclist 차이 알아보기, quickfix:project, location:local 레벨, 파일단위인지 프로젝트 단위인지
+- [o] plugin 추가
+  - [o] nvim-ufo
+    - [X] 설정 + https://github.com/deptno/nvim/commit/38f6c19
+    - [ ] 폴드가 원하는대로는 안풀려서 좀더 찾아보자
+  - [X] tabscope + https://github.com/deptno/nvim/commit/2341b5c
 - [X] blankline 설정 + https://github.com/deptno/nvim/commit/94f9410d
 - [ ] gitsign change-base telescope 로 전환
 - [X] telescope layout 변경 + https://github.com/deptno/nvim/commit/60ed157
