@@ -4,6 +4,7 @@
 > github 에 존재하는 wiki를 쓰고 있었는데 github 에서 wiki를 버렸다 생각될 정도로 구성이 수상하다. 일단 이를 깃 레포지터리로 이용하는 것은 유지하되, 편하게 접근하고 읽을 수 있도록 시스템이 필요했다.
 
 ## todo [[@todo]]
+- [ ] `[]()`의 링크 형태에 대해서 markdown 은 제대로 파싱되나 백링크등 데이터를 만들어내지 못함
 - [ ] 최근 수정된 파일 목록
 - [ ] `diary:` 등의 prefix 처리 -> ~~해보니 이미 처리했었나봄~~ 글이아닌 태그와 그래프에서 이동시 문제가 있다
 - [X] frontend revision 노출 + https://github.com/deptno/deptno.dev/commit/6b3c35b

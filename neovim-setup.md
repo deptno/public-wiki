@@ -17,6 +17,7 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- auto-session -> persisted, mksession 은 간혹 세션의 이전 버퍼가 딸려오는 문제는 있는 것 같다
 - [X] quickfix vs loclist 차이 알아보기, quickfix:project, location:local 레벨, 파일단위인지 프로젝트 단위인지
 - [o] plugin 추가
   - [o] nvim-ufo
@@ -24,7 +25,9 @@
     - [ ] 폴드가 원하는대로는 안풀려서 좀더 찾아보자
   - [X] tabscope + https://github.com/deptno/nvim/commit/2341b5c
 - [X] blankline 설정 + https://github.com/deptno/nvim/commit/94f9410d
-- [ ] gitsign change-base telescope 로 전환
+- [o] gitsign
+  - [ ] change-base telescope 로 전환
+  - [X] diff 에 관련한 설정이 가능한지 -> 가능하지 않음 delta 적용불가 + https://github.com/lewis6991/gitsigns.nvim/issues/723
 - [X] telescope layout 변경 + https://github.com/deptno/nvim/commit/60ed157
 - [ ] nvchad pull
 - [ ] bookmark: 이슈별 그룹지정, 이슈리스트 J 로 테스트해보자
@@ -33,7 +36,7 @@
 - [X] navigate window ctrl+w + {h,j,k,l} -> 원래 됨 ctrl+{h,j,k,l}
 - [X] resize window ctrl+{H,J,K,L} -> 생각보다 메커님이 복잡 윈도우 사용
 - [X] emoji 관련 nvim-cmp 플러그인도 찾자 + https://github.com/deptno/nvim/commit/6b24994
-- [ ] [[html]] 작성하는데 [[zen-coding]] 가 안먹는다 플러그인 찾자
+- [X] [[html]] 작성하는데 [[zen-coding]] 안먹는다 플러그인 찾자, lsp 로 와 기본적으로 제공되는 snippet 으로 대충 가능할 것으로 보임
 - [X] luaJIT 참조하도록 설정 + https://github.com/deptno/nvim/commit/85619c9
 - [X] vim 에서 cwd 혹은 현재 파일의 위치를 가지고 [[tmux]] {pane,window} 를 생성할 수 있도록 지원 - https://github.com/deptno/NvChad/commit/8e6dfa1
 - [X] vim cd.. 이 ~~cwd 기준이라 recursive 하게 동작하지 않는 문제~~ 수정
