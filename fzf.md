@@ -24,9 +24,27 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 ```sh 
 git log --graph --date=short --pretty=format:'%cd\t%h\t%d\t%aL\t%s' --abbrev-commit | \
 fzf --delimiter '\t' --preview 'git show {2} | delta' --bind 'ctrl-d:become(git diff {2} @)' --bind 'enter:become(git show {2} @)'
+fzf --delimiter '\t' --preview 'git show {2} | delta' --bind 'ctrl-d:become(git diff {2} @)' --bind 'enter:become(git show {2} @)'
+```
+
+### bind
+```sh 
+# --bind [key]:[fzf-command](shell-command)
+--bind 'ctrl-r:reload(ps -ef)'
+--bind 'ctrl-/:toggle-preview'
+--bind 'ctrl-y:execute(echo -n {2..} | pbcopy)+abort'
+--bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+--bind 'ctrl-d:become(git diff {2} @)'
+--bind 'ctrl-/:change-preview-window(50%|hidden|)'
+
+# 한번에 정의
+--bind 'enter:become(vim {}),ctrl-e:become(emacs {})'
+# with --multi
+--multi --bind 'enter:become(vim {+})'
 ```
 
 ## link
 - [terminal](terminal)
 - [vim](vim)
 - [git](git)
+- [lazygit](lazygit)
