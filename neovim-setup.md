@@ -17,9 +17,10 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] session
-  - [ ] auto-session -> persisted, mksession 은 간혹 세션의 이전 버퍼가 딸려오는 문제는 있는 것 같다
-  - [ ] session 은 버리고 directory 기반 이동 + telescope oldfiles 가 낫겠음, 프로젝트 이동간에 cwd 가 변경되는 경우가 너무 많음
+- [X] session
+  - [X] auto-session -> persisted, mksession 은 간혹 세션의 이전 버퍼가 딸려오는 문제는 있는 것 같다 -> 세션 목록에서 저장하도록 해서 일단 사용
+  - [X] *option* ~~session 은 버리고 directory 기반 이동 + telescope oldfiles 가 낫겠음, 프로젝트 이동간에 cwd 가 변경되는 경우가 너무 많음~~
+  - [X] *option* persisted 를 기준으로 세션 이동 전에 세션을 자동 저장하도록 한다 + https://github.com/deptno/nvim/commit/a2bd474c5706bccd253bab88634acedfb844fa6a
 - [X] quickfix vs loclist 차이 알아보기, quickfix:project, location:local 레벨, 파일단위인지 프로젝트 단위인지
 - [o] plugin 추가
   - [o] nvim-ufo
