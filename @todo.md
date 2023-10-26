@@ -7,6 +7,7 @@
 - [ ] grafana [[alarm]]
 - [ ] ha 깨짐 [[home-assistant]]
   - [ ] ip_bans.yaml 파일에 왜 서버 자기 자신의 ip가 추가되는지 확인해서 조치 필요
+- [ ] kubernetes certificate 갱신
 
 ## 일상
 - [ ] 거울 사기
