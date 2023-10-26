@@ -1,7 +1,6 @@
 # ios
 
 ## 이미지 파일 이슈
-
 ```sh
 dyld: Library not loaded:
   /System/Library/Frameworks/LinkPresentation.fraemwork/LinkPresentation
@@ -24,3 +23,5 @@ Link Binary With Libraries
 - [[git]]
 - [[unity]]
 - [[proxyman]]
+- [[udid]]
+- [apple](apple)
