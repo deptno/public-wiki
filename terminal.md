@@ -69,6 +69,7 @@
 - [[fdisk]]
 - [[envsubst]]
 - [[fzf]]
+- [sort](sort)
 
 ### file
 /etc/netplan
