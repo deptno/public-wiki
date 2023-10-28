@@ -30,3 +30,4 @@ jq -n '{"json": "data"}' # formating
 - [[xsv]]
 - [[yq]]
 - [[tidy]]
+- [[fx]]

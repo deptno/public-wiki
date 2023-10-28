@@ -28,3 +28,4 @@ curl 'http://192.168.0.222/api/xxx/lights/2/state' \\
 - [[terminal]]
 - [[http]]
 - [[request]]
+- [fx](fx)
