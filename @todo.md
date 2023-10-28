@@ -22,7 +22,7 @@
   - .github/README.md 를 사용하면 overwrite 걱정 우려가 없고 repo 에서도 해당 방법으로 사용되고 있어서 해결됨
 
 ## 맥
-- [X] 회사 chrome profile -> safari profile
+- [X] 회사 chrome profile -> [safari](safari) profile
 - [X] 링크별 브라우저 선택
   1. [[finicky]] {safari,chrome-profile}
   2. safari-profile, 설정에 있음
