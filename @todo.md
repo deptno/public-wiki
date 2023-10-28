@@ -30,6 +30,7 @@
 - [ ] [[finicky]] 에서 proxy 한 링크를 모두 기록해서 fuzzy 로 사용
 
 ## 터미널
+- [X] fx 사용 + https://github.com/antonmedv/fx
 - [o] [[tmux]]
   - [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f
   - [ ] tmux-thumbs 색상 설정
