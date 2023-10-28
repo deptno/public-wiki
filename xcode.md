@@ -109,3 +109,4 @@ terminal 이 arm 으로 실행된 경우
 - [[react-native]]
 - [[cocoapods]]
 - [[unity]]
+- [[xcrun]]
