@@ -17,6 +17,11 @@ $ echo "/hello/world" | sed 's|/hello/||'
 world
 ```
 
+## usage
+```sh 
+sed '$d' # 여러줄의 결과중 마지막 라인을 제거한다
+```
+
 ## link
 - [[terminal]]
 - [[tr]]
