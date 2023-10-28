@@ -17,6 +17,10 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- [ ] lsp
+  - [ ] 파일명 변경
+  - [ ] 포매팅
+- [ ] vim-rest-console 연동
 - [ ] [lazygit](lazygit) 연동
 - [ ] fx 연동
 - [X] session
