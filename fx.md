@@ -35,6 +35,14 @@ echo '{"text": "Hello"}' '{"text": "World!"}' | fx --slurp '.map(x => x.text)' '
 - `.fxrc.js` 를 통한 함수 확장도 지원한다
   - [ ] 문서에 디렉토리가 안나와있는데 테스트를 해봐야한다 [@todo](@todo)
 
+## tip
+### unicode
++ https://github.com/antonmedv/fx/issues/271
+```sh
+[json] | fx . | fx
+```
+`fx .` 를 통해서 한번 evaluation 을 하고 진입하면된다
+
 ## link
 - [jq](jq)
 - [curl](curl)
