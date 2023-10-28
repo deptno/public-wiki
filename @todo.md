@@ -26,7 +26,7 @@
 - [X] 링크별 브라우저 선택
   1. [[finicky]] {safari,chrome-profile}
   2. safari-profile, 설정에 있음
-- [ ] bruno 설치 테스트 rest-nvim 이 불안정해서 대체 할지 검토
+- [X] [bruno](bruno) 설치 테스트 rest-nvim 이 불안정해서 대체 할지 검토
 - [ ] [[finicky]] 에서 proxy 한 링크를 모두 기록해서 fuzzy 로 사용
 
 ## 터미널
