@@ -20,8 +20,9 @@
 - [ ] lsp
   - [ ] 파일명 변경
   - [ ] 포매팅
-- [ ] vim-rest-console 연동
-- [ ] [lazygit](lazygit) 연동
+- [X] vim-rest-console 연동 + https://github.com/deptno/nvim/commit/059745591ce6f5e521ebbd07e676fd1c64de8680
+- [X] [lazygit](lazygit) 연동 + https://github.com/deptno/nvim/commit/1dd2dc48067d9bf01f4484ae15fcfc1d62df7a5c
+  - [X] https://github.com/gioele/vim-autoswap 설정과 함께 봐볼 것 + https://github.com/deptno/nvim/commit/9f3be8f546d191a459f3728ea7e06448681e050e
 - [ ] fx 연동
 - [X] session
   - [X] auto-session -> persisted, mksession 은 간혹 세션의 이전 버퍼가 딸려오는 문제는 있는 것 같다 -> 세션 목록에서 저장하도록 해서 일단 사용
@@ -117,9 +118,10 @@
     - [ ] apple reminder
     - [ ] api,구글 등 cloud provider 연동, filter + 휴가 이모지등
 - [ ] [[octo]] 도입 검토
-- [ ] [[neogit]] git checkout 대신 git switch 를 이용할 방법
-  - [ ] diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
-  - [ ] change base 쉽게
+- [X] [[neogit]] 제거 https://github.com/deptno/nvim/commit/cc0fcebc0ef9cc282ad7dc1c49b4eb63148c77d6
+  - [X] *remove* git checkout 대신 git switch 를 이용할 방법
+  - [X] *remove* diffview 가 활성화되면 theme 자체를 변경해버리는 것도 고려
+  - [X] *remove* change base 쉽게
 - [.] window
   - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/nvim/commit/3008b87d
   - [ ] 제대로 동작하지 않는 경우가 있는 것으로 보임, 확인 처리
