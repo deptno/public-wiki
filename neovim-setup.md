@@ -23,7 +23,7 @@
 - [X] vim-rest-console 연동 + https://github.com/deptno/nvim/commit/059745591ce6f5e521ebbd07e676fd1c64de8680
 - [X] [lazygit](lazygit) 연동 + https://github.com/deptno/nvim/commit/1dd2dc48067d9bf01f4484ae15fcfc1d62df7a5c
   - [X] https://github.com/gioele/vim-autoswap 설정과 함께 봐볼 것 + https://github.com/deptno/nvim/commit/9f3be8f546d191a459f3728ea7e06448681e050e
-- [ ] fx 연동
+- [X] fx 연동 + https://github.com/deptno/nvim/commit/3f125cae051fab1147dbc494cbfc3fae59773279
 - [X] session
   - [X] auto-session -> persisted, mksession 은 간혹 세션의 이전 버퍼가 딸려오는 문제는 있는 것 같다 -> 세션 목록에서 저장하도록 해서 일단 사용
   - [X] *option* ~~session 은 버리고 directory 기반 이동 + telescope oldfiles 가 낫겠음, 프로젝트 이동간에 cwd 가 변경되는 경우가 너무 많음~~
