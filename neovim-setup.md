@@ -17,12 +17,31 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] lsp
+- [ ] [alacritty](alacritty) 세션 이동시에 디렉토리 접근 권한 묻지 않도록
+- [.] lspsaga
   - [ ] 파일명 변경
-  - [ ] 포매팅
+    + https://github.com/neovim/neovim/issues/20784#issuecomment-1722288456
+  - [.] keymap
+    - [ ] `[e` diagnostic error
+    - [ ] `[d` error
+    - [X] `K` hover
+    - [ ] `<leader>rA` rename ++project 
+    - [ ] `;rA` rename ++project 
+    - [ ] outline > symbols-outline
+    - [ ] `gd` definition
+    - [ ] `gD` peek
+    - [ ] `gtd` type
+    - [ ] `gtD` peek
+    - [ ] `gi` peek
+    - [ ] `gi` peek
+    - [ ] `<leader>ic` incoming_calls
+    - [ ] `<leader>oc` outgoing_calls, 이건 중요하지 않음
+- [ ] 포매팅
 - [X] vim-rest-console 연동 + https://github.com/deptno/nvim/commit/059745591ce6f5e521ebbd07e676fd1c64de8680
-- [X] [lazygit](lazygit) 연동 + https://github.com/deptno/nvim/commit/1dd2dc48067d9bf01f4484ae15fcfc1d62df7a5c
+- [.] [lazygit](lazygit) 연동 + https://github.com/deptno/nvim/commit/1dd2dc48067d9bf01f4484ae15fcfc1d62df7a5c
   - [X] https://github.com/gioele/vim-autoswap 설정과 함께 봐볼 것 + https://github.com/deptno/nvim/commit/9f3be8f546d191a459f3728ea7e06448681e050e
+  - [ ] tig blame 혹 github blame
+  - [ ] 현재 파일의 디렉토리 기반으로 열기
 - [X] fx 연동 + https://github.com/deptno/nvim/commit/3f125cae051fab1147dbc494cbfc3fae59773279
 - [X] session
   - [X] auto-session -> persisted, mksession 은 간혹 세션의 이전 버퍼가 딸려오는 문제는 있는 것 같다 -> 세션 목록에서 저장하도록 해서 일단 사용
