@@ -17,25 +17,24 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [.] lspsaga
-  - [ ] 파일명 변경
-    + https://github.com/neovim/neovim/issues/20784#issuecomment-1722288456
-  - [.] keymap
-    - [ ] `[e` diagnostic error
-    - [ ] `[d` error
+- [X] lspsaga
+  - [X] keymap
+    - [X] `[e` diagnostic error
+      - [X] *fail* `[d` diagnostic -> 메소드 없음 
     - [X] `K` hover
-    - [ ] `<leader>rA` rename ++project 
-    - [ ] `;rA` rename ++project 
-    - [ ] outline > symbols-outline
-    - [ ] `gd` definition
-    - [ ] `gD` peek
-    - [ ] `gtd` type
-    - [ ] `gtD` peek
-    - [ ] `gi` peek
-    - [ ] `gi` peek
-    - [ ] `<leader>ic` incoming_calls
-    - [ ] `<leader>oc` outgoing_calls, 이건 중요하지 않음
+    - [X] `<leader>rA` rename ++project 
+    - [X] `<leader>2` outline > symbols-outline
+    - [X] `gd` definition
+    - [X] `gD` peek
+      - [X] *drop* `gtd` type
+      - [X] *drop* `gtD` peek
+      - [X] *drop* `gi` peek
+    - [X] `<leader>ic` incoming_calls
+      - [X] *drop* `<leader>oc` outgoing_calls, 이건 중요하지 않음
 - [ ] 포매팅
+- [ ] react-native 같은 특수 파일 suffix 지원 `.native.tsx` -> `.tsx` 인식
+- [ ] 파일명 변경
+  + https://github.com/neovim/neovim/issues/20784#issuecomment-1722288456
 - [X] vim-rest-console 연동 + https://github.com/deptno/nvim/commit/059745591ce6f5e521ebbd07e676fd1c64de8680
 - [X] [lazygit](lazygit) 연동 + https://github.com/deptno/nvim/commit/1dd2dc48067d9bf01f4484ae15fcfc1d62df7a5c
   - [X] https://github.com/gioele/vim-autoswap 설정과 함께 봐볼 것 + https://github.com/deptno/nvim/commit/9f3be8f546d191a459f3728ea7e06448681e050e
@@ -76,11 +75,7 @@
       - ctrl+t, ctrl-o 등으로 해당 스택을 이동하는 경우 이전 session 의 파일들을 불러오게되면서 session 영역이 혼탁해짐
       - [[comparison:tagstack-vs-jump]]
       - [[vimwiki]] 에서 링크 이동에 tag stack 이 사용되지 않는 문제
-        - [ ] ctrl+i 가 `VimwikiNextLink` 로 동작하지 않도록 제거
-      - session 이동시에는 tagstack, jumps 가 세트로 변경되어야한다
-      - [ ] session 대체제 부터 찾아보기
-      - [ ] session auto load 가 `Session.vim` 에서만 동작하는데 이 부분에 대한 처리 필요
-        - [ ] session directory 기준으로 autoload 를 할 수 있는지 확인 필요, https://github.com/mhinz/vim-startify/blob/4e089dffdad46f3f5593f34362d530e8fe823dcf/plugin/startify.vim#L36-L50
+        - [X] ctrl+i 가 `VimwikiNextLink` 로 동작하지 않도록 제거 -> `ctrl+i` 는 `tab` 과 같은 역할을 하며 이건 vim 잘못이 아님
   - [X] startify session 에서 cwd 지정이 가능한지 확인
     - [X] startify_change_to_dir  옵션을 사용해 봤으나 사용성이 떨어지고 git root 로 가야함 -> 범용적으로 cdp 구현 프로젝트로 루트 이동이 가능
       + https://github.com/deptno/nvim/commit/a869b4a4
@@ -141,8 +136,6 @@
   - [X] *remove* change base 쉽게
 - [.] window
   - [X] buffer 최대 가로사이즈로 window width 설정 https://github.com/deptno/nvim/commit/3008b87d
-  - [ ] 제대로 동작하지 않는 경우가 있는 것으로 보임, 확인 처리
-  - [ ] layout 설정이 가능했으면 좋겠다. predefine 된 레이아웃으로 변경할 수 있는 플러그인부터 검색
 - [o] code chunk 실행, [[repl]]
   - [X] [[lua]] 에서 해당 라인을 실행할 수 있도록 처리 -> vim.notify https://github.com/deptno/nvim/commit/bd102e6
   - [ ] 언어별 핸들러 제공필요, ts bun
