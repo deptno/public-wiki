@@ -38,7 +38,7 @@
   - [ ] 해당 시점 이후의 브랜치목록
   - [ ] author 별 브랜치 목록, 시간 역순
   - [X] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현 -> 불필요, cmp_git 으로 대체 가능
-  - [ ] graph 확인
+  - [X] graph 확인 -> [lazygit](lazygit)
   - [ ] mergetool [[intellij]] 이용
     + https://www.jetbrains.com/help/webstorm/working-with-the-ide-features-from-command-line.html#arguments
     - [ ] https://gist.github.com/ffittschen/6d9be1720f30eb8dc0142cc0ed91c7d9
@@ -47,16 +47,6 @@
   - [.] diff
     - [ ] difftool 로 [[intellij]] 적용
     - [X] delta 적용 + `--ignore-all-space`
-    - [ ] fzf
-      - [ ] log -> 상세로 이어질 수 있도록
-      - [ ] 여러 커밋을 선택해서 변경된 파일 리스트 보기
-  - [ ] last commit diff 보기
-  - [ ] 현재 브랜치와 부모 브랜치 사이의 diff
-    - [ ] 현재 브랜치에만 포함된 커밋들로 확인
-  - [ ] 현재 파일
-    - [ ] 현재 파일에서의 수정사항 log
-    - [ ] 현재 파일에서의 선택 영역 수정사항 log
-  - [ ] log: preview navigation
 - [X] 특정 레포에서 라이브러리 정의를 못따라가는 경우가 있음
   - [X] 해보니 설정이 pnp모드라 이거 관련된 것인지 확인 필요
   - [X] 프로젝트 root 에서 `yarn dlx @yarnpkg/sdks vim` 설치 필요, `lbrayner/vim-rzip` 설치 필요
