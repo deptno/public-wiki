@@ -30,6 +30,9 @@
 - [ ] [[finicky]] 에서 proxy 한 링크를 모두 기록해서 fuzzy 로 사용
 
 ## 터미널
+- [X] [alacritty](alacritty) 세션 이동시에 디렉토리 접근 권한 묻지 않도록
+  - [X] *fail* [codesign](codesign) 처리
+  - [X] `전체 디스크 접근 권한` 을 줘서 해결
 - [X] fx 사용 + https://github.com/antonmedv/fx
 - [o] [[tmux]]
   - [X] tmux pane 생성시 이전 pane 기준의 cwd 설정 https://github.com/deptno/.config/commit/5e85f87f

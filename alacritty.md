@@ -66,6 +66,7 @@ drwxr-xr-x@     4    - deptno 2021-08-03 18:52    │  ├──  61
 에서 명령어 개별로 되어있는 경우가 있다면 제거한다. eg. zsh, exa, ls 등
 
 [[codesign]] 처리한다.
+- *update* 2023-10-30 전체 디스크 접근 권한(Full Disk Access)을 줘서 해결한다
 
 # relatead
 - [[rust]]
