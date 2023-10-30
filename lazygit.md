@@ -14,7 +14,7 @@
 > green yellow red 등 색상은 테마에 따라 달라지니 참고
 
 - commit 들이 green 으로 표현
-- [ ] main 브랜치(git.mainBranches 옵션에 의해 지정된)에 포함되지 않은 커밋은 yellow 로 표현되는 것으로 *추정*된다
+- [X] ~~main~~ 현재 브랜치(git.mainBranches 옵션에 의해 지정된)에 포함되지 않은 커밋은 yellow 로 표현되는 것으로 *추정*된다
 - red 로 표시되는 커밋들은 아직 remote 에 push 되지 않은 커밋
 
 ## custom command
