@@ -1,0 +1,3 @@
+# rg
+
+synonim [ripgrep](ripgrep)

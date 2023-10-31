@@ -17,6 +17,15 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- [X] [vimwiki](vimwiki) syntax highlight 는 markdown 을 filetype 은 vimwiki 를 유지 + https://github.com/deptno/nvim/commit/2c6d5605ffc2339f10164877573e1fe05053d797
++ https://github.com/ecosse3/nvim
+  - [ ] nvim-dap
+    - [ ] react-native 디버깅 가능한지 파악
+  - [ ] jest
+- [ ] 포매팅
+- [ ] react-native 같은 특수 파일 suffix 지원 `.native.tsx` -> `.tsx` 인식
+- [ ] 파일명 변경
+  + https://github.com/neovim/neovim/issues/20784#issuecomment-1722288456
 - [X] lspsaga
   - [X] keymap
     - [X] `[e` diagnostic error
@@ -31,10 +40,6 @@
       - [X] *drop* `gi` peek
     - [X] `<leader>ic` incoming_calls
       - [X] *drop* `<leader>oc` outgoing_calls, 이건 중요하지 않음
-- [ ] 포매팅
-- [ ] react-native 같은 특수 파일 suffix 지원 `.native.tsx` -> `.tsx` 인식
-- [ ] 파일명 변경
-  + https://github.com/neovim/neovim/issues/20784#issuecomment-1722288456
 - [X] vim-rest-console 연동 + https://github.com/deptno/nvim/commit/059745591ce6f5e521ebbd07e676fd1c64de8680
 - [X] [lazygit](lazygit) 연동 + https://github.com/deptno/nvim/commit/1dd2dc48067d9bf01f4484ae15fcfc1d62df7a5c
   - [X] https://github.com/gioele/vim-autoswap 설정과 함께 봐볼 것 + https://github.com/deptno/nvim/commit/9f3be8f546d191a459f3728ea7e06448681e050e

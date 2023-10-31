@@ -1,6 +1,6 @@
 # ripgrep
 
-a.k.a `rg`
+a.k.a [rg](rg)
 
 ## link
 - [[telescope]]

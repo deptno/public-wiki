@@ -1,5 +1,12 @@
 # nvim-treesitter
 
+## usage
+- [markdown](markdown) 기반인 [vimwiki](vimwiki) filetype 의 문법 지원
+```lua
+-- markdown -> vimwiki filetype 에 적용
+vim.treesitter.language.register('markdown', 'vimwiki')
+```
+
 ## [[error]] [[m1]]
 ```vim
 Error detected while processing FileType Autocommands for "*":
@@ -54,3 +61,4 @@ arm64
 - [[defx]]
 - [[m1]]
 - [[alacritty]]
+- [tree sitter](tree-sitter)
