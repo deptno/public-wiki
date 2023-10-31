@@ -20,6 +20,7 @@
 - [X] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
   + https://github.com/deptno/nvim/blob/d049fc86fe19354ee0d3373b707fbc91fdf0b5e6/.github/README.md
   - .github/README.md 를 사용하면 overwrite 걱정 우려가 없고 repo 에서도 해당 방법으로 사용되고 있어서 해결됨
+- [comparison:intellij-vs-neovim](comparison:intellij-vs-neovim)
 
 ## 맥
 - [X] 회사 chrome profile -> [safari](safari) profile
