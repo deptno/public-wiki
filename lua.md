@@ -45,12 +45,25 @@ dofile("FILENAME") -- eval
 require("FILENAME") -- import
 ```
 
+### string
+#### match
+```lua
+string:find --   -> index
+string:gmatch -- -> iterator
+string:match --  -> string
+string:gsub --   -> string 치환
+string:sub --    -> string substring
+```
+
+pattern 을 인자로 받는 gmatch, match, gsub 의 경우에는 [#정규표현식](#정규표현식) 을 참조
+
 ### 전역
 `_CAPITAL` `_` 바로 시작되는 대문자 전역변수는 예약어로 사용
 
 ### 정규표현식
 > lua 는 정규표현식을 fully 구현하지 않는다
-`escape`
+- escape 를 위해 사용되는 문자는 `%` 다.  때문에 `%%` 로 `%` 를 표현해야한다
+- `-` 도 패턴에서는 역할이 있으므로 `%-` 를 사용하므로 주의하자 [[diary:2023-11-01]]
 - 패턴 매칭 내에서도 이전 매칭 결과를 사용할 수 있음
   - `(['"])hello%1` `'` 혹은 `"` 이 매칭되었을때 `%1` 은 이전에 매칭된 결과와 같은 문자열로 픽스됨
     - 성공, `"hello"`, `'hello'`
@@ -58,7 +71,8 @@ require("FILENAME") -- import
 - string pattern 매치에는 정규표현식의 `{7, 40}` 에 해당 하는 구문이 없다 [[diary:2023-10-12]]
   - git sha1 을 매칭하기 위해 사용했다.
   + https://github.com/deptno/NvChad/commit/6ed9f8a
-```luajit
+
+```lua
 local is_git_hash = function(hash)
   local char = '^[0-9a-fA-F]$'
   local matched = string.match(hash, string.format('%s*', char:rep(8)))
