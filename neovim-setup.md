@@ -17,7 +17,8 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] git furgitive, blame 때문
+- [ ] lsp 를 통한 영어단어 hover + gpt
+- [X] git ~~furgitive~~ blame 때문, blame + git-blame 추가 + https://github.com/deptno/nvim/commit/62c6da867e8e2b5846afbe6c3461da633396102a
 - [ ] tmux-popup command 생성 input: shell command i.g.) tig blame
 - [ ] 마크다운 블럭 내에서의 언어 실행 + [nvim treesitter](nvim-treesitter) 
   - [ ] 블럭에 대해서 repl 플러그인 검색
