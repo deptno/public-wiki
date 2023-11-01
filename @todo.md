@@ -15,12 +15,14 @@
 - [ ] 라즈베리파이 판매
 - [ ] 요금제 찾아보기
 - [ ] 에어컨 청소
+- [ ] mifare classic tool 에서 현관키 못 읽는데 key range  찾아볼 것
+  + https://www.icaria.de/mct/help-and-info/#read_tag
 
 ## 프로젝트 관리
 - [X] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
   + https://github.com/deptno/nvim/blob/d049fc86fe19354ee0d3373b707fbc91fdf0b5e6/.github/README.md
   - .github/README.md 를 사용하면 overwrite 걱정 우려가 없고 repo 에서도 해당 방법으로 사용되고 있어서 해결됨
-- [comparison:intellij-vs-neovim](comparison:intellij-vs-neovim)
+- [ ] [comparison:intellij-vs-neovim](comparison:intellij-vs-neovim) lsp 기능 비교
 
 ## 맥
 - [X] 회사 chrome profile -> [safari](safari) profile
@@ -31,6 +33,8 @@
 - [ ] [[finicky]] 에서 proxy 한 링크를 모두 기록해서 fuzzy 로 사용
 
 ## 터미널
+- [ ] [gh](gh) 설정 고도화
+- [ ] jira 티켓 생성등 템플릿화
 - [X] [alacritty](alacritty) 세션 이동시에 디렉토리 접근 권한 묻지 않도록
   - [X] *fail* [codesign](codesign) 처리
   - [X] `전체 디스크 접근 권한` 을 줘서 해결

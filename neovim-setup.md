@@ -17,6 +17,10 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- [ ] git furgitive, blame 때문
+- [ ] tmux-popup command 생성 input: shell command i.g.) tig blame
+- [ ] 마크다운 블럭 내에서의 언어 실행 + [nvim treesitter](nvim-treesitter) 
+  - [ ] 블럭에 대해서 repl 플러그인 검색
 - [X] [vimwiki](vimwiki) syntax highlight 는 markdown 을 filetype 은 vimwiki 를 유지 + https://github.com/deptno/nvim/commit/2c6d5605ffc2339f10164877573e1fe05053d797
 + https://github.com/ecosse3/nvim
   - [ ] nvim-dap
