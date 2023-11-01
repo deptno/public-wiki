@@ -168,6 +168,8 @@
   - [ ] *feat* vV github permalink 를 가져올대 현재 커밋이 아닌 해당 영역 log들의 순서상 최신으로 하는 것이 좋아보임
   - [X] *bug* vV papago 깨짐
   - [ ] *feat* filetype 별 gx enable 여부
+  - [X] *feat* node_modules 내에서 하면 해당 라이브러리 기준으로 처리가 필요, pnp
+    - pnp 까지 처리하려고했으나 .git 정보가 없어서 커밋정보에 접근하지 못하기 때문에 의미가 약함  레포지터리까지만 여는 것으로 멈춤 + https://github.com/deptno/nvim/commit/b5395499a00a0e4e1dab68bd50032d469f3381b5
 
 ## link
 - [[neovim]]
