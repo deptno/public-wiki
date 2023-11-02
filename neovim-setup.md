@@ -17,7 +17,11 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] lsp 를 통한 영어단어 hover + gpt
+- [ ] leetcode.nvim
+- [o] lsp
+  - [X] 포매팅 guard.nvim
+  - [X] 파일명 변경, nvim-lsp-file-operations -> 동작 안함
+  - [ ] lsp 를 통한 영어단어 hover + gpt
 - [X] git ~~furgitive~~ blame 때문, blame + git-blame 추가 + https://github.com/deptno/nvim/commit/62c6da867e8e2b5846afbe6c3461da633396102a
 - [ ] tmux-popup command 생성 input: shell command i.g.) tig blame
 - [ ] 마크다운 블럭 내에서의 언어 실행 + [nvim treesitter](nvim-treesitter) 
@@ -27,9 +31,7 @@
   - [ ] nvim-dap
     - [ ] react-native 디버깅 가능한지 파악
   - [ ] jest
-- [ ] 포매팅
 - [ ] react-native 같은 특수 파일 suffix 지원 `.native.tsx` -> `.tsx` 인식
-- [ ] 파일명 변경
   + https://github.com/neovim/neovim/issues/20784#issuecomment-1722288456
 - [X] lspsaga
   - [X] keymap
