@@ -24,5 +24,18 @@ sudo ln -s /usr/share/applications/Image-ExifTool-12.44/exiftool /usr/local/bin
 ```
 5. `exiftool` 로 실행후 실패하는 경우 [[perl]] 이 없는 경우라면 [[Synology]] UI에서 패키지로 이동하여 [[perl]] 을 설치 후 실행한다.
 
+## [error](error)
+
+###  업로드 보류됨
+> 공간이 부족합니다
+
+- 개인 사진이 올라가는 곳(homes 폴더 예상)의 용량 제한에 걸린 경우
+
+1. 제어판
+2. 공유 폴더
+3. `homes` 공유 폴더 편집
+4. 고급
+5. 공유 폴더 할당량 활성화 수정
+
 ## link
 - [[synology]]
