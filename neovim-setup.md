@@ -17,6 +17,8 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- [X] *bug* ;db 를 통한 quickfix 류의 창이 열린 이후로 q 누르면 버퍼 닫힘
+  + 이벤트 호출을 막는 법은 찾지 못해서 이벤트를 한번만 처리하도록 처리 + https://github.com/deptno/nvim/commit/66836ec2098f5268b2d8c838f99400070293f995
 - [ ] leetcode.nvim
 - [o] lsp
   - [X] 포매팅 guard.nvim
@@ -28,10 +30,12 @@
   - [ ] 블럭에 대해서 repl 플러그인 검색
 - [X] [vimwiki](vimwiki) syntax highlight 는 markdown 을 filetype 은 vimwiki 를 유지 + https://github.com/deptno/nvim/commit/2c6d5605ffc2339f10164877573e1fe05053d797
 + https://github.com/ecosse3/nvim
-  - [ ] nvim-dap
-    - [ ] react-native 디버깅 가능한지 파악
-  - [ ] jest
-- [ ] react-native 같은 특수 파일 suffix 지원 `.native.tsx` -> `.tsx` 인식
+  - [X] nvim-dap + https://github.com/deptno/nvim/commit/abff6147f65b87c9ee4deaa5782b04d15d1969e2
+  - [X] react-native 디버깅 가능한지 파악 + https://github.com/deptno/nvim/commit/01478edf8a3863cdb933e7a1e518c582e20f619f
+    - mason 을 통해서도 인스톨이 가능할 수 있을것 같음
+  - [ ] [jest](jest)
+  - [ ] [rust](rust)
+- [X] *wip* react-native 같은 특수 파일 suffix 지원 `.native.tsx` -> `.tsx` 인식 + https://github.com/deptno/nvim/commit/dda74cfcada336b0eb80cb84e84baf8e441dacf5
   + https://github.com/neovim/neovim/issues/20784#issuecomment-1722288456
 - [X] lspsaga
   - [X] keymap
