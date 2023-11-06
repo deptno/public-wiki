@@ -1,5 +1,14 @@
 # neovim
 
+## list
+- buflist `:buffers`
+- arglist `:args`
+  - buffer list 의 subset 으로 argument 로 열린 리스트가 보여진다
+  - argadd 명령을 통해서 확장 가능하다
+
+## ex
+- `@:` 최근 명령어 실행
+
 ## [[python]]
 ```sh
 # python 지원 확인
