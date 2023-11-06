@@ -17,6 +17,10 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- [ ] [bun](bun) 을 사용해서 [typescript](typescript) 테스트 환경 구축
+- [ ] session 이동시 열린 버퍼를 가지고 이동하는 문제
+- [ ] jira ticket 발행
+- [X] harpoon + https://github.com/deptno/nvim/commit/9ab9f786253b76069f1ad7d53ba9a3bb39aa5808
 - [X] *bug* ;db 를 통한 quickfix 류의 창이 열린 이후로 q 누르면 버퍼 닫힘
   + 이벤트 호출을 막는 법은 찾지 못해서 이벤트를 한번만 처리하도록 처리 + https://github.com/deptno/nvim/commit/66836ec2098f5268b2d8c838f99400070293f995
 - [ ] leetcode.nvim
