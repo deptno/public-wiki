@@ -19,7 +19,8 @@
 
 - [X] *bug* gx url 에서 `?` 가 존재하면 열리지 않음 + https://github.com/deptno/nvim/commit/f4e09cfbf9abf1ad52bb952c63727d34c4941cfc
 - [ ] [bun](bun) 을 사용해서 [typescript](typescript) 테스트 환경 구축
-- [ ] session 이동시 열린 버퍼를 가지고 이동하는 문제
+- [X] session 이동시 열린 버퍼를 가지고 이동하는 문제+ https://github.com/deptno/nvim/commit/04d8e15209b2052892a164db47a174fa2a06e51a
+  - [X] 후행으로 닫도록 수정, 속도관련해서도 이슈가 있음
 - [ ] jira ticket 발행
 - [X] harpoon + https://github.com/deptno/nvim/commit/9ab9f786253b76069f1ad7d53ba9a3bb39aa5808
 - [X] *bug* ;db 를 통한 quickfix 류의 창이 열린 이후로 q 누르면 버퍼 닫힘

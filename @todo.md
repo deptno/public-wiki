@@ -23,6 +23,7 @@
   + https://github.com/deptno/nvim/blob/d049fc86fe19354ee0d3373b707fbc91fdf0b5e6/.github/README.md
   - .github/README.md 를 사용하면 overwrite 걱정 우려가 없고 repo 에서도 해당 방법으로 사용되고 있어서 해결됨
 - [ ] [comparison:intellij-vs-neovim](comparison:intellij-vs-neovim) lsp 기능 비교
+- [ ] production 에 머지된 최근 브랜치가 master 에도 들어와있는지 확인
 
 ## 맥
 - [X] 회사 chrome profile -> [safari](safari) profile
