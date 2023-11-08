@@ -17,6 +17,7 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
+- [ ] markdown 에서는 v 모드에서 `~` 키를 통해서 취소선 적용
 - [X] *bug* gx url 에서 `?` 가 존재하면 열리지 않음 + https://github.com/deptno/nvim/commit/f4e09cfbf9abf1ad52bb952c63727d34c4941cfc
 - [ ] [bun](bun) 을 사용해서 [typescript](typescript) 테스트 환경 구축
 - [X] session 이동시 열린 버퍼를 가지고 이동하는 문제+ https://github.com/deptno/nvim/commit/04d8e15209b2052892a164db47a174fa2a06e51a
@@ -131,14 +132,14 @@
 - [ ] 파일 네비게이션
   - [ ] 파일 이동간에 git_root 를 lcd 혹 cwd 설정
   - [ ] 혹은 git_root 가 다른 파일 이동에는 tabpage 전환, tabpage 마다 root
-- [.] [[vimwiki]]
+- [o] [[vimwiki]]
   - [ ] diary 간 이동할때 buffer 가 계속 늘어나지 않도록 조치
   - [X] diary 를 폴더구조거아니라 prefix 형태로 평탄화 가능한 옵션이 있는지 검토
     - [X] `diary:` prefix 를 통해 상대경로가 아니어도 링크가능하므로 이걸 이용
     - [X] 경로에 depth 가 들어간 경우, `/` prefix 를 통해서 wiki 루트로 부터 계산되니 이걸 사용
       - [X] [[deptno.dev]] 에서 해당 컨셉이 지원되고 있는지 확인이 필요 -> 안되면 구현
-  - [ ] 회사와 private wiki 를 분리
-    - [ ] 마이그레이션 - diary 를 통째로 복사하고([[git-subtree]]) 수동으로 필터([[git-rebase]])링해서 필터링할 것
+  - [X] 회사와 private wiki 를 분리
+    - [X] 마이그레이션 - diary 를 통째로 복사하고([[git-subtree]]) 수동으로 필터([[git-rebase]])링해서 필터링할 것 -> [git filter repo](git-filter-repo) 를 통해 처리
   - [ ] *bug* 특정 케이스에 vimwiki가 꺼지는 상황이 있음 현재 파일 기준 24라인 이후에 뎁스가 더 들어간 todo를 생성하며 꺼짐
   - [X] timestamp, 혹은 다이어키를 삽입하는 키맵 추가 - 이미 snippet 자동완성으로 지원되고 있었음 `diso`
   - [ ] code block 을 실행할때 shell 구문인 경우 tmux 의 다른 panel에서 실행할 수 있도록 지원 [[gx]]
