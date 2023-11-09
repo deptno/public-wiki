@@ -9,6 +9,12 @@
   - [ ] ip_bans.yaml 파일에 왜 서버 자기 자신의 ip가 추가되는지 확인해서 조치 필요
 - [ ] kubernetes certificate 갱신
 
+## news
+- [ ] openai
+- [ ] copilot
+- [X] feconf [diary:2023-11-09](diary:2023-11-09)
+- [X] next 14 문서 읽기
+
 ## 일상
 - [ ] 거울 사기
 - [ ] 주방 조명
