@@ -17,7 +17,9 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] markdown 에서는 v 모드에서 `~` 키를 통해서 취소선 적용
+- [ ] [wip](wip) [develop neovim lua plugin](develop-neovim-lua-plugin)
+- [X] [octo](octo) 초기 설정 `:Octo`
+- [ ] copilot
 - [X] *bug* gx url 에서 `?` 가 존재하면 열리지 않음 + https://github.com/deptno/nvim/commit/f4e09cfbf9abf1ad52bb952c63727d34c4941cfc
 - [ ] [bun](bun) 을 사용해서 [typescript](typescript) 테스트 환경 구축
 - [X] session 이동시 열린 버퍼를 가지고 이동하는 문제+ https://github.com/deptno/nvim/commit/04d8e15209b2052892a164db47a174fa2a06e51a
