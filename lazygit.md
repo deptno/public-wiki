@@ -9,6 +9,8 @@
 - [X] custom command
   - [X] commits
     - [X] filter by author + https://github.com/deptno/.config/commit/24db073d9781906b271b31e10a15f833472ed048
+  - [X] [gh](gh) 와 연동해서 브랜치 PR 열기
+    + https://github.com/deptno/.config/commit/a7216f3dc82dc50d7e42721568986a84ee6b3daa
 
 ## color 구분
 > green yellow red 등 색상은 테마에 따라 달라지니 참고
