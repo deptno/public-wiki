@@ -39,11 +39,28 @@ lua -e "print('hello')" script a b
 
 ## 문법
 
-### import
+### load
 ```lua
 dofile("FILENAME") -- eval
-require("FILENAME") -- import
+loadfile("FILENAME") -- eval
+require("module_name") -- import
 ```
+
+#### require
+```lua
+require("module.submodule")
+```
+`require` 를 시도하면 아래와 같은 동작으로 모듈을 찾는것으로 이해하고 있다.
+
+1. package.searchpath 은 아래 순서로 검색을 시작한다
+- `package.path` 활용해서 `package.loaded["module.submodule"]` 하나의 모듈명으로 인식해서 찾기
+  - `package.loaded["module"]` `.`을 기준으로 분리하여 module 을 찾기
+  - `loadfile` 시도 -> 결과 값을 `package.loaded["module"]` 에 저장  결과 값이 없다면 `true` 를 저장
+  - 이를 통해 추후 리로딩을 막는다. `package.loaded["module"] = nil` 을 통해 리로드가 가능해진다
+  1. package.preload
+  2. module - `package.path`
+  3. cmodule - `package.cpath` -> `luaopen_*-module` 가  init 함수
+  4. error
 
 ### string
 #### match
