@@ -5,6 +5,7 @@
 
 ---
 ## 구조
+### 흐름도
 ```mermaid
 erDiagram
   EXTERNAL-EVENT ||--|| Service : receive-from-external-event
@@ -60,6 +61,45 @@ erDiagram
     - CustumTask
 - [ ] TriggerBinding <-> TriggerTemplate
   - [ ] n..1 관계로 Trigger 에서 만나는데 TriggerBinding 수 많은 TriggerTemplate 을 호출되는지 확인이 필요
+
+### 흐름도 단순화 버전
+> 2023-01-29 에 타 프로젝트에서 비슷한 걸 그린 단순화 버전이 있어서 이쪽으로 이동
+
++ https://github.com/deptno/wiki/blob/723c94917898fc9bf99e4475196dc2a67fa60de4/project.md#tekton
+#### tekton
+```mermaid
+flowchart TD
+  subgraph external
+    a{{httpEvent}}
+  end
+  subgraph cluster
+  subgraph sa
+    ServiceAccount
+    ClusterRole --> ClusterRoleBinding --> ServiceAccount
+    Role --> RoleBinding --> ServiceAccount
+    Role --> ClusterRoleBinding
+    Secret --> ServiceAccount
+  end
+  
+  subgraph tekton
+    a{{httpEvent}} --> EventListener --> Trigger --> TriggerBinding
+                                    Trigger --> TriggerTemplate --> PipelineRun --> Pipeline --> Task
+                                    Trigger --> _(Interceptor) -..-> TriggerBinding -...-> TriggerTemplate
+                                    
+    ServiceAccount -..-> EventListener
+    ServiceAccount -..-> PipelineRun
+    ServiceAccount -..-> Trigger
+  end
+  end
+```
+- 생성 오브젝트
+  - external
+  - clsuter
+    - EventListeer
+    - EventListeer
+    - EventListeer
+    - EventListeer
+---
 
 ### CRD
 EventListener > TriggerBinding > TriggerTemplate > PipelineRun > Pipeline > Task
