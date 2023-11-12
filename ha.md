@@ -3,3 +3,4 @@
 
 ## relatead
 - [[traefik]]
+- [[home-assistant]]
