@@ -111,6 +111,7 @@ kubectl get secret -n [ namespace ] [ secret name ] | kubectl neat | sed "s/name
 ```
 
 ## authentication
++ [[rbac]] 에서 롤 추가에 대한 내용 확인
 유저추가
  + https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/#normal-user
  
