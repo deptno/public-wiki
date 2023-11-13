@@ -81,6 +81,7 @@
   - [ ] `.jira` filetype 정의 syntax: [[markdown]]
   - [ ] sh command fence block + markdown content block 구성
     - [ ] [[tree-sitter]] 로 분리
+- [ ] rn 로그에 [[tailspin]] 적용
 
 ## link 
 - [[idea]]
