@@ -3,3 +3,4 @@
 ## viewer
 - [[lnav]]
 - [[goaccess]]
+- [[tailspin]]

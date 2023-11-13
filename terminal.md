@@ -70,6 +70,7 @@
 - [[envsubst]]
 - [[fzf]]
 - [sort](sort)
+- [[tspin]]
 
 ### file
 /etc/netplan
