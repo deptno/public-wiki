@@ -77,6 +77,10 @@
   - [ ] 카카오톡 알림톡 등도있음
   - [ ] web이면 url
   - [ ] app인 경우 navigation screen 이름
+- [ ] jira 생성 템플릿 작성
+  - [ ] `.jira` filetype 정의 syntax: [[markdown]]
+  - [ ] sh command fence block + markdown content block 구성
+    - [ ] [[tree-sitter]] 로 분리
 
 ## link 
 - [[idea]]
