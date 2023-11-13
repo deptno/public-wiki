@@ -46,6 +46,14 @@ vim.cmd ":let $LANG='en_US.UTF-8'"
   - client async request -> error occur 
   - server -..-> notify error event later
 
+### buf -> stdin -> stdout
+```lua
+local buf = vim.fn.getbufline('%', 1, '$')
+local stdin = buf.fn.getbufline('%', 1, '$')
+vim.fn.system('grep content', stdin)
+```
+`vim.fn.system` 의 두번째 인자가 `stdin` 의 역할을 한다
+
 ---
 ## tabpage > window > buffer [[@todo]]
 - [[nvchad]] 는 [[tabufline]] 을 사용
