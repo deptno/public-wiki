@@ -7,6 +7,11 @@
 vim.treesitter.language.register('markdown', 'vimwiki')
 ```
 
+## treesitter-playground
+
+### lazy 설정
++ https://github.com/deptno/nvim/commit/62e43094797d94ab27e5008d87ea56ec51072a4d
+
 ## [[error]] [[m1]]
 ```vim
 Error detected while processing FileType Autocommands for "*":

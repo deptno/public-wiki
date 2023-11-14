@@ -100,4 +100,4 @@ print(ts_utils.get_node_at_cursor())
 ## link
 - [ctags](ctags)
 - [lsp](lsp)
-- [[treesitter]]
+- [[nvim-treesitter]]
