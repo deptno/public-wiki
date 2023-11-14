@@ -2,6 +2,13 @@
 
 - [[neovim-setup]]
 
+## 문서 정리
+- [ ] [[vim]] [[regexp]]
+  - very magic
+  - \k
+  - (a|b)
+  - non-greedy
+
 ## 클러스터
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
 - [ ] grafana alarm ha 깨짐 [[home-assistant]]
