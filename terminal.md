@@ -69,7 +69,7 @@
 - [[fdisk]]
 - [[envsubst]]
 - [[fzf]]
-- [sort](sort)
+- [[sort]]
 - [[tspin]]
 
 ### file

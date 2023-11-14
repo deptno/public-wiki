@@ -5,11 +5,11 @@
 + [config 설정](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)
 + [내 설정:2023-10-26](https://github.com/deptno/.config/blob/5789b6fef0075ee1104f45952906afe73ce99521/.config/lazygit/config.yml)
 
-## [@todo](@todo)
+## [[@todo]]
 - [X] custom command
   - [X] commits
     - [X] filter by author + https://github.com/deptno/.config/commit/24db073d9781906b271b31e10a15f833472ed048
-  - [X] [gh](gh) 와 연동해서 브랜치 PR 열기
+  - [X] [[gh]] 와 연동해서 브랜치 PR 열기
     + https://github.com/deptno/.config/commit/a7216f3dc82dc50d7e42721568986a84ee6b3daa
 
 ## color 구분
@@ -30,7 +30,7 @@ pbpaste | xargs -0 git branch --contains | fzf --bind 'enter:become(git switch $
 - commit 뷰에서 `y`, `<c-y>` 를 통해 해시 복사가 후 해당 커밋이 있는 브랜치 확인이 가능
 
 ## link
-- [golang](golang)
-- [git](git)
-- [tig](tig)
-- [fzf](fzf)
+- [[golang]]
+- [[git]]
+- [[tig]]
+- [[fzf]]

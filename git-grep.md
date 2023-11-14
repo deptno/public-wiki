@@ -3,7 +3,7 @@
 > `git log --grep` 달리 커밋 메시지가 아닌 실제 코드에 대한 검색
 + https://stackoverflow.com/questions/2928584/how-to-grep-search-committed-code-in-the-git-history
 
-- HEAD 검색은 [ripgrep](ripgrep) 으로 대체가 가능
+- HEAD 검색은 [[ripgrep]] 으로 대체가 가능
 - 
 
 ## usage
@@ -22,4 +22,4 @@ git grep -pPn [REGEXP] [COMMIT] # 해당 revision 에서 검색 수행
 ## link
 - [[git]]
 - [[git-log]]
-- [ripgrep](ripgrep)
+- [[ripgrep]]

@@ -5,6 +5,6 @@
 - 1년에 한번만 등록된 기기 해제 가능
 
 ## link
-- [macos](macos)
-- [ios](ios)
-- [udid](udid)
+- [[macos]]
+- [[ios]]
+- [[udid]]

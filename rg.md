@@ -1,3 +1,3 @@
 # rg
 
-synonim [ripgrep](ripgrep)
+synonim [[ripgrep]]

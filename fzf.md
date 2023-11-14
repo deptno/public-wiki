@@ -44,7 +44,7 @@ fzf --delimiter '\t' --preview 'git show {2} | delta' --bind 'ctrl-d:become(git 
 ```
 
 ## link
-- [terminal](terminal)
-- [vim](vim)
-- [git](git)
-- [lazygit](lazygit)
+- [[terminal]]
+- [[vim]]
+- [[git]]
+- [[lazygit]]

@@ -1,3 +1,3 @@
 # lsp
 
-synonim [language server protocol](language-server-protocol)
+synonim [[language-server-protocol]]

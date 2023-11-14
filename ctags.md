@@ -2,4 +2,4 @@
 
 ## link
 - [[universal-ctags]]
-- [tree sitter](tree-sitter)
+- [[tree-sitter]]

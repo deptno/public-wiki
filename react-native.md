@@ -5,7 +5,7 @@ react-native run ios --device "phonename"
 ```
 ## 설정
 ### neovim
-- [dap](dap)
+- [[dap]]
 - rn 파일 컨벤션 지원
   + https://github.com/deptno/nvim/commit/dda74cfcada336b0eb80cb84e84baf8e441dacf5
 
@@ -137,5 +137,5 @@ schema edit -> build -> dependency order
 - [[react-native-debugger]]
 - [[tauri]]
 - [[flutter]]
-- [android](android)
-- [ios](ios)
+- [[android]]
+- [[ios]]

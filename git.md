@@ -33,8 +33,8 @@
 - [[git-tag]]
 - [[git-bisect]]
 - [[git-credential-manager]]
-- [git filter branch](git-filter-branch)
-- [git filter repo](git-filter-repo)
+- [[git-filter-branch]]
+- [[git-filter-repo]]
 
 ## files
 - [[path|.gitconfig]]

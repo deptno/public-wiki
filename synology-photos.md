@@ -24,7 +24,7 @@ sudo ln -s /usr/share/applications/Image-ExifTool-12.44/exiftool /usr/local/bin
 ```
 5. `exiftool` 로 실행후 실패하는 경우 [[perl]] 이 없는 경우라면 [[Synology]] UI에서 패키지로 이동하여 [[perl]] 을 설치 후 실행한다.
 
-## [error](error)
+## [[error]]
 
 ###  업로드 보류됨
 > 공간이 부족합니다

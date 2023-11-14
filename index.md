@@ -91,7 +91,7 @@
 
 ## session
 - [[eks-immersion-day]]
-- [feconf](feconf)
+- [[feconf]]
 
 ## 삶
 - [[financial/index|financial]]

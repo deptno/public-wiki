@@ -6,7 +6,7 @@
 ## todo [[@todo]]
 - [ ] diary next, prev 이동
 - [X] 개발 환경에서 graph 클릭시 live 버전 링크가 걸려있음 + https://github.com/deptno/deptno.dev/commit/8866a2959a6c195162b225f47ef71412fa28309a
-- [X] markdown 기본 포맷에서는 `-` 가 공백으로 변환되는 것으로 보인다 [shell script](shell-script) 추적해서 확인 + https://github.com/deptno/deptno.dev/commit/23bfff89604ecc93f4145a0bb9614a1fe8245a1f
+- [X] markdown 기본 포맷에서는 `-` 가 공백으로 변환되는 것으로 보인다 [[shell-script]] 추적해서 확인 + https://github.com/deptno/deptno.dev/commit/23bfff89604ecc93f4145a0bb9614a1fe8245a1f
 - [X] 배포 버전에서는 최근 수정파일이 시간순이 아님, clone 받아서 그런것으로 추정 + https://github.com/deptno/deptno.dev/commit/20a39fa2b7ddb8c8c681646a0a3674f1116bb8e8
 - [X] `[]()`의 링크 형태에 대해서 markdown 은 제대로 파싱되나 백링크등 데이터를 만들어내지 못함
 - [X] 최근 수정된 파일 목록 + https://github.com/deptno/deptno.dev/commit/efe783c94b4e387f35819c5c304369d25b046ced

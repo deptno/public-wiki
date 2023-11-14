@@ -2,12 +2,12 @@
 
 + https://fx.wtf/getting-started
 
-[jq](jq) 의 interactive 버전
+[[jq]] 의 interactive 버전
 
 ## usage
 
 ### cli
-[javascript](javascript) 문법을 통해서 제어가 가능하다
+[[javascript]] 문법을 통해서 제어가 가능하다
 
 ```sh 
 echo '{"name": "world"}' | fx 'x => x.name' 'x => `Hello, ${x}!`' # javascript 함수 지원
@@ -33,7 +33,7 @@ echo '{"text": "Hello"}' '{"text": "World!"}' | fx --slurp '.map(x => x.text)' '
 
 ## custom
 - `.fxrc.js` 를 통한 함수 확장도 지원한다
-  - [ ] 문서에 디렉토리가 안나와있는데 테스트를 해봐야한다 [@todo](@todo)
+  - [ ] 문서에 디렉토리가 안나와있는데 테스트를 해봐야한다 [[@todo]]
 
 ## tip
 ### unicode
@@ -44,5 +44,5 @@ echo '{"text": "Hello"}' '{"text": "World!"}' | fx --slurp '.map(x => x.text)' '
 `fx .` 를 통해서 한번 evaluation 을 하고 진입하면된다
 
 ## link
-- [jq](jq)
-- [curl](curl)
+- [[jq]]
+- [[curl]]

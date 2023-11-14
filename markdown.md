@@ -3,4 +3,4 @@
 markdown language
 
 ## link
-- [vimwiki](vimwiki)
+- [[vimwiki]]

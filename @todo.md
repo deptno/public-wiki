@@ -11,7 +11,7 @@
 ## news
 - [ ] openai
 - [ ] copilot
-- [X] feconf [diary:2023-11-09](diary:2023-11-09)
+- [X] feconf [[diary:2023-11-09]]
 - [X] next 14 문서 읽기
 
 ## 일상
@@ -27,22 +27,22 @@
 - [X] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
   + https://github.com/deptno/nvim/blob/d049fc86fe19354ee0d3373b707fbc91fdf0b5e6/.github/README.md
   - .github/README.md 를 사용하면 overwrite 걱정 우려가 없고 repo 에서도 해당 방법으로 사용되고 있어서 해결됨
-- [ ] [comparison:intellij-vs-neovim](comparison:intellij-vs-neovim) lsp 기능 비교
+- [ ] [[comparison:intellij-vs-neovim]] lsp 기능 비교
 - [ ] production 에 머지된 최근 브랜치가 master 에도 들어와있는지 확인
 
 ## 맥
-- [X] 회사 chrome profile -> [safari](safari) profile
+- [X] 회사 chrome profile -> [[safari]] profile
 - [X] 링크별 브라우저 선택
   1. [[finicky]] {safari,chrome-profile}
   2. safari-profile, 설정에 있음
-- [X] [bruno](bruno) 설치 테스트 rest-nvim 이 불안정해서 대체 할지 검토
+- [X] [[bruno]] 설치 테스트 rest-nvim 이 불안정해서 대체 할지 검토
 - [ ] [[finicky]] 에서 proxy 한 링크를 모두 기록해서 fuzzy 로 사용
 
 ## 터미널
-- [ ] [gh](gh) 설정 고도화
+- [ ] [[gh]] 설정 고도화
 - [ ] jira 티켓 생성등 템플릿화
-- [X] [alacritty](alacritty) 세션 이동시에 디렉토리 접근 권한 묻지 않도록
-  - [X] *fail* [codesign](codesign) 처리
+- [X] [[alacritty]] 세션 이동시에 디렉토리 접근 권한 묻지 않도록
+  - [X] *fail* [[codesign]] 처리
   - [X] `전체 디스크 접근 권한` 을 줘서 해결
 - [X] fx 사용 + https://github.com/antonmedv/fx
 - [o] [[tmux]]
@@ -52,7 +52,7 @@
   - [ ] 해당 시점 이후의 브랜치목록
   - [ ] author 별 브랜치 목록, 시간 역순
   - [X] `.github/CODEOWNERS` 파일을 기준으로 fzf 자동완성 기능 구현 -> 불필요, cmp_git 으로 대체 가능
-  - [X] graph 확인 -> [lazygit](lazygit)
+  - [X] graph 확인 -> [[lazygit]]
   - [ ] mergetool [[intellij]] 이용
     + https://www.jetbrains.com/help/webstorm/working-with-the-ide-features-from-command-line.html#arguments
     - [ ] https://gist.github.com/ffittschen/6d9be1720f30eb8dc0142cc0ed91c7d9
@@ -81,6 +81,7 @@
   - [ ] sh command fence block + markdown content block 구성
     - [ ] [[tree-sitter]] 로 분리
 - [ ] rn 로그에 [[tailspin]] 적용
+- [ ] 회사 프로그램에 릭있음 하던일만 뺄것
 
 ## link 
 - [[idea]]

@@ -1,7 +1,7 @@
 # jest
 
-[javascript](javascript) test framework
+[[javascript]] test framework
 
 ## link
-- [javascript](javascript)
-- [typescript](typescript)
+- [[javascript]]
+- [[typescript]]

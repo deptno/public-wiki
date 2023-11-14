@@ -72,7 +72,7 @@ string:gsub --   -> string 치환
 string:sub --    -> string substring
 ```
 
-pattern 을 인자로 받는 gmatch, match, gsub 의 경우에는 [#정규표현식](#정규표현식) 을 참조
+pattern 을 인자로 받는 gmatch, match, gsub 의 경우에는 [[#정규표현식]] 을 참조
 
 ### 전역
 `_CAPITAL` `_` 바로 시작되는 대문자 전역변수는 예약어로 사용

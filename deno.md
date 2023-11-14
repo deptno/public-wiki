@@ -1,7 +1,7 @@
 # deno
 
-[javascript](javascript) runtime
+[[javascript]] runtime
 
 ## link
-- [node](node)
-- [bun](bun)
+- [[node]]
+- [[bun]]

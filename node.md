@@ -88,4 +88,4 @@ cross-env NODEOPTIONS=--inspect ts-node .
 - [[axios]]
 - [[iconv-lite]]
 - [[chrome]]
-- [bun](bun)
+- [[bun]]

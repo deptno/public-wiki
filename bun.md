@@ -1,8 +1,8 @@
 # bun
 
-[javascript](javascript) runtime
+[[javascript]] runtime
 
-- [typescript](typescript) 지원
+- [[typescript]] 지원
 
 ## config
 `.bunfig`
@@ -11,7 +11,7 @@
 - package.json 위치에 만들어서 local 로 사용
 
 ## link
-- [node](node)
-- [javascript](javascript)
-- [typescript](typescript)
-- [zig](zig)
+- [[node]]
+- [[javascript]]
+- [[typescript]]
+- [[zig]]

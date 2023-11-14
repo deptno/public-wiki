@@ -9,5 +9,5 @@ sort -r # 순서를 반전한다다. 오름차순 <-> 내린차순
 ```
 
 ## link
-- [terminal](terminal)
-- [shell script](shell-script)
+- [[terminal]]
+- [[shell-script]]

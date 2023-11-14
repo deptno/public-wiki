@@ -12,4 +12,4 @@ awk -F'[+-]' '{ print $2 $1 }' # delimiter 가 2개
 
 ## link
 - [[terminal]]
-- [sed](sed)
+- [[sed]]

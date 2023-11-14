@@ -17,11 +17,11 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] [wip](wip) [develop neovim lua plugin](develop-neovim-lua-plugin)
-- [X] [octo](octo) 초기 설정 `:Octo`
+- [ ] [[wip]] [[develop-neovim-lua-plugin]]
+- [X] [[octo]] 초기 설정 `:Octo`
 - [ ] copilot
 - [X] *bug* gx url 에서 `?` 가 존재하면 열리지 않음 + https://github.com/deptno/nvim/commit/f4e09cfbf9abf1ad52bb952c63727d34c4941cfc
-- [ ] [bun](bun) 을 사용해서 [typescript](typescript) 테스트 환경 구축
+- [ ] [[bun]] 을 사용해서 [[typescript]] 테스트 환경 구축
 - [X] session 이동시 열린 버퍼를 가지고 이동하는 문제+ https://github.com/deptno/nvim/commit/04d8e15209b2052892a164db47a174fa2a06e51a
   - [X] 후행으로 닫도록 수정, 속도관련해서도 이슈가 있음
 - [ ] jira ticket 발행
@@ -35,15 +35,15 @@
   - [ ] lsp 를 통한 영어단어 hover + gpt
 - [X] git ~~furgitive~~ blame 때문, blame + git-blame 추가 + https://github.com/deptno/nvim/commit/62c6da867e8e2b5846afbe6c3461da633396102a
 - [ ] tmux-popup command 생성 input: shell command i.g.) tig blame
-- [ ] 마크다운 블럭 내에서의 언어 실행 + [nvim treesitter](nvim-treesitter) 
+- [ ] 마크다운 블럭 내에서의 언어 실행 + [[nvim-treesitter]] 
   - [ ] 블럭에 대해서 repl 플러그인 검색
-- [X] [vimwiki](vimwiki) syntax highlight 는 markdown 을 filetype 은 vimwiki 를 유지 + https://github.com/deptno/nvim/commit/2c6d5605ffc2339f10164877573e1fe05053d797
+- [X] [[vimwiki]] syntax highlight 는 markdown 을 filetype 은 vimwiki 를 유지 + https://github.com/deptno/nvim/commit/2c6d5605ffc2339f10164877573e1fe05053d797
 + https://github.com/ecosse3/nvim
   - [X] nvim-dap + https://github.com/deptno/nvim/commit/abff6147f65b87c9ee4deaa5782b04d15d1969e2
   - [X] react-native 디버깅 가능한지 파악 + https://github.com/deptno/nvim/commit/01478edf8a3863cdb933e7a1e518c582e20f619f
     - mason 을 통해서도 인스톨이 가능할 수 있을것 같음
-  - [ ] [jest](jest)
-  - [ ] [rust](rust)
+  - [ ] [[jest]]
+  - [ ] [[rust]]
 - [X] *wip* react-native 같은 특수 파일 suffix 지원 `.native.tsx` -> `.tsx` 인식 + https://github.com/deptno/nvim/commit/dda74cfcada336b0eb80cb84e84baf8e441dacf5
   + https://github.com/neovim/neovim/issues/20784#issuecomment-1722288456
 - [X] lspsaga
@@ -61,7 +61,7 @@
     - [X] `<leader>ic` incoming_calls
       - [X] *drop* `<leader>oc` outgoing_calls, 이건 중요하지 않음
 - [X] vim-rest-console 연동 + https://github.com/deptno/nvim/commit/059745591ce6f5e521ebbd07e676fd1c64de8680
-- [X] [lazygit](lazygit) 연동 + https://github.com/deptno/nvim/commit/1dd2dc48067d9bf01f4484ae15fcfc1d62df7a5c
+- [X] [[lazygit]] 연동 + https://github.com/deptno/nvim/commit/1dd2dc48067d9bf01f4484ae15fcfc1d62df7a5c
   - [X] https://github.com/gioele/vim-autoswap 설정과 함께 봐볼 것 + https://github.com/deptno/nvim/commit/9f3be8f546d191a459f3728ea7e06448681e050e
   - [X] 현재 파일의 디렉토리 기반으로 열기 + https://github.com/deptno/nvim/commit/32243e9516fc5e46f98212283a643bc91b52e387
 - [X] fx 연동 + https://github.com/deptno/nvim/commit/3f125cae051fab1147dbc494cbfc3fae59773279
@@ -77,7 +77,7 @@
   - [X] tabscope + https://github.com/deptno/nvim/commit/2341b5c
 - [X] blankline 설정 + https://github.com/deptno/nvim/commit/94f9410d
 - [X] gitsign
-  - [X] ~~Change-base telescope 로 전환~~ -> [lazygit](lazygit) 으로 인해 니즈 죽음
+  - [X] ~~Change-base telescope 로 전환~~ -> [[lazygit]] 으로 인해 니즈 죽음
   - [X] diff 에 관련한 설정이 가능한지 -> 가능하지 않음 delta 적용불가 + https://github.com/lewis6991/gitsigns.nvim/issues/723
 - [X] telescope layout 변경 + https://github.com/deptno/nvim/commit/60ed157
 - [X] telescope oldfiles 에서 cwd 기준으로만 리스팅 + https://github.com/deptno/nvim/commit/8536cd6dfdf0113de078eb4beccd0cc1711ce7c9
@@ -141,7 +141,7 @@
     - [X] 경로에 depth 가 들어간 경우, `/` prefix 를 통해서 wiki 루트로 부터 계산되니 이걸 사용
       - [X] [[deptno.dev]] 에서 해당 컨셉이 지원되고 있는지 확인이 필요 -> 안되면 구현
   - [X] 회사와 private wiki 를 분리
-    - [X] 마이그레이션 - diary 를 통째로 복사하고([[git-subtree]]) 수동으로 필터([[git-rebase]])링해서 필터링할 것 -> [git filter repo](git-filter-repo) 를 통해 처리
+    - [X] 마이그레이션 - diary 를 통째로 복사하고([[git-subtree]]) 수동으로 필터([[git-rebase]])링해서 필터링할 것 -> [[git-filter-repo]] 를 통해 처리
   - [ ] *bug* 특정 케이스에 vimwiki가 꺼지는 상황이 있음 현재 파일 기준 24라인 이후에 뎁스가 더 들어간 todo를 생성하며 꺼짐
   - [X] timestamp, 혹은 다이어키를 삽입하는 키맵 추가 - 이미 snippet 자동완성으로 지원되고 있었음 `diso`
   - [ ] code block 을 실행할때 shell 구문인 경우 tmux 의 다른 panel에서 실행할 수 있도록 지원 [[gx]]
