@@ -4,8 +4,7 @@
 
 ## 클러스터
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
-- [ ] grafana [[alarm]]
-- [ ] ha 깨짐 [[home-assistant]]
+- [ ] grafana [[alarm]] ha 깨짐 [[home-assistant]]
   - [ ] ip_bans.yaml 파일에 왜 서버 자기 자신의 ip가 추가되는지 확인해서 조치 필요
 - [ ] kubernetes certificate 갱신
 
@@ -17,13 +16,13 @@
 
 ## 일상
 - [ ] 거울 사기
-- [ ] 주방 조명
+- [X] 주방 조명
 - [ ] 라즈베리파이 판매
-- [ ] 요금제 찾아보기
-- [ ] 에어컨 청소
-- [ ] mifare classic tool 에서 현관키 못 읽는데 key range  찾아볼 것
+- [X] 요금제 찾아보기
+- [X] 에어컨 청소
+- [X] mifare classic tool 에서 현관키 못 읽는데 key range  찾아볼 것
   + https://www.icaria.de/mct/help-and-info/#read_tag
-
+  - 해보니 key  값이 기본적으로 포함된 레인지에는 없는 것 같고 따로 찾을 방법도  없는 것  같다  중국산 실물 기기에 키 값이 많다는데 이 것도 복불복일것으로 예상 mct@4.1.0 에서 테스트
 ## 프로젝트 관리
 - [X] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
   + https://github.com/deptno/nvim/blob/d049fc86fe19354ee0d3373b707fbc91fdf0b5e6/.github/README.md
