@@ -55,6 +55,32 @@
 ### static type node
 - 타입언어에 관해서는 `node-types.json` 타입 파일이 생성되고 이를 활용할 수 있다 정도로 이해
 
+## code navigation
+
+### tag
+- @role.kind
+- @name
+- @doc
+
+| Category                 | Tag                       |
+| ------------------------ | ------------------------- |
+| Class definitions        | @definition.class         |
+| Function definitions     | @definition.function      |
+| Interface definitions    | @definition.interface     |
+| Method definitions       | @definition.method        |
+| Module definitions       | @definition.module        |
+| Function/method calls    | @reference.call           |
+| Class reference          | @reference.class          |
+| Interface implementation | @reference.implementation |
+
+#### built-in function
+```tree-sitter
+#strip! @doc "^#\\s*"
+#select-adjacent! @doc @definition.class
+```
+- #select-adjacent! @capture-of-docstring @adjacent-capture
+- #strip! @capture-of-docstring, "regular expression"
+
 ## [nvim treesitter](nvim-treesitter)
 - [neovim](neovim) 에서 사용하는 tree-sitter
 
