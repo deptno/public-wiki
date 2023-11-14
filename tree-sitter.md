@@ -50,7 +50,10 @@
   - `(node (child) . (child))` 연속된 sibling 만 match i.g. a,b,c,d: (a,b),(b,c),(c,d)
   - `string` literal 과는 **사용 불가**
 - `@` capture 재사용을 위해 이름을 부여한다
-- `#` predicate 재사용을 위해 이름을 부여한다
+- `#` predicate @capture 에 대해 조건을 부여한다 @capture 구문 종료 후 사용
+```
+((language) @lang (#eq? @lang "lua"))
+```
 
 ### static type node
 - 타입언어에 관해서는 `node-types.json` 타입 파일이 생성되고 이를 활용할 수 있다 정도로 이해
