@@ -4,7 +4,7 @@
 
 ## 클러스터
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
-- [ ] grafana [[alarm]] ha 깨짐 [[home-assistant]]
+- [ ] grafana alarm ha 깨짐 [[home-assistant]]
   - [ ] ip_bans.yaml 파일에 왜 서버 자기 자신의 ip가 추가되는지 확인해서 조치 필요
 - [ ] kubernetes certificate 갱신
 
