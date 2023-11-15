@@ -146,7 +146,7 @@
   - [ ] *bug* 특정 케이스에 vimwiki가 꺼지는 상황이 있음 현재 파일 기준 24라인 이후에 뎁스가 더 들어간 todo를 생성하며 꺼짐
   - [X] timestamp, 혹은 다이어키를 삽입하는 키맵 추가 - 이미 snippet 자동완성으로 지원되고 있었음 `diso`
   - [ ] code block 을 실행할때 shell 구문인 경우 tmux 의 다른 panel에서 실행할 수 있도록 지원 [[gx]]
-  - [ ] 다른 wiki 로 이동할 때 session 전환 [[vim-startify]]
+  - [X] ~~다른 wiki 로 이동할 때 session 전환~~ [[vim-startify]] -> 어려울 것
   - [ ] calendar 를 이용해서 시각화
     - [ ] wiki
       - [ ] diary
