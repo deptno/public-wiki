@@ -62,12 +62,12 @@ git commit -m 'initial commit'
 }
 ```
 
+- `vim` 에 접속해서 `:messages` 를 통해서 `hello gx` 가 찍힌 것 확인
+
 ### Q&A
 - [X] runtimepath
   - plugin runtimepath 에 대해서 plugin manager(lazy.nvim) 쪽에서 처리를 하는 것으로 보인다
   - `runtimepath` 에 대해서 딱히 추가하지 않았으나 동작한다
-
-- `vim` 에 접속해서 `:messages` 를 통해서 `hello gx` 가 찍힌 것 확인
 
 ## link
 - [[lua]]
