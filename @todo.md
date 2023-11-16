@@ -47,7 +47,7 @@
 
 ## 터미널
 - [ ] [[gh]] 설정 고도화
-- [ ] jira 티켓 생성등 템플릿화
+- [X] jira 티켓 생성등 템플릿화 -> 생성하고보니 {assign,watch,edit} 등이 더 가치있어보임
 - [X] [[alacritty]] 세션 이동시에 디렉토리 접근 권한 묻지 않도록
   - [X] *fail* [[codesign]] 처리
   - [X] `전체 디스크 접근 권한` 을 줘서 해결
@@ -83,10 +83,10 @@
   - [ ] 카카오톡 알림톡 등도있음
   - [ ] web이면 url
   - [ ] app인 경우 navigation screen 이름
-- [ ] jira 생성 템플릿 작성
-  - [ ] `.jira` filetype 정의 syntax: [[markdown]]
-  - [ ] sh command fence block + markdown content block 구성
-    - [ ] [[tree-sitter]] 로 분리
+- [X] jira 생성 템플릿 작성
+  - [X] `.jira` filetype 정의 syntax: [[markdown]]
+  - [X] sh command fence block + markdown content block 구성
+    - [X] [[tree-sitter]] 로 분리
 - [ ] rn 로그에 [[tailspin]] 적용
 - [ ] 회사 프로그램에 릭있음 하던일만 뺄것
 

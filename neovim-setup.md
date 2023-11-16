@@ -17,7 +17,7 @@
 ## 개선사항 [[@todo]]
 > [[@todo]] 에서 이관
 
-- [ ] [[wip]] rmd(runnable markdown) filetype 작성 jira 테스트중
+- [X] [[wip]] rmd(runnable markdown) filetype 작성 jira 테스트중
 - [ ] [[wip]] [[develop-neovim-lua-plugin]]
 - [X] [[octo]] 초기 설정 `:Octo`
 - [ ] copilot
