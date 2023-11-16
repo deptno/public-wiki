@@ -36,6 +36,33 @@ runtime plugin/plenary.vim
 - .styluaignore
 - rockspec.template
 
+## 개발
+- plugin 이름을 `gx` 로 가정
+- lazy.nvim 을 플러그인 매니저로 사용한다고 가정
+
+### 플러그인 작성
+```sh
+mkdir -p gx/lua/gx
+cd gx
+git init
+echo 'hello gx' >>  lua/gx/init.lua
+git commit -m 'initial commit'
+```
+
+### 개발 환경 플러그인 로드
+- lazy 를 통해서 load 할 설정, `dir` 속성을 통해 
+```lua
+{
+  dir = 'path/to/gx',
+  config = function ()
+    require('gx')
+  end,
+  lazy = false,
+}
+```
+
+- `vim` 에 접속해서 `:messages` 를 통해서 `hello gx` 가 찍힌 것 확인
+
 ## link
 - [[lua]]
 - [[neovim]]
