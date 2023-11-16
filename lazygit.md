@@ -11,6 +11,8 @@
     - [X] filter by author + https://github.com/deptno/.config/commit/24db073d9781906b271b31e10a15f833472ed048
   - [X] [[gh]] 와 연동해서 브랜치 PR 열기
     + https://github.com/deptno/.config/commit/a7216f3dc82dc50d7e42721568986a84ee6b3daa
+  - [X] custom command 를 사용해서 깃헙 pr 열기 {base,head}
+    + https://github.com/deptno/.config/commit/9fc069dddbe1c1e23ab894ad7d680c5b5d219f09
 
 ## color 구분
 > green yellow red 등 색상은 테마에 따라 달라지니 참고
