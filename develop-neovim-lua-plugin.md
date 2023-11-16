@@ -37,6 +37,7 @@ runtime plugin/plenary.vim
 - rockspec.template
 
 ## 개발
++ https://github.com/deptno/gx.nvim/commit/c881d9ca13a0dd8efbc94d00dbb3dd14cb441e69
 - plugin 이름을 `gx` 로 가정
 - lazy.nvim 을 플러그인 매니저로 사용한다고 가정
 
@@ -60,6 +61,11 @@ git commit -m 'initial commit'
   lazy = false,
 }
 ```
+
+### Q&A
+- [X] runtimepath
+  - plugin runtimepath 에 대해서 plugin manager(lazy.nvim) 쪽에서 처리를 하는 것으로 보인다
+  - `runtimepath` 에 대해서 딱히 추가하지 않았으나 동작한다
 
 - `vim` 에 접속해서 `:messages` 를 통해서 `hello gx` 가 찍힌 것 확인
 
