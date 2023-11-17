@@ -26,5 +26,7 @@ UPPERCASE
 
 ## link
 - [[terminal]]
+- [[awk]]
 - [[sed]]
 - [[shell-script]]
+- [[grep]]
