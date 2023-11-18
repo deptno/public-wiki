@@ -207,3 +207,5 @@ git reset --mixed $(git merge-base master @)
 - [[github]]
 - [[vim]]
 - [[tig]]
+- [[alias]]
+- [[git-alias]]
