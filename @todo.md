@@ -8,6 +8,7 @@
   - \k
   - (a|b)
   - non-greedy
+- [X] [[dynamodb]] 오래전에 정리하지 못한 것 기록
 
 ## 클러스터
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
