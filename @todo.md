@@ -31,6 +31,7 @@
 - [X] mifare classic tool 에서 현관키 못 읽는데 key range  찾아볼 것
   + https://www.icaria.de/mct/help-and-info/#read_tag
   - 해보니 key  값이 기본적으로 포함된 레인지에는 없는 것 같고 따로 찾을 방법도  없는 것  같다  중국산 실물 기기에 키 값이 많다는데 이 것도 복불복일것으로 예상 mct@4.1.0 에서 테스트
+
 ## 프로젝트 관리
 - [X] fork 프로젝트 sync 타이밍에 overwrite 된 README 를 유지할 수 있는 방법 검토
   + https://github.com/deptno/nvim/blob/d049fc86fe19354ee0d3373b707fbc91fdf0b5e6/.github/README.md
@@ -44,10 +45,9 @@
   1. [[finicky]] {safari,chrome-profile}
   2. safari-profile, 설정에 있음
 - [X] [[bruno]] 설치 테스트 rest-nvim 이 불안정해서 대체 할지 검토
-- [ ] [[finicky]] 에서 proxy 한 링크를 모두 기록해서 fuzzy 로 사용
 
 ## 터미널
-- [ ] [[gh]] 설정 고도화
+- [X] [[gh]] 설정 고도화
 - [X] jira 티켓 생성등 템플릿화 -> 생성하고보니 {assign,watch,edit} 등이 더 가치있어보임
 - [X] [[alacritty]] 세션 이동시에 디렉토리 접근 권한 묻지 않도록
   - [X] *fail* [[codesign]] 처리
@@ -88,8 +88,7 @@
   - [X] `.jira` filetype 정의 syntax: [[markdown]]
   - [X] sh command fence block + markdown content block 구성
     - [X] [[tree-sitter]] 로 분리
-- [ ] rn 로그에 [[tailspin]] 적용
-- [ ] 회사 프로그램에 릭있음 하던일만 뺄것
+- [X] rn 로그에 [[tailspin]] 적용
 
 ## link 
 - [[idea]]
