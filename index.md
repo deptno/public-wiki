@@ -84,6 +84,7 @@
 - [[orgmode]]
 - [[mermaid]]
 - [[planuml]]
+- [[mct]]
 - [[interview]]
 
 ## 책
