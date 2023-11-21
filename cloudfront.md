@@ -17,4 +17,3 @@ Access to XMLHttpRequest at 'https://XXX.com' from origin 'https://YYY.com' has 
 - [[aws]]
 - [[s3]]
 - [[response-code]]
-- [[cors]]
