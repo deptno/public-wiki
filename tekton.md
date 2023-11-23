@@ -359,7 +359,7 @@ task fetch-source has failed: "step-clone" exited with code 1 (image: "gcr.io/te
 ```
 
 ## error
-pipelinerun 을 통해서 pod 생성 후 계속 pending 상태라 보니 pvc 가 바운드되지 않는 문제
+- pipelinerun 을 통해서 pod 생성 후 계속 pending 상태라 보니 pvc 가 바운드되지 않는 문제
 ```sh
 Events:
   Type     Reason            Age   From               Message
@@ -367,10 +367,10 @@ Events:
   Warning  FailedScheduling  2m8s  default-scheduler  0/1 nodes are available: pod has unbound immediate PersistentVolumeClaims. preemption: 0/1
  nodes are available: 1 No preemption victims found for incoming pod..
 ```
--> pvc 를 가보니 storageClassName 이 비어있다, 현 세팅은 `openebs-hostpath` 를 지정해야 사용이 가능한 상태
--> manifest 에서 pvc 설정에 storageClassName 을 설정했음에도 동작하지 않았다.
--> pvc 에서 `spec.storageClassName: openebs-hostpath` 를 주입하니 정상 실행된다.
--> `PipelineRun` 에서 `storageClassName` 을 주입하면 동작한다
+  1. pvc 를 가보니 storageClassName 이 비어있다, 현 세팅은 `openebs-hostpath` 를 지정해야 사용이 가능한 상태
+  2. manifest 에서 pvc 설정에 storageClassName 을 설정했음에도 동작하지 않았다.
+  3. pvc 에서 `spec.storageClassName: openebs-hostpath` 를 주입하니 정상 실행된다.
+  4. `PipelineRun` 에서 `storageClassName` 을 주입하면 동작한다
 ```yaml
   workspaces:
   - name: shared-data
@@ -384,7 +384,9 @@ Events:
         storageClassName: openebs-hostpath
 ```
 + https://tekton.dev/docs/pipelines/workspaces/#using-persistent-volumes-within-a-pipelinerun
+
 ---
+
 ```sh 
 {
     "severity": "fatal",
@@ -395,8 +397,9 @@ Events:
     "error": "Timed out waiting on CaBundle to available for clusterInterceptor: Timed out waiting on CaBundle to available for Interceptor: clusterinterceptors. triggers.tekton.dev is forbidden: User \"system:serviceaccount:project-things:default\" cannot list resource \"clusterinterceptors\" in API group \"triggers.tekton.dev\" at the cluster scope"
 }
 ```
-account 에 tekton에서 제공하는 ClusterRole, Role 이 제대로 되어 있는지 확인한다
+- account 에 tekton에서 제공하는 ClusterRole, Role 이 제대로 되어 있는지 확인한다
   + https://github.com/tektoncd/triggers/blob/main/examples/rbac.yaml
+
 ## releated
 - [[kubernetes]]
 - [[metrics-server]]
