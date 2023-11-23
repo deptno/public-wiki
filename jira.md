@@ -15,3 +15,4 @@
 
 ## link
 - [[jql]]
+- [[jira-cli]]

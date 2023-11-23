@@ -71,6 +71,7 @@
 - [[fzf]]
 - [[sort]]
 - [[tspin]]
+- [[jira-cli]]
 
 ### file
 /etc/netplan
