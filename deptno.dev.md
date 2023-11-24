@@ -3,7 +3,8 @@
 > 보조 기억 장치
 > github 에 존재하는 wiki를 쓰고 있었는데 github 에서 wiki를 버렸다 생각될 정도로 구성이 수상하다. 일단 이를 깃 레포지터리로 이용하는 것은 유지하되, 편하게 접근하고 읽을 수 있도록 시스템이 필요했다.
 
-## todo [[@todo]]
+## [[@todo]]
+- [ ] about me 추가, 해당 파일을 특수 파일로 인식하도록
 - [X] [[mermaid]] 지원 추가 + https://github.com/deptno/deptno.dev/commit/f309f036802488dbfa048310d8da4c4b39679be5
 - [ ] diary next, prev 이동
 - [X] 개발 환경에서 graph 클릭시 live 버전 링크가 걸려있음 + https://github.com/deptno/deptno.dev/commit/8866a2959a6c195162b225f47ef71412fa28309a
