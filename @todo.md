@@ -1,6 +1,7 @@
 # @todo
 
 - [[neovim-setup]]
+- [[deptno.dev]]
 
 ## 문서 정리
 - [ ] [[vim]] [[regexp]]
@@ -9,6 +10,7 @@
   - (a|b)
   - non-greedy
 - [X] [[dynamodb]] 오래전에 정리하지 못한 것 기록
+- [ ] 이력정리
 
 ## 클러스터
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
