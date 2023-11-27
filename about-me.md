@@ -11,7 +11,8 @@
 - 2016-04 ~ 2018-03: 알스퀘어, 프론트엔드 개발팀장
   - 회사 서비스 홈페이지 개발
   - 사내 back-office, html 기반 PDF 생성
-  - [[serverless]], ECS 기반의 배포환경 2019-06 ~ 2021-05: 알스퀘어, 팀장
+  - [[serverless]], ECS 기반의 배포환경
+- 2019-06 ~ 2021-05: 알스퀘어, 팀장
   - [[c#]] -> [[node]] + [[graphql]] 마이그레이션
   - 사내 back-office 프론트엔드 개발
   - elk + beat 기반의 [[log]] 시스템 생성
@@ -48,6 +49,7 @@
 - [[raycast]]
 - [[terminal]]
 - [[webstorm]]
+- [[chatgpt]]
 
 ## link
 - [[me]]
