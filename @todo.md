@@ -3,6 +3,11 @@
 - [[neovim-setup]]
 - [[deptno.dev]]
 
+## 우선순위
+- 이력, 경험 정리
+- 튜브몬 서비스 구현 및 BM 정리
+- 3개월 마일스톤
+
 ## 문서 정리
 - [ ] [[vim]] [[regexp]]
   - very magic
