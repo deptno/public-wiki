@@ -72,6 +72,7 @@
 - [[sort]]
 - [[tspin]]
 - [[jira-cli]]
+- [[k9s]]
 
 ### file
 /etc/netplan
