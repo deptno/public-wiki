@@ -1,3 +1,3 @@
 # golang
 
-synonim go
+synonim [[go]]
