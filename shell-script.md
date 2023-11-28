@@ -101,7 +101,10 @@ done;
 ```
 
 ## 인자
+- `$?` 은 최근 shell 의 결괏값(err_code) `0` 인경우 문제 없이 종료된 케이스
+
 ### 인자 > 환경변수 > 기본값
+argument 는 `$1` 부터
 ```sh 
 if [ -n "$1" ]; then
   NS=$1
@@ -109,7 +112,7 @@ fi
 NS=${NS:="default-ns"}
 ```
 
-## shell
+## link
 - [[terminal]]
 - [[zsh]]
 - [[sed]]
