@@ -102,6 +102,15 @@ done;
 
 ## 인자
 - `$?` 은 최근 shell 의 결괏값(err_code) `0` 인경우 문제 없이 종료된 케이스
+- 최근 값 저장이라는게 버그 프룬이므로 아래와 같이 저장된 형태로 사용한다
+```sh 
+echo 'save exit code'
+latest_result=$?
+
+if [ $latest_result -eq 0 ]; then
+  # do something
+fi
+```
 
 ### 인자 > 환경변수 > 기본값
 argument 는 `$1` 부터
