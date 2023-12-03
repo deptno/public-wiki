@@ -1,5 +1,19 @@
 # react-native
 
+## 설정
+> 글 작성 시점 `0.72.7`
+- `--skip-install` 은 패키지 매니저를 갈아 끼우려는 목적
+- `--npm` 은 패키지 매니저를 갈 아 끼우려는 목적
+  - 목적과는 별개로 옵션을 주지 않으면 실행되지 않음 [[### Please make sure the template is valid]]
+- `node_modules` 가 필요하기때문에 `yarn` `pnp` 를 사용한다면 주의
+
+```sh 
+npx react-native@latest init MyApp --directory my-app --skip-install --npm 
+# or
+bun x react-native@latest init MyApp --directory my-app --skip-install --npm 
+```
+
+## 실행
 ```sh
 react-native run ios --device "phonename"
 ```
@@ -125,6 +139,15 @@ sysctl 을 통해서 변수를 확인할 수 있다.
 
 ### warning: Building targets in manual order is deprecated - choose Dependency Order in scheme settings instead, or set DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING in any of the targets in the current scheme to suppress this warning
 schema edit -> build -> dependency order
+
+### Please make sure the template is valid
+```sh 
+✔ Downloading template
+✖ Copying template
+error Couldn't find the "/var/folders/yr/lb2jlrrd1fs7h6hn30n_ksvr0000gn/T/rncli-init-template-FoAnnF/node_modules/react-native/template.config.js file inside "react-native" template. Please make sure the template is valid. Read more: https://github.com/react-native-community/cli/blob/master/docs/init.md#creating-custom-template.
+info Run CLI with --verbose flag for more details.
+```
+- `0.72.7` 에서 발생, `--npm` 옵션을 추가해서 해결
 
 ## link
 - [[mobile]]
