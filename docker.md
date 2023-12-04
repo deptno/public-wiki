@@ -89,6 +89,42 @@ no space 에러는 `docker system prune [-a]` 로 해결된다.
 ```sh 
 docker system prune
 ```
+### GPG error
+```sh
+ [+] Building 3.4s (5/5) FINISHED
+ => [internal] load build definition from Dockerfile.chrome                                                                                                                                                                        0.0s
+ => => transferring dockerfile: 750B                                                                                                                                                                                               0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                                  0.0s
+ => => transferring context: 71B                                                                                                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/node:20-bullseye                                                                                                                                                                0.9s
+ => CACHED [1/2] FROM docker.io/library/node:20-bullseye@sha256:c1b3e61fa0fde701bdb45032796bc4bb020a8c53f06cba5765584b620087fa03                                                                                                   0.0s
+ => ERROR [2/2] RUN apt-get update && apt-get install gnupg wget -y &&   wget --quiet --output-document=- https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor > /etc/apt/trusted.gpg.d/google-archive.gpg &&     2.4s
+------
+ > [2/2] RUN apt-get update && apt-get install gnupg wget -y &&   wget --quiet --output-document=- https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor > /etc/apt/trusted.gpg.d/google-archive.gpg &&   sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' &&   apt-get update &&   apt-get install google-chrome-stable -y --no-install-recommends &&   rm -rf /var/lib/apt/lists/*:
+#5 0.484 Get:1 http://deb.debian.org/debian bullseye InRelease [116 kB]
+#5 0.589 Get:2 http://deb.debian.org/debian-security bullseye-security InRelease [48.4 kB]
+#5 0.631 Get:3 http://deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+#5 1.156 Err:1 http://deb.debian.org/debian bullseye InRelease
+#5 1.156   At least one invalid signature was encountered.
+#5 1.719 Err:2 http://deb.debian.org/debian-security bullseye-security InRelease
+#5 1.719   At least one invalid signature was encountered.
+#5 2.268 Err:3 http://deb.debian.org/debian bullseye-updates InRelease
+#5 2.268   At least one invalid signature was encountered.
+#5 2.306 Reading package lists...
+#5 2.404 W: GPG error: http://deb.debian.org/debian bullseye InRelease: At least one invalid signature was encountered.
+#5 2.404 E: The repository 'http://deb.debian.org/debian bullseye InRelease' is not signed.
+#5 2.405 W: GPG error: http://deb.debian.org/debian-security bullseye-security InRelease: At least one invalid signature was encountered.
+#5 2.405 E: The repository 'http://deb.debian.org/debian-security bullseye-security InRelease' is not signed.
+#5 2.405 W: GPG error: http://deb.debian.org/debian bullseye-updates InRelease: At least one invalid signature was encountered.
+#5 2.405 E: The repository 'http://deb.debian.org/debian bullseye-updates InRelease' is not signed.
+------
+executor failed running [/bin/sh -c apt-get update && apt-get install gnupg wget -y &&   wget --quiet --output-document=- https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor > /etc/apt/trusted.gpg.d/google-archive.gpg &&   sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' &&   apt-get update &&   apt-get install google-chrome-stable -y --no-install-recommends &&   rm -rf /var/lib/apt/lists/*]: exit code: 100
+
+```
+- GPG 에러 였지만 결국엔 disk space 랑 연결, 아래 명령어를 통해서 해결
+```sh 
+docker system prune -a
+```
 
 ## link
 - [[kubernetes]]
