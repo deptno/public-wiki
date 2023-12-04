@@ -15,6 +15,9 @@ bun x react-native@latest init MyApp --directory my-app --skip-install --npm
 
 ## 개발
 +  https://reactnative.dev/docs
+
+- [ ] TODO: `.xcode.env` 정리
+
 ### Workflow
 #### Fast Refresh
 잘 활용하기 위해서 지켜야할 컨벤션
