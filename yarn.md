@@ -1,5 +1,10 @@
 # yarn
 
+## `.yarnrc.yml`
++ https://yarnpkg.com/configuration/yarnrc
+yarn@2  이후로는 `.yarnrc.yml` 을 사용하며 다른 설정 파일은 무시함
+
+## usage
 berry 기준
 
 ```sh
@@ -9,6 +14,7 @@ yarn patch-package
 yarn set version berry
 yarn plugin import @yarnpkg/plugin-workspace-tools
 ```
+
 ## pnp
 대충 zero install 모드가 되면서 package 가 zip 파일로 `.yarn/cache` 디렉토리안에 들어가게된다.
 대신 `node_modules` 디렉토리가 없어지면서 에디터에서 문제를 일으켰는데 webstorm@2022.3.1 기준, 잘 동작
