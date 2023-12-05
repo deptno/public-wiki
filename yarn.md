@@ -188,6 +188,34 @@ $ SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm_config_arch=x64 npm_config_platform=linux ya
 ```
 브랜치 바꾸니까 해결됨, 브랜치내에 문제가 있었던 걸로 예상됨
 
+### RequestError: Socket connection timeout
+- yarn@4.0.2 + node@20.2.0 에서 발생
+```sh 
+ yarn                                                                                                                1 err  9s  20.2.0 node  01:21:00
+➤ YN0000: · Yarn 4.0.2
+➤ YN0000: ┌ Resolution step
+➤ YN0001: │ RequestError: Socket connection timeout
+    at ClientRequest.<anonymous> (/Users/deptno/workspace/src/github.com/deptno/salji.ro/backend/.yarn/releases/yarn-4.0.2.cjs:147:14258)
+    at Object.onceWrapper (node:events:626:26)
+    at ClientRequest.emit (node:events:523:35)
+    at u.emit (/Users/deptno/workspace/src/github.com/deptno/salji.ro/backend/.yarn/releases/yarn-4.0.2.cjs:142:14420)
+    at TLSSocket.socketErrorListener (node:_http_client:495:9)
+    at TLSSocket.emit (node:events:511:28)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+    at runNextTicks (node:internal/process/task_queues:64:3)
+    at new NodeError (node:internal/errors:399:5)
+    at internalConnectMultiple (node:net:1099:20)
+    at Timeout.internalConnectMultipleTimeout (node:net:1638:3)
+    at listOnTimeout (node:internal/timers:575:11)
+    at process.processTimers (node:internal/timers:514:7)
+➤ YN0000: └ Completed in 3s 297ms
+➤ YN0000: · Failed with errors in 3s 304ms
+```
+- [[node]] version 을 18로 다운후 처리가 가능하다, 설치 후에는 20 으로 복귀해도 문제 없다
+  + https://github.com/yarnpkg/berry/issues/5452#issuecomment-1709174786
+
 ## link
 - [[node]]
 - [[npm]]
