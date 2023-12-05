@@ -7,6 +7,16 @@
 GIT_SSH_COMMAND='ssh -i [KEY_PATH]' bundle exec fastlane build phase:dev
 ```
 
+## project
+> 굉장히 괜찮다
+
+- pros
+  - repository 독립적
+  - table 지원
+  - kanban 지원
+  - gantt 지원
+  - filter 지원
+
 ## link
 - [[git]]
 - [[gh]]
