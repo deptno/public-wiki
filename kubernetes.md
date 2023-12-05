@@ -6,6 +6,7 @@
   설정을 위해 선실행되고 종료되는 컨테이너
   + https://kubernetes.io/ko/docs/concepts/workloads/pods/init-containers/
   여러 컨테이너가 선언된경우 순차적으로 실행된다[[gpt]]
+- [[node]] 에서 `throw` 를 통해 unhandled execption 을 통해 종료하는 것보다 `process.exit(1)` 을 통해서 비정상 종료를 해야지 container 가 종료되는 것으로 보인다
 ### multi container pod 의 경우
 1. container 중 하나만 죽어도 파드 내의 컨테이너들이 재시작되는 되는 것인지 503 이 뜸
 2. 사실 파드 중 하나는 초기 설정을 위한 거였는데 이를 initContainer 로 만들고 나니 에러가 안남
