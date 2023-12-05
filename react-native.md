@@ -237,7 +237,7 @@ npx react-native log-ios
 #### Direct Manipulation
 - `setNativeProps`: 애니메이션과 제스쳐  응답과 같이 같이 특수한 상황에서 렌더 트리 계층을 건너띄어야할때만 사용
 - 기본적으로 다이렉트로 멀리있는 자식 컴포넌트에 `props` 를 직접 주입하는 방법
-- TODO: 필요할 떄 상세 참조
+- [ ] TODO: 필요할 떄 상세 참조
 
 ### The New Architecture
 - as-is
@@ -248,7 +248,32 @@ npx react-native log-ios
   - 동기 실행
   - 동시성(다른스레드에서 동작하는 네이티브 함수를 여러번 콜함으로써 얻는 이득의 의미일 듯)
   - serialize/deserialize 비용 제거
-  - 
+
+#### New Architecture
+- Fabric: RST 가 JSI 를 통해 호스트에서도 C++로 존재할 수 있는 방식 Render Pipeline 에서는 Render, Commit 이 해당
+
+##### Render, Commit, and Mount
+- Render Pipeline
+  - 단계는 쓰레드 동립적일 수 있다
+  - Render: React Element Tree(JS) -> React Shadhow Tree(C++)
+  - Commit: React Shadhow Tree 가 완전히 생성된 후 RET, RST 를 *next tree* 로써 mount 준비한다
+    - `onLayout`from *core*
+  - Mount: RST + Layout Caculation -> Host View Tree
+    - `onChange` from *host platform*
+###### Phase 1. Render
+- React Shadow Node 는 Recat Composite Component 가 아닌 Host Component 와 매칭된다
+- [ ] TODO:
+
+#### Createing a New Architecture App
+- RN@0.68 이상
+- [[iOS]] 환경변수 `RCT_NEW_ARCH_ENABLED=1 bundle exec pod install` 을 통해서 가능
+- [[android]] 환경변수 혹은 `android/gradle.properties` 에서 설정을 통해 가능
+- 확인 시작 로그의 `fabric` 을 통해서 확인 가능
+```sh 
+ LOG  Running "APP NAME" with {"fabric": true}
+```
+- new architecture library 는 fabric component, turbo module 로 명명된다
+- [ ] TODO: 현재 `react-native-inappbrowser-reborn` 라이브러리가 fabric 을 지원하지 않아 여기서 pending
 
 ### 공식 문서에 언급된 라이브러리들
 - react-navigation
