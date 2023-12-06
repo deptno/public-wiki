@@ -13,6 +13,8 @@ gh pr list -S 'draft:false' # 드래프트가 아닌 pr만 보여준다
 gh pr list -S 'draft:false' -s merged
 gh dash # dashboard
 gh actions # action 관련 명령어
+gh config list # config 목록 확인
+gh config set editor "vim -c 'set filetype=gitcommit'" # 아래 neovim 섹션 참조
 ```
 
 ### gh-dash
@@ -58,8 +60,20 @@ gh pr list \
 {{end}}'
 ```
 
+## [[neovim]]
+- pr 작성중에 `#18` 등을 통해서 pr 혹은 issue 에 대한 정보 및 자동완성 제공
+  + https://github.com/petertriho/cmp-git
+  - pr 생성등에서 `nvim-cmp` 와 함께 해서 지원을 받을 수 있다.
+  - 이를 위해서는 `gh pr create` 등의 명령어를 사용할 때 filetype 이 설정되어 있어한데 기본적으로 `markdown` 이 지정된다
+  - `git_cmp` 설정에서 `filetypes` 에 `gitcommit` 이 포함된 것(기본설정) 확인 필요
+```sh
+gh config set editor "vim -c 'set filetype=gitcommit'" # assist 도움을 받기 위해서 파일타입이 필요한 경우 지정
+gh config list # 확인
+```
+
 ## link
 - [[direnv]]
 - [[github]]
 - [[jq]]
 - [[xsv]]
+- [[neovim]]
