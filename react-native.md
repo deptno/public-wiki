@@ -280,6 +280,11 @@ npx react-native log-ios
 - react-native-keychain 관련
 - react-native-fast-image
 
+### 공식 문서에 언급된 커맨드
+```sh 
+npx react-native upgrade
+```
+
 ## 실행
 ```sh
 react-native run ios --device "phonename"
@@ -415,6 +420,22 @@ error Couldn't find the "/var/folders/yr/lb2jlrrd1fs7h6hn30n_ksvr0000gn/T/rncli-
 info Run CLI with --verbose flag for more details.
 ```
 - `0.72.7` 에서 발생, `--npm` 옵션을 추가해서 해결
+
+### Invariant Violation: View config getter callback for component `RNSScreen` must be a function (received `undefined`).
+```sh 
+ ERROR  Invariant Violation: View config getter callback for component `RNSScreen` must be a function (received `undefined`).
+
+This error is located at:
+    in RNSScreen
+```
+`RNSScreen` 문제는 아니고 상황이 상태에 따라 변한다. `react-native` 버전업을 하다가 리셋하고 다시 이전버전을 사용하면서 발생하게되었는데 조치했던 방법은 아래와 같다
+- `bun install`, [[bun]] 사용중이었다
+- `bundle exec pod deintegrate && bundle exec pod install`
+- *Derived Data* 디렉토리 비움 by *DevCleaner*
+- `git reset --hard`
+- `bun start --reset-cache`
+
+결과적으로 모두 안되었는데 `node_modules` 까지 지우고 다시 `bun install` 을 한 이후에 에러가 사라졌다.
 
 ## link
 - [[mobile]]
