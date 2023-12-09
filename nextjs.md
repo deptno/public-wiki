@@ -201,3 +201,4 @@ Type error: Element implicitly has an 'any' type because expression of type 'str
 - [[tailwindcss]]
 - [[yarn]]
 - [[corepack]]
+- [[next-auth]]
