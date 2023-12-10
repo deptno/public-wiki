@@ -197,13 +197,13 @@ __23.3.2 파드 삭제 및 노드 종료 시 서비스 이상 여부 검증
   1. shell autocomplete 설정
   2. [[../krew]] k8s plugin manager 설정
     - ns
-```shell
+```sh
 kubectl krew install ctx
 kubectl ctx # listing
 kubectl ctx [context-name] # 컨텍스트 변경
 ```
     - ctx
-```shell
+```sh
 kubectl krew install ns
 kubectl ns # listing
 kubectl ns [namespace-name] # 네임스페이스 변경
@@ -212,7 +212,7 @@ kubectl ns [namespace-name] # 네임스페이스 변경
     **설치하지 않음, tmux 플러그인으로 대체했음**
 3. 03장: kubectl 명령어로 익히는 쿠버네티스의 주요 오브젝트 
   - pod
-```shell
+```sh
 $ k ns
 Context "kubernetes-admin@cluster.local" modified.
 Active namespace is "default".
@@ -229,7 +229,7 @@ nginx     1/1     Running             0          2m12s   10.233.85.197   kube02 
 nginx01   0/1     ContainerCreating   0          3s      <none>          kube01   <none>           <none>
 ```
     - 파드내 실행 프로세스 확인
-```shell
+```sh
 $ k exec -it nginx -- bash
 root@nginx:/# apt -y update && apt -y install procps # ps 실행을 위해 설치
 root@nginx:/# ps aux
@@ -238,7 +238,7 @@ root@nginx:/# ps aux
       - [ ] 막상 들어가보니 디렉토리 자체가 존재하지 않음
         - /var/lib/containerd/* 은 존재하나 pod(nginx) 는 존재하지 않았음
   - deployment
-```shell
+```sh
 $ k create deployment httpd --image=httpd
 deployment.apps/httpd created
 $ kgpwide                         ok  1.59.0 rust  kubernetes-admin@cluster.local kube  15:31:47
@@ -295,7 +295,7 @@ nginx01                  1/1     Running   0          21m   10.233.72.132   kube
 ```
     - 파드를 삭제해도 deployment 의 replicas 로 인해 파드가 자동 재생성 되는 것 확인
   - 네임스페이스 생성
-```shell
+```sh
 $ k create ns default01                                                                  ok  kubernetes-admin@cluster.local kube  15:39:28
 namespace/default01 created
 $ k ns default                                                                           ok  kubernetes-admin@cluster.local kube  15:39:40
@@ -310,7 +310,7 @@ $ kgpwide                                                                       
 No resources found in default namespace.
 ```
     - 네임스페이스 내에서는 같은 이름의 파드를 재생성할 수 없다
-```shell
+```sh
 $ k run nginx --image=nginx                                                              ok  kubernetes-admin@cluster.local kube  15:40:41
 pod/nginx created
 $ k run nginx --image=nginx                                                              ok  kubernetes-admin@cluster.local kube  15:41:28
@@ -323,7 +323,7 @@ pod/nginx created
 ```
     - 다른 네임스페이스 파드간 통신
       네임스페이스는 네트워크 수준의 분리가 아니다
-```shell
+```sh
  ~  kgpwide -n default01                                                                                                   INT  9s  15:45:13
  ~  kgpwide -n default                                                      INT  9s  kubernetes-admin@cluster.local/default01 kube  15:45:13
 NAME    READY   STATUS    RESTARTS   AGE     IP              NODE     NOMINATED NODE   READINESS GATES
@@ -346,7 +346,7 @@ root@nginx:/#
 ```
 04. 04장: YAML 파일을 이용한 쿠버네티스 오브젝트 관리 
   - neat 설치, 상태나 기본값을 제거한 이력 관리용 yaml 을 추출
-```shell
+```sh
 $ k run busybox --image=busybox                                                          ok  kubernetes-admin@cluster.local kube  16:00:14
 pod/busybox created
 $ kgpwide # busybox 가 실행 후 바로 완료됨                                                                                ok  kubernetes-admin@cluster.local kube  16:00:52
@@ -357,7 +357,7 @@ $ kgp busybox -o yaml
 # ... verbose yaml
 ```
     - neat 설치
-```shell
+```sh
 $ k krew install neat                                                                    ok  kubernetes-admin@cluster.local kube  16:01:58
 Updated the local copy of plugin index.
 Installing plugin: neat
@@ -390,7 +390,7 @@ spec:
     - "-c"
     - "sleep inf"
 ```
-```shell
+```sh
  ~/w/st/k8s-24-steps  kaf busybox-pod.yaml
  ~/w/st/k8s-24-steps  kaf busybox-pod.yaml                                            ok  11s  kubernetes-admin@cluster.local kube  16:11:46
 pod/busybox created
@@ -432,7 +432,7 @@ nginx     1/1     Running   0          30m   10.233.85.202   kube02   <none>    
     4. Logs
     5. Get Event
   - 없는 이미지를 사용한 트러블슈팅 시나리오
-```shell
+```sh
  ~/workspace/study/k8s-24-steps  vi nginx-error-pod.yaml                                                                        ok  16:25:08
  ~/workspace/study/k8s-24-steps  cat nginx-error-pod.yaml                                                               ok  1m 35s  16:26:54
 apiVersion: v1
@@ -569,7 +569,7 @@ nginx-19   1/1     Running   0          6s    10.233.85.204   kube02   <none>   
     2. describe 를 통해서 디테일한 이슈 확인
     3. 정상작동을 log 통해서 확인
        label 로 필터링하면 여러 파드의 로그를 함게 확인할 수 잇는 것으로 보인다
-```shell
+```sh
  ~/w/study/k8s-24-steps  kl1h -l component=kube-apiserver -n kube-system                                          ok  kubernetes-admin@cluster.local kube  16:38:59
 I1220 06:39:40.498414       1 controller.go:616] quota admission added evaluator for: serviceaccounts
 I1220 06:39:40.478986       1 controller.go:616] quota admission added evaluator for: namespaces
@@ -578,13 +578,13 @@ Trace[908013652]: ---"Writing http response done" 45107ms (07:32:11.071)
 Trace[908013652]: [45.111899611s] [45.111899611s] END
 ```
     - events
-```shell
+```sh
 $ k get events
 $ k get events -n kube-system
 $ k get events -A # all namespaces
 ```
   - 호스트 노드의 용량 초과 시나리오 트러블슈팅
-```shell
+```sh
  ~/workspace/study/k8s-24-steps  vim busybox-deploy.yaml                                                                        ok  16:55:20
  ~/workspace/study/k8s-24-steps  cat busybox-deploy.yaml                                                                     1 err  16:55:26
 apiVersion: apps/v1
@@ -628,7 +628,7 @@ nginx                     1/1     Running             0          74m   10.233.85
 nginx-19                  1/1     Running             0          25m   10.233.85.204   kube02   <none>           <none>
 ```
     - kube01 에 접속해서 큰 용량의 파일을 생성  
-```shell
+```sh
  ~/workspace/study/k8s-24-steps  m shell kube01                                                                                 ok  16:55:37
 Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-56-generic aarch64)
 
@@ -670,7 +670,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 ubuntu@kube01:~$ exit
 ```
     - 용량 부족으로 인해 kube01 노드의 파드들이 에러를 내고 다른 노드에서 ContainerCreating 이 발생하는 것을 확인
-```shell
+```sh
  ~/w/study/k8s-24-steps  kgpwide                                                                                  ok  kubernetes-admin@cluster.local kube  17:05:25
 NAME                      READY   STATUS              RESTARTS   AGE   IP              NODE     NOMINATED NODE   READINESS GATES
 busybox-9ff887cc8-487jr   1/1     Running             0          10m   10.233.85.206   kube02   <none>           <none>
@@ -689,7 +689,7 @@ busybox-9ff887cc8-swz78   1/1     Running             0          64s   10.233.10
 nginx                     1/1     Running             0          84m   10.233.85.202   kube02   <none>           <none>
 nginx-19                  1/1     Running             0          35m   10.233.85.204   kube02   <none>           <none>
 ```
-```shell
+```sh
  ~/w/study/k8s-24-steps  k get events | head -n 20                                                             1 err  kubernetes-admin@cluster.local kube  17:14:15
 LAST SEEN   TYPE      REASON                 OBJECT                         MESSAGE
 18m         Normal    Scheduled              pod/busybox-9ff887cc8-487jr    Successfully assigned default/busybox-9ff887cc8-487jr to kube02
@@ -805,7 +805,7 @@ Events:
 ```
     - `NodeHasDiskPressure` 이벤트 확인이 가능하다
     - 정리
-```shell
+```sh
  ~/w/study/k8s-24-steps  k delete deployments.apps busybox                                                        ok  kubernetes-admin@cluster.local kube  17:16:40
 deployment.apps "busybox" deleted
  ~/w/study/k8s-24-steps  kgpwide                                                                                  ok  kubernetes-admin@cluster.local kube  17:18:48
@@ -884,7 +884,7 @@ nginx-19   1/1     Running   0          49m   10.233.85.204   kube02   <none>   
   - https://artifacthub.io 단일 헬름 차트 저장소
   - 차트내 `values.yaml` 파일을 통해 변수화 하고 `template` 디렉토리의 yaml 에 변수를 적용하는 방식
   - helm permission warning 제거
-```shell
+```sh
  ~/w/study/k8s-24-steps  helm repo list                                                                        1 err  kubernetes-admin@cluster.local kube  17:31:06
 WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /Users/deptno/.kube/config
 WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /Users/deptno/.kube/config
@@ -902,7 +902,7 @@ Permissions Links Size User   Date Modified    Git Name
 .rw-------      1 5.7k deptno 2022-12-20 15:54  -I  /Users/deptno/.kube/config
 ```
   - chart 설치
-```shell
+```sh
  ~/w/study/k8s-24-steps  helm repo update                                                                      1 err  kubernetes-admin@cluster.local kube  17:40:36
 Hang tight while we grab the latest from your chart repositories...
 ...Successfully got an update from the "bitnami" chart repository
@@ -975,7 +975,7 @@ NAME    NAMESPACE       REVISION        UPDATED                                 
 nginx   nginx           1               2022-12-20 17:49:04.604435 +0900 KST    deployed        nginx-13.2.19   1.23.3
 ```
     - `CrashLoopBackOff` 트러블 슈팅
-```shell
+```sh
  ~/w/st/k/nginx-13.2.19  kgp                                                                                ok  kubernetes-admin@cluster.local/nginx kube  18:20:44
 NAME                     READY   STATUS             RESTARTS        AGE
 nginx-6bb994745d-86tvg   0/1     CrashLoopBackOff   7 (2m10s ago)   13m
@@ -991,7 +991,7 @@ exec /opt/bitnami/scripts/nginx/entrypoint.sh: exec format error
         - https://github.com/canonical/multipass/issues/886
         - stress 이미지도 마찬가지로 되지 않는다
     - 모든 파드 정리
-```shell
+```sh
 kdelp --all
 ```
   - resource 보장
@@ -1044,10 +1044,10 @@ kdelp --all
   - [[../kubetail]] 여러 파드의 로그 보기
   - [[../k6]] 을 활용한 부하 테스트
   - 단절 확인, 노드 중 어떤 노드를 reboot 해도 단절이 확인 됨
-```shell
+```sh
 while true; do curl -I 192.168.64.50 --silent | grep -E 'Date|OK'; sleep 1; done
 ```
-```shell
+```sh
 $ ssh kube02
 $$ sudo reboot 
 ```
@@ -1099,7 +1099,7 @@ spec:
 24. 24장: 쿠버네티스 노드 변경과 추가 
   - ubuntu server 설치 + openssh
   - helm chart 설치
-```shell
+```sh
 vi /etc/hosts # 노드 정보 추가
 vi inventory/mycluster/hosts.yml # host 정보 추가 + node 추가
 ansible-playbook -i inventory/mycluster/hosts.yml -b facts.yml
@@ -1107,7 +1107,7 @@ ansible-playbook -i inventory/mycluster/hosts.yml -b scale.yml --limit=[nodename
 ```
 
 ## architecture issue
-```shell
+```sh
 exec /opt/bitnami/scripts/nginx/entrypoint.sh: exec format error
 ```
 실습에 사용된 특정 image 들은 arm 에서 실행이 불가능하다.  
