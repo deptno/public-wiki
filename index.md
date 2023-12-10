@@ -48,6 +48,7 @@
 - [[electron]]
 - [[tidy]]
 - [[applescript]]
+- [[nextjs]]
 
 ## ai
 - [[chatgpt]]
