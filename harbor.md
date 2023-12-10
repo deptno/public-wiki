@@ -81,6 +81,16 @@ $ sudo vi /etc/containerd/config.toml
 sudo systemctl restart containerd
 ```
 
+### ImagePullBackOff
+> local 에서 kubernetes 에 private repository 에 있는 image 를 통해 띄울 때 발생
++ [[diary:2023-12-10]]
+- private 레포지터리를 사용할때 이슈가 발생
+- yaml 을 통해서 `imagePullSecrets` 를 지정하는 경우문제가 되지 않는다
+- [[shell]] command 를 통해서 진행할때 [[kubernetes]] 는 이를 모르기 때문에 `imagePullSecrets` 옵션을 지정해주어야한다
+```sh 
+kubectl run test --image=harbor.registry.com/cns/name:tag --overrides='{"spec":{"imagePullSecrets":[{"name": "harbor"}]}}'
+```
+
 ## link
 - [[kubernetes]]
 - [[book/24-steps-k8s]]
