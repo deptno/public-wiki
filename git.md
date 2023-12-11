@@ -35,6 +35,8 @@
 - [[git-credential-manager]]
 - [[git-filter-branch]]
 - [[git-filter-repo]]
+- [[git-bundle]]
+- [[git-unbundle]]
 
 ## files
 - [[path|.gitconfig]]
