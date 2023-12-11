@@ -14,9 +14,12 @@ bun x react-native@latest init MyApp --directory my-app --skip-install --npm
 ```
 
 ## 개발
-+  https://reactnative.dev/docs
++  https://reactnative.dev
 
-- [ ] TODO: `.xcode.env` 정리
+### .xcode.env 
++ https://reactnative.dev/docs/environment-setup#optional-configuring-your-environment
+- `ios/` 폴더 밑
+- `.xcode.env`, `.xcode.env.local`
 
 ### Workflow
 #### Fast Refresh
