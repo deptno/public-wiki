@@ -4,7 +4,20 @@
 - test-flight 없는 테스트 기기 등록 가능
 - 1년에 한번만 등록된 기기 해제 가능
 
+## 인증
++ https://github.com/invertase/react-native-apple-authentication/blob/main/docs/INITIAL_SETUP.md
+
+## 개발자 등록
++ developer.apple.com
+
+1. Apple Developer Program 등록
+2. 개인정보 입력, 한글안됨
+3. 법인유형:  개인/개인사업자
+4. 동의
+5. 구입 ￦129,000
+
 ## link
 - [[macos]]
 - [[ios]]
 - [[udid]]
+- [[google]]
