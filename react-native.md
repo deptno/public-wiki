@@ -14,6 +14,16 @@ bun x react-native@latest init MyApp --directory my-app --skip-install --npm
 ```
 
 ## 개발
+
+### ios bundler identifer 변경
+- `ios/[APP_NAME]/Info.plist` 에서 `CFBundleIdientifer` 변경
+
+### android package name 변경
++ https://github.com/deptno/salji.ro/commit/07fe2cb3a609a69e679b02aa858133b08d4fe219
+- full search 로 `com.[APP_NAME]` 을 찾아 참조를 바꾼다
+- [[domain]] 을 `.com` 아닌 다른 것으로 변경한 경우에는 `android/src/{com,[[[MY_TLD]]]}/**` 로 디렉토리명을 변경한다
+
+## 공식문서
 +  https://reactnative.dev
 
 ### .xcode.env 
@@ -439,6 +449,14 @@ This error is located at:
 - `bun start --reset-cache`
 
 결과적으로 모두 안되었는데 `node_modules` 까지 지우고 다시 `bun install` 을 한 이후에 에러가 사라졌다.
+
+### DEVELOPER_ERROR
+- `@react-native-google-signin/google-signin` 패키지 사용하면서 발생
+  + https://github.com/react-native-google-signin/google-signin
+- [[android]] 에서만 발생
+- android oauth client key 는 프로젝트에 입력하지 않는다. android client id 를 발급받으면서 입력한 *SHA-1* 을 통해서 해당 디바이스가 요청하는 경우 인증으로 이어지게 된다(그래보임)
+- 문서에 존재하는 client id(아마도 web, ios)는 `configure` 의 인자로 입력하고 android client id 를 입력하지 않더라도 생성은 되어있어야한다
+- *SHA-1* 은 [[keytool#사용]] 참조, debug 모드인 경우에는 기본적으로 생성되어있는 점 참고
 
 ## link
 - [[mobile]]

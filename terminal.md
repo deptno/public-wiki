@@ -73,6 +73,7 @@
 - [[tspin]]
 - [[jira-cli]]
 - [[k9s]]
+- [[keytool]]
 
 ### file
 /etc/netplan

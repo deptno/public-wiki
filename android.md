@@ -1,5 +1,11 @@
 # android
 
+## 개발
+
+### SHA-1 인증서 디지털 지문
+- [[keytool]] 참고
+- google 인증에서 사용됨
+
 ## Android android-studio
 - Actions -> New Module
 
