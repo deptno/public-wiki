@@ -33,7 +33,9 @@
     - apple 의 reminder
     - slack mention 등을
   - 날짜 패턴이 오늘이면 다른색
-    
+- calendar
+  - 채용달력 표현
+
 ## link
 - [[vim]]
 - [[@todo]]
