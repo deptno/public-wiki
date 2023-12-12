@@ -451,6 +451,7 @@ This error is located at:
 결과적으로 모두 안되었는데 `node_modules` 까지 지우고 다시 `bun install` 을 한 이후에 에러가 사라졌다.
 
 ### DEVELOPER_ERROR
++ https://peerlist.io/blog/engineering/implementing-google-signin-in-react-native
 - `@react-native-google-signin/google-signin` 패키지 사용하면서 발생
   + https://github.com/react-native-google-signin/google-signin
 - [[android]] 에서만 발생
