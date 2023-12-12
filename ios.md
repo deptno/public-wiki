@@ -15,6 +15,9 @@ Link Binary With Libraries
 ## files
 - [[path|~/Library/Developer/Xcode/DerivedData/]] - 시뮬레이터 관련 파일 관련
 
+## 개발
++ https://github.com/ClintJang/ios-swift-objc-questions-and-answers/blob/master/README.md#5-reject
+
 
 ## releated
 - [[xcode]]
@@ -25,3 +28,4 @@ Link Binary With Libraries
 - [[proxyman]]
 - [[udid]]
 - [[apple]]
+- [[android]]
