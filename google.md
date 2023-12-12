@@ -3,3 +3,4 @@
 ## link
 - [[exiftool]]
 - [[synology]]
+- [[google-workspace]]
