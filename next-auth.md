@@ -89,7 +89,7 @@ sequenceDiagram
 - redirect_url: {provider.authorization.url,oauth4webapi.processDiscoveryResponse(provider.provider.issuer)}/signin
   - cookie: pkce, state 등
   - 이렇게되면 해당 provider 에서 로그인후 다시 redirect 됨, target은 스펙에서 찾아야함(callback 으로 예상)
-  - 
+
 ### callback()
 ```js
 const user = adapter.getUserByAccount(providerAccountId, provider)
@@ -175,6 +175,28 @@ callbacks.signIn(user, account, profile)
   + https://github.com/nextauthjs/next-auth/blob/0126f94788a263bd8420ceac9a11ed6d2c2fb958/packages/core/src/lib/actions/callback/index.ts#L120-L153
   - callbacks.jwt -> jwt.encode with salt -> session store 를 통해 chunk화 -> cookie
   - events.signIn()
+
+#### signin callback diagram
++ [[react-native]]
+- 앱에서 oauth 로그인 연동을 가정
+- [ ] TODO: 디바이스(app 또는 web)에서 로그인된 경우(session) + 같은 혹은  다른 디바이스에서 oauth 로그인 시도 고민
+```mermaid
+flowchart TD
+  callback(oauth/oidc callback from app) --"getUserByAccount(oauthoidc provider)"--> user[(User)]
+  user --> oauth_exists{동일 provider oauth 유저 존재?}
+  %% oauth_exists --예--> 종료
+  oauth_exists --아니오--> session{로그인 상태}
+  session --예--> linkAccount
+linkAccount --> linkAccountEvent(emit linkAccount)
+  session --아니오--> same_email_exists{동일 email 유저 존재?}
+  same_email_exists --예--> allowLinking{provider.allowDangerousEmailAccountLinking} 
+  same_email_exists --아니오--> createUser
+  createUser --> createUserEvent(emit createUser)
+  createUserEvent --> linkAccount
+  allowLinking --예--> createUserEvent
+  %% allowLinking --아니오--> 종료
+  user[(User)]
+```
 
 ### 참고
 + http://swcho.github.io/blogs/2023-03-03-auth.js
