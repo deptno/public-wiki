@@ -30,6 +30,11 @@ vim.cmd ":let $LANG='en_US.UTF-8'"
 - 다소 다르게 처리하긴 했는데 `lsp-config` 에서 `semanticTokensProvider` 관련 설정을 `on_init` 으로 타이밍 변경후 나지 않는다
   + https://github.com/deptno/nvim/commit/bc8273d6600f3f1964b1abb0136dc8c577f6000c
   - 무엇이 안되는지 봐야겟으나 `dynamic symbols` 은 동작하는 것으로 보인다
+    - `rename` 이 안되는 것으로 보임
+```vim 
+Error on prepareRename: Request textDocument/prepareRename failed with message:  You cannot rename this element. 
+```
+
 
 ## plugin
 - [[taskwiki]]
