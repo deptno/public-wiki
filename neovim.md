@@ -25,6 +25,12 @@ emoji 등 유니코드 캐릭터가 존재한 이후에는 yy 등 카피가 clip
 vim.cmd ":let $LANG='en_US.UTF-8'"
 ```
 
+### .local/share/nvim/runtime/lua/vim/lsp/semantic_tokens.lua:98: attempt to index field 'semanticTokensProvider' (a nil value)
++ https://github.com/neovim/nvim-lspconfig/issues/2542#issuecomment-1547019213
+- 다소 다르게 처리하긴 했는데 `lsp-config` 에서 `semanticTokensProvider` 관련 설정을 `on_init` 으로 타이밍 변경후 나지 않는다
+  + https://github.com/deptno/nvim/commit/bc8273d6600f3f1964b1abb0136dc8c577f6000c
+  - 무엇이 안되는지 봐야겟으나 `dynamic symbols` 은 동작하는 것으로 보인다
+
 ## plugin
 - [[taskwiki]]
 - [[defx]]
