@@ -173,7 +173,7 @@ callbacks.signIn(user, account, profile)
 ```
 - 이후 프로세스에 따라 jwt 생성
   + https://github.com/nextauthjs/next-auth/blob/0126f94788a263bd8420ceac9a11ed6d2c2fb958/packages/core/src/lib/actions/callback/index.ts#L120-L153
-  - callbacks.jwt -> jwt.encode with salt -> session store 를 통해 chunk화 -> cookie
+  - [ ] TODO: callbacks.jwt -> jwt.encode with salt -> session store 를 통해 chunk화 -> cookie
   - events.signIn()
 
 #### signin callback diagram
