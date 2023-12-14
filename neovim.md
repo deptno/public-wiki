@@ -47,6 +47,15 @@ Error on prepareRename: Request textDocument/prepareRename failed with message: 
 - [[null-ls|null-ls.nvim]]
 - [[nlspsettings|nlspsettings.nvim]]
 
+### 북마크
+- bookmarks.nvim
+  + https://github.com/deptno/nvim/commit/ed11001b34706b8f079c0e19df21545c59d813c4
+  - [[git]] 프로젝트 기반으로 영구적인 북마크를 생성한다, 리스팅과 태그 프리뷰가 지원
+- marks.nvim
+  + https://github.com/deptno/nvim/blob/ed11001b34706b8f079c0e19df21545c59d813c4/lua/custom/configs/marks.lua
+  - custom mark 를 지원하며 동일 북마크키로 여러군대를 지정하고 네비게이션이 가능하다
+  - 영구적이지않아 이슈 분석등을 일시적으로 할때 편리하다
+
 ### neovim lua 기반 플러그인 환경 설정
 - [[neovim-lua-plugins]]
 
