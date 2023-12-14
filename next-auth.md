@@ -19,6 +19,7 @@
   + https://authjs.dev/concepts/session-strategies
   - useSession 시에 db 갔다오냐(database) 마냐(jwt) 차이로 이해
   - database adapter가 제공된다면 jwt 와 관계없이 데이터는 저장됨
+  - database adapter가 제공된다면 기본 session strategy 는 default 로 `database` 가 지정됨
 
 ### auth()
 - server 에서 사용되며 `session` callback 은 무시되고 `jwt` callback 결과  혹은 `database` strategy 인 경우 `User` 모델이 리턴되는 것으로 이해
@@ -173,7 +174,7 @@ callbacks.signIn(user, account, profile)
 ```
 - 이후 프로세스에 따라 jwt 생성
   + https://github.com/nextauthjs/next-auth/blob/0126f94788a263bd8420ceac9a11ed6d2c2fb958/packages/core/src/lib/actions/callback/index.ts#L120-L153
-  - [ ] TODO: callbacks.jwt -> jwt.encode with salt -> session store 를 통해 chunk화 -> cookie
+  - [ ] TODO: callbacks.jwt 결과 -> jwt.encode with salt -> session store 를 통해 chunk화 -> cookie
   - events.signIn()
 
 #### signin callback diagram
