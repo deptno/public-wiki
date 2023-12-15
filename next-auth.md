@@ -206,3 +206,5 @@ linkAccount --> linkAccountEvent(emit linkAccount)
 ## link
 - [[nextjs]]
 - [[smtp]]
+- [[oauth]]
+- [[authjs]]
