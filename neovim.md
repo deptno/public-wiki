@@ -35,6 +35,13 @@ vim.cmd ":let $LANG='en_US.UTF-8'"
 Error on prepareRename: Request textDocument/prepareRename failed with message:  You cannot rename this element. 
 ```
 
+### [after/]ftplugin/*.lua 에서 설정한 키맵이 전역으로 번지는 문제
+> 예를 들어 `markdown` filetype 에 특정키 `q` 를 매핑해서 `bdelete` 를 하게되면 `markdown` 이후의 모든 파일들에대해서 해당 키맵이 동작하는 문제
++ https://github.com/deptno/nvim/commit/bc7cf0669385fc69f281cfe8b5165c4e1ede0758
+- `vim('quit')`  일때는 문제가 발생했으나 `vim('bwipeout')` 으로는 문제가 없는 것으로 보인다
+- 그래도 잘은 이해가 안가는데 `bwipeout` 으로 일단 종료가 된것으로 보인다
+- `vim.api.nvim_buf_key_setmap` 를 혼용해서 썻는데 이 부분은 문제가 없는 것으로 보임
+  + https://github.com/deptno/nvim/commit/24693ea9111233dcc6ee79aa3e2023820963f9d3
 
 ## plugin
 - [[taskwiki]]
