@@ -22,6 +22,12 @@ $ git rebase --onto F D H
 #             D---E---H---I (HEAD)                          E---H (HEAD)
 ```
 
+### warning: could not read '.git/rebase-merge/head-name': No such file or directory
+- `git rebase --abort` 가 먹지 않는다
+```sh 
+git rebase --quit
+```
+
 ## link
 - [[git]]
 
