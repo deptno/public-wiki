@@ -42,6 +42,10 @@
       + https://github.com/nextauthjs/next-auth/blob/0126f94788a263bd8420ceac9a11ed6d2c2fb958/packages/core/src/lib/actions/callback/index.ts#L121-L152
     - 인증된 oauth 토큰으로 유저 정보에 대한 api 를 생성해서 추가 정보에 접근할 수 있도록 함
 
+## 질문
+### access token 이 jwt 로 생성될때 refresh token 발급 필요성
+- [[jwt]] 참고
+
 ## link
 - [[jwt]]
 - [[authentication]]
