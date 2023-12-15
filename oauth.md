@@ -44,7 +44,7 @@
 
 ## 질문
 ### access token 이 jwt 로 생성될때 refresh token 발급 필요성
-- [[jwt]] 참고
+- [[jwt#jwt 를 사용할때 refresh token 이 필요한지?]] 참고
 
 ## link
 - [[jwt]]
