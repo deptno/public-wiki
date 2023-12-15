@@ -17,7 +17,8 @@ curl 'http://192.168.0.222/api/xxx/lights/2/state' \\
 ```
 
 ## options
-- I, --head - fetch headers only
+- I, --head - fetch response headers only
+- i, --head - fetch headers + 응답 값
 - s, --silent
 - o, --output <file> - stdout 이 아닌 파일로 응답을 저장
 - w, --write-out - display information after a completed transfer
