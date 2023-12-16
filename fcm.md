@@ -24,6 +24,7 @@ firebase cloud message
   + https://rnfirebase.io/messaging/server-integration
 
 ### client
+- *중요* 백그라운드 메시지 처리에 제약사항으로 인해 코드가 로딩되는 이른 시점에 firebase 설정이 되어야한다
 - [[ios]] 는 백그라운드에서 메시지를 받았을때 리액트 루트가 마운트되며 이로인한 문제를 방지하기 위한 설정이 필요하다
   + https://rnfirebase.io/messaging/usage#background-application-state
 
