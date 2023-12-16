@@ -473,6 +473,30 @@ The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does 
 + https://velog.io/@qkr135qkr/firebase를-iOS에-적용하면서-맞닦들인-문제들
   - [[iOS]] 작업 시작할때 참조할 것
 
+## 필수 패키지 분석
+```mermaid
+flowchart LR
+  react-native --> _push_ --> #react-native-firebase/messeging
+  #react-native-firebase/messeging --> react-native-permissions
+  #react-native-firebase/messeging --> #react-native-firebase/app
+  #react-native-firebase/messeging --> AppDelegate.mm수정
+  _push_ --> #notifee/react-native
+
+  react-native --> _navigation_ --> #react-natigation/native --> react-native-screens
+  #react-natigation/native --> #react-natigation/bottom-tabs
+  #react-natigation/native --> #react-natigation/bottom-stack
+
+  react-native --> _browser_
+  _browser_ --> react-native-webview
+  _browser_ --> react-native-inappbrowser-reborn
+
+  react-native --> _view_
+  _view_ --> react-native-safe-area-context
+
+  react-native --> _oauth_
+  _oauth_ --> #react-native-google-signin/google-signin
+```
+
 ## link
 - [[mobile]]
 - [[xcode]]
