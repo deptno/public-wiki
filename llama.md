@@ -12,7 +12,7 @@
     - guff 파일 생성됨
   - *optional* `./quantize file.guff 2`
     - 양자화라고하는데 f16 -> int8 로 무언가를 변환하면서 리소스 효율을 상승시킨다
-  - `./main [[guff_location.guff]] -p '질의어'`
+  - `./main guff_location.guff -p '질의어'`
 
 ## link
 - [[pipenv]]
