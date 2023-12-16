@@ -459,6 +459,20 @@ This error is located at:
 - 문서에 존재하는 client id(아마도 web, ios)는 `configure` 의 인자로 입력하고 android client id 를 입력하지 않더라도 생성은 되어있어야한다
 - *SHA-1* 은 [[keytool#사용]] 참조, debug 모드인 경우에는 기본적으로 생성되어있는 점 참고
 
+### [!] The following Swift pods cannot yet be integrated as static libraries:
+- firebase 패키지 설치 이후에 발생
+```sh 
+bun add @react-native-firebase/{app,messaging} # 패키지 설치
+cd ios
+bundle exec pod install # 파드 설치 시작
+# ... skip
+[!] The following Swift pods cannot yet be integrated as static libraries:
+
+The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
+```
++ https://velog.io/@qkr135qkr/firebase를-iOS에-적용하면서-맞닦들인-문제들
+  - [[iOS]] 작업 시작할때 참조할 것
+
 ## link
 - [[mobile]]
 - [[xcode]]
