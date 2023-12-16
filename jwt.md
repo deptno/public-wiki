@@ -39,6 +39,8 @@ sequenceDiagram
   auth --> auth: renew access_token
   auth ->> app: access_token
 ```
+  - 이런 구현인 경우 만료된 토큰을 가지고 /auth/refresh 를 지속적으로 요구하면 db 가 지속되어 기존 스펙보다 나은게 없는 것 같다
+  - refresh token 을 함께 발급하고 이를 안전한 저장소에 클라이언트에 저장하는게 요구사항인만큼 이것이 관철되는것이 좋을것으로 생각한다
 
 ## link
 - [[oauth]]
