@@ -53,6 +53,8 @@
 ## 개념
 - [[oauth]]
 - [[jwt]]
+- [[deeplink]]
+- [[smtp]]
 
 ## ai
 - [[chatgpt]]
