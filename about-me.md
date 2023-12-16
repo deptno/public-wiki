@@ -1,6 +1,6 @@
 # about-me
-
-[[wip]]
+- [[wip]]
+- deptno@gmail.com
 
 ## 커리어
 - 2011-06 ~ 2015-07: Humax, 대리
