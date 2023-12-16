@@ -17,6 +17,7 @@
 - [[jwt]] 형태 사용 가능
 
 ### refresh token
++ [[jwt#refresh token 구현 아이디어]]
 - access token 만료에 따른 요청시 refresh token 으로 access token과 refresh token 을 갱신(재발급)
   - 유저 입장에서는 refresh token의 만료 시간 이내에만 지속적으로 접근한다면 추가 인증없이 지속적 사용 가능
 - 신뢰 클라이언트 인증에서 사용

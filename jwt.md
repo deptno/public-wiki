@@ -16,6 +16,30 @@ JSON Web Token
 - 이를 분리하는건 탈취에 대한 방어인데 access_token 과 refresh_token 을 같은 비신뢰 저장소에 저장해 둔다면 동일하게 탈취되므로 의미가 없다
 - 구현이슈는 복잡하고 생각할게 많으므로 [[mvp]] 를 구현하는데 방해가 될 수 있으므로 보안 요구사항을 생각하고 진행하는 것이 좋겠다
 
+#### refresh token 구현 아이디어
+- 클라이언트에 저장 하지 않고 access token 에 대해서 한번만 발생할 수 있는 refresh token 발급 api 를 생성한다
+```mermaid
+sequenceDiagram
+  actor app as app or web
+  participant service as service server
+  participant auth as auth server
+  participant db as database
+
+  app ->> auth: 인증 요구
+  auth ->>+ app: access_token
+  app --> app: expired
+  app ->>- service: request with expired auth
+  service ->> app: 401
+  app ->> auth: /auth/refresh/token=[access_token]
+  auth --> auth: if 만료 &&  만료시간이 특정 기간이내
+  auth -->> db: find access_token
+  db -->> auth: db에 없음
+  note right of db: db에 있는 경우 이미 발행된 케이스
+  auth -->> db: save access_token
+  auth --> auth: renew access_token
+  auth ->> app: access_token
+```
+
 ## link
 - [[oauth]]
 - [[jwe]]
