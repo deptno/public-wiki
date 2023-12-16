@@ -50,10 +50,20 @@ firebase cloud message
 - 상태에 따라 다르게 행동하게되며 이해가 중요하다고 함 읽어볼 것
   + https://firebase.google.com/docs/cloud-messaging/concept-options?hl=ko
 
-### 메시지 타입
+#### 메시지 타입
 > data only 메시지는 low priority 로 간주되며 앱을 깨우지 않는다,  우선순위를 강제하면 깨울 수 있다
 - data + notification
 - data
+
+### server
++ https://rnfirebase.io/messaging/server-integration
+- 메시지를 보내는 방식
+  - 메시지를 특정 디바이스에 보내는 방식
+  - 메시지를 토픽에 발송하는 방식
+    - 토픽을 구독하는 주체는 앱
+    - 서버가 토픽에 메시지를 발송(한번에 최대 5개 토픽)
+    - *주의*  특정 유저를 위한 토픽을 만들지 말것
+    - [ ] [[@todo]] 많은 유저가 구독중인 알람으로 인한 서버부담을 줄이고자 유저를 토픽 유저를 그룹으로 나눠서 시간차로 보낼 수 있는지 확인
 
 ## 언급되는 라이브러리
 - https://github.com/invertase/notifee
