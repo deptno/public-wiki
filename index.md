@@ -50,6 +50,10 @@
 - [[applescript]]
 - [[nextjs]]
 
+## 개념
+- [[oauth]]
+- [[jwt]]
+
 ## ai
 - [[chatgpt]]
 
