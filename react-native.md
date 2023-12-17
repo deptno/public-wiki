@@ -476,6 +476,22 @@ The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does 
 pod 'GoogleUtilities', :modular_headers => true
 ```
   + [[https://velog.io/@qkr135qkr/firebase를-iOS에-적용하면서-맞닦들인-문제들]]
+  - 메인터네이너가 사용하지말라고함
+    + https://github.com/invertase/react-native-firebase/discussions/6339#discussioncomment-4861993
+
+### Module 'FirebaseCore' not Found
+위에 Swift pods 문제를 해결하고 나서 xcode 통해 run 을 하게 되면 발생한다
+```sh 
+Module 'FirebaseCore' not found
+
+$ bundle exec pod update
+```
+-  Swift pod 문제와 동일하게 아래 코드를 넣는다
+```txt
+pod 'FirebaseCore', :modular_headers => true
+```
+- 메인터네이너가 사용하지말라고함
+  + https://github.com/invertase/react-native-firebase/discussions/6339#discussioncomment-4861993
 
 ### Cannot connect to metro. *warning*
 - [[android]] 라면 [[adb]] 포트 확인, [[metro]] 포트인 `8081` 이 제대로 설정되었는지 필요
