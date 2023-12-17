@@ -5,7 +5,8 @@
 - -v 변경사항을 표시
 - -p `git add -p` 와 같은 것으로 보임 commit 시에 진진행
 - -m message 를 터미널에서 남길때 사용한다
-- --allow-empty 
+- --allow-empty - force 푸시 하기 어려울때 이력을 내용을 담아 commit 할때도 쓰임
+  + https://github.com/deptno/public_wiki/commit/fec27017a7f78f8cac3508ebd181e93d6eb560bd 
 - --no-verify 훅 무시
 
 ## 빈 커밋
