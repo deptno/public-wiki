@@ -17,6 +17,10 @@ nvim +checkhealth
 python3 -m pip install --upgrade pynvim
 ```
 
+## usage
+### 특정 파일을 특정 파일 타입으로 매핑
++ https://github.com/deptno/nvim/commit/a4c7a44e3eb4c74b2b0196623c3eada387e17adb
+
 ## [[error]]
 emoji 등 유니코드 캐릭터가 존재한 이후에는 yy 등 카피가 clipboard(reg *) 에 복사되지 않는 이슈
 
