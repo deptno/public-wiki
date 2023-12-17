@@ -1,3 +1,4 @@
+# home
 Welcome to the [[deptno.dev]]!
 
 ## 통신 배선

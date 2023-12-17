@@ -104,6 +104,7 @@
 - [[feconf]]
 
 ## 삶
+- [[home]]
 - [[financial/index|financial]]
 - [[english]]
 - [[car]]
