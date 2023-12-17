@@ -460,7 +460,7 @@ This error is located at:
 - *SHA-1* 은 [[keytool#사용]] 참조, debug 모드인 경우에는 기본적으로 생성되어있는 점 참고
 
 ### [!] The following Swift pods cannot yet be integrated as static libraries:
-- firebase 패키지 설치 이후에 발생
+- [[iOS]] firebase 패키지 설치 이후에 발생
 ```sh 
 bun add @react-native-firebase/{app,messaging} # 패키지 설치
 cd ios
@@ -470,8 +470,12 @@ bundle exec pod install # 파드 설치 시작
 
 The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does not define modules. To opt into those targets generating module maps (which is necessary to import them from Swift when building as static libraries), you may set `use_modular_headers!` globally in your Podfile, or specify `:modular_headers => true` for particular dependencies.
 ```
-+ https://velog.io/@qkr135qkr/firebase를-iOS에-적용하면서-맞닦들인-문제들
-  - [[iOS]] 작업 시작할때 참조할 것
+
+- 에러 메시지와 마찬가지로 Podfile 마지막에 아래 줄을 추가로 해결한다
+```txt
+pod 'GoogleUtilities', :modular_headers => true
+```
+  + [[https://velog.io/@qkr135qkr/firebase를-iOS에-적용하면서-맞닦들인-문제들]]
 
 ## 필수 패키지 분석
 ```mermaid
