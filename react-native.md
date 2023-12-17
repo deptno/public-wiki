@@ -21,7 +21,7 @@ bun x react-native@latest init MyApp --directory my-app --skip-install --npm
 ### android package name 변경
 + https://github.com/deptno/salji.ro/commit/07fe2cb3a609a69e679b02aa858133b08d4fe219
 - full search 로 `com.[APP_NAME]` 을 찾아 참조를 바꾼다
-- [[domain]] 을 `.com` 아닌 다른 것으로 변경한 경우에는 `android/src/{com,[[[MY_TLD]]]}/**` 로 디렉토리명을 변경한다
+- [[domain]] 을 `.com` 아닌 다른 것으로 변경한 경우에는 `android/src/{com,[MY_TLD]}/**` 로 디렉토리명을 변경한다
 
 ## 공식문서
 +  https://reactnative.dev
