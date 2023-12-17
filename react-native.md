@@ -475,7 +475,7 @@ The Swift pod `FirebaseCoreInternal` depends upon `GoogleUtilities`, which does 
 ```txt
 pod 'GoogleUtilities', :modular_headers => true
 ```
-  + [[https://velog.io/@qkr135qkr/firebase를-iOS에-적용하면서-맞닦들인-문제들]]
+  + https://velog.io/@qkr135qkr/firebase를-iOS에-적용하면서-맞닦들인-문제들
   - 메인터네이너가 사용하지말라고함
     + https://github.com/invertase/react-native-firebase/discussions/6339#discussioncomment-4861993
 
