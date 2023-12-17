@@ -1,3 +1,5 @@
+# adb 
+
 ## wifi 디버깅
 
 케이블로 폰 연결
@@ -13,12 +15,15 @@ adb devices # 확인
 adb shell dumpsys activity activities > activity_dump.txt
 ```
 
-## -
-[[react-native]] [[metro]] 연결시에 필요, 재부팅마다 해줘야하는듯
-```sh
-adb [-s DEVICE_ID] reverse tcp:8081 tcp:8081
-```
+## command
+- reverse - 기기의 localhost 접근 포트를 연결된 pc 의 포트로 전달
+  - [[react-native]] [[metro]] 연결시에 필요, 재부팅마다 해줘야하는듯
+  ```sh
+  adb [-s DEVICE_ID] reverse tcp:8081 tcp:8081
+  ```
+
 ### error
+#### error: device unauthorized.
 ```sh
 adb: error: device unauthorized.
 This adb server's $ADB_VENDOR_KEYS is not set
@@ -26,6 +31,13 @@ Try 'adb kill-server' if that seems wrong.
 Otherwise check for a confirmation dialog on your device.
 ```
 
+#### error: more than one device/emulator
+- `adb devices` 보면 2개 이상의 디바이스가 확인된다
+- `adb -s [DEVICE_ID] shell` 을 통해 device shell 로 진입해서 명령어를 처리한다
+- `adb -s [DEVICE_ID] [COMMAND] [COMMAND_OPTION]` 을 통해 명령어를 특정 디바이스에 특정한다
+
 ## link
 - [[android-studio]]
 - [[emulator]]
+- [[android]]
+- [[react-native]]

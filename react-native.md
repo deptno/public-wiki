@@ -477,6 +477,10 @@ pod 'GoogleUtilities', :modular_headers => true
 ```
   + [[https://velog.io/@qkr135qkr/firebase를-iOS에-적용하면서-맞닦들인-문제들]]
 
+### Cannot connect to metro. *warning*
+- [[android]] 라면 [[adb]] 포트 확인, [[metro]] 포트인 `8081` 이 제대로 설정되었는지 필요
+  - 혹은 *Change bundle location* 을 통해서 localhost 대신 개발 pc ip 로 접근
+
 ## 필수 패키지 분석
 ```mermaid
 flowchart LR
