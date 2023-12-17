@@ -82,3 +82,4 @@
 
 ## link
 - [[about-me]]
+- [[home]]
