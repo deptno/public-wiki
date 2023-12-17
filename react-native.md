@@ -497,6 +497,18 @@ pod 'FirebaseCore', :modular_headers => true
 - [[android]] 라면 [[adb]] 포트 확인, [[metro]] 포트인 `8081` 이 제대로 설정되었는지 필요
   - 혹은 *Change bundle location* 을 통해서 localhost 대신 개발 pc ip 로 접근
 
+### No permission handler detected.
+- 이슈 자체는 [[iOS]] 에서 `react-native-permissions` 의 `requestNotification(PERMISSIONS.ANDROID.POST_NOTIFICATIONS)` 하면서 발생
+```txt
+- Chceck that you are correctly calling setup_permissions in you Podfile.
+- Uninstall this app, reinstall your Pods, delete your Xcode DerivedData folder and rebuild it.
+```
+- `react-native-permissions` 버전에 따라 갈리는데 `> @4` 인 겨우 `Podfile` 에 관련된 내용이 있는 `README.md` 참조
+- `Podfile` 에서 permissions 설정을 하고 나면 `bundle exec pod install` 을 통해 해당 권한에 대한 파드를 설치하고 실행
+  - **클린 빌드 필요**
+    1. Product -> Clean Build Folder...
+    2. Product -> Run
+
 ## 필수 패키지 분석
 ```mermaid
 flowchart LR
