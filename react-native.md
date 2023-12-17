@@ -422,8 +422,11 @@ watchman 을 설치하도록한다.
 
 sysctl 을 통해서 변수를 확인할 수 있다.
 
-### warning: Building targets in manual order is deprecated - choose Dependency Order in scheme settings instead, or set DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING in any of the targets in the current scheme to suppress this warning
-schema edit -> build -> dependency order
+### warning: Building targets in manual order is deprecated
+```sh 
+warning: Building targets in manual order is deprecated choose Dependency Order in scheme settings instead, or set DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING in any of the targets in the current scheme to suppress this warning
+```
+- schema edit -> build -> dependency order
 
 ### Please make sure the template is valid
 ```sh 
@@ -434,7 +437,7 @@ info Run CLI with --verbose flag for more details.
 ```
 - `0.72.7` 에서 발생, `--npm` 옵션을 추가해서 해결
 
-### Invariant Violation: View config getter callback for component `RNSScreen` must be a function (received `undefined`).
+### View config getter callback for component `RNSScreen` must be a function (received `undefined`).
 ```sh 
  ERROR  Invariant Violation: View config getter callback for component `RNSScreen` must be a function (received `undefined`).
 

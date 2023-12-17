@@ -2,3 +2,4 @@
 
 ## link
 - [[loki]]
+- [[meilisearch]]
