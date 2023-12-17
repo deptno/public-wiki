@@ -1,1 +1,3 @@
-Welcome to the [deptno.github.io wiki](index)!
+Welcome to the [[deptno.dev]]!
+
+
