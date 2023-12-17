@@ -1,0 +1,5 @@
+# smarthome
+
+## link
+- [[home]]
+- [[smartthings]]
