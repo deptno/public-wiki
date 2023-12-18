@@ -108,5 +108,5 @@ google keep, mac note, good note, evernote, [[orgmode]] 등을 사용해 보았�
 ## link
 - [[project]]
 - [[gtd]]
-- [[task-warrior]]
+- [[taskwarrior]]
 - [[webhook]]
