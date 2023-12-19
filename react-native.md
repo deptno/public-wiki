@@ -465,6 +465,10 @@ This error is located at:
     - 패키지 이름 `/android/app/src/main/java/` 이후 패스가 `.`으로 연결된 형태
     - *SHA-1* 은 [[keytool#사용]] 참조, debug 모드인 경우에는 기본적으로 생성되어있는 점 참고
 
+### TypeError: Network request failed
+- [[android]] 에서 발생
+  - [[adb]] 이슈로 `adb reverse tcp:[PORT] tcp:[PORT]` 형태로 로컬웹서버를 사용한다면 해당 포트를 열어주면된다
+
 ### [!] The following Swift pods cannot yet be integrated as static libraries:
 - [[iOS]] firebase 패키지 설치 이후에 발생
 ```sh 
