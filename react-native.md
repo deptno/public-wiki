@@ -459,9 +459,11 @@ This error is located at:
 - `@react-native-google-signin/google-signin` 패키지 사용하면서 발생
   + https://github.com/react-native-google-signin/google-signin
 - [[android]] 에서만 발생
-- android oauth client key 는 프로젝트에 입력하지 않는다. android client id 를 발급받으면서 입력한 *SHA-1* 을 통해서 해당 디바이스가 요청하는 경우 인증으로 이어지게 된다(그래보임)
-- 문서에 존재하는 client id(아마도 web, ios)는 `configure` 의 인자로 입력하고 android client id 를 입력하지 않더라도 생성은 되어있어야한다
-- *SHA-1* 은 [[keytool#사용]] 참조, debug 모드인 경우에는 기본적으로 생성되어있는 점 참고
+  - [[android]] [[oauth]] client key 는 *프로젝트*에 입력하지 않는다. [[android]] client id 를 발급받으면서 입력한 *SHA-1* 을 통해서 해당 디바이스가 요청하는 경우 인증으로 이어지게 된다(그래보임)
+  - 문서에 존재하는 client id(아마도 web, ios)는 `configure` 의 인자로 입력하고 [[android]] client id 를 입력하지 않더라도 생성은 되어있어야한다
+  + https://console.cloud.google.com/apis/credentials
+    - 패키지 이름 `/android/app/src/main/java/` 이후 패스가 `.`으로 연결된 형태
+    - *SHA-1* 은 [[keytool#사용]] 참조, debug 모드인 경우에는 기본적으로 생성되어있는 점 참고
 
 ### [!] The following Swift pods cannot yet be integrated as static libraries:
 - [[iOS]] firebase 패키지 설치 이후에 발생
