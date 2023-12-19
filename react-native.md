@@ -309,6 +309,38 @@ react-native run ios --device "phonename"
 - rn 파일 컨벤션 지원
   + https://github.com/deptno/nvim/commit/dda74cfcada336b0eb80cb84e84baf8e441dacf5
 
+### firebase/*
+- [[tbd]]
+
+### firebase/messaging
++ https://rnfirebase.io/messaging/usage
++ [[firebase]
+- app init 단계
+```ts 
+import messaging from '@react-native-firebase/messaging'
+
+messaging().setBackgroundMessageHandler(async remoteMessage => {
+  console.log('Message handled in the background!', remoteMessage)
+})
+```
+- root component 
+```ts
+import messaging from '@react-native-firebase/messaging'
+useEffect(() => {
+    const unsubscribe = messaging().onMessage(async remoteMessage => {
+      Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+    });
+
+    return unsubscribe;
+  }, []);
+```
+- 상태에따른 핸들러
+|         | active      | background, quit            |
+|---------|-------------|-----------------------------|
+| method  | onMessage() | setBackgroundMessageHandler |
+
+### firebase-admin
+- [[wip]]
 
 ## error
 > XXApp 으로 이름 가정
