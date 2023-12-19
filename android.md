@@ -62,6 +62,7 @@ overridefunonCreate(savedlnstanceState: Bundle?) {
     setContentView(binding.root)
 }
 ```
+
 ## Event|이벤트
 - Single Abstract Method(SAM) - 오브젝트 대신 메소드를 할당하여 처리한다.
 
@@ -78,6 +79,7 @@ override fun onCreate(savedlnstanceState: Bundle?) {
 }
 
 ```
+
 ## Life Cycle|생명주기
 - 액티비티 시작
 - onCreate call setContentView
@@ -107,6 +109,7 @@ startActivityForResult(intent, intrequestCode)
 ```kotlin
 intent.setPackage("com.google.android.apps.maps")
 ```
+
 ### error
 #### 없는 activity 를 지정한 경우(없는 intent)
 실행한 쪽에서 에러가 난다.
@@ -122,6 +125,7 @@ There was a problem communicating with Google servers.
 ```kotlin
 val intent = Intent(this, MainActivity::class.java)
 ```
+
 #### 암시적
 외부에서 액티비티를 실행할 수 있도록 manifest 파일에 intent 설정을 해줘야한다.
 ```xml

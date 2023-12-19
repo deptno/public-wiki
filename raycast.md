@@ -3,6 +3,7 @@
 ```sh
 brew install --cask raycast
 ```
+
 ## publish
 package.json
 - author: raycast 에 등록된 `이름 <이메일>`
@@ -30,6 +31,7 @@ We do already have Google Translate so it makes sense to make the Papago transla
 Let me know your thoughts
 
 ```
+
 #### todo
 - [ ] i18n 제거
 - [ ] command 이름 변경: TT -> `Translator` or `Babel`?

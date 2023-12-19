@@ -49,10 +49,12 @@
   ```sh
    git cherry-pink -n [SHA]
   ```
+
 ## 특정 커밋 내용 확인
   ```sh
   git show [SHA]:[PATH]
   ```
+
 ##  특정 커밋 내용 비교
   ```sh
   git diff [SHA0] [SHA1] [PATH]
@@ -192,6 +194,7 @@ git clean -fd
 git switch feature
 git reset --mixed $(git merge-base master @)
 ```
+
 #### 1. 변경된 파일 모두 버퍼로
 `vim $(git diff --name-only)`
 #### 2. 상태값으로 필터

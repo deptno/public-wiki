@@ -302,6 +302,7 @@ npx react-native upgrade
 ```sh
 react-native run ios --device "phonename"
 ```
+
 ## 설정
 ### neovim
 - [[dap]]

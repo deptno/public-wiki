@@ -10,6 +10,7 @@ podman login [container registry]
 podman image list
 podman system connection list
 ```
+
 ## install
 ```sh 
 $ brew install podman
@@ -48,6 +49,7 @@ following command in your terminal session:
 
 Machine "start" started successfully
 ```
+
 ## error
 ### Error: failed to connect: dial tcp [::1]:61310: connect: connection refused
 ```sh 

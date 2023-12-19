@@ -167,6 +167,7 @@ ubuntu  ALL=(ALL) NOPASSWD: ALL
 # ! 이동 후 해결된 영역
 ubuntu  ALL=(ALL) NOPASSWD: ALL
 ```
+
 ### 문제상황
 ```sh 
 ubuntu@kube03:~$ sudo -l
@@ -180,6 +181,7 @@ ubuntu@kube03:~$ !v
 vi /etc/sudoers
 ubuntu@kube03:~$ sudo vi /etc/sudoers
 ```
+
 ### 해결됨
 ```sh
 ubuntu@kube03:~$ sudo -l

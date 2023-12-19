@@ -70,6 +70,7 @@ yarn set version stable
 yarn config set nodeLinker pnpm # 필수는 아님, 기본은 node_modules
 yarn # migrate to yarn 3.x
 ```
+
 ### server and client components
 + https://beta.nextjs.org/docs/rendering/server-and-client-components
 - server component 여러곳에서 같은 data fetch 는 캐시를 통해 공유되어 한번만 fetch 가 일어난다
@@ -180,6 +181,7 @@ Error: This action with HTTP GET is not supported by NextAuth.js
     "next": "13.1.6",
     "next-auth": "^4.19.2",
 ```
+
 ### next-auth/src 를 참조해서 에러나는 경우
 참조가 src로 걸린건지 확인해서 수정할 것
 ```sh

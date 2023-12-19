@@ -30,6 +30,7 @@ rust package manager
 ```sh
 cargo install cargo-edit
 ```
+
 ### 명령어
 ```sh
 cargo add package_name

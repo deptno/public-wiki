@@ -216,6 +216,7 @@ CertificateSigningRequest 한시간이 지나면 토큰이 만료되어 로그�
 $ kgp
 error: You must be logged in to the server (Unauthorized)
 ```
+
 ### ServiceAccount 를 통한 접근
 + https://devopscube.com/kubernetes-kubeconfig-file/
 

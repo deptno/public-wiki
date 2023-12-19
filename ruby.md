@@ -56,6 +56,7 @@ $ gem install bundler:2.2.20
 ERROR:  While executing gem ... (Gem::FilePermissionError)
     You don't have write permissions for the /Library/Ruby/Gems/2.6.0 directory.
 ```
+
 ### ffi
 ```sh
  ~/.gem/ruby/2.6.8/gems/ffi-1.13.1/lib  ls                                                                                      ok  17:54:54
@@ -76,6 +77,7 @@ Gem ffi-1.13.1
   Used by
     ethon-0.12.0 (ffi (>= 1.3.0))
 ```
+
 ### mac13 ventura
 ```sh
 Installing json 2.6.2 with native extensions

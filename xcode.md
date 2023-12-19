@@ -87,6 +87,7 @@ info Run CLI with --verbose flag for more details.
 ```sh
 rm -rf ~/Library/Developer/Xcode/DerivedData/*
 ```
+
 ### ld: symbol(s) not found for architecture x86_64
 시뮬레이터에서만 발생하고 실기기에서는 발생하지 않는다
 ```sh

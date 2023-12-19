@@ -78,6 +78,7 @@ ssh-keygen -t ed25519 -C "deptno@gmail.com"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 pbcopy < ~/.ssh/id_ed25519.pub # github 등록
 ```
+
 #### copy from remote ssh
 ```sh
 scp USER@HOST:/path/to/remote/pub.key ~/.ssh/

@@ -371,6 +371,7 @@ csrf=e020b6a2d282deed96185016aea24fcf; Path=/; Expires=Sun, 22 Jan 2023 04:43:52
 ```text
 400 오류: redirect_uri_mismatch
 ```
+
 ### duplicate-certificate-limit
 - Unable to obtain ACME certificate for domains 429
 ```sh 
@@ -400,12 +401,14 @@ time="2023-05-01T19:45:46Z" level=error msg="Unable to obtain ACME certificate f
 time="2023-05-01T19:45:46Z" level=debug msg="Serving default certificate for request: \"example.com\""
 time="2023-05-01T19:45:46Z" level=debug msg="http: TLS handshake error from 192.168.0.7:57734: remote error: tls: bad certificate"
 ```
+
 ### unable to generate a wildcard certificate in ACME provider for domain
 이거 일단 ipv6 지원이 되야하는 것으로 생각됨
 ```sh 
 time="2023-05-02T18:43:33Z" level=error msg="Unable to obtain ACME certificate for domains \"example.com,*.example.com\"" rule="Host(`???.example.com`)" error="unable to generate a wildcard certificate in ACME provider for domain \"example.com,*.example.com\" : ACME needs a DNSChallenge" ACME CA=
 "https://acme-v02.api.letsencrypt.org/directory" providerName=letsencrypt.acme routerName=harbor-harbor-499b22a125e5ffa3fe26@kubernetescrd
 ```
+
 ### 660 too open
 traefik 이 자기가 만든 acme.json 파일 퍼미션이 너무 열려있다고해서 수동으로 600 퍼미션으로 변경하고 리붓해서 해결
   + chart@2.9.9

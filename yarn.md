@@ -26,6 +26,7 @@ yarn plugin import @yarnpkg/plugin-workspace-tools
 yarn dlx @yarnpkg/sdks vscode vim
 yarn dlx @yarnpkg/sdks base # neovim >= 0.6 native lsp
 ```
+
 ### lnp 모드시 모듈 임포트(require)
 #### node cli 에서 
 모듈 임포트가 안되서 테스트하기가 짜증났는데 옵션 줘서 해보니 된다
@@ -33,10 +34,12 @@ yarn dlx @yarnpkg/sdks base # neovim >= 0.6 native lsp
 node -r .pnp.cjs
 $
 ```
+
 #### 파일에서
 ```sh 
 yarn node [script.js]
 ```
+
 ## workspace, monorepo, pnp
 - 2023-02-04 참조
   + https://velog.io/@projaguar/Yarn-3-MonoRepo-with-Typescript-Next.js-Nest-React-Native
@@ -165,6 +168,7 @@ $ YARN_CHECKSUM_BEHAVIOR=update yarn
 ```sh 
 yarn set version 3.3.1
 ```
+
 ### Error: Required unplugged package missing from disk. This may happen when switching branches without running installs (unplugged packages must be fully materialized on disk to work).
 `sharp` 모듈을 설치하면서 에러가 났다. `yarn` 을 안한 것은 아니고 이미지를 빌드하는 컴퓨터와 runtime 컨테이너의 아키텍쳐 차이가 발생하면서 모듈을 못찾는게 문제
 해당 모듈은 `.yarn/unplugged` 위치에 설치되는데 아마도 `node-gyp` 를 통해 네이티브 빌드가 들어가기 때문일 수 있을 것 같음

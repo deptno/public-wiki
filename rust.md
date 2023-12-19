@@ -379,6 +379,7 @@ fn main() {
     }
 }
 ```
+
 #### std::rc::Rc  
 atomic refernece counted, 
 
@@ -419,6 +420,7 @@ let process = match Command::new("wc")
     Ok(process) => process,
 };
 ```
+
 #### std::os::unix
 #### std::env
 - env::args
@@ -437,6 +439,7 @@ println!("hello, world!");
 println!("{}", "hello, world!");
 println!("{} {}", "hello", "world");
 ```
+
 ### enum
 - Result  
   - method  
