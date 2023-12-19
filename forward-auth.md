@@ -15,6 +15,6 @@ user -> ingress -> forward auth service
 https://radarr.example.com/_oauth
 https://radarr.example.com/_oauth
 
-## relatead
+## link
 - [[traefik]]
 - [[ingress]]

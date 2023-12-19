@@ -1,7 +1,5 @@
 # docker
-
 컨테이너
-
 ```sh
 brew install --cask docker 
 ```
@@ -25,6 +23,7 @@ CMD node $JS
   - `FROM` **전**의 `ARG` 는 `FROM` 후의 절에서 **사용 가능하지 않다**
   - `FROM` **후**의 `ARG` 는 `FROM` 이 후 절에서 사용 가능하다
   - `FROM` **후**의 `ARG` 는 `FROM` 절에서 **사용 가능하지 않다**
+
 ## build
 ```sh
 docker build . -f [Dockerfile.custom]
@@ -66,6 +65,7 @@ Error: building at STEP "RUN yarn --immutable": while running runtime: exit stat
 COPY packages ./packages
 ```
 폴더안의 새로운 폴더가 생성되었음에도 불구하고 레이어가 캐시되는 문제가 있다.
+
 ### `failed to solve with frontend dockerfile.v0: failed to create LLB definition: no build stage in current context`
 둘 중 하나 확인못함
 - [X] ENV 는 FROM 전에 갈수 없다
@@ -73,7 +73,9 @@ COPY packages ./packages
 - [ ] ARG 를 잘못 쓴 것으로 보인다
 - [ ] build 중 ctrl+c 로 취소하면서 문제가 생긴 것으로 보인데 빌드되다만 이미지를 삭제한다
   - Docker desktop -> 우상단의 debug 아이콘 -> Clean / Purge data
+
 ---
+
 ### `ERROR [internal] load metadata for [image]:[tag]`
 항상 빌드되던 다커빌드시에 발생했는데 apt-get update 를 진행하는중에 발생했다. 좀 관련이 없어보이지만 결국 `docker system prune` 으로 해결되었다
 ```sh 
@@ -85,11 +87,13 @@ failed to register layer: Error processing tar file(exit status 1): write /home/
 ```
 no space 에러는 `docker system prune [-a]` 로 해결된다.
 `FROM` 절에서 참조할 수 없는 이미지를 참조한 경우
+
 ### At least one invalid signature was encountered.
 ```sh 
 docker system prune
 ```
-### GPG error
+
+### GPG error  
 ```sh
  [+] Building 3.4s (5/5) FINISHED
  => [internal] load build definition from Dockerfile.chrome                                                                                                                                                                        0.0s
