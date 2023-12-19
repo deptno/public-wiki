@@ -522,10 +522,10 @@ pod 'FirebaseCore', :modular_headers => true
 ## 필수 패키지 분석
 ```mermaid
 flowchart LR
-  react-native --> _push_ --> #react-native-firebase/messeging
-  #react-native-firebase/messeging --> react-native-permissions
-  #react-native-firebase/messeging --> #react-native-firebase/app
-  #react-native-firebase/messeging --> AppDelegate.mm수정
+  react-native --> _push_ --> #react-native-firebase/messaging
+  #react-native-firebase/messaging --> react-native-permissions
+  #react-native-firebase/messaging --> #react-native-firebase/app
+  #react-native-firebase/messaging --> AppDelegate.mm수정
   _push_ --> #notifee/react-native
 
   react-native --> _navigation_ --> #react-natigation/native --> react-native-screens
