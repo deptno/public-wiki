@@ -111,6 +111,17 @@ autocmd FileType vimwiki nmap x <Plug>VimwikiToggleListItem
 /\C[SEARCH_TEXT]
 ```
 
+### 여러 파일 치환
+- headless 모드에서 vim 을 [[sed]] 처럼 사용해서 치환
+  ```sh
+  vim **/*.md --headless --clean -c 'silent! argdo %s/\v(\`\`\`.*\n)##/\1\r##/g | update | q' 
+  ```
+  - `--headless` 는 vim 을 `background` 에서 실행 [[neovim]] 에서만 지원될 것으로 추정
+  - `--clean` 은 치환처리에 필요없고 속도를 위해서 로드하지 않기 위해 추가
+  - 모든 *markdown* 파일을 연 뒤에 `argdo` 로 열파일 모두에 대해서 치환 후 저장 그리고 종료
+  + [[diary:2023-12-19]]
+  + [[diary:2023-11-15]]
+
 ## 정렬
 visual 모드에서 사용 예, 
 ```vim
