@@ -131,8 +131,13 @@ executor failed running [/bin/sh -c apt-get update && apt-get install gnupg wget
 docker system prune -a
 ```
 
+### cannot replace to directory
+```sh 
+cannot replace to directory /var/lib/docker/overlay2/pg75y9wcqxxgmqzex5k30owur/merged/app/.yarn/cache/next-npm-14.0.3-45132b65cd-73aa3d5dd7.zip with file
+```
+- [[dockerfile]] 에서 `COPY` 구문의 타겟에 복사할 대상과 같은 이름의 디렉토리가 존재할 떄 발생
+
 ## link
 - [[kubernetes]]
 - [[podman]]
-- [[harbor]]
-- [[container]]
+- [[harbor]] [[container]]

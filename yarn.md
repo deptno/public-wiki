@@ -1,5 +1,9 @@
 # yarn
 
+## yarn@4 에 대한 최근생각
+- 복잡성에 대해
+  + [[diary:2023-12-21]]
+
 ## `.yarnrc.yml`
 + https://yarnpkg.com/configuration/yarnrc
 yarn@2  이후로는 `.yarnrc.yml` 을 사용하며 다른 설정 파일은 무시함
@@ -220,8 +224,27 @@ $ SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm_config_arch=x64 npm_config_platform=linux ya
 - [[node]] version 을 18로 다운후 처리가 가능하다, 설치 후에는 20 으로 복귀해도 문제 없다
   + https://github.com/yarnpkg/berry/issues/5452#issuecomment-1709174786
 
+### ERR_MODULE_NOT_FOUND
+```sh 
+ ⨯ Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'firebase-admin' imported from [-]
+Did you mean to import firebase-admin-npm-12.0.0-a20a06d34c-70e619250d.zip/node_modules/firebase-admin/lib/app/index.js?
+    at packageResolve (node:internal/modules/esm/resolve:844:9)
+    at moduleResolve (node:internal/modules/esm/resolve:901:20)
+    at defaultResolve (node:internal/modules/esm/resolve:1121:11)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:396:12)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:365:25)
+    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:240:38)
+    at ModuleLoader.import (node:internal/modules/esm/loader:328:34)
+    at importModuleDynamically (node:internal/modules/cjs/loader:1261:33)
+    at importModuleDynamicallyWrapper (node:internal/vm/module:431:21)
+    at importModuleDynamicallyCallback (node:internal/modules/esm/utils:176:14) {
+  code: 'ERR_MODULE_NOT_FOUND'
+```
+- yarn@4 + pnp 를 docker 로 배포했을때 발생
+
 ## link
 - [[node]]
 - [[npm]]
 - [[pnpm]]
 - [[ci]]
+- [[docker]]
