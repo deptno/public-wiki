@@ -241,6 +241,13 @@ error: --overwrite is false but found the following declared annotation(s):
 ```
 kubectl annotate 시에 --overwrite 옵션을 추가하거나 --force를 추가해서 해결한다
 
+### pod
+#### Error from server (Forbidden): pods "[pod]" is forbidden: User "[user]" cannot create resource "pods/exec" in API group "" in the namespace "[namespace]"
+- `kubectl exec -ti [pod] [-c container] -- sh -c "clear; (bash || ash || sh)"`  명령어 를 통해서 실행중인 컨테이너에 접속이 가능하다
+  - [[lens]] 나 [[k9s]] 에서소 동일 기능을 제공
+- 접근을 하려고하니 위 에러를 출력하고 접근이 안된다. 에러 메시지대로 권한 문제로 role 과 rolebinding 을 주입해서 처리하면 될일
+- 문제는 [[k9s]] 에서 접속했을때 바로 종료되고 에러메시지를 참고할 수가 없어서 원인파악에 시간이 걸림
+
 ## link
 - [[minikube]]
 - [[kubectl]]
