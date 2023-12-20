@@ -27,6 +27,17 @@ const f1 = () => undefined {
 - console.log 의 반환 **값**은 `undefined` 이지만 **타입**은 `void` 을 가지기 때문에 타입에러가 발생한다
 - `unknown` 타입과 비슷하지만 다만 명시적으로 **의미가 없는 값의 타입** 정도로 이해한다
 
+## 유틸 타입 type
+- NonNullable: null 제거
+- Pick: 오브젝트에서 선택 속성으로 타입 생성
+- Omit: 오브젝트에서 선택 속성 제거로 타입 생성
+- Extract: 타입에서 추출
+- Exclude: 타입에서 제거
+- Required: 모든 속성에서 옵셔널 제거
+- Partial: 모든 속성 옵셔널
+- Parameters: 함수의 인자를 타입으로
+- Awaited: Promise<T> | T
+
 ## error
 ### compile option
 ```sh
@@ -73,3 +84,13 @@ import { a } from './module'
 ```typescript
 import { a } from './module.js'
 ```
+
+## version 변경사항
+- 5.0
+  - decorator
+- 4.9
+  - satisfied
+  - auto-accessor: `#__[NAME]` 에 대한 `get`, `set` 확장 문법 슈거
+  - `A|B` 타입으로 정의된 변수 `a` 대 해서 `[b에만 존재하는 속성]  in a`  는 `B`로 타입캐스트
+- 4.8
+  - `unknown` 타입은 `{} | null | undefined` 와 가가운 정의를 가진다
