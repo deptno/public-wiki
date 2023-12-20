@@ -19,7 +19,8 @@
 ## serverside
 + https://firebase.google.com/docs/cloud-messaging/server?hl=ko
 - console.firebase.google.com 에서 프로젝트 ->  프로젝트 설정 ->  서비스 계정 -> *새 비공개 키 생성*
-- 
+- api spec
+  + https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages?hl=ko 
 
 ## [[error]]
 ### Error: No Firebase App '[DEFAULT]' has been created - call firebase.initializeApp()
