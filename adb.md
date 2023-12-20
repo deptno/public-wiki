@@ -1,7 +1,7 @@
-# adb 
+# adb|Android Debug Bridge
++ https://adbshell.com
 
 ## wifi 디버깅
-
 케이블로 폰 연결
 ```sh
 adb tcpip 5555
@@ -16,10 +16,12 @@ adb shell dumpsys activity activities > activity_dump.txt
 ```
 
 ## command
++ https://adbshell.com/commands
 - reverse - 기기의 localhost 접근 포트를 연결된 pc 의 포트로 전달
   - [[react-native]] [[metro]] 연결시에 필요, 재부팅마다 해줘야하는듯
   ```sh
   adb [-s DEVICE_ID] reverse tcp:8081 tcp:8081
+  adb [-s DEVICE_ID] reverse --list # 목록
   ```
 
 ### error
