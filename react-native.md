@@ -186,6 +186,10 @@ useEffect(() => {
   + https://github.com/deptno/nvim/commit/dda74cfcada336b0eb80cb84e84baf8e441dacf5
   + https://github.com/deptno/nvim/commit/7dc10ea5962e4cd2879399fd1fc8ca250e9648e2
 
+### 환경별 빌드 설정
+- [[env]], deeplink scheme 환경별로 분리되어야 테스트가 편하다
+  + https://ricale.kr/blog/posts/210831-react-native-build-setting-for-envs/
+
 ## error
 > XXApp 으로 이름 가정
 
