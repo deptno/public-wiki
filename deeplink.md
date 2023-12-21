@@ -46,7 +46,7 @@
   - 이후 앱이 실행되면 딥링크를 실행
 - 기본적으로 웹 url 이고 판단에 따라서 앱이 설치 유무에 따라 동작이 달라지는 컨셉
 - 솔루션
-  - firebase dynamic link
+  - firebase dynamic link - @deprecated 2025
   - [[appsflyer]] one ink
   - branch
   - adjust
