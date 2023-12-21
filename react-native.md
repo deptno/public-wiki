@@ -66,17 +66,17 @@ useEffect(() => {
 + https://kaumadiechamalka100.medium.com/how-to-implement-universal-link-app-link-in-react-native-a33eb6532612
 
 #### [[iOS]] [[universal-link]]
-> [[apple]] 개발자 등록이 필요하다
+> [[apple]] 개발자 등록이 필요하고, [[universal-link]] 의 서브 주체인 웹서버가 필요하다
 
-- [ ] apple-app-site-association 파일 등록
+1 apple-app-site-association 파일 등록
   + https://developer.apple.com/documentation/xcode/supporting-associated-domains
   - `https://[DOMAIN.COM]/.well-known/apple-app-site-association` 와 같은 형태
   - *subdomain* 별 entitlement 추가 필요
-1. developer.apple.com 에서 *Associated Domain* 활성화
-2. *provision profile* 재생성
-3. xcode 에서 *Signing Capabilities* 에 *Associated Domain* 추가 `applinks:` prefix가 필요하다
+2. developer.apple.com 에서 *Associated Domain* 활성화
+3. *provision profile* 재생성
+4. xcode 에서 *Signing Capabilities* 에 *Associated Domain* 추가 `applinks:` prefix가 필요하다
   - `applinks:[DOMAIN.COM]`
-4. `AppDelegation.mm` - app 을 열 수 있도록 수정
+5. `AppDelegation.mm` - app 을 열 수 있도록 수정
   ```objc
   #import <React/RCTLinkingManager.h>
   
@@ -95,7 +95,7 @@ useEffect(() => {
                       restorationHandler:restorationHandler];
   }
   ```
-5. `js` 코드에서 핸들링
+6. `js` 코드에서 핸들링
   - app `quit`, `background` 상태일때
     ```ts
     import { Linking } from 'react-native'
@@ -116,6 +116,51 @@ useEffect(() => {
     ```
 
 #### [[android]] [[applink]]
+> Android 6.0(API level 23) 이상에서 사용가능하다
+> [[android]] [[applink]] 의 서브 주체인 웹서버가 필요하다
+> Play App Signing 을 사용한다면 SHA256을 https://play.google.com/console 에서 확인하도록한다
+> designate
+
+1. `assetlinks.json` 생성
+  - site domain, Application ID 가 필요한데 ID 는 `android/app/build.gradle` 에서 확인이 가능
+  - Play App Signing 을 사용하고 있다면 해당 콘솔에서 SHA256 을 확인
+  - [X] [[keytool]] 을 활용해서 SHA256 figerprint를 확인한다
+    - `keytool -list -v -keystore [release.keystore]`
+  - [ ] Android Studio 를 이용해서 생성할 수 도 있다
+    - launch *Android Studio* -> Tools -> App Links Assistant -> Open Digital Asset Links File Generator
+  - 최종 형태는 아래와 같다
+    + https://developer.android.com/training/app-links/verify-android-applinks?hl=ko#web-assoc
+    ```json 
+    [{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.example",
+        "sha256_cert_fingerprints":
+        ["14:6D:E9:83:C5:73:06:50:D8:EE:B9:95:2F:34:FC:64:16:A0:83:42:E6:1D:BE:A8:8A:04:96:B2:3F:CF:44:E5"]
+      }
+    }]
+    ```
+2. `assetlinks.json` 파일 등록
+  - `https://[DOMAIN.COM]/.well-known/assetlinks.json` 로 서빙되어야한다
+  - 테스트한다
+    + https://developers.google.com/digital-asset-links/tools/generator?hl=ko
+3. app 에서 받아 줄 수 있도록 앱링크 요청에 대한 처리를 한다
+  + https://developer.android.com/training/app-links/verify-android-applinks?hl=ko#request-verify
+  - `/android/app/src/main/AndroidManifest.xml` 수정
+    ```xml 
+    <activity ...>
+
+      <intent-filter android:autoVerify="true">
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data android:scheme="http" android:host="www.example.com" />
+          <data android:scheme="https" />
+      </intent-filter>
+
+    </activity>
+    ```
 
 ## 설정
 ### neovim
