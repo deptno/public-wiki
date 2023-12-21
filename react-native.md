@@ -161,6 +161,23 @@ useEffect(() => {
 
     </activity>
     ```
+  - `android:host` 에 `localhost` 를 주입하는 경우 `port` 는 포함하지 않는다
+- 추가적으로 딥링크 scheme 을 추가하고자한다면 그것도 함께 추가하면된다
+  ```xml 
+  <activity ...>
+
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="[SCHEME_NAME]" />
+    </intent-filter>
+
+  </activity>
+  ```
+- [[test]]
+  - [X] `npx uri-scheme open --android '[SCHEME_NAME]://[PATH]'`
+  - [ ] `adb shell am start -W -a android.intent.action.VIEW -d '[SCHEME_NAME]://[PATH]'`
 
 ## 설정
 ### neovim
