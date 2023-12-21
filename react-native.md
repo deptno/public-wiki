@@ -551,6 +551,14 @@ pod 'FirebaseCore', :modular_headers => true
     1. Product -> Clean Build Folder...
     2. Product -> Run
 
+### [Error: Invalid notification (no valid small icon): Notification
+- [[android]]
+- `notifee` 에서 example 실행중에 발생
+  ```sh 
+  ERROR  [Error: Invalid notification (no valid small icon): Notification(channel=default shortcut=null contentView=null vibrate=null sound=null defaults=0x0 flags=0x10 color=0x00000000 vis=PRIVATE)]
+  ```
+  - 속성에 문제가 있는 것으로 이번 경우엔 아이콘 지우면 속성 제거하면된다.  이미지가 없다는 뜻인듯
+
 ## 필수 패키지 분석
 ```mermaid
 flowchart LR
