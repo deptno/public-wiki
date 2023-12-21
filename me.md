@@ -1,33 +1,27 @@
+# me
+> 정리되지 않음 기록
+
 - 개발 철학
 - 읽은 책
   - 
 - 언어
-  - rust
   - typescript
-  - 책 한권
-    - swift
+  - lua
+  - rust
+  - 책 한권 swift
     - clojure
     - go
     - c
 - 관심 분야
-  - editor
-- 공부 예정
-  - lua
+  - editor, vim, 자동화, workflow
 - 퇴사
+  + [[about-me]] 에 정리
   1. ebook 책 같은거 읽다가 ebook 업체 취업
   2. dynamon 이전에 sns + blog 등을 통합한 이력서 서비스
 - 만들고 싶은거
   - editor
-- 만들었던 것
-  - tubemon.io
-    1. youtube ranking
-    2. 알뜰구매
-  - googit.io
-    - 기존 블로그를 대체
-    - writing <-> publishing 을 구분
-  - googit.co
-    - 문제 은행(공인중개사로 트라이)
-    - markdown parsing
+- [X] 만들었던 것
+  + [[about-me]] 에 정리
 - 가진 기술
   - kubernetes
   - typescript
@@ -39,7 +33,8 @@
   - neovim
   - db
     - postgresql
-      - pg-toolbox
+      + https://github.com/deptno/pg-toolbox/tree/master/packages/asql
+        - asql, orm 이 불편해서 tagged template string 기반으로 sql이 보이도록 구현
     - dynamodb
       - project
         - tubemon.io
@@ -50,13 +45,12 @@
     - lib
       - graphql-toolbox
       - dataloader-toolbox
-    - project
-      - tubemon.io
-      - googit.io
-      - googit.co
+        + https://github.com/deptno/dataloader-toolbox
+          - graphq n+1 문제해결을위해 data-loader를 사용하는데 request 당 하나로 캐시되는 
+            라이브러리, react 18 에서 도입된 cache 와 유사한 개념
   - uml
-    - plantuml
-    - mermaid
+    - [ ] plantuml
+    - [X] mermaid
   - git 
     - connect history
       - repository 이동되면서 git history 를 잃어버림
@@ -72,14 +66,11 @@
 - 기술
   - srp 등
   - rxjs
-  - functional
-  - node
-    - single thread
-    - async priority 2
-      - micro queue
-      - promises
-      - timer
+    - tubemon.io 크롤러가 이걸로 만들어짐
+  - [[functional]]
+  - [[node]]
 
 ## link
 - [[about-me]]
 - [[home]]
+- [[diary/index]]

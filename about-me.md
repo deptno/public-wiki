@@ -86,4 +86,4 @@
 ## link
 - [[me]]
 - [[home]]
-- [[diary]]
+- [[diary/index]]

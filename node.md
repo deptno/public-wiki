@@ -13,6 +13,13 @@ javascript runtime a.k.a [[nodejs]]
 - __filename -> import.meta.url
 - __dirname -> path.dirname(import.meta.url)
  
+## 개념
+### 비동기 우선 순위
+  - single thread
+  - async priority
+    - micro queue
+    - promises
+    - timer
 
 ## [[error]]
 ### ECONNRESET
