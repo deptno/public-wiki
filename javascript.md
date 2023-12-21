@@ -5,3 +5,5 @@
 - [[node]]
 - [[browser]]
 - [[osascript]]
+- [[log]]
+- [[typescript]]

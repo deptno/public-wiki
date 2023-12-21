@@ -1,5 +1,4 @@
 # tailspin | tspin
-
 > log highlighter
 
 + https://github.com/bensadeh/tailspin
@@ -13,3 +12,4 @@ cargo install tailspin
 - [[terminal]]
 - [[log]]
 - [[rust]]
+- [[tspin]]

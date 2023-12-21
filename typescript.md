@@ -6,7 +6,6 @@
 tsc --sourceMap=true
 node --enable-source-maps [source.js]
 ```
-
 ## build clean
 [[vitest]] 테스트 중에 ts 와 빌드된 js 가 함께 있는 경우 js 를 먼저 읽는경우가 있어서 build 된 파일 제거 후 테스트가 필요했다.
 ```sh
@@ -37,6 +36,16 @@ const f1 = () => undefined {
 - Partial: 모든 속성 옵셔널
 - Parameters: 함수의 인자를 타입으로
 - Awaited: Promise<T> | T
+
+## version 변경사항
+- 5.0
+  - decorator
+- 4.9
+  - satisfied
+  - auto-accessor: `#__[NAME]` 에 대한 `get`, `set` 확장 문법 슈거
+  - `A|B` 타입으로 정의된 변수 `a` 대 해서 `[b에만 존재하는 속성]  in a`  는 `B`로 타입캐스트
+- 4.8
+  - `unknown` 타입은 `{} | null | undefined` 와 가가운 정의를 가진다
 
 ## error
 ### compile option
@@ -85,12 +94,7 @@ import { a } from './module'
 import { a } from './module.js'
 ```
 
-## version 변경사항
-- 5.0
-  - decorator
-- 4.9
-  - satisfied
-  - auto-accessor: `#__[NAME]` 에 대한 `get`, `set` 확장 문법 슈거
-  - `A|B` 타입으로 정의된 변수 `a` 대 해서 `[b에만 존재하는 속성]  in a`  는 `B`로 타입캐스트
-- 4.8
-  - `unknown` 타입은 `{} | null | undefined` 와 가가운 정의를 가진다
+## link
+- [[javascript]]
+- [[node]]
+- [[log]]
