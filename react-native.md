@@ -55,9 +55,9 @@ useEffect(() => {
   }, []);
 ```
 - 상태에따른 핸들러
-|         | active      | background, quit            |
-|---------|-------------|-----------------------------|
-| method  | onMessage() | setBackgroundMessageHandler |
+|        | active        | background, quit                |
+|--------|---------------|---------------------------------|
+| method | `onMessage()` | `setBackgroundMessageHandler()` |
 
 ### firebase-admin
 - [[wip]]
@@ -170,6 +170,21 @@ useEffect(() => {
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="[SCHEME_NAME]" />
+    </intent-filter>
+
+  </activity>
+  ```
+- 합쳐도 동작함
+  ```xml 
+  <activity ...>
+
+    <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="http" android:host="www.example.com" />
+        <data android:scheme="https" />
         <data android:scheme="[SCHEME_NAME]" />
     </intent-filter>
 
