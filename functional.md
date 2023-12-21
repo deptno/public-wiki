@@ -14,7 +14,7 @@
 | filter    |   | o    | o  |                                                                                            |
 | reduce    |   | o    | o  |                                                                                            |
 | partition |   | o    |    |                                                                                            |
-| fold      |   | o    |    | https://egghead.io/lessons/rust-rustlings-iterators4-implementing-factorial-with-iterators |                                                                                           |
+| fold      |   | o    |    | https://egghead.io/lessons/rust-rustlings-iterators4-implementing-factorial-with-iterators |
 | product   |   | o    |    | https://egghead.io/lessons/rust-rustlings-iterators4-implementing-factorial-with-iterators |
 
 ## link
