@@ -1,6 +1,7 @@
 # react-native
 
-## 설정
+## 실행
+### 설치
 > 글 작성 시점 `0.72.7`
 - `--skip-install` 은 패키지 매니저를 갈아 끼우려는 목적
 - `--npm` 은 패키지 매니저를 갈 아 끼우려는 목적
@@ -13,8 +14,13 @@ npx react-native@latest init MyApp --directory my-app --skip-install --npm
 bun x react-native@latest init MyApp --directory my-app --skip-install --npm 
 ```
 
-## 개발
+### 실행
+```sh
+[npx|yarn dlx|bun] react-native start [--reset-cache] # [[metro]] 실행 + 앱 런칭 옵션 제공
+[npx|yarn dlx|bun] react-native run ios [--device "phonename"] # 특정 디바이스만
+```
 
+## 개발
 ### ios bundler identifer 변경
 - `ios/[APP_NAME]/Info.plist` 에서 `CFBundleIdientifer` 변경
 
@@ -22,17 +28,6 @@ bun x react-native@latest init MyApp --directory my-app --skip-install --npm
 + https://github.com/deptno/salji.ro/commit/07fe2cb3a609a69e679b02aa858133b08d4fe219
 - full search 로 `com.[APP_NAME]` 을 찾아 참조를 바꾼다
 - [[domain]] 을 `.com` 아닌 다른 것으로 변경한 경우에는 `android/src/{com,[MY_TLD]}/**` 로 디렉토리명을 변경한다
-
-## 실행
-```sh
-react-native run ios --device "phonename"
-```
-
-## 설정
-### neovim
-- [[dap]]
-- rn 파일 컨벤션 지원
-  + https://github.com/deptno/nvim/commit/dda74cfcada336b0eb80cb84e84baf8e441dacf5
 
 ### firebase/*
 - [[tbd]]
@@ -66,6 +61,68 @@ useEffect(() => {
 
 ### firebase-admin
 - [[wip]]
+
+### deeplink
++ https://kaumadiechamalka100.medium.com/how-to-implement-universal-link-app-link-in-react-native-a33eb6532612
+
+#### [[iOS]] [[universal-link]]
+> [[apple]] 개발자 등록이 필요하다
+
+- [ ] apple-app-site-association 파일 등록
+  + https://developer.apple.com/documentation/xcode/supporting-associated-domains
+  - `https://[DOMAIN.COM]/.well-known/apple-app-site-association` 와 같은 형태
+  - *subdomain* 별 entitlement 추가 필요
+1. developer.apple.com 에서 *Associated Domain* 활성화
+2. *provision profile* 재생성
+3. xcode 에서 *Signing Capabilities* 에 *Associated Domain* 추가 `applinks:` prefix가 필요하다
+  - `applinks:[DOMAIN.COM]`
+4. `AppDelegation.mm` - app 을 열 수 있도록 수정
+  ```objc
+  #import <React/RCTLinkingManager.h>
+  
+  - (BOOL)application:(UIApplication *)application
+     openURL:(NSURL *)url
+     options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+  {
+    return [RCTLinkingManager application:application openURL:url options:options];
+  }
+
+  - (BOOL)application:(UIApplication *)application continueUserActivity:(nonnull NSUserActivity *)userActivity
+   restorationHandler:(nonnull void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler
+  {
+   return [RCTLinkingManager application:application
+                    continueUserActivity:userActivity
+                      restorationHandler:restorationHandler];
+  }
+  ```
+5. `js` 코드에서 핸들링
+  - app `quit`, `background` 상태일때
+    ```ts
+    import { Linking } from 'react-native'
+    
+    Linking.getInitialURL().then(url => {
+      Linking.canOpenURL(url)
+        .then([HANDLER])
+        .catch([ERROR_HANDLER])
+    })
+    ``` 
+  - app `foreground` 상태일때는 app 핸들링을 위해 app mount 이후 처리 필요
+    ```ts 
+    Linking.addEventListener('uri', event => {
+      Linking.canOpenURL(event.url)
+        .then([HANDLER])
+        .catch([ERROR_HANDLER])
+    })
+    ```
+
+#### [[android]] [[applink]]
+
+## 설정
+### neovim
+- [[dap]]
+- rn 파일 컨벤션 지원
+  + https://github.com/deptno/nvim/commit/dda74cfcada336b0eb80cb84e84baf8e441dacf5
+  + https://github.com/deptno/nvim/commit/7dc10ea5962e4cd2879399fd1fc8ca250e9648e2
 
 ## error
 > XXApp 으로 이름 가정
