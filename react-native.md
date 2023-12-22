@@ -54,10 +54,10 @@ useEffect(() => {
     return unsubscribe;
   }, []);
 ```
-- 상태에따른 핸들러
-|        | active        | background, quit                |
-|--------|---------------|---------------------------------|
-| method | `onMessage()` | `setBackgroundMessageHandler()` |
+- 상태에따른 핸들러  
+  |        | active        | background, quit                |
+  |--------|---------------|---------------------------------|
+  | method | `onMessage()` | `setBackgroundMessageHandler()` |
 
 ### firebase-admin
 - [[wip]]
