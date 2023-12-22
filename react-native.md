@@ -422,6 +422,13 @@ pod 'FirebaseCore', :modular_headers => true
   ```
   - 속성에 문제가 있는 것으로 이번 경우엔 아이콘 지우면 속성 제거하면된다.  이미지가 없다는 뜻인듯
 
+### [Error: URL.pathname not implemented]
+```ts 
+const url = new URL(urlString)
+const { pathname, searchParams } = url
+```
+- react-native 0.72.7 기준으로 *URL* 오브젝트가 정상 구현이 안된 것으로 보인다, 폴리필을 쓰던지,  알아서 처리하던지 해야한다.
+
 ## 필수 패키지 분석
 ```mermaid
 flowchart LR
