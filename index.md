@@ -95,6 +95,7 @@
 - [[planuml]]
 - [[mct]]
 - [[interview]]
+- [[mistake]]
 
 ## 책
 - [[book/index|book]]
