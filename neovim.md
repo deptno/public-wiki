@@ -97,6 +97,14 @@ vim.fn.system('grep content', stdin)
 - `vim.api.nvim_win_get_tabpage(0)` -> 현재 window 의 tab nubmer
 - `vim.api.nvim_win_get_buf(0)` -> 현재 window의 buf number
 
+## 설정
+### lazigit
++ [[diary:2023-12-24]]
+- nvim-tree 와 콜라보
+  + https://github.com/deptno/nvim/commit/e2cb2cc137801365bb9d5ebcbd96adc5a69e7a4e
+- 현재파일,  현재파일의 디렉토리
+  + https://github.com/deptno/nvim/commit/1ec4ebde7ada21812f2123c91d9f53bed2784151
+
 ## link
 - [[vim]]
 - [[python]]
