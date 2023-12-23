@@ -428,6 +428,9 @@ const url = new URL(urlString)
 const { pathname, searchParams } = url
 ```
 - react-native 0.72.7 기준으로 *URL* 오브젝트가 정상 구현이 안된 것으로 보인다, 폴리필을 쓰던지,  알아서 처리하던지 해야한다.
+  + **0.72.7** https://github.com/facebook/react-native/blob/v0.72.7/packages/react-native/Libraries/Blob/URL.js#L124-L233
+  + **master** https://github.com/facebook/react-native/blob/8c0c860e38f57e18296f689e47dfb4a54088c260/Libraries/Blob/URL.js#L115-L222
+- **polyfill** https://github.com/charpeni/react-native-url-polyfill
 
 ## 필수 패키지 분석
 ```mermaid

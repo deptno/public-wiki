@@ -247,6 +247,21 @@ kubectl annotate 시에 --overwrite 옵션을 추가하거나 --force를 추가�
   - [[lens]] 나 [[k9s]] 에서소 동일 기능을 제공
 - 접근을 하려고하니 위 에러를 출력하고 접근이 안된다. 에러 메시지대로 권한 문제로 role 과 rolebinding 을 주입해서 처리하면 될일
 - 문제는 [[k9s]] 에서 접속했을때 바로 종료되고 에러메시지를 참고할 수가 없어서 원인파악에 시간이 걸림
+- 대상에 `rolebinding` 으로 연결된 네임스페이스 `role` 중에 `pods/exec` 이 추가 해결
+  ```yaml 
+  apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    name: role-name
+    namespace: tubemon
+  rules:
+    - apiGroups:
+        - ""
+      resources:
+        - pods
+        - pods/exec
+
+  ```
 
 ## link
 - [[minikube]]
