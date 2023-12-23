@@ -21,13 +21,14 @@ bun x react-native@latest init MyApp --directory my-app --skip-install --npm
 ```
 
 ## 개발
-### ios bundler identifer 변경
-- `ios/[APP_NAME]/Info.plist` 에서 `CFBundleIdientifer` 변경
+### ios bundler identifier 변경
+- ~~`ios/[APP_NAME]/Info.plist` 에서 `CFBundleIdientifer` 변경~~ 지금 보니 틀려보임 아래 확인
+- `ios/saljiro.xcodeproj/project.pbxproj` 파일에서 `PRODUCT_BUNDLE_IDENTIFIER` 찾아서 일괄 변경
 
 ### android package name 변경
-+ https://github.com/deptno/salji.ro/commit/07fe2cb3a609a69e679b02aa858133b08d4fe219
-- full search 로 `com.[APP_NAME]` 을 찾아 참조를 바꾼다
-- [[domain]] 을 `.com` 아닌 다른 것으로 변경한 경우에는 `android/src/{com,[MY_TLD]}/**` 로 디렉토리명을 변경한다
++ https://github.com/deptno/salji.ro/commit/720f51219b98fdf950fac402c172c380b55c31b6
+- `android/app/build.grale` 에서 `namespace`, `applicationId` 를 변경
+- 변경된 `applicationId` 에 **맞춰서** `android/src/{stage}/java/com,[MY_TLD]}/*` 형태로 디렉토리 이름을 변경
 
 ### firebase/*
 - [[tbd]]
@@ -431,6 +432,49 @@ const { pathname, searchParams } = url
   + **0.72.7** https://github.com/facebook/react-native/blob/v0.72.7/packages/react-native/Libraries/Blob/URL.js#L124-L233
   + **master** https://github.com/facebook/react-native/blob/8c0c860e38f57e18296f689e47dfb4a54088c260/Libraries/Blob/URL.js#L115-L222
 - **polyfill** https://github.com/charpeni/react-native-url-polyfill
+
+### [Error: URL.pathname not implemented]
+```sh 
+~/w/sr/g/d/salji.ro/f/app/ios  feature/crea..e-app-0.73.1 *2 !1 ?18  bundle exec pod install                                                                                                  1 err  20.2.0 node  0.0.1 pkg  22:22:31
+
+[!] Invalid `Podfile` file: [!] /Users/deptno/.nvm/versions/node/v20.2.0/bin/node -p require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  ) /Users/deptno/workspace/src/github.com/deptno/salji.ro/frontend/app/ios
+
+node:internal/modules/cjs/loader:1073
+  throw err;
+  ^
+
+Error: Cannot find module 'react-native/scripts/react_native_pods.rb'
+Require stack:
+- /Users/deptno/workspace/src/github.com/deptno/salji.ro/frontend/app/ios/[eval]
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1070:15)
+    at Function.resolve (node:internal/modules/helpers:127:19)
+    at [eval]:1:9
+    at Script.runInThisContext (node:vm:122:12)
+    at Object.runInThisContext (node:vm:298:38)
+    at node:internal/process/execution:83:21
+    at [eval]-wrapper:6:24
+    at runScript (node:internal/process/execution:82:62)
+    at evalScript (node:internal/process/execution:104:10)
+    at node:internal/main/eval_string:50:3 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/Users/deptno/workspace/src/github.com/deptno/salji.ro/frontend/app/ios/[eval]'
+  ]
+}
+
+Node.js v20.2.0
+.
+
+ #  from /Users/deptno/workspace/src/github.com/deptno/salji.ro/frontend/app/ios/Podfile:2
+ #  -------------------------------------------
+ #  # Resolve react_native_pods.rb with node to allow for hoisting
+ >  require Pod::Executable.execute_command('node', ['-p',
+ #    'require.resolve(
+ #  -------------------------------------------
+```
 
 ## 필수 패키지 분석
 ```mermaid
