@@ -66,14 +66,29 @@ useEffect(() => {
 ### deeplink
 + https://kaumadiechamalka100.medium.com/how-to-implement-universal-link-app-link-in-react-native-a33eb6532612
 
-#### [[iOS]] [[universal-link]]
-> [[apple]] 개발자 등록이 필요하고, [[universal-link]] 의 서브 주체인 웹서버가 필요하다
+#### [[iOS]] deeplink
+1. `AppDelegation.mm` 을 수정한다
+  ```objc
+  #import <React/RCTLinkingManager.h>
+  
+  - (BOOL)application:(UIApplication *)application
+     openURL:(NSURL *)url
+     options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+  {
+    return [RCTLinkingManager application:application openURL:url options:options];
+  }
+   ```
+2. xcworkspace 파일을 열고 프로젝트 화면에서 **TARGETS** 선택 ->  info -> URL Types 를 추가한다
+3. identifier, URL Schemes 는 사용할 프로토콜을 추가한다 `[프로토콜]://path`
 
-1 apple-app-site-association 파일 등록
+#### [[iOS]] [[universal-link]]
+> [[universal-link]] 는 [[apple]] 개발자 등록이 필요하고, [[universal-link]] 의 서브 주체인 웹서버가 필요하다
+
+1. apple-app-site-association 파일 등록
   + https://developer.apple.com/documentation/xcode/supporting-associated-domains
   - `https://[DOMAIN.COM]/.well-known/apple-app-site-association` 와 같은 형태
   - *subdomain* 별 entitlement 추가 필요
-2. developer.apple.com 에서 *Associated Domain* 활성화
+2. https://developer.apple.com 에서 *Associated Domain* 활성화
 3. *provision profile* 재생성
 4. xcode 에서 *Signing Capabilities* 에 *Associated Domain* 추가 `applinks:` prefix가 필요하다
   - `applinks:[DOMAIN.COM]`
