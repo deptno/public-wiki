@@ -13,7 +13,7 @@ brew search PACKAGE
 
 ## install old verison
 + https://github.com/Homebrew/homebrew-core/commits/master/Formula/k/k9s.rb
-1. https://github.com/Homebrew/homebrew-core/commits/master/Formula/[first initial]/[package name].rb 로 접속해서 파일을 `[package name].rb` 로 다운로드한다
+1. `https://github.com/Homebrew/homebrew-core/commits/master/Formula/[first initial]/[package name].rb` 로 접속해서 파일을 `[package name].rb` 로 다운로드한다
 2. `brew install [package name].rb` 를 실행 
 
 ## link
