@@ -203,8 +203,9 @@ useEffect(() => {
   + https://github.com/deptno/nvim/commit/7dc10ea5962e4cd2879399fd1fc8ca250e9648e2
 
 ### 환경별 빌드 설정
-- [[env]], deeplink scheme 환경별로 분리되어야 테스트가 편하다
+- [ ] [[env]], deeplink scheme 환경별로 분리되어야 테스트가 편하다
   + https://ricale.kr/blog/posts/210831-react-native-build-setting-for-envs/
+  + https://velog.io/@dody_/RN-ios-뉴스-어플-헤드라잇-prod-dev앱-나눠서-관리하기-feat.-ios-Bundle-Identifier-ios-Scheme-ios-Build-Configuration
 
 ## error
 > XXApp 으로 이름 가정
