@@ -348,7 +348,17 @@ This error is located at:
 - `git reset --hard`
 - `bun start --reset-cache`
 
-결과적으로 모두 안되었는데 `node_modules` 까지 지우고 다시 `bun install` 을 한 이후에 에러가 사라졌다.
+- 결과적으로 모두 안되었는데 `node_modules` 까지 지우고 다시 `bun install` 을 한 이후에 에러가 사라졌다.
+- *중요* [[bun]] 사용시에 `isntall` 로 해결이 안되는 경우 `bun.lockb` 파일을 `node_modules`와 함께 지우고 클린 설치해야지 되는 경우가 있다
+  + [[diary:2023-12-25]]
+
+### Invariant Violation: View config getter callback for component `RNSScreenStackHeaderConfig` must be a function (received `undefined`).
+- *중요* [[bun]] 사용시에 `isntall` 로 해결이 안되는 경우 `bun.lockb` 파일을 `node_modules`와 함께 지우고 클린 설치해야지 되는 경우가 있다
+  + [[diary:2023-12-25]]
+
+### Error: No safe area value available. Make sure you are rendering `<SafeAreaProvider>` at the top of your app.
+- *중요* [[bun]] 사용시에 `isntall` 로 해결이 안되는 경우 `bun.lockb` 파일을 `node_modules`와 함께 지우고 클린 설치해야지 되는 경우가 있다
+  + [[diary:2023-12-25]]
 
 ### DEVELOPER_ERROR
 + https://peerlist.io/blog/engineering/implementing-google-signin-in-react-native
