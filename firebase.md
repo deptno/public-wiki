@@ -13,8 +13,23 @@
     - google sigin 관련 라이브러 설치하면서 이미 설정되어있음
   - android/app/build.grade 에서 apply plugin
 - [[ios]]
+  + https://rnfirebase.io
   - console.firebase.google.com 에서 ios 앱도 프로젝트 설정을 해주어야한다
-  - 개발자 등록후 진행
+    - **주의** 앱 번들 ID는 변경불가
+  - ~~개발자 등록후 진행~~
+  - 패키지 설치
+    - spm 을 사용하는 방법도 있으나 결과적으로 실패
+    - pod 에서와 같이 수정하고 [[flipper]] 를 주석 처리하는 방법이 적혀있으나 안됨
+      ```ruby 
+      # right after `use_frameworks! :linkage => :static`
+      $RNFirebaseAsStaticFramework = true
+      ```
+    - `ios/Podfile` 에 추가하는 것으로 해결
+      ```ruby 
+      pod 'FirebaseCore', :modular_headers => true
+      ```
+      + [[react-native]] **### Module 'FirebaseCore' not Found** 참조
+  - `AppDelegate.mm` 수정
 
 ## serverside
 + https://firebase.google.com/docs/cloud-messaging/server?hl=ko
