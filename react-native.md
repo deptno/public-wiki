@@ -20,6 +20,18 @@ bun x react-native@latest init MyApp --directory my-app --skip-install --npm
 [npx|yarn dlx|bun] react-native run ios [--device "phonename"] # 특정 디바이스만
 ```
 
+### 클린 빌드
+```sh 
+rm -rf node_modules
+bun install # npm yarn pnpm 마찬가지
+```
+- [[ios]] cmd+shift+k 이후 빌드
+- [[android]]
+  ```sh 
+  cd android/app
+  ./gradlew clean build --refresh-dependencies
+  ```
+
 ## 개발
 ### ios bundler identifier 변경
 - ~~`ios/[APP_NAME]/Info.plist` 에서 `CFBundleIdientifer` 변경~~ 지금 보니 틀려보임 아래 확인
