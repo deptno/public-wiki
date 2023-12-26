@@ -5,7 +5,8 @@
 ## 사용
 ```sh
 # 생성
-keytool -genkey -v -keyalg RSA -keysize 2048 -validity 1000 -keystore [NAME.keystore] -alias [ALIAS_NAME]
+keytool -genkey -v -keyalg RSA -keysize 2048 -validity 1000 -keystore [NAME.keystore] -alias [ALIAS_NAME] # 아래 방법 권장
+keytool -genkeypair -v -storetype PKCS12 -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000 # 공식 예제
 # 정보 확인(SHA1, SHA256 등)
 keytool -keystore [NAME.keystore] -list -v
 keytool -keystore app/debug.keystore -list -v # react-native 기준
