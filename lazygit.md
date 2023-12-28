@@ -2,8 +2,9 @@
 
 > tui git client
 
-+ [config 설정](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)
-+ [내 설정:2023-10-26](https://github.com/deptno/.config/blob/5789b6fef0075ee1104f45952906afe73ce99521/.config/lazygit/config.yml)
++ https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+- 내 설정 [[diary:2023-10-26]]
+  + https://github.com/deptno/.config/blob/5789b6fef0075ee1104f45952906afe73ce99521/.config/lazygit/config.yml
 
 ## [[@todo]]
 - [X] custom command
