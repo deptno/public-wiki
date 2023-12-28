@@ -1,5 +1,5 @@
 # stable-diffusion
 
 ## link
-- [[ai|ai]]
+- [[ai]]
 - [[midjourney]]
