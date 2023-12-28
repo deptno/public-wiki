@@ -5,3 +5,4 @@
 ## link
 - [[discord]]
 - [[ai]]
+- [[stable-diffusion]]

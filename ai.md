@@ -4,3 +4,4 @@
 ## link
 - [[chatgpt]]
 - [[midjourney]]
+- [[stable-diffusion]]
