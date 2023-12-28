@@ -402,6 +402,20 @@ This error is located at:
 ### TypeError: Network request failed
 - [[android]] 에서 발생
   - [[adb]] 이슈로 `adb reverse tcp:[PORT] tcp:[PORT]` 형태로 로컬웹서버를 사용한다면 해당 포트를 열어주면된다
+- [[ios]] 에서 발생
+  - react-native@0.73 을 기준으로 아래와 같은 설정이 되어있는 상태에서 설명
+    ```xml 
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <false/>
+      <key>NSAllowsLocalNetworking</key>
+      <true/>
+    </dict>
+    ```
+  - `ip` 로는 로컬 네트워크에 접근이 가능하다. 문제는 [[android]] 의 `adb reverse tcp:3000 tcp:3000` 와 같은 기능이 없다는 것
+  - 검색 결과 솔루션이 없는 것 같다. 인증 같은 경우는 테스트할 때 최종적으로 localhost 로 들어오게 되는데
+    - 이를 local domain name 으로 처리하면 될 것 같기도 한데, 인증은 그냥 시뮬에서 하는걸로
 
 ### [!] The following Swift pods cannot yet be integrated as static libraries:
 - [[iOS]] firebase 패키지 설치 이후에 발생
