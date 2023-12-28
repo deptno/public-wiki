@@ -52,6 +52,9 @@
 - [[fcm]]
 - [[stylexjs]]
 
+## tool
+- [[k9s]]
+
 ## 개념
 - [[oauth]]
 - [[jwt]]
