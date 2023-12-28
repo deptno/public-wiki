@@ -471,6 +471,27 @@ const { pathname, searchParams } = url
   + **master** https://github.com/facebook/react-native/blob/8c0c860e38f57e18296f689e47dfb4a54088c260/Libraries/Blob/URL.js#L115-L222
 - **polyfill** https://github.com/charpeni/react-native-url-polyfill
 
+### Task :app:packageRelease FAILED
+```sh 
+> Task :app:packageRelease FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:packageRelease'.
+> A failure occurred while executing com.android.build.gradle.tasks.PackageAndroidArtifact$IncrementalSplitterRunnable
+   > SigningConfig "release" is missing required property "storeFile".
+```
+- **releaes** 빌드를 위해 `build.properties` 에 `*.keystore` 파일에 대한 정보를 패스워드 포함해서 주입이 필요함
+- `gradle.properties` 에 선언한다,  참조하는 fastlane 과 페어로 동작
+  ```sh 
+  MYAPP_UPLOAD_STORE_FILE=release.keystore
+  MYAPP_UPLOAD_KEY_ALIAS=release
+  MYAPP_UPLOAD_STORE_PASSWORD=********
+  MYAPP_UPLOAD_KEY_PASSWORD=********
+  ```
+  - 보안을 위해 `~/.gradle/gradle.properties` 에 넣어도 동작한다
+
 ## 필수 패키지 분석
 ```mermaid
 flowchart LR
@@ -784,5 +805,6 @@ npx react-native upgrade
 - [[android]]
 - [[ios]]
 - [[react-navigation]]
+- [[fastlane]]
 + https://www.reactnative.express/exercises
 

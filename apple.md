@@ -8,7 +8,8 @@
   3. 법인유형:  개인/개인사업자
   4. 동의
   5. 구입 ￦129,000
--
+- 승인에 9시간 정도 소요됨 [[diary:2023-12-26]]
+- 프로그램 사용권 계약에 대해 검토 
 
 ## developer.apple.com
 + https://developer.apple.com

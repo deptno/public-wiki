@@ -1,5 +1,38 @@
 # xcode
 
+## 애플 개발자 등록
+- [[apple#개발자 등록]] 참조
+
+## code signing
+> 개발자 등록 후진행한다,  개발자 등록이 안되면 [[testflight]] 를 포함한 배포단계가 동작하지 않는다
+
+- 프로비저닝 프로파일은 다음을 포함있다
+  - 개발자의 인증서(애플을 통해 인증되었기 때문에 폰에서 신뢰하기를 누르는 절차가 생략된다)
+  - 앱의 bundle id
+  - device uuid
+- 기본적으로 개발자 인증서가 하나 발급되어있다. https://developer.apple.com 에서는 확인하지 못했으나 *xcworkspace* 를 열어서보면 확인된다
+  - *Signing & Capabiliteis* -> *Signing* -> *Team* 에 보면 추가되어있는 것을 확인할 수 있다
+  - 선택을 하게되면 *identifiers* 리스트에 추가된 것을 확인할 수 있다
+    + https://developer.apple.com/account/resources/identifiers/list
+  - Product -> Archive 해본다
+    - [X] 이제 Validate 진행된다
+    - [X] Release Testing
+      - `xcarchive` 파일이 `/Users/[USER_NAME]/Library/Developer/Xcode/Archives/[DATE]` 쪽에 저장
+      - 지정한 경로로 `ipa` 파일 생성
+    - [ ] Testflight Internal Only
+    - [ ] Testflight & Appstore
+  - [ ] Product -> Edit Schema -> Release -> Run 하게도면 디바이스 미등록 메시지가 나오고 등록을 눌러준다
+    - https://developer.apple.com/account/resources/devices/list 에 추가되는 것 확인
+    - 설치 실패
+    - `Failed to install the app on the device.`
+      - `Command Ld emitted errors but did not return a nonzero exit code to indicate failure`
+      - `IDERunOperationFailingWorker = IDEInstallCoreDeviceWorker;`
+      - Team 선택에서 앱스토어가 아닌 개발자 등록 이전에 쓰던 것으로는 사용가능
+      - 아마도 **인증서가 바뀐경우 설치된 디바이스에서 수동으로 제거** 가 필요한 것으로 추측
+        + https://developer.apple.com/forums/thread/739711 pod 지우고 다시 설치하라는 글도 있다
+    - [[testflight]] 설정
+    - 일반 > VPN 및 기기 관리 -> VPN 쪽으로 이동한 것으로 추측됨
+
 ## 빌드
 ### 원격 빌드
 1. xcode 실행
