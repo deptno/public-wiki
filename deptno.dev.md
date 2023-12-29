@@ -3,6 +3,7 @@
 > github 에 존재하는 wiki를 쓰고 있었는데 github 에서 wiki를 버렸다 생각될 정도로 구성이 수상하다. 일단 이를 깃 레포지터리로 이용하는 것은 유지하되, 편하게 접근하고 읽을 수 있도록 시스템이 필요했다.
 
 ## [[@todo]]
+- [ ] 정적 배포시에도 meilsearch 는 업데이트되어야함
 - [X] 정적 배포 지원, 집 서버에 구글 봇이 잘 못들어오는 거 같아서 seo 탄력을 못받음, ISP 쪽에서 괴롭히는건가 싶어 static 빌드 지원, 서버띄울 필요도 없긴함 사실
 - [X] about me 추가, 해당 파일을 특수 파일로 인식하도록
 - [X] [[mermaid]] 지원 추가 + https://github.com/deptno/deptno.dev/commit/f309f036802488dbfa048310d8da4c4b39679be5
