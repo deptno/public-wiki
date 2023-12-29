@@ -35,10 +35,14 @@ vim 에서와 같이 `:` 로 이동이 가능하다.
 - 0.29.0 버전에서 방식이 변경됨 0.29.1 에서 현재 신규 설정이 제대로 동작하지 않음 [[diary:2023-12-09]]
   - 다운그레이드는 [[brew]] 참조
 
-## shell pod
+## nodeShell
 + https://k9scli.io/topics/shell/
-- shell pod 기능이 있는데 떠있는 컨테이너에 접속을 하는 개념이다
-- [ ] [[@todo]] neovim 설정상태로 [[docker]] 이미지를 생성해서 붙을 수 있는지
+- `shellPod` 기능이 있는데 떠있는 컨테이너에 접속을 하는 개념이다
+- [X] neovim 설정상태로 [[docker]] 이미지를 생성해서 붙을 수 있는지
+  - shellPod 에서 셋업된 컨테이너를 띄우면 될 것으로 보인다
+- `nodeShell` 의 개념은 해당 `node` 자체에 접속을 허용하는 것이며 원하는 파드를 통해서 띄우게된다
+  - `/host` 를 통해서 해당 노드의 파일 시스템이 마운트 된다
+  - `chroot /host` 를 통해서 해당 노드에 `ssh` 와 같은 형태로 접속하는 것을 갈음할 수 있다
 
 ## plugin
 - [[metrics-server]] 를 설치하면 노드에 cpu, mem, pod 등의 정보를 얻어올 수 있다
