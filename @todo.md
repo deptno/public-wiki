@@ -20,16 +20,14 @@
 - [ ] pods 110 개 제한 풀기 (cidr 이슈)
 - [ ] grafana alarm ha 깨짐 [[home-assistant]]
   - [ ] ip_bans.yaml 파일에 왜 서버 자기 자신의 ip가 추가되는지 확인해서 조치 필요
-- [ ] kubernetes certificate 갱신
+- [ ] [[@wip]] kubernetes certificate 갱신 -> 업그레이드로 갈음할 예정
 
 ## news
-- [ ] openai
-- [ ] copilot
 - [X] feconf [[diary:2023-11-09]]
 - [X] next 14 문서 읽기
 
 ## 일상
-- [ ] 거울 사기
+- [X] 거울 사기
 - [X] 주방 조명
 - [ ] 라즈베리파이 판매
 - [X] 요금제 찾아보기
