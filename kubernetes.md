@@ -234,6 +234,48 @@ CertificateSigningRequest 생성시에 발생하는데 `cat user.csr | base` 한
 #### [[multipass]]
 multipass 를 사용하면 vm을 이용하여 실제와 같은 클러스터 구현이 가능하다.
 
+
+## 클러스터 업그레이드
++ [[diary:2023-12-30]]
+- minor version **1 단계**씩만 업그레이드 가능
+- 업그레이드 시에는 certs 도 갱신됨
+- 노드 업그레이드 순서
+  - [X] 기본 컨트롤 플레인 노드 -> 난 싱글 노드 클러스터라 여기만 진행
+  - [ ] 추가 컨트롤 플레인 노드
+  - [ ] 워커 노드
+- **swap off** 상태 확인
+- `/etc/kubernetes/admin.conf` 파일 존재 여부 확인
+```sh 
+# 현재 클러스터 버전 확인
+kuberadm version
+# 현재 클러스터 업그레이드 가능 버전 확인
+sudo kubeadm upgrade plan
+# 쿠버네티스 버전 리스트업
+apt-cache madison kubeadm
+# 업그레이드 타겟(현재 버전에서 minor +1, 최신 패치)의 kubeadm 설치
+sudo apt-mark unhold kubeadm && sudo apt-get update && sudo apt-get install -y kubeadm=1.27.6-00 &&  sudo apt-mark hold kubeadm
+
+# 인증서 갱신 여부를 확인하기 위해서 체크(Optional)
+sudo kubeadm certs check-expiration
+
+# 업그레이드를 위해 파드를 내림, kubectrl cordon 함께 진행되는 것으로 추측
+# 싱글 클러스터라 에러가 나는거 같은데 무시했음, 싱글 클러스터라 다운타임 피할 수 없음
+kubectl drain [NODE_NAME] --ignore-daemonsets
+# **업그레이드**
+sudo kubeadm upgrade apply v1.27.6
+
+# kubelet 재시작
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+
+# 인증서 갱신 확인
+sudo kubeadm certs check-expiration
+
+# 상태 확인
+systemctl status kubelet
+journalctl -xeu kubelet
+```
+
 ## error
 ### annotate
 ```sh
@@ -260,8 +302,34 @@ kubectl annotate 시에 --overwrite 옵션을 추가하거나 --force를 추가�
       resources:
         - pods
         - pods/exec
-
   ```
+#### PodExistsInVolume failed to find expandable plugin
+```sh
+deptno@5950x:/var$ systemctl status kubelet
+● kubelet.service - kubelet: The Kubernetes Node Agent
+     Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+    Drop-In: /etc/systemd/system/kubelet.service.d
+             └─10-kubeadm.conf
+     Active: active (running) since Fri 2023-12-29 17:22:06 UTC; 16min ago
+       Docs: https://kubernetes.io/docs/home/
+   Main PID: 504846 (kubelet)
+      Tasks: 40 (limit: 154342)
+     Memory: 163.1M
+        CPU: 1min 21.675s
+     CGroup: /system.slice/kubelet.service
+             └─504846 /usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime-endpoint=unix:///var/run/conta>
+
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.480743  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/bacf5436-cbef-461d-baa2-3f5eda4ac310-pv-nfs-nas volume>
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.480781  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/1cb3268c-4c71-46e1-803f-71f38f7a0d3f-pv-nfs-nas volume>
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.581558  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/1cb3268c-4c71-46e1-803f-71f38f7a0d3f-pv-nfs-nas volume>
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.581623  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/bacf5436-cbef-461d-baa2-3f5eda4ac310-pv-nfs-nas volume>
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.682196  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/1cb3268c-4c71-46e1-803f-71f38f7a0d3f-pv-nfs-nas volume>
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.682257  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/bacf5436-cbef-461d-baa2-3f5eda4ac310-pv-nfs-nas volume>
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.782770  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/bacf5436-cbef-461d-baa2-3f5eda4ac310-pv-nfs-nas volume>
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.782801  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/1cb3268c-4c71-46e1-803f-71f38f7a0d3f-pv-nfs-nas volume>
+Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.884154  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/bacf5436-cbef-461d-baa2-3f5eda4ac310-pv-nfs-nas volume>
+```
+- [ ] [[@todo]] 처리필요
 
 ## link
 - [[minikube]]
