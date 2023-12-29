@@ -1,6 +1,5 @@
 # kubernetes|쿠버네티스
 
-- TODO: sudo kubeadm certs check-expiration
 ## pod
 - init container
   설정을 위해 선실행되고 종료되는 컨테이너

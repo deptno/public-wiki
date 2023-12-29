@@ -1,8 +1,9 @@
 # kubeadm
-
 + https://kubernetes.io/docs/reference/setup-tools/kubeadm/
 
-- [ ] TODO: kubeadm certs check-expiration [[diary:2024-01-01]]
+## 인증서 갱신 기록
+- [X] DONE: kubeadm certs check-expiration [[diary:2023-12-30]]
+- [ ] TODO: kubeadm certs check-expiration [[diary:2024-12-20]]
 
 ## k8s cluster 생성
 
