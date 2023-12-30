@@ -56,6 +56,7 @@ firebase cloud message
 - data
 
 ### server
++ https://firebase.google.com/docs/cloud-messaging/ios/first-message?hl=ko
 + https://rnfirebase.io/messaging/server-integration
 - 메시지를 보내는 방식
   - 메시지를 특정 디바이스에 보내는 방식
@@ -64,6 +65,9 @@ firebase cloud message
     - 서버가 토픽에 메시지를 발송(한번에 최대 5개 토픽)
     - *주의*  특정 유저를 위한 토픽을 만들지 말것
     - [ ] [[@todo]] 많은 유저가 구독중인 알람으로 인한 서버부담을 줄이고자 유저를 토픽 유저를 그룹으로 나눠서 시간차로 보낼 수 있는지 확인
+- [[ios]]
+  - [[firebase]] 프로젝트 설정에서 [[APNs]] 등록 필요
+  - [ ] [[xcode]] 에서 push 활성화 필요할 것
 
 ## 언급되는 라이브러리
 - https://github.com/invertase/notifee
@@ -78,3 +82,4 @@ firebase cloud message
 - [[iOS]]
 - [[android]]
 - [[react-native]]
+- [[apns]]
