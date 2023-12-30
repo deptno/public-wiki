@@ -4,6 +4,8 @@
 + https://console.cloud.google.com
 + https://console.firebase.google.com
 + https://play.google.com/console
++ https://search.google.com/search-console
++ https://www.google.com/adsense
 
 ## 플레이 콘솔
 + https://play.google.com/console
