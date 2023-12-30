@@ -2,7 +2,7 @@
 
 - [[chrome|크롬]]
 - [[samsung-mobile|삼성모바일]]
-- [[brow.sh]]
+- [[brow-sh]]
 - [[firefox]]
 
 ## link

@@ -1,5 +1,5 @@
 # home
-Welcome to the [[deptno.dev]]!
+Welcome to the [[deptno-dev]]!
 
 ## 통신 배선
 - cat5e 로 배선됨

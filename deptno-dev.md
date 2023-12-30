@@ -4,6 +4,7 @@
 
 ## [[@todo]]
 - [X] 정적 배포시에도 [[meilisearch]] 는 업데이트되어야함 [[diary:2023-12-30]]
+  - [ ] [[github]] page  배포에서는 `.` 을 파일 확장자로 구분해서 패스에 있는 경우 문제가 됨, md 내에서 교체 예정
   - [ ] 보안상 로컬 크론잡 필요할듯
   - [X] key 관리필요
     + https://github.com/deptno/deptno.dev/commit/8832cb92aa0ab3cdf87432a4b3eaf2689741b2ab
@@ -27,7 +28,7 @@
 - [X] frontend revision 노출 + https://github.com/deptno/deptno.dev/commit/6b3c35b
 - [X] encoded uri 가 노출되는 문제, i.e. @todo -> %40todo + https://github.com/deptno/deptno.dev/commit/420d203
 - [X] history, edit 기능이 wiki 와 달라서 처리 필요 + https://github.com/deptno/deptno.dev/commit/312682a
-- [X] [[deptno.dev]] 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정
+- [X] [[deptno-dev]] 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정
   - [X] process.exit + livenessProbe 로 process 를 재시작할 뿐 pod 나 container 를 재시작할 수 없음
   - [X] 결국 [[webhook]] -> [[kubernetes-api]] 를 통해 rollout 을 하는 방향으로 수정되어야함
   - [X] 생각해 보니 서버가 아닌 wiki 의 레포가 일반 레포가 아닌 wiki repo 여서 이벤트를 ~~받을 수 없음~~

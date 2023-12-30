@@ -27,5 +27,5 @@ helm upgrade -n [NAMESPACE] --install meilisearch meilisearch@x.y.z
 
 ## link
 - [[rust]]
-- [[deptno.dev]]
+- [[deptno-dev]]
 - [[helm]]

@@ -1,7 +1,7 @@
 # @todo
 
 - [[neovim-setup]]
-- [[deptno.dev]]
+- [[deptno-dev]]
 
 ## 우선순위
 - [ ] 튜브몬 서비스 구현 및 BM 정리
