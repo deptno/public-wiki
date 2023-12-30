@@ -4,6 +4,7 @@
 
 ## [[@todo]]
 - [X] 정적 배포시에도 [[meilisearch]] 는 업데이트되어야함 [[diary:2023-12-30]]
+  - [ ] 보안상 로컬 크론잡 필요할듯
   - [X] key 관리필요
     + https://github.com/deptno/deptno.dev/commit/8832cb92aa0ab3cdf87432a4b3eaf2689741b2ab
 - [X] 정적 배포 지원, 집 서버에 구글 봇이 잘 못들어오는 거 같아서 seo 탄력을 못받음, ISP 쪽에서 괴롭히는건가 싶어 static 빌드 지원, 서버띄울 필요도 없긴함 사실
