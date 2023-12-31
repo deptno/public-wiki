@@ -74,8 +74,9 @@ firebase cloud message
   - android notification ux 까지 변경지원하는 것으로 언급됨
   - 이전에 사용되던 https://github.com/zo0r/react-native-push-notification 는 버전 업데이트 멈춘듯 2021-10-01
 
-
-
+## 구현
+```mermaid
+```
 
 ## link
 - [[firebase]]
