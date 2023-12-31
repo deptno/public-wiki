@@ -159,6 +159,11 @@ val intent = Intent(this, MainActivity::class.java)
 - res/layout/activity_main.xml - 세로 모드에서 사용
 - res/layout/`land`/activity_main.xml - 가로 모드에서 사용
 
+## [[error]]
+
+###  설치 실패
+- [[firebase]] app distribution, [[app]] tester 등을 통해서 앱을 설치하려고하는데 계속 에러가 난다면 빌드를 universal apk 로 진행한다 [[diary:2023-12-31]]
+
 ## link
 - [[flipper]]
 - [[scrcpy]]

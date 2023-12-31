@@ -505,6 +505,24 @@ Execution failed for task ':app:packageRelease'.
   MYAPP_UPLOAD_KEY_PASSWORD=********
   ```
   - 보안을 위해 `~/.gradle/gradle.properties` 에 넣어도 동작한다
+### You must be registered for remote messages before calling getToken
+```sh 
+Error: [messaging/unregistered] You must be registered for remote messages before calling getToken, see messaging().registerDeviceForRemoteMessages().]
+```
+- react-native [[firebase]] [[fcm]] 라이브러ㅣ 사용시에 [[ios]] 에서 발생 에서 발생
+- error `registerDeviceForRemoteMessages` 함수가 아니라 [[xcode]] signing -> capabilities 에 등록 필요
+    
+### 빌드된 버전에서 키자마자 죽는([[crash]])가 발생하느 경우
++ [[crash]]
+
+#### [[android]]
+- flipper 디바이스 연결된 상황에서 로그및 **Crash Repoter** 로 확인가능
+- `react-native-config` 라이브러시 설정이슈 proguard 설정에 누락이 있었음
+  + https://github.com/lugg/react-native-config/blob/bb3d813/README.md
+  - 무지성으로 문서를 복사했는데 `package` 명에 대한 치환이 필요
+
+#### [[ios]]
+- [[tbd]]
 
 ## 필수 패키지 분석
 ```mermaid
