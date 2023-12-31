@@ -19,6 +19,18 @@
 ## Android android-studio
 - Actions -> New Module
 
+### [[mac]] -> [[android]] 파일복사
+#### android file transfer 를 통한 복사
+```sh 
+brew install --cask android-file-transfer
+```
+- 설치하고 나서 안드로이드 기기를 연결하면, finder 형태로 디바이스 스토리지가 보인다
+
+#### [[adb]] 를 이용한 복사
+```sh 
+adb push app/build/outputs/apk/release/app-release.apk /storage/self/primary/Download/
+```
+
 ## 설정
 ### Android Studio
 #### Auto import
@@ -174,3 +186,4 @@ val intent = Intent(this, MainActivity::class.java)
 - [[java]]
 - [[kotlin]]
 - [[proxyman]]
+- [[mac]]
