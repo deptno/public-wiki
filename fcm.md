@@ -75,7 +75,30 @@ firebase cloud message
   - 이전에 사용되던 https://github.com/zo0r/react-native-push-notification 는 버전 업데이트 멈춘듯 2021-10-01
 
 ## 구현
+- 유저의 디바이스가 여러개일 수 있으므로 user, token 관계는 **1:n** 
+- 로그인을 가정
 ```mermaid
+sequenceDiagram
+  participant a as app
+  participant u as auth
+  participant b as backend
+  participant f as firebase
+  participant d as db
+  u -->> a: login
+  f -->> a: token
+  a -->> b: setToken: login 정보 + device 정보
+  b -->> d: 동일디바이스 기존 토큰 제거 및 신규 토큰 추가
+  par 구독
+  a -->> b: 구독
+  b -->> f: topic 구독
+  f -->> b: 200
+  b -->> d: 200: 구독 키워드 기록
+  end
+  par push
+  b -->> f: push 요청
+  b -->> d: 4xx,5xx: 토큰 제거
+  f -->> a: push notification
+  end
 ```
 
 ## link
