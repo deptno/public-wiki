@@ -25,6 +25,14 @@
     - Uncaught DOMException: Blocked a frame with origin "http://localhost:4000" from accessing a cross-origin frame.
     - postMessage 로 우회를 해야할 것으로 보임
   
+## env
+
+### safe-area-inset
++ https://developer.mozilla.org/en-US/docs/Web/CSS/env
+- 메타 `viewport-fit=cover` 가 있어야지 safe-area-inset 이 동작한다
+```sh 
+<meta name="viewport" content="viewport-fit=cover" />
+```
 
 ## links
 - [[css]]
