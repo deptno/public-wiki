@@ -35,10 +35,9 @@
 
 ## 빌드
 ### 원격 빌드
-1. xcode 실행
+1. xcode -> Window -> Devices and Simulators [shift + cmd + 2]
 2. iPhone 을 케이블로 연결
-3. Window -> Devices and Simulators [shift + cmd + 2]
-4. Device 화면 상단의 `Connect via netowrk` 를 선택
+3. Device 화면 상단의 `Connect via netowrk` 를 선택
 
 ## [[m1]] issue
 Application 의 XCode 정보보기에서 rosetta2 를 통해서 실행시킬수 있다.(Intel)
