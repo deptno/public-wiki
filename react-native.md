@@ -393,11 +393,15 @@ This error is located at:
 - `@react-native-google-signin/google-signin` 패키지 사용하면서 발생
   + https://github.com/react-native-google-signin/google-signin
 - [[android]] 에서만 발생
-  - [[android]] [[oauth]] client key 는 *프로젝트*에 입력하지 않는다. [[android]] client id 를 발급받으면서 입력한 *SHA-1* 을 통해서 해당 디바이스가 요청하는 경우 인증으로 이어지게 된다(그래보임)
-  - 문서에 존재하는 client id(아마도 web, ios)는 `configure` 의 인자로 입력하고 [[android]] client id 를 입력하지 않더라도 생성은 되어있어야한다
+  - [[android]] [[oauth]] client key 는 *프로젝트*에 입력하지 않는다.
+    - [[android]] client id 를 발급받으면서 입력한 *SHA-1*, *SHA-256* 을 통해서 해당 디바이스가 요청하는 경우 인증으로 이어지게 된다
+  - 설정에 입력하는키는 **web** 키가 된다
   + https://console.cloud.google.com/apis/credentials
     - 패키지 이름 `/android/app/src/main/java/` 이후 패스가 `.`으로 연결된 형태
     - *SHA-1* 은 [[keytool#사용]] 참조, debug 모드인 경우에는 기본적으로 생성되어있는 점 참고
+
+#### DEVELOPER_ERROR 10
+- 해당 이슈가 발견되면 위에 것을 살펴보고 빌드시 keystore 가 다른 파일이 사용된 것인지 확인한다, 해당 파일 이름바꿔보면 티난다
 
 ### TypeError: Network request failed
 - [[android]] 에서 발생
