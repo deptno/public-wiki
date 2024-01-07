@@ -57,11 +57,11 @@ sequenceDiagram
   service ->> app: 401
   app ->> auth: /auth/refresh?access_token&refresh_token
   auth --> auth: if refresh 만료되지 않은 경우
-  auth -->> db: find refresh_token
-  note right of db: db에 없는 경우 이미 교환한 케이스
-  db -->> auth: found
-  auth --> auth: renew  access_token, refresh_token
-  db -->> db: save refresh_token, delete 이미 교환된 refresh_token
+  auth ->> db: try to delete refresh_token
+  db --> app: 403: db에 이미 없는 경우 이미 교환한 케이스
+  db ->> auth: 200: 삭제 성공시
+  auth --> auth: renew access_token, refresh_token
+  auth ->> db: save refresh_token with user
   auth ->> app: access_token, refresh_token
 ```
 
