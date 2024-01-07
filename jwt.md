@@ -53,10 +53,10 @@ sequenceDiagram
   be ->> db: save refresh_token with user
   be ->>+ app: access_token, refresh_token
   app --> app: expired
-  app ->>- be: request with expired be
+  app ->>- be: expired token
   be ->> app: 401
   app ->> be: /auth/refresh?access_token&refresh_token
-  be --> be: if refresh 만료되지 않은 경우
+  be --> be: if refresh token 만료되지 않은 경우
   be ->> db: try to delete refresh_token
   db --> app: 403: db에 이미 없는 경우 이미 교환한 케이스
   db ->> be: 삭제 성공: 토큰이 있는 경우
@@ -64,6 +64,7 @@ sequenceDiagram
   be ->> db: save refresh_token with user
   be ->> app: access_token, refresh_token
 ```
+  - access token 을 salt 로 써도 좋을 듯
 
 ## link
 - [[oauth]]
