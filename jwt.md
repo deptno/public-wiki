@@ -58,7 +58,7 @@ sequenceDiagram
   app ->> be: /auth/refresh?access_token&refresh_token
   be --> be: if refresh token 만료되지 않은 경우
   be ->> db: try to delete refresh_token
-  db --> app: 403: db에 이미 없는 경우 이미 교환한 케이스
+  db --> app: 401: db에 이미 없는 경우 이미 교환한 케이스
   db ->> be: 삭제 성공: 토큰이 있는 경우
   be --> be: renew access_token, refresh_token
   be ->> db: save refresh_token with user
