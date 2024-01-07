@@ -41,28 +41,28 @@ sequenceDiagram
 ```
   - 이런 구현인 경우 만료된 토큰을 가지고 /auth/refresh 를 지속적으로 요구하면 db 가 지속되어 기존 스펙보다 나은게 없는 것 같다
   - refresh token 을 함께 발급하고 이를 안전한 저장소에 클라이언트에 저장하는게 요구사항인만큼 **이것이 관철되는것이 좋을것**으로 생각한다
+  - 최종적으로 구현을 정리하여 단순화하면 아래와 같다
 ```mermaid
 sequenceDiagram
   title: 리프레시 토큰교환 한번만 진행
   actor app as app or web
-  participant service as service server
-  participant auth as auth server
+  participant be as backend
   participant db as database
 
-  app ->> auth: 인증 요구
-  auth ->> db: save refresh_token with user
-  auth ->>+ app: access_token, refresh_token
+  app ->> be: 인증 요구
+  be ->> db: save refresh_token with user
+  be ->>+ app: access_token, refresh_token
   app --> app: expired
-  app ->>- service: request with expired auth
-  service ->> app: 401
-  app ->> auth: /auth/refresh?access_token&refresh_token
-  auth --> auth: if refresh 만료되지 않은 경우
-  auth ->> db: try to delete refresh_token
+  app ->>- be: request with expired be
+  be ->> app: 401
+  app ->> be: /auth/refresh?access_token&refresh_token
+  be --> be: if refresh 만료되지 않은 경우
+  be ->> db: try to delete refresh_token
   db --> app: 403: db에 이미 없는 경우 이미 교환한 케이스
-  db ->> auth: 200: 삭제 성공시
-  auth --> auth: renew access_token, refresh_token
-  auth ->> db: save refresh_token with user
-  auth ->> app: access_token, refresh_token
+  db ->> be: 삭제 성공: 토큰이 있는 경우
+  be --> be: renew access_token, refresh_token
+  be ->> db: save refresh_token with user
+  be ->> app: access_token, refresh_token
 ```
 
 ## link
