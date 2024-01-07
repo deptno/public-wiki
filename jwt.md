@@ -130,6 +130,26 @@ sequenceDiagram
 - webview 의 새로고침은 발생하지 않는다, 무한 스크롤 등 구현이 다소 유리
 - app 에서도 로직이 존할 것이므로 full webview 기반이 아니라면 refresh token 로직은 중복구현된다
 - 좀더 seamless 한 경험을 줄 수 있지만 **인증된 SSR** 사용이 안되는건 마찬가지
+- ssr 은 포기해야지 싶다
+
+##### 앱에서 갱신 + 웹뷰에 통신으로 브로드 캐스팅
+```mermaid
+flowchart LR
+app --"5: injectJavascript(access_token)"--> webview0
+app --"5: injectJavascript(access_token)"--> webview1
+app --"5: injectJavascript(access_token)"--> webview2
+app --"5: injectJavascript(access_token)"--> webview3
+  webview3 -- 2: 401 --> app
+  webview3 -.-> service
+  service --1: 401--> webview3
+  app --3: /refresh/token --> service
+  service --4: access token --> app
+  webview0 --6: 갱신--> webview0
+  webview1 --6: 갱신--> webview1
+  webview2 --6: 갱신--> webview2
+  webview3 --6: 갱신--> webview3
+```
+- ssr 을 포기하면 가장 심리스한 구현이 아닐가 싶
 
 ## link
 - [[oauth]]
