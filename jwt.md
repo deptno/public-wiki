@@ -66,6 +66,71 @@ sequenceDiagram
 ```
   - access token 을 salt 로 써도 좋을 듯
 
+#### 하이브리드 웹
+- 토큰 갱신을 어디서할 것인지에 따라서 보안레벨이 달라진다
+- **인증된 SSR 사용시** 에는 401 화면 노출을 피할 수 없다
+- 웹뷰에서 갱신을 하게 되면 중복 구현이 발생한다
+
+##### 갱신시 webview 를 새로 고침
+```mermaid
+sequenceDiagram
+  actor app as app
+  actor wv as webview
+  participant be as backend
+  participant db as database
+
+  app ->> be: 인증 요구
+  be ->> db: save refresh_token with user
+  be ->> app: access_token, refresh_token
+  app ->> wv: open with access_token
+  wv ->> be: expired token
+  be ->> wv: 401
+  wv ->> app: 401
+  app ->> be: /auth/refresh?access_token&refresh_token
+  be --> be: if refresh token 만료되지 않은 경우
+  be ->> db: try to delete refresh_token
+  db --> app: 401: db에 이미 없는 경우 이미 교환한 케이스
+  db ->> be: 삭제 성공: 토큰이 있는 경우
+  be --> be: renew access_token, refresh_token
+  be ->> db: save refresh_token with user
+  be ->> app: access_token, refresh_token
+  app ->> wv: open with access_token
+```
+- weview 를 열때 access_token 을 전달
+- 만료시에는 app 에서 토큰 리프레시를 담당하고 웹뷰를 새로고침한다 
+- 구조가 단순한 대신 새로고침 되므로 경험이 떨어진다, 스크롤 위치 이슈
+
+##### 갱신시 webview 에서 갱신후 후 앱에 전달 
+```mermaid
+sequenceDiagram
+  actor app as app
+  actor wv as webview
+  participant be as backend
+  participant db as database
+
+  app ->> be: 인증 요구
+  be ->> db: save refresh_token with user
+  be ->> app: access_token, refresh_token
+  app ->> wv: open with access_token
+  wv ->> be: expired token
+  be ->> wv: 401
+  wv ->> app: get refresh_token
+  app ->> wv: refresh_token
+  wv ->> be: /auth/refresh?access_token&refresh_token
+  be --> be: if refresh token 만료되지 않은 경우
+  be ->> db: try to delete refresh_token
+  db --> app: 401: db에 이미 없는 경우 이미 교환한 케이스
+  db ->> be: 삭제 성공: 토큰이 있는 경우
+  be --> be: renew access_token, refresh_token
+  be ->> db: save refresh_token with user
+  be ->> wv: access_token, refresh_token
+  wv ->> app: store access_token & refresh_token
+  wv ->> be: retry failed api
+```
+- webview 의 새로고침은 발생하지 않는다, 무한 스크롤 등 구현이 다소 유리
+- app 에서도 로직이 존할 것이므로 full webview 기반이 아니라면 refresh token 로직은 중복구현된다
+- 좀더 seamless 한 경험을 줄 수 있지만 **인증된 SSR** 사용이 안되는건 마찬가지
+
 ## link
 - [[oauth]]
 - [[jwe]]
