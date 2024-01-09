@@ -69,6 +69,37 @@ firebase cloud message
   - [[firebase]] 프로젝트 설정에서 [[APNs]] 등록 필요
   - [ ] [[xcode]] 에서 push 활성화 필요할 것
 
+### rest 
+#### fcm access token 발급
+- oauth 토큰이 필요하다 아래서 발급이 가능하다
+  + https://developers.google.com/oauthplayground/
+    + https://stackoverflow.com/questions/50399170/what-bearer-token-should-i-be-using-for-firebase-cloud-messaging-testing
+    - [X] Firebase Cloud Messaging API v1
+
+#### 사용
+- vim rest 형태니 알아서 변경해서 쓴다
+  ```sh 
+  https://fcm.googleapis.com
+
+  Content-Type: application/json
+  Authorization: Bearer [위에서 발급받은 accessToken]
+
+  POST /v1/projects/saljiro/messages:send
+
+  {
+    "message": {
+      "data":{
+        "deepLink":"myscheme://path",
+      },
+      "notification":{
+        "body":"1",
+        "title":"leserrafim"
+      },
+      "token" : "[발송 대상의 fcm token]"
+    }
+  }
+  ```
+
 ## 언급되는 라이브러리
 - https://github.com/invertase/notifee
   - android notification ux 까지 변경지원하는 것으로 언급됨
