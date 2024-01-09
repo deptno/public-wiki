@@ -112,6 +112,24 @@ mount: /var/lib/kubelet/pods/91f95da8-3cea-4f8a-a367-c2b11b3444b5/volumes/kubern
   # 시크릿 네임스페이스 복사
   kubectl get secret -n [ namespace ] [ secret name ] | kubectl neat | sed "s/namespace: .*/namespace: [ target namespace]/" | kubectl apply -f -
   ```
+### volume mount
+```yaml 
+      containers:
+        # ...
+        volumeMounts:
+        - name: google-application-credentials
+          mountPath: /app/google-application-credentials.json
+          subPath: google-application-credentials.json
+          readOnly: true
+      volumes:
+      - name: google-application-credentials
+        secret:
+          secretName: firebase.admin.sdk
+          items:
+          - key: json
+            path: google-application-credentials.json
+```
+  - 위와 같은 형태로 파일로 마운트가 가능
 
 ## authentication
 + [[rbac]] 에서 롤 추가에 대한 내용 확인
