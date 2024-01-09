@@ -1,33 +1,31 @@
 # about-me
-- [[wip]]
 - deptno@gmail.com
 
 # 커리어
-
 ### 2021-05 ~ 현재: 직방, 프론트엔드 파트 매니저
-  - [[react-native]] 기반의 앱, 사내 back-office 프론트엔드 개발 매니징
+- [[react-native]] 기반 직방앱 개발 매니징, 원룸, 오피스텔, 빌라 파트
 
 ### 2019-06 ~ 2021-05: 알스퀘어, 팀장
+- 사내 back-office 개발, 프론트엔드로 시작하여 백엔드까지 전체 타입스크립트 + 노드로 마이그레이션
   - [[csharp]] -> [[node]] + [[graphql]] 마이그레이션
-  - 사내 back-office 프론트엔드 개발
-  - elk + beat 기반의 [[log]] 시스템 생성
-  - [[kubernetes]] + [[helm]] 기반의 배포환경
+- elk + beat 기반의 [[log]] 모니터링 시스템 생성
+- [[kubernetes]] + [[helm]] 기반의 배포환경 구성
 
 ### 2016-04 ~ 2018-03: 알스퀘어, 프론트엔드 개발팀장
-  - 회사 서비스 홈페이지 개발
-  - 사내 back-office, html 기반 PDF 생성
-  - [[serverless]], ECS 기반의 배포환경
+- 회사 서비스 홈페이지 개발
+- 사내 back-office, html 기반 PDF 생성
+- [[serverless]], ECS 기반의 배포환경
 
 ### 2011-06 ~ 2015-07: Humax, 대리
-  - 2011년 당신 [[typescript]] 베이스의 SPA 로 구현된 세탑박스 UX 구현
-  - 영국 및 독일 제품에 포함되어 출고, OTA 지원 및 타 서비스(BBC 등)의 앱 런칭 가능
-  - [[electron]] 과 유사하게 임베디드 브라우저에 커스텀 오브젝트를 구현하여 미들웨어와 통신하는 방식
-  + 당시 베이스로 구현된 라이브러리
-    + **깃허브** https://github.com/controlsts/controls.ts
-  - 제품 영상(순서대로 영국, 독일, 영국 제품)
-    + **유튜브** https://www.youtube.com/watch?v=RfhtVHHoVcE
-    + **유튜브** https://www.youtube.com/watch?v=GZtnesjkVyo
-    + **유튜브** https://www.youtube.com/watch?v=vN850-Dy6Yw
+- 2011년, [[typescript]] 베이스의 SPA 로 구현된 세탑박스 UX 구현
+- 영국 및 독일 제품에 포함되어 출고, OTA 지원 및 타 서비스(BBC 등)의 앱 런칭 가능
+- [[electron]] 과 유사하게 임베디드 브라우저에 커스텀 오브젝트를 구현하여 미들웨어와 통신하는 방식
++ 당시 베이스로 구현된 라이브러리
+  + **깃허브** https://github.com/controlsts/controls.ts
+- 제품 영상(순서대로 영국, 독일, 영국 제품)
+  + **유튜브** https://www.youtube.com/watch?v=RfhtVHHoVcE
+  + **유튜브** https://www.youtube.com/watch?v=GZtnesjkVyo
+  + **유튜브** https://www.youtube.com/watch?v=vN850-Dy6Yw
 
 # 개인 프로젝트
 ### [[vimwiki]] 기반의 범용 프론트엔드
@@ -87,3 +85,4 @@
 - [[me]]
 - [[home]]
 - [[diary/index]]
+- [[wn.private:resume]]
