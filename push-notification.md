@@ -56,7 +56,8 @@ flowchart
   style Linking.getInitialURL fill:#e91
 ```
 - 흐름도를 보면 Linking.openURL 을 타지 않고 바로 네비게이션 처리가 가능하다
-- 아마도 이 딥링크 부분은 앱 자신을 넘어설때 필요한 로직으로 보인다
+- `Linking` 을 사용하는 이유
+  - `notification` 을 통하지 않고 다른 앱이나 웹에서 [[deeplink]] 를 받기 위해서라도 필요할 것으로 생각된다
 ### fcm 메시지 수신
 ```mermaid
 flowchart TD
