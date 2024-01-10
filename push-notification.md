@@ -33,6 +33,7 @@ flowchart
 
   app2 -.-> getInitialNotification -.background 에서 받은 경우.-> app2 
   app2 --deeplink--> Linking.openURL
+  app2 ==fast track 인가?\nnavigate==> deeplink-url
 
   Linking.openURL --> Linking.addEventListener`url`
   Linking.openURL -.-> app3[app]
@@ -54,6 +55,8 @@ flowchart
   style Linking.addEventListener`url` fill:#e91
   style Linking.getInitialURL fill:#e91
 ```
+- 흐름도를 보면 Linking.openURL 을 타지 않고 바로 네비게이션 처리가 가능하다
+- 아마도 이 딥링크 부분은 앱 자신을 넘어설때 필요한 로직으로 보인다
 ### fcm 메시지 수신
 ```mermaid
 flowchart TD
