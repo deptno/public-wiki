@@ -2,6 +2,11 @@
 
 > react-navigation@6 을 기반로 작성
 
+## [[typescript]] 설정
+### nested navigator
++ https://javascript.plainenglish.io/react-navigation-v6-with-typescript-nested-navigation-part-2-87844f643e37
++ https://github.com/deptno/salji.ro/commit/f91889c48a35a7ac5fb382045df77b7a4d2c4825
+
 ## 문서
 + https://reactnavigation.org/docs/getting-started
 
