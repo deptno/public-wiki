@@ -10,6 +10,50 @@
   - 수신: onTokenRefresh
 
 ## [[fcm]] - push-notification 흐름도
+### 딥링크 처리까지의 큰 흐름
+```mermaid
+flowchart
+  style notifee fill:#bbf
+  style firebase fill:#f66
+  style react-native fill:#e91
+
+  fcm --payload--> onMessage
+  fcm -.payload.-> setBackgroundMessageHandler
+
+  setBackgroundMessageHandler -.-> app
+  setBackgroundMessageHandler -.notification 띄우는 주체가 아직 불확실.-> notification
+  onMessage --> app
+
+  app --show--> notification
+  notification --press--> onForegroundEvent
+  notification -.press.-> onBackgroundEvent
+
+  onForegroundEvent --> app2[app]
+  onBackgroundEvent --> app2[app]
+
+  app2 -.-> getInitialNotification -.background 에서 받은 경우.-> app2 
+  app2 --deeplink--> Linking.openURL
+
+  Linking.openURL --> Linking.addEventListener`url`
+  Linking.openURL -.-> app3[app]
+
+  Linking.addEventListener`url` --> app3[app]
+  app3 -.-> Linking.getInitialURL -.background 에서 받은 경우.-> app3[app]
+
+  app3 --navigate---> deeplink-url
+
+  style notification fill:#b3d9ff
+  style onForegroundEvent fill:#bbf
+  style onBackgroundEvent fill:#bbf
+  style getInitialNotification fill:#bbf
+
+  style onMessage fill:#f66
+  style setBackgroundMessageHandler fill:#f66
+
+  style Linking.openURL fill:#e91
+  style Linking.addEventListener`url` fill:#e91
+  style Linking.getInitialURL fill:#e91
+```
 ### fcm 메시지 수신
 ```mermaid
 flowchart TD
