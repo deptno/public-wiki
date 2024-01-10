@@ -3,9 +3,9 @@
   - 수신: onMessage
 - app: active 가 아닌경우
   - 수신: setBackgroundMessageHandler
-  - ~~getInitialNotification~~ `@notifee/react-native` 사용시 안쓰임
+  - ~~getInitialNotification~~ `@notifee/react-native` 사용시 `notifee.getInitialNotification`
 - remote notification 이 눌린경우
-  - 수신: ~~onNotificationOpenedApp~~ `@notifee/react-native` 사용시 안쓰임
+  - 수신: ~~onNotificationOpenedApp~~ `@notifee/react-native` 사용시 `notifee.onForegroundEvent` - `type: 'PRESS'`
 - 서버에서 토큰이 변경된 경우
   - 수신: onTokenRefresh
 
