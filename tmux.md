@@ -51,3 +51,9 @@ tmux kill-session -t 0
 - tmux-open - open
 - tmux-thumbs - 환면에 있는 [[text]] 청크를 복사
 - tmux-resurrect - 세션 창 분할 저장
+
+## 고급 글
++ https://www.baeldung.com/linux/tmux-kill-respawn-pane
+
+## link
+- [[terminal]]

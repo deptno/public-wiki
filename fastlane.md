@@ -212,7 +212,7 @@ The following build commands failed:
 [04:02:20]: ERROR: [ContentDelivery.Uploader] Asset validation failed (90713) Missing Info.plist value. A value for the Info.plist key 'CFBundleIconName' is missing in the bundle 'ro.salji.app'. Apps built with iOS 11 or later SDK must supply app icons in an asset catalog and must also provide a value for this Info.plist key. For more information see http://help.apple.com/xcode/mac/current/#/dev10510b1f7. (ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
 ```
 - 앱 아이콘에 없어서나는 에러로 구글에서 `app icon generator` 를 검색해서 아무거나 선택하면 될 것으로 보인다 사용한 링크는 아래추가
-  + https://easyappicon.com
+  + https://easyappicon.com [[ios]] [[android]] [[react-native]]
 
 ### No build_beta_detail included
 - 베타에 대한 정보가 없어서 나는 것으로 추측
