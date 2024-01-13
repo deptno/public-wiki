@@ -162,6 +162,7 @@ EOF
     - 69@129Mi -> 24@65->83Mi 
     - 69@117Mi -> 25@64->108Mi
     - 최적화가 조금 더 들어가는건지 메모리 사용량이 빠짐
+
 ## error
 ### next.js 13 + next-auth
 signin 을 누르면 제대로 동작하지 않는이슈 브라우저에서는 아래 메시지가 찍힌다
@@ -197,6 +198,18 @@ Type error: Element implicitly has an 'any' type because expression of type 'str
   136 |     if (missingMethods.length) {
   137 |       return new MissingAdapterMethods(
 ```
+
+### 'sharp' is required to be installed in standalone mode for the image optimization to function correctly.
+```sh 
+⨯ Error: 'sharp' is required to be installed in standalone mode for the image optimization to function correctly. Read more at: https://nextjs.org/docs/messages/sharp-missing-in-production
+```
+- arm 에서 빌드하고 x86 에서 [[docker]] 컨테이너가 뜨게되는데 경우 네이티브 빌드 모듈인 `sharp` 없다고 `warning` 이 난다
+- dockerfile 에 글로벌 설치해서 처리해버리는게 가장 깔끔하다 생각된다
+```dockerfile 
+RUN npm install -g --arch=x64 --platform=linux --libc=glibc sharp
+ENV NEXT_SHARP_PATH=/usr/local/lib/node_modules/sharp
+```
+  + https://github.com/lovell/sharp/issues/3877#issuecomment-1850388322
 
 ## link
 - [[react]]
