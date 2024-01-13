@@ -528,6 +528,20 @@ Error: [messaging/unregistered] You must be registered for remote messages befor
 #### [[ios]]
 - [[tbd]]
 
+### InternalBytecode
+```sh 
+Error: ENOENT: no such file or directory, open '/Users/distiller/react-native/packages/react-native/sdks/hermes/build_iphonesimulator/lib/InternalBytecode/InternalBytecode.js'
+# ...
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/distiller/react-native/packages/react-native/sdks/hermes/build_iphonesimulator/lib/InternalBytecode/InternalBytecode.js'
+
+```
+- [[ios]] 에서 발생
+- 여러 상황에서 발생하는 에러로 보이는데 이번 케이스는 `fetch` 시에 접근 불가능한 주소에 접근할때 발생했다
+- 예를들자면 실기기에서 `localhost`
+
 ## 필수 패키지 분석
 ```mermaid
 flowchart LR

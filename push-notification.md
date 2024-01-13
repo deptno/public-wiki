@@ -58,6 +58,7 @@ flowchart
 - 흐름도를 보면 Linking.openURL 을 타지 않고 바로 네비게이션 처리가 가능하다
 - `Linking` 을 사용하는 이유
   - `notification` 을 통하지 않고 다른 앱이나 웹에서 [[deeplink]] 를 받기 위해서라도 필요할 것으로 생각된다
+- 헷갈릴까봐 그래프에 표시 하지 않았지만 `@react-native-firebase/messaging` 에서 제공하는 이벤트 핸들러는 `@notifee/react-native` 의 on{Fore/Back}groundEvent 에도 동일하게 전달되는 것을로 보인다.  `DELIVERED` 타입 좀 더 확인을 용의가 있다면 firebase 이벤트 핸들러를 제거할 수 있을 수 있다
 ### fcm 메시지 수신
 ```mermaid
 flowchart TD

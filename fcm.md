@@ -120,15 +120,18 @@ sequenceDiagram
   a -->> b: setToken: login 정보 + device 정보
   b -->> d: 동일디바이스 기존 토큰 제거 및 신규 토큰 추가
   par 구독
-  a -->> b: 구독
-  b -->> f: topic 구독
-  f -->> b: 200
-  b -->> d: 200: 구독 키워드 기록
+    a -->> b: 구독
+    b -->> f: topic*n 구독
+    f -->> b: 200
+    b -->> d: 200: 구독 키워드 기록
+    par 실패한 토큰 처리
+      b -->> d: `messaging/registration-token-not-registered`: 토큰 제거
+    end
   end
   par push
-  b -->> f: push 요청
-  b -->> d: 4xx,5xx: 토큰 제거
-  f -->> a: push notification
+    b -->> f: push 요청
+    b -->> d: 4xx,5xx: 토큰 제거
+    f -->> a: push notification
   end
 ```
 
