@@ -30,13 +30,6 @@ sec   ed25519 2022-03-01 [SC]
 uid           [ultimate] 이봉 (mbp14) <deptno@xxxxxxx.com>
 ssb   cv25519 2022-03-01 [E]
 
-$ gpg    ok  16.15.0 node  11:00:37
-gpg: WARNING: no command supplied.  Trying to guess what you mean ...
-gpg: Go ahead and type your message ...
-^C
-gpg: signal Interrupt caught ... exiting
-
-$ gpg --edit-key gpg
 $ gpg --list-keys
 /Users/deptno/.gnupg/pubring.kbx
 --------------------------------
