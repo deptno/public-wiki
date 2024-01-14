@@ -11,6 +11,8 @@
     - [[fcm]] 이 다른 bundle identifier 가 사용된다는 의미로 production 계정과 꼬일 수 있다는 점 정도 염두
 
 ## [[ios]]
++ https://github.com/deptno/salji.ro/commit/53c03555e6faa3dc9e7b015ec1c4b6a05b609957
+
 ### bundle identifier 분리
 - bundle identifier 에 의해 앱이 구분되므로 이를 분리해야한다
 - bundle identifier 를 분리하기 위해서는 먼저 **configuration** 을 생성해야한다
