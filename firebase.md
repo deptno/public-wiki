@@ -2,6 +2,17 @@
 - firebase 프로젝트를 등록하면 google cloud console 에 firebase 가 테스트 사용 및 API 키를 자동으로 등록한다
 - firebase 프로젝트를 등록하면 google cloud console 에 firebase 서비스계정을 자동으로 등록한다
 
+## flowchart
+- [[wip]]
+```mermaid
+flowchart
+  ad[developer.apple.com] -.key includes APNs: push..-> f
+  ad[developer.apple.com] -.appstore id, bundle id, team_id..-> f
+  gc[console.cloud.google.com] -.CLIENT_ID: oauth.-> f
+  f[console.firebase.google.com] --GoogleService-info.plist--> i[ios app]
+  f[console.firebase.google.com] --google-services.json--> i[android app]
+```
+
 ## client
 - console.firebase.google.com 에서 각 플랫폼별 `google-services.json` 을 다운받는다
 - 문서가 두개가 있는데 firebase 문서가 아닌 rnfirebase.io *Getting Started* 문서를 따라간다
@@ -98,3 +109,4 @@ const app = apps[0] ?? admin.initializeApp({
 ## link
 - [[fcm]]
 - [[firebase-app-check]]
+- [[devide-app-by-development-env]]
