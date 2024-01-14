@@ -34,6 +34,10 @@
 - **project** -> **target** -> *Build Settings* 화면에서 `+` 버튼을 눌러 **Add User Define Setting** 을 눌러 변수를 추가한다
   - 변수명은 `DISPLAY_APP_NAME` 으로 하였고 각각 이름을 달리하여 설치한 앱이 각각 어떤 환경을 나타내는지 구분할 수 있도록 한다
 
+### [[firebase]]
+- firebase 콘솔의 프로젝트 관리에 들어가서 추가된 [[ios]] bundle identifier 마다 앱을 생성
+- firebase app distribution 에서 해당 앱을 선택하고 시작하기를 눌러줘야지 배포시에 에러가 나지 않는다k
+- 
 ### [[fastlane]]
 - [[fastlane]] 을 통해 배포할때 두가지를 이용하고 있었다 여기서는 [[firebase]] app distribution 을 다룬다
   - [ ] testflight - 분리하지 않는 이유 [[diary:2024-01-15]] 참고
