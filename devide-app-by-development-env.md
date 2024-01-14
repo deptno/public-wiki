@@ -4,6 +4,12 @@
 > [[fastlane]] 적용까지를 목표로 한다  
 > 이 페이지는 프로젝트 최초셋업아니고 마이그레이션을 전제로 분리에만 포커싱한다
 
+## [[@todo]]
+- [[@todo]] firebase 완전 분리
+  - fcm 까지 분리할 계획이라면 [[apns]] 연결등의 추가적인 작업이 필요하다 현재는 필요없다
+  - [[ios]] 생성후에 GoogleService-info.plist 를 적용하지 않았다
+    - [[fcm]] 이 다른 bundle identifier 가 사용된다는 의미로 production 계정과 꼬일 수 있다는 점 정도 염두
+
 ## [[ios]]
 ### bundle identifier 분리
 - bundle identifier 에 의해 앱이 구분되므로 이를 분리해야한다
@@ -51,8 +57,6 @@
   - identifier 가 하나일떄는 자동으로 잘 동작을 해줬으나 여러개가 되고 난 이후로 찾지 못해서 수동으로 생성 후 매칭해줬다
   - bundle_identifier 에 따라 [[firebase]] 앱을 각각 생성해야하니 이 부분을 적용한다
   - `Domain=IDEProfileLocatorErrorDomain Code=4` 에러가 발생하면 [[#error]] 참고한다
-- [[@todo]] firebase 완전 분리
-  - fcm 까지 분리할 계획이라면 [[apns]] 연결등의 추가적인 작업이 필요하다 현재는 필요없다
 
 ## [[android]]
 - [[tbd]]
@@ -84,3 +88,4 @@ Invalid request
 - [[firebase]]
 - [[fastlane]]
 - [[xcode]]
+- [[fcm]]
