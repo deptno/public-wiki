@@ -42,8 +42,8 @@ jobs:
           cd deptno.dev
           pnpm turbo run build --no-cache
           touch apps/wiki/out/.nojekyll
-          git config user.name github-actions
-          git config user.email deptno@gmail.com
+          git config --global user.name github-actions
+          git config --global user.email deptno@gmail.com
           git config --global init.defaultBranch main
           cd apps/wiki/out
           git init
