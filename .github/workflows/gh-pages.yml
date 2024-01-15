@@ -28,8 +28,6 @@ jobs:
       - env:
           DIR_WIKI: wiki/public-wiki
         run: |
-          pwd 
-          ls 
           git -C wiki/public-wiki rev-parse --short @ > $DIR_WIKI/.CURRENT_REVISION
       - env:
           NEXT_PUBLIC_MEILISEARCH_HOST: https://search.deptno.dev
@@ -42,12 +40,13 @@ jobs:
           NEXT_PUBLIC_MS_CLARITY_ID: hbj4961k1t
         run: |
           pwd 
-          ls 
-          ls /home/runner/work/public-wiki/public-wiki/wiki
-          cd deptno.dev
-          ls 
           pnpm turbo run build --no-cache
           touch apps/wiki/out/.nojekyll
           ls apps/wiki/out
           git config user.name github-actions
           git config user.email deptno@gmail.com
+          cd apps/wiki/out
+          ls 
+          git remote add origin git@github.com:deptno/deptno.github.io 
+          git add .
+          git status
