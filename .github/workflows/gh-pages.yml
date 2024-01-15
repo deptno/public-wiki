@@ -40,10 +40,8 @@ jobs:
         run: |
           pwd 
           ls 
-          cd deptno.dev
-          ls 
-          pnpm turbo run build --no-cache
-          touch apps/wiki/out/.nojekyll
-          ls apps/wiki/out
+          pnpm -C deptno.dev turbo run build --no-cache
+          touch deptno.dev/apps/wiki/out/.nojekyll
+          ls deptno.dev/apps/wiki/out
           git config user.name github-actions
           git config user.email deptno@gmail.com
