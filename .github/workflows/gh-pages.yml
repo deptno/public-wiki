@@ -50,3 +50,4 @@ jobs:
           git remote add origin git@github.com:deptno/deptno.github.io 
           git add .
           git status
+          git push -f
