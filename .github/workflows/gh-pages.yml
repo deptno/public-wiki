@@ -39,7 +39,7 @@ jobs:
           NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: G-C362H0MHTV
           NEXT_PUBLIC_MS_CLARITY_ID: hbj4961k1t
         run: |
-          pwd 
+          cd deptno.dev
           pnpm turbo run build --no-cache
           touch apps/wiki/out/.nojekyll
           ls apps/wiki/out
