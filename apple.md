@@ -18,6 +18,8 @@
 
 ## 인증
 + https://github.com/invertase/react-native-apple-authentication/blob/main/docs/INITIAL_SETUP.md
+- 애플 로그인은 이메일 제공/미제공 여부와 무관하게 동일 계정 동일 공유 아이디를 제공받는 것으로 보인다
+- 때문에 첫 가입 시점에서 미제공으로 인해서 proxy 이메일을 받게되는 상황이면 추후에 이메일을 제공하더라도 두 계정이 같은 고유값으로 묶인다
 
 ## link
 - [[macos]]
