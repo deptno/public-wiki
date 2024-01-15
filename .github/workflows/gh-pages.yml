@@ -19,6 +19,7 @@ jobs:
         with:
           repository: deptno/deptno.dev
           path: deptno.dev
+          branch: lab/static-build
       - uses: pnpm/action-setup@v2
         with:
           version: 8
