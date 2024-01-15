@@ -34,8 +34,8 @@ jobs:
         run: |
           pwd 
           ls 
-          git -C public-wiki rev-parse --short @ > $DIR_WIKI/.CURRENT_REVISION
-          pnpm -C deptno.dev turbo run build --no-cache
+          git -C wiki/public-wiki rev-parse --short @ > $DIR_WIKI/.CURRENT_REVISION
+          pnpm -C wiki/deptno.dev turbo run build --no-cache
           touch deptno.dev/apps/wiki/out/.nojekyll
           ls deptno.dev/apps/wiki/out
           git config user.name github-actions
