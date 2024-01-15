@@ -42,10 +42,9 @@ jobs:
           cd deptno.dev
           pnpm turbo run build --no-cache
           touch apps/wiki/out/.nojekyll
-          ls apps/wiki/out
           git config user.name github-actions
           git config user.email deptno@gmail.com
-          git config init.defaultBranch main
+          git config --global init.defaultBranch main
           cd apps/wiki/out
           git init
           git remote add origin git@github.com:deptno/deptno.github.io 
