@@ -1,0 +1,53 @@
+name: deploy gh pages
+
+on:
+  push:
+    branches:
+      - lab/deploy-gh
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          path: wiki/public-wiki
+      - name: checkout frontend
+        uses: actions/checkout@v4
+        with:
+          repository: deptno/deptno.dev
+          path: deptno.dev
+          ref: lab/static-build
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: |
+            - cwd: deptno.dev
+      - env:
+          DIR_WIKI: wiki/public-wiki
+        run: |
+          git -C wiki/public-wiki rev-parse --short @ > $DIR_WIKI/.CURRENT_REVISION
+      - env:
+          NEXT_PUBLIC_MEILISEARCH_HOST: https://search.deptno.dev
+          NEXT_PUBLIC_MEILISEARCH_API_KEY: fde26209c267ac6b5802e52d0582a18ad593d3853f354e3d63e67d40c36628a7
+          NEXT_PUBLIC_ENDPOINT: https://deptno.dev
+          DIR_WIKI_ROOT: /home/runner/work/public-wiki/public-wiki/wiki
+          DIR_WIKI: /home/runner/work/public-wiki/public-wiki/wiki/public-wiki
+          URL_ME: /public-wiki/about-me
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: G-C362H0MHTV
+          NEXT_PUBLIC_MS_CLARITY_ID: hbj4961k1t
+        run: |
+          cd deptno.dev
+          pnpm turbo run build --no-cache
+          touch apps/wiki/out/.nojekyll
+          git config --global user.name github-actions
+          git config --global user.email deptno@gmail.com
+          git config --global init.defaultBranch main
+          cd apps/wiki/out
+          git init
+          git remote add origin https://deptno:${{ secrets.DEPLOY_DEPTNO_GITHUB_IO }}@github.com/deptno/deptno.github.io 
+          git add .
+          git commit -m "from public-wiki"
+          git push -f --set-upstream origin main
