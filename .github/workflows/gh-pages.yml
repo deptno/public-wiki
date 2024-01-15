@@ -49,4 +49,5 @@ jobs:
           git init
           git remote add origin git@github.com:deptno/deptno.github.io 
           git add .
+          git commit -m "from public-wiki"
           git push -f --set-upstream origin main
