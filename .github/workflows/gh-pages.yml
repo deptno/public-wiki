@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: deptno/deptno.dev
-          path: ../deptno.dev
+          path: deptno.dev
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -32,8 +32,7 @@ jobs:
           NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: G-C362H0MHTV
           NEXT_PUBLIC_MS_CLARITY_ID: hbj4961k1t
         run: |
-          pwd # /public-wiki/public-wiki
-          cd ..
+          pwd 
           ls 
           git -C public-wiki rev-parse --short @ > $DIR_WIKI/.CURRENT_REVISION
           pnpm -C deptno.dev turbo run build --no-cache
