@@ -35,8 +35,8 @@ jobs:
           NEXT_PUBLIC_MEILISEARCH_HOST: https://search.deptno.dev
           NEXT_PUBLIC_MEILISEARCH_API_KEY: fde26209c267ac6b5802e52d0582a18ad593d3853f354e3d63e67d40c36628a7
           NEXT_PUBLIC_ENDPOINT: https://deptno.dev
-          DIR_WIKI_ROOT: wiki
-          DIR_WIKI: wiki/public-wiki
+          DIR_WIKI_ROOT: ../wiki
+          DIR_WIKI: ../wiki/public-wiki
           URL_ME: /public-wiki/about-me
           NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: G-C362H0MHTV
           NEXT_PUBLIC_MS_CLARITY_ID: hbj4961k1t
