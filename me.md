@@ -23,16 +23,16 @@
 - [X] 만들었던 것
   + [[about-me]] 에 정리
 - 가진 기술
-  - kubernetes
-  - typescript
-  - next.js
-  - css
-    - tailwind
+  - [[kubernetes]]
+  - [[typescript]]
+  - [[nextjs]]
+  - [[css]]
+    - [[tailwindcss]]
     - tachyon
-  - intellij
-  - neovim
-  - db
-    - postgresql
+  - [[intellij]]
+  - [[neovim]]
+  - [[db]]
+    - [[postgresql]]
       + https://github.com/deptno/pg-toolbox/tree/master/packages/asql
         - asql, orm 이 불편해서 tagged template string 기반으로 sql이 보이도록 구현
     - dynamodb
@@ -48,6 +48,7 @@
         + https://github.com/deptno/dataloader-toolbox
           - graphq n+1 문제해결을위해 data-loader를 사용하는데 request 당 하나로 캐시되는 
             라이브러리, react 18 에서 도입된 cache 와 유사한 개념
+          - [X] n+1 문제가 지금와서 잘생각이 안남 정리 필요
   - uml
     - [ ] plantuml
     - [X] mermaid
@@ -69,6 +70,8 @@
     - tubemon.io 크롤러가 이걸로 만들어짐
   - [[functional]]
   - [[node]]
+  - bundle
+    - [ ] webpack vite esbuild 정리 필요
 
 ## link
 - [[about-me]]
