@@ -8,3 +8,4 @@ brew install --cask discord
 ## link
 - [[slack]]
 - [[midjourney]]
+- [[nc]]

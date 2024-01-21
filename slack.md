@@ -32,3 +32,5 @@ after:YYYY-MM-DD
 ## link
 - [[work]]
 - [[grep]]
+- [[nc]]
+- [[discord]]
