@@ -18,6 +18,7 @@ kubectl apply -f https://github.com/openebs/charts/blob/gh-pages/openebs-operato
 - pvc 를 삭제하면 pv 도 함게 삭제된다. 기본 reclaim 정책이 delete 이기 때문인데 바꾸면 수동 pv 삭제 가능
 - openebs 는 host node 에 pv 가 존재하기 때문에 bound 된 pvc 가 있는 pod 는 다른 노드에서 뜰 수 없다
 - mount path 는 /var/openebs/local 로 보임
+- pvc 에서 pv 이름을 지정한 경우가 아닌 경우 +  가용한 pv 가만들어져있지 않은경우 자동으로 pv 를 만들어서 할당한다
 
 ## option
 - openebs-device - mount 되지 않은 device 를 사용
