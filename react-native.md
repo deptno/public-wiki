@@ -173,6 +173,7 @@ useEffect(() => {
   - `https://[DOMAIN.COM]/.well-known/assetlinks.json` 로 서빙되어야한다
   - 테스트한다
     + https://developers.google.com/digital-asset-links/tools/generator?hl=ko
+  + [[diary:2024-01-25]]
 3. app 에서 받아 줄 수 있도록 앱링크 요청에 대한 처리를 한다
   + https://developer.android.com/training/app-links/verify-android-applinks?hl=ko#request-verify
   - `/android/app/src/main/AndroidManifest.xml` 수정
