@@ -4,6 +4,10 @@
 
 + https://learn.microsoft.com/ko-kr/appcenter/sdk/getting-started/react-native
 
+## 설정 기록
++ [[diary:2024-01-02]]
++ [[diary:2024-01-16]]
+
 ## link
 - [[react-native]]
 + [[diary:2024-01-16]]
