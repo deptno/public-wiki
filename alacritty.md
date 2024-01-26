@@ -75,3 +75,4 @@ drwxr-xr-x@     4    - deptno 2021-08-03 18:52    │  ├──  61
 - [[nvim-treesitter]]
 - [[infocmp]]
 - [[codesign]]
+- [[kitty]]
