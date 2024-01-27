@@ -28,6 +28,14 @@
   + **유튜브** https://www.youtube.com/watch?v=vN850-Dy6Yw
 
 # 개인 프로젝트
+### 살지로
+- 커뮤니티 게시판 딜 글들을 모아 알림서비스 제공
+- [[react-native]], [[next-auth]]
++ **홈** https://app.salji.ro
++ **ios** https://apps.apple.com/kr/app/%EC%82%B4%EC%A7%80%EB%A1%9C/id6475012933
++ **android** 심사중
++ **개발 기록** [[wip]] [[diary:2024-01-25]]
+
 ### [[vimwiki]] 기반의 범용 프론트엔드
 - 지식의 인덱싱을 위해서는 blog 가 아닌 wiki 가 필요하다는 판단, [[vimwiki]] frontend 구현
 + **서비스** https://deptno.dev
