@@ -1,8 +1,16 @@
 # push-notification
+## 작업 기록
++ [[diary:2024-01-27]]
+
+## 동작
 - app: active
-  - 수신: onMessage
+  - 수신: onMessage -> noficiation 을 띄운다
 - app: active 가 아닌경우
+  - notification 자체는 시스템에서 띄우는 것으로 *추측*
   - 수신: setBackgroundMessageHandler
+    - [[ios]] 수신 조건
+      - `contentAvailble: true` + `apns-priority: '10'`
+      - `cpns-push-type: 'background'` + **not** `apns-priority: '10'`
   - ~~getInitialNotification~~ `@notifee/react-native` 사용시 `notifee.getInitialNotification`
 - remote notification 이 눌린경우
   - 수신: ~~onNotificationOpenedApp~~ `@notifee/react-native` 사용시 `notifee.onForegroundEvent` - `type: 'PRESS'`
@@ -18,10 +26,11 @@ flowchart
   style react-native fill:#e91
 
   fcm --payload--> onMessage
-  fcm -.payload.-> setBackgroundMessageHandler
+  fcm -.payload, :ios:contentAvailable:true\n.-> setBackgroundMessageHandler
+  fcm -.payload :ios:apns-push-type-background\niOS ONLY 추측.-> notification
 
   setBackgroundMessageHandler -.-> app
-  setBackgroundMessageHandler -.notification 띄우는 주체가 아직 불확실.-> notification
+  setBackgroundMessageHandler -.:background: 경우 notification 은 시스템에서 의해서 뜨는 것으로 추측.-> notification
   onMessage --> app
 
   app --show--> notification
@@ -119,3 +128,4 @@ flowchart TD
 
 ## link
 - [[fcm]]
+- [[react-native]]

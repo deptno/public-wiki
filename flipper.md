@@ -1,8 +1,13 @@
 # flipper
 
+## install
 ```sh
 brew install --cask flipper
 ```
+
+### [[ios]]
+- `idb` 설치 필요
+- mac 에서는 `pip3` 사용
 
 ## [[error]]
 ### Failed to start flipper-server
