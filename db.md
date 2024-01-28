@@ -3,3 +3,4 @@
 ## link
 - [[postgresql]]
 - [[dynamodb]]
+- [[redis]]

@@ -130,6 +130,13 @@ pid 확인해서 컨테이너 접속후
 kill [PID]
 ```
 
+### ON CONFLICT DO UPDATE command cannot affect row a second time
+```sh 
+[2024-01-28 19:54:38] [21000] ERROR: ON CONFLICT DO UPDATE command cannot affect row a second time
+[2024-01-28 19:54:38] Hint: Ensure that no rows proposed for insertion within the same command have duplicate constrained values.
+```
+- conflict 키 중복, 한 쿼리에 여러 아이템에대한 컨플릭트처리를 하는데 키 중복이 있었다.
+
 ## link
 - [[kubernetes]]
 - [[psql]]

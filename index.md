@@ -40,6 +40,7 @@
 - [[darkmode|다크모드]]
 - [[web]]
 - [[db]]
+- [[redis]]
 - [[dynamodb]]
 - [[python]]
 - [[llama]]

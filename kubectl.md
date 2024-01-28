@@ -29,6 +29,7 @@ kubectl api-resources # resource 검색 [[kubernetes-api]] 참조
 kubectl api-versions
 
 kubectl get pods --context=[context-name] # context-name 을 주입할 수 있다 i.g. 스크립스 사용시
+kubectl cp my-release-master-0:/data/dump.rdb dump.rdb -c redis
 ```
 
 ## link
