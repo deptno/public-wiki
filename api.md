@@ -1,0 +1,2 @@
+# api
+- [[coupang-partners-api]]
