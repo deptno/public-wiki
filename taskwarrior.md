@@ -68,7 +68,11 @@ task context none # 해제
 - `schedule` - 일정의 시장
 - `due` - 해당일 
 - `until` - 마감일
-[[-]] `wait` - 이날 전까지는 노출하지 않는다.
+- `wait` - 이날 전까지는 노출하지 않는다.
 
 책 반납을 `schedule` 부터 가능하고 계획한 예정일은 `due` 이며 연체료를 물지 않으려면 `until` 까지는 해야한다.  
 그리고 `wait` 시점까지는 목록에서 노출되기를 원하지 않는다.
+
+## link
+- [[gtd]]
+- [[deptno-dev]]
