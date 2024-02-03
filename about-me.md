@@ -7,7 +7,7 @@
 
 ### 2019-06 ~ 2021-05: 알스퀘어, 팀장
 - 사내 back-office 개발, 프론트엔드로 시작하여 백엔드까지 전체 타입스크립트 + 노드로 마이그레이션
-  - [[csharp]] -> [[node]] + [[graphql]] 마이그레이션
+  - [[csharp]] -> [[node]] + [[graphql]] + [[dataloader]] 마이그레이션
 - elk + beat 기반의 [[log]] 모니터링 시스템 생성
 - [[kubernetes]] + [[helm]] 기반의 배포환경 구성
 
@@ -52,13 +52,13 @@
 ### 공인중개사 문제은행
 - 시험문제 -> [[markdown]] 변환 이후 커스텀 렌더러를 통해서 모든 렌더링을 구현
 - [[serverless]] 서비스들로만 구현 + [[dynamodb]], [[lambda]]+edge([[seo]]), cognito, iot(websocket)
-- [[nextjs]], graphql
+- [[nextjs]], [[graphql]]
 + **서비스** https://googit.co
 
 ### 구깃
 - 이력관리 + SNS link 를 통한 프로필, 이력서 제공 서비스
 - [[serverless]] 서비스들로만 구현 + [[dynamodb]], [[lambda]]+edge([[seo]]), cognito
-- [[nextjs]], graphql
+- [[nextjs]], [[graphql]]
 + **서비스**  https://googit.io
 + **개발 기록** https://googit.io/post/ap-northeast-2:c03f8bf0-992e-48a8-93b6-15787a0fc96f/public/googit/
 
@@ -75,6 +75,21 @@
 - [[github]] page 로 서빙, 노트북 들고 다니면서 산책하기 무릎아파서 구현
 + **서비스** https://deptno.github.io/map-subway-storage
 + **깃허브** https://github.com/deptno/map-subway-storage
+
+# 개인 라이브러리
+### dataloader-toolbox
+- session 당 [[dataloader]] 래퍼 함수의 인터스턴스 유지하기 위한 session
+- [[sql]] `IN` operator 가 함수 순서보장을 안하므로 서버에서 정렬하기 위한 sorter
++ **깃허브** https://github.com/deptno/dataloader-toolbox
+
+### pg-toolbox
+- 쿼리와 변수를 함께 보기위한 *tagged template literals* 기반한 sql 생성기
++ **깃허브** https://github.com/deptno/pg-toolbox/tree/master/packages/asql
+
+### dataloader-toolbox
+- session 당 [[dataloader]] 래퍼 함수의 인터스턴스 유지하기 위한 session
+- [[sql]] `IN` operator 가 함수 순서보장을 안하므로 서버에서 정렬하기 위한 sorter
++ **깃허브** https://github.com/deptno/dataloader-toolbox
 
 # 개인 설정
 ### .config
