@@ -86,9 +86,6 @@
 - 쿼리와 변수를 함께 보기위한 *tagged template literals* 기반한 sql 생성기
 + **깃허브** https://github.com/deptno/pg-toolbox/tree/master/packages/asql
 
-# 개인 채널
-- **유튜브**: https://www.youtube.com/@user-cl9cj5ty2v
-
 # 개인 설정
 ### .config
 - [[terminal]] 사용을 위한 개인 설정
