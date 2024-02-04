@@ -86,10 +86,8 @@
 - 쿼리와 변수를 함께 보기위한 *tagged template literals* 기반한 sql 생성기
 + **깃허브** https://github.com/deptno/pg-toolbox/tree/master/packages/asql
 
-### dataloader-toolbox
-- session 당 [[dataloader]] 래퍼 함수의 인터스턴스 유지하기 위한 session
-- [[sql]] `IN` operator 가 함수 순서보장을 안하므로 서버에서 정렬하기 위한 sorter
-+ **깃허브** https://github.com/deptno/dataloader-toolbox
+# 개인 채널
+- **유튜브**: https://www.youtube.com/@user-cl9cj5ty2v
 
 # 개인 설정
 ### .config
