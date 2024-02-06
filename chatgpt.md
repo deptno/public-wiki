@@ -14,6 +14,7 @@
   ```
   You've reached the current usage cap for GPT-4, please try again after 5:01 AM. Learn more
   ```
-  ## link
+## link
 - [[ai]]
 - [[api]]
+## [[book/index|book]]
