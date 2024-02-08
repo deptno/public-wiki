@@ -18,6 +18,8 @@
     - figma export svg -> [[sharp]] 등을 통한 이미지 변환 로직
 - [[app]] icon 생성
   + https://easyappicon.com
+- [[seo]] debugger
+  + https://ko.rakko.tools/tools/9/
 
 ## link
 - [[asset]]
