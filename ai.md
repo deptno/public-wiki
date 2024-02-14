@@ -5,3 +5,4 @@
 - [[chatgpt]]
 - [[midjourney]]
 - [[stable-diffusion]]
+- [[data]]
