@@ -24,7 +24,7 @@ pipenv --rm # 가상환경 삭제
   - `pipenv install -U [PACKAGE]` 은 지원되지 않는 것으로 보인다
 
 ### `pipenv shell`
-- `shell` 을 활성화 한다 하더라도 `pip` 를 통해 설치하면 `Pipfile` 에 기록되지 않는다
+- `shell` 을 활성화 한다 하더라도 `pip` 를 통해 설치하면 `Pipfile` 에 기록되지 않는다 다만 격리된 환경에 인스톨된다
 
 
 ## link
