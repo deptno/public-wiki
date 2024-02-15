@@ -52,6 +52,7 @@
 - [[nextjs]]
 - [[fcm]]
 - [[stylexjs]]
+- [[wsl]]
 
 ## tool
 - [[k9s]]

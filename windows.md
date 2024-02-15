@@ -1,0 +1,6 @@
+# windows
+
+;b
+
+## link
+- [[wsl]]
