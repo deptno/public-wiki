@@ -20,6 +20,8 @@ helm upgrade -n [NAMESPACE] --install milvus milvus@[VERSION]
   + https://github.com/milvus-io/milvus-sdk-node
 
 ## 사용
+### [[langchain]]
++ https://github.com/milvus-io/milvus-sdk-node/tree/main/examples/LangChain
 ```javascript 
 const address = `localhost:19530`
 const collectionName = 'test'
@@ -77,6 +79,20 @@ console.log('response', response)
     }
   ]
   ```
+## 개념
+> database > collection > partition > data
+
+### database
+- 사용 유저의 권한을 여기서 구분
+- 접속시 선택
+- `default`
+
+### collection
+- 사용 유저의 권한을 여기서 구분
+- 생성하면서 `field` 와 data-type 을 지정할 수 있다.
+
+### partition
+- partition 생성 안할 시 `_default` partition
 
 ## link
 - [[ai]]
