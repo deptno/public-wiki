@@ -30,7 +30,6 @@
 - [[react]]
 - [[kubernetes]]
 - [[debug]]
-- [[postgresql]]
 - [[vite]]
 - [[random]]
 - [[eol]]
@@ -39,9 +38,6 @@
 - [[css]]
 - [[darkmode|다크모드]]
 - [[web]]
-- [[db]]
-- [[redis]]
-- [[dynamodb]]
 - [[python]]
 - [[llama]]
 - [[react-native]]
@@ -54,6 +50,12 @@
 - [[stylexjs]]
 - [[wsl]]
 
+## [[db]]
+- [[redis]]
+- [[dynamodb]]
+- [[postgresql]]
+- [[milvus]]
+
 ## tool
 - [[k9s]]
 - [[game-engine]]
@@ -64,10 +66,11 @@
 - [[deeplink]]
 - [[smtp]]
 
-## ai
+## [[ai]]
 - [[chatgpt]]
+- [[langchain]]
 
-## web
+## [[web]]
 - [[navigator]]
 - [[console]]
 - [[seo]]
