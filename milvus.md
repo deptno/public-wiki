@@ -71,10 +71,13 @@ console.log('response', response)
   ```sh 
   response [
     Document {
-      pageContent: "방금전 퍼즐버블 문제있나요?",
+      pageContent: "칠성사이다 350ml x 24개",
       metadata: {},
     }, Document {
-      pageContent: "[티몬10분어택] 발가락교정기 1+1 외 다양 (6,125원/무료)",
+      pageContent: "웰치스 오렌지 355ml 48캔",
+      metadata: {},
+    }, Document {
+      pageContent: "[11마존] 쿠폰소진용 Kraft 마요 리얼 마요네즈 354ml (5,560)",
       metadata: {},
     }
   ]
