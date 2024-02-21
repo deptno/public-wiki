@@ -67,6 +67,14 @@ COPY packages ./packages
 ```
 폴더안의 새로운 폴더가 생성되었음에도 불구하고 레이어가 캐시되는 문제가 있다.
 
+### `failed to solve with frontend dockerfile.v0: failed to create LLB definition: failed to parse stage name "registry/image/tag:": invalid reference format`
+- [[dockerfile]] 에서 `FROM image:$TAG` 와 같은 형태로 사용하면서 $TAG 를 ARG 로 받지 않아서 생긴문제
+```dockerfile
+ARG TAG=latest
+
+FROM registry/repo/name:$TAG
+```
+
 ### `failed to solve with frontend dockerfile.v0: failed to create LLB definition: no build stage in current context`
 둘 중 하나 확인못함
 - [X] ENV 는 FROM 전에 갈수 없다
