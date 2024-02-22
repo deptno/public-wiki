@@ -135,7 +135,10 @@ const main = async () => {
     await milvus.createIndex({
       collection_name: collectionName,
       field_name: "title",
-      extra_params: index_params,
+      extra_params: {
+        metric_type: "IP",
+        index_type: "FLAT",
+      },
     })
 
     const openai = new OpenAI()
@@ -169,10 +172,6 @@ const main = async () => {
     const loaded = await milvus.loadCollection({
       collection_name: collectionName,
     })
-    const index_params = {
-      metric_type: "IP",
-      index_type: "FLAT",
-    }
     
     // ID 로 검색
     const expr = `id == '${rows[0].id}'`
