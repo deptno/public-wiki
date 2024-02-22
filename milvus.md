@@ -18,6 +18,7 @@ helm upgrade -n [NAMESPACE] --install milvus milvus@[VERSION]
 ### sdk 설치
 - [[node]]
   + https://github.com/milvus-io/milvus-sdk-node
+  - grpc 위에 올라가있고 에러가 많고 [[nextjs]] 와의 실패 경험이 있으니 참고 [[diary:2024-02-22]]
 
 ## 사용
 ### [[langchain]]

@@ -71,6 +71,13 @@ Internal Error: spawn Unknown system error -8
     at async o (/Users/deptno/.cache/node/corepack/yarn/3.3.1/yarn.js:403:146)
 ```
 
+### Automatic extension resolution of the "main" field is deprecated for ES modules.
+```sh 
+Automatic extension resolution of the "main" field is deprecated for ES modules.
+something:build: (node:11541) [DEP0151] DeprecationWarning: Package /Users/deptno/workspace/src/github.com/deptno/salji.ro/backend/packages/logger/node_modules/@internal/constant/ has a "main" field set to "dist", excluding the full filename and extension to the resolved file at "dist/index.js", imported from /backend/packages/logger/dist/logger.mjs.
+```
+- `package.json` `main` 속성에 `index.js` 와 같이 확장자를 포함한 경로 명시
+
 ## 디버깅
 ### memory leak
 - [[env|NODE_OPTIONS]]
