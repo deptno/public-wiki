@@ -6,6 +6,7 @@ kubectl annotate [resouce type] [resource name] kubernetes.io/change-cause="[cha
 
 kubectl rollout history ds/[daemonset name] -n [namespace]
 kubectl rollout status ds/[daemonset name] -n [namespace]
+# undo 시 환경변수도 해당 시점으로 돌아가는 것으로 보인다
 kubectl rollout undo [--to-revision=[revision from history]]
 kubectl rollout restart deployment [name] -n [namespace]
 
