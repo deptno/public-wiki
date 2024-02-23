@@ -1,5 +1,6 @@
 # kubectl
 
+## 사용
 ```sh
 kubectl rollout restart [resource type eg.daemonset] [daemonset name] -n [namespace]
 kubectl annotate [resouce type] [resource name] kubernetes.io/change-cause="[change-cause will be shown via kubernets rollout history [resource type] [resource name]]"
@@ -39,3 +40,4 @@ kubectl cp my-release-master-0:/data/dump.rdb dump.rdb -c redis
 - [[eol]]
 - [[envsubst]]
 - [[kubernetes-api]]
+- [[shell-script]]

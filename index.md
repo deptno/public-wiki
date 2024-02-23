@@ -66,6 +66,8 @@
 - [[deeplink]]
 - [[smtp]]
 
+## [[tip]]
+
 ## [[ai]]
 - [[chatgpt]]
 - [[langchain]]

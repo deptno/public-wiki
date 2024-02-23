@@ -121,8 +121,57 @@ fi
 NS=${NS:="default-ns"}
 ```
 
+## [[tip]]
+### [[kubernetes]] 환경을 그대로 사용하기 위한 환경변수([[env]]) 주입
+- 로컬 스크립트와 배포되었을때 참조하는 yaml 간의 격차 해소를 위해 yaml 을 기준으로 주입한다
+- [[yaml]] 파일을 기준으로 해도 되고 실제환경의 yaml 을 가져와도 무방
+```sh 
+echo $NS
+container_envs=$(
+  cat ../kubernetes/ns/$NS/$NAME/dp-$NAME.yaml \
+    | yq -ojson \
+    | jq -r '.spec.template.spec.containers[0].env | map(select(.value)) | map(.name + "=" + .value) | .[]'
+)
+container_secrets=$(
+  cat ../kubernetes/ns/$NS/$NAME/dp-$NAME.yaml \
+    | yq -ojson \
+    | jq -r '.spec.template.spec.containers[0].env | map(select(.valueFrom)) | map(.name + "=$(kubectl get secret -n $NS " + .valueFrom.secretKeyRef.name + " -ojsonpath=\"{.data." + .valueFrom.secretKeyRef.key + "}\" | base64 -d)") | .[]'
+)
+
+IFS=$'\n'
+
+for s in $container_envs; do export $s; done
+for s in $container_secrets; do eval "export $s"; done
+```
+
+#### 사용 예
+- `namespace` 를 `$NS` 로 주입받고 그 환경으로 실행한다 로컬에서 portforward 등을 통해 이름이 달라지는 내부 dns 명을 사용한다면 해당 부분은 추가적으로 아래 `export` 를 통해서 덮어 쓴다
+
+### [[kubernetes]] 에 권한이 있는지 미리 체크
+- [[kubernetes]] 에 배포를 한다던지 할때 권한을 미리 체크한다
+- `set -e` 옵션을 통해서 에러 발생시 스크립트를 중단하도록
+```sh 
+set -e
+
+PERMISSION="$(kubectl auth can-i -n $NS create svc/portforward)"
+if [[ "no" == $PERMISSION ]]; then
+  echo "no permission"
+  exit 1
+fi
+if [[ "error: You must be logged in to the server (Unauthorized)" == "$PERMISSION" ]]; then
+  echo "not authorized"
+  exit 1
+fi
+set +e
+```
+
+#### 사용 예
+- [[dockerfile]] 을 이미지 모두 생성 뒤에 푸시를 못하는 불상사를 앞단에 끊어낸다
+- 로컬에서 사용시 디비등 portforward 등이 필요한 경우 이에대한 권한을 미리 체크한다
+
 ## link
 - [[terminal]]
 - [[zsh]]
 - [[sed]]
 - [[tr]]
+- [[kubectl]]
