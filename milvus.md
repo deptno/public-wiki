@@ -86,6 +86,7 @@ console.log('response', response)
 
 ### 검색
 - load 후 사용, load 전에 index 필요
+- index 는 데이터양에 따라 생성되는 시간이 소요됨, 검색 가능한 시간까지
 
 #### query
 ```javascript
