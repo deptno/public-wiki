@@ -3,5 +3,5 @@
 - [ ] 컨텐츠 설명을 통한 광고 수잎 말고도 승인 받을 수 있는지
 
 ## link
-- [[adsense]]
+- [[google-adsense]]
 - [[api]]

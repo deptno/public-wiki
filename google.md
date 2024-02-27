@@ -54,3 +54,4 @@
 - [[synology]]
 - [[google-workspace]]
 - [[apple]]
+- [[google-adsense]]
