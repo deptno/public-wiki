@@ -21,6 +21,14 @@ helm upgrade -n [NAMESPACE] --install milvus milvus@[VERSION]
   - grpc 위에 올라가있고 에러가 많고 [[nextjs]] 와의 실패 경험이 있으니 참고 [[diary:2024-02-22]]
 
 ## 사용
+### 주의사항
+- insert 시에 **primary key** 중복이 허용된다
+  - **조건을 넣어서** `query` 하면 마지막 입력 결과가 출력된다
+  - **조건을 넣지않으면** 데이터가 존재하는것이 확인된다
+  - **search** 를 하게되면 같은 아이디 데이터 여러개를 확인할 수 있다
+  - 이를 피하려면 `upsert` 를 사용해야하고, `insert` 를 fail 시키는 방법은 없는 것으로 보인다
+    + https://github.com/milvus-io/milvus/discussions/18201#discussioncomment-6658114
+
 ### [[langchain]]
 + https://github.com/milvus-io/milvus-sdk-node/tree/main/examples/LangChain
 ```javascript 
@@ -270,6 +278,37 @@ async function tryToCreateSaljiroDealSchema(
 
 ### partition
 - partition 생성 안할 시 `_default` partition
+
+## [[error]]
+### "detail": "not support manually specifying the partition names if partition key mode is used"
+```sh 
+"detail": "not support manually specifying the partition names if partition key mode is used"
+```
+- `upsert` 시에 `partition_name` 지정시에 발생 `schema` 에 `is_partition_key` 를 지정했다고 발생하는 것으로 보임
+- 문제는 `is_partition_key` 를 지정하더라도 파티션이 `_default_1` 형태로 생성됨 버전은 `2.3.5`
+- schema 에서 제거한후 `upsert` 시에 파티션을 지정하니 아래 에러가 발생
+```sh 
+"reason": "Invalid partition name: 2024-02. Partition name can only contain numbers, letters and underscores.",
+```
+- `-`가 문제 `_` 로 변경
+```json 
+{
+  "status": {
+    "error_code": "MetaFailed",
+    "reason": "partition not found[partition=2024_02]",
+    "code": 200,
+    "retriable": false,
+    "detail": "partition not found[partition=2024_02]"
+  }
+}
+```
+- `is_partition_key` 를 주면 파티션 생성이 되지 않는다, 베타적
+- 두가지 방법이 있다
+  - `partition` 을 생성해서 `partition_name` 과 함께 `insert` 
+  - 스키마에서 `is_partition_key` 를 true 로 주는 것, 하지만 생성은 `_default_1` 형태로 생성된다
+- 파티션을 제거하려면 `unload` 후 제거해야한다
+
+
 
 ## link
 - [[ai]]
