@@ -11,7 +11,13 @@
 ## [[nextjs]] 사용시 알아 둘점
 - 버전 14를 기반으로 metadata 정의가 상위 정의와 함께 머지된다
 - 중복 정의는 하위 정보로 대체된다
-- **루트 키**를 기준으로 대체되므로 `openGraph.title` 속성을 재정의하는경우 `openGraph` 자체가 재정의된다
+
+## 검색엔진 등록
++ [[diary:2024-02-01]]
+- bing
+- [[google]] search console
+- naver
+  + https://searchadvisor.naver.com
 
 ## link
 - [[nextjs]]
