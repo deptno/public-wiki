@@ -31,7 +31,7 @@ sessionStorage.setItem(location.href, window.scrollY.toString())
 
 ### 스크롤 포지션 복구
 ```javascript
-useLayoutEffect(() => {
+useffect(() => {
   const y = sessionStorage.getItem(location.href)
 
   if (y) {
