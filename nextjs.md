@@ -163,6 +163,96 @@ EOF
     - 69@117Mi -> 25@64->108Mi
     - 최적화가 조금 더 들어가는건지 메모리 사용량이 빠짐
 
+## cache
++ https://nextjs.org/docs/app/building-your-application/caching
+
+### Request Memoization
+> 클라이언트 당 한번의 요청에서 발생하는 캐시 컨트롤
+- **React Component Tree** 내에서 요청당 같은 요청에 대해서 캐싱을 한다 - [[../dataloader|dataloader]] 와 같은 개념
+  - [[../nextjs|nextjs]] 가 아닌 [[../react|react]] 피쳐다
+  - fetch 의 `GET` 에서만 동작
+  - route handler 에서는 동작하지 않는다 *GET* 혼동하지 말것, 여긴 리액트 컴포넌트 트리의 일부가 아니기 때문
+  - 특수한 처리를 위해서라면 `React.cache` 함수를 통해 커스텀 처리 가능
+  - opt-out 가능, 할일은 없을 듯
+    - `fetch(url, { signal: new AbortController() })`
+
+### Data Cache
+> Request Memoization 과는 달리 영구적으로 캐시된다
+- 렌더링 중에 만난 `fetch` 는 기본적으로 캐시된다
+- `fetch(..., { cache: 'no-store' })` 로 캐시를 무시하고 요청할 수 있으며 이 또한 **캐시**된다
+- 캐시는 영구적이며 두가지 캐이스로 revalidation 이 가능하다
+  - 시간 지정(`{next: { revalidate: 60 }}`)
+    - **중요한 점**은 시간을 60초로 지정했을때 90초가 지난 시점에 요청이 **처음** 들어왔따면 이때 revalidate 가 진행되고 리턴 자체는 캐시되었던 데이터가 리턴된다. `stale-while-revalidate` 와 개념이 같다
+  - 명시적 요청
+    - `revalidateTag('tag')` 
+      - `{next: { tags: [tag] }}` 요청에 대해서 무효화 한다
+    - `revalidatePath`
+- `fetch` 메소드를 명시적으로 쓸 수 없어서 옵션을 전달할 수 없는 경우 *Soute Segment Config*을 사용한다
+  + https://nextjs.org/docs/app/building-your-application/caching#segment-config-options
+- opt-out 가능
+  - `export const revalidate = 0`
+  - `export const dynamic = 'force-dynamic'`
+
+### Full Route Cache
+> 빌드타임에 생성되는 리액트 서버 컴포넌트 페이로드와 클라이언트 컴포넌트에서 자바스크립트를 통해 생성하는 html
+- 빌드 타임 캐싱, or revalidation
+- static rendering 은 빌드 타임에 기본적으로 캐시된다
+- dynamic rendering 은 빌드 타임에 기본적으로 캐시되지 **않는다**
+- [X] ~~파라메터(slug) 가 포함된 페이지의 경우 `generateStaticParams` 에 정의경우 빌드 타임 아니면 런타임의 첫 요청에서 캐싱됨~~
+  - 불확실
+    + https://nextjs.org/docs/app/building-your-application/caching#generatestaticparams
+    - [ ] 위 내용에 따른 dynamic 도 첫 요청떄 캐시를 하는데 `generateStaticParams` 이 명시된 곳에서 빠진 경우에만인지 확인이 필요
+- chunk
+  - chunking
+    - route 마다
+      - React Server Comoponent -> **React Server Component Payload** 로 변환
+        - streaming 을 최적화하기 위한 *바이너리* 포맷
+        - rsc 의 결과로 dom 을 업데이트하기 위해 사용
+        - 클라이언트 컴포넌트 placeholder
+        - 클라이언트 컴포넌트로 전달될 props
+        - **클라이언트**의 **Route Cache** 에 저장됨
+        - **Route Cache** 에 존재하는 경우 **요청 자체를 스킵**
+    - suspense 바운더리 마다
+  - 둘을 합쳐서 청크 생성
+    - React Server Component Payload,
+    - Client Componetn javascript to render html on the server
+- 무효화
+  - `fetch(url, { signal: new AbortController() })`
+  - 새로운 빌드 배포
+- opt-out
+  - dynamic function 사용
+    - cookies 
+    - headers
+    - searchParams, 이건 prop
+  - cache 되지 않은 `fetch` 를 사용하는 경우 해당 `fetch` 만 opt-out 된다 나머지 자체는 캐시가 유지된다
+
+### Route Cache
+> 방문했던, 방문할(prefetching) 라우트에 대한 클라이언트 캐시  
+> React Server Component Payload 를 route segment 마다 in-memory 저장  
+> user session 동안 유지
+- 지속시간
+  - static 페이지인 경우 5분
+  - dynamic 페이지인 경우 30초
+    - `<Link prefetch />` 혹은 `router.prefetch` 를 명시적으로 사용하는 경우 5분
+- 무효화
+  - `router.refresh`
+  - server action
+    - `revalidateTag`
+    - `revalidatePath`
+    - `cookies.set`
+    - `cookies.delete`
+- opt-out
+  - 얜 opt-out 이 없다
+
+### Full Route Cache vs Route Cache
+
+|        | Full Route Cache    | Route Cache            |
+|--------|---------------------|------------------------|
+| 어디서 | Server              | Client                 |
+| 무엇을 | RSCP & HTML, static | RSCP, static & dynamic |
+| 얼마나 | persist             | user session           |
+
+
 ## error
 ### next.js 13 + next-auth
 signin 을 누르면 제대로 동작하지 않는이슈 브라우저에서는 아래 메시지가 찍힌다
