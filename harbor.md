@@ -93,6 +93,14 @@ sudo systemctl restart containerd
 kubectl run test --image=harbor.registry.com/cns/name:tag --overrides='{"spec":{"imagePullSecrets":[{"name": "harbor"}]}}'
 ```
 
+### Failed to dial harbor-notary-signer:7899: connection error: desc = "transport: x509: certificate has expired or is not yet valid: current time
+```sh 
+Failed to dial harbor-notary-signer:7899: connection error: desc = "transport: x509: certificate has expired or is not yet valid: current time
+```
+- [[helm]] chart 1.11.0 에서 1.14.0 으로 업그레이드하면서 해결하려고해보니 notary 가 안보임
+- 업그레이드 중에 에러가 나서 `helm delete harbor` 이후 새로운 버전으로 생성(values.yaml 은 복사)
+- 기존 pvc 들이 모두 제대로 붙으면서 해결됨
+
 ## link
 - [[kubernetes]]
 - [[book/24-steps-k8s]]
