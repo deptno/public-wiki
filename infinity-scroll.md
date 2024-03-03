@@ -24,6 +24,8 @@ sequenceDiagram
   - 클릭하면 새창에서 열어버리는게 사실 깔금, 모바일에서도 이런 경우 심리스한 뒤로가기를 지원
 
 ## 구현
+> 포지션 저장 복구는 네비게이션 이동에 따른 상황을 처리하기 위함인데, 백키로 할 경우는 브라우저에서 처리하는 것으로 보이고 이게 더 명확하게 느껴진다  
+> 이때 전제조건은 캐시가 존재하여 이를 복구할 수 있는 경우에 한정된다
 ### 스크롤 포지션 저장
 ```javascript
 sessionStorage.setItem(location.href, window.scrollY.toString())
@@ -35,6 +37,7 @@ useffect(() => {
   const y = sessionStorage.getItem(location.href)
 
   if (y) {
+    const y = sessionStorage.removeItem(location.href)
     const top = Number(y)
     if (top) {
       window.scrollTo({ top })
