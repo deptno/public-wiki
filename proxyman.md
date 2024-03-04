@@ -46,6 +46,7 @@ brew install --cask proxyman
   - vpn 꺼짐 확인
 - [[iphone]] 에 설치 후 활성화 해줘야한다
 - [[ios]] 에서 vpn 은 꺼둔다
+- mac 을 리붓하기도 함
 
 ## link
 - [[ios]]
