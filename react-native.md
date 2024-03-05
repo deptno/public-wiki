@@ -542,6 +542,7 @@ Error: ENOENT: no such file or directory, open '/Users/distiller/react-native/pa
 - [[ios]] 에서 발생
 - 여러 상황에서 발생하는 에러로 보이는데 이번 케이스는 `fetch` 시에 접근 불가능한 주소에 접근할때 발생했다
 - 예를들자면 실기기에서 `localhost`
+- 혹은 리턴값이 `200` 이 아닌 경우에도 발생
 
 ## 필수 패키지 분석
 ```mermaid
