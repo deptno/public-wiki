@@ -142,3 +142,4 @@ sequenceDiagram
 - [[react-native]]
 - [[apns]]
 - [[push-notification]]
+- [[google]]
