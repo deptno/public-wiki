@@ -28,6 +28,10 @@ Starting server
 To see the GUI go to: http://127.0.0.1:8188
 ```
 - 이후 주소 접속시 ui 확인 됨
+- ui에서 queue 를 클릭하면 모델이 없다고 에러난다 아래 주소에서 다운로드후 `models/checkpoints` 디렉토리에 넣어준다
+  + https://huggingface.co/runwayml/stable-diffusion-v1-5
+- **Load checkpoint** 노드에서 넣어준 `checkpoint` 를 선택하고 `queue` 를 누르면 실행된다
+  - m1max 64ram 기준으로 아무것도 건드리지 않고 기본 프롬프트로 **25.85s** 가 소요
 
 ## 개념
 ### checkpoint
