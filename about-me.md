@@ -31,7 +31,7 @@
 ### 살지로
 - 커뮤니티 게시판 딜 글들을 모아 알림서비스 제공
 - [[react-native]], [[next-auth]]
-+ **홈** https://app.salji.ro
++ **홈** https://salji.ro
 + **ios** https://apps.apple.com/kr/app/%EC%82%B4%EC%A7%80%EB%A1%9C/id6475012933
 + **android** 심사중
 + **개발 기록** [[wip]] [[diary:2024-01-25]]
