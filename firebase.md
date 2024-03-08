@@ -109,4 +109,5 @@ const app = apps[0] ?? admin.initializeApp({
 ## link
 - [[fcm]]
 - [[firebase-app-check]]
+- [[big-query]]
 - [[devide-app-by-development-env]]
