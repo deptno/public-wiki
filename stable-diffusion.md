@@ -1,7 +1,6 @@
 # stable-diffusion
 
 ## [[@todo]]
-- [ ] [[wip]] 책 보기
 - [ ] 모델 확보
 - [ ] voxel art, pixel art
 
@@ -236,4 +235,4 @@ style of [화풍,화가]
 ## link
 - [[ai]]
 - [[midjourney]]
-- comfyui
+- [[comfyui]]

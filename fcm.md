@@ -69,6 +69,10 @@ firebase cloud message
   - [[firebase]] 프로젝트 설정에서 [[APNs]] 등록 필요
   - [ ] [[xcode]] 에서 push 활성화 필요할 것
 
+#### firebase-admin
+- `sendTo` 로 시작하면 레거시 api 이므로 사용불가, `send` 를 사용
+- `sendEachForMulticast` 여러 토큰에 한번에 전송이 필요한 경우 사용
+
 ### rest 
 #### fcm access token 발급
 - oauth 토큰이 필요하다 아래서 발급이 가능하다
