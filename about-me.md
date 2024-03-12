@@ -28,7 +28,7 @@
   + **유튜브** https://www.youtube.com/watch?v=vN850-Dy6Yw
 
 # 개인 프로젝트
-### 살지로
+### 살지
 - 커뮤니티 게시판 딜 글들을 모아 알림서비스 제공
 - [[react-native]], [[next-auth]]
 + **홈** https://salji.ro
