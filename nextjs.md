@@ -307,3 +307,4 @@ ENV NEXT_SHARP_PATH=/usr/local/lib/node_modules/sharp
 - [[yarn]]
 - [[corepack]]
 - [[next-auth]]
+- [[turborepo]]
