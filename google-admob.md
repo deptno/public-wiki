@@ -23,6 +23,21 @@
 - firebase 콘솔에서 admob 시작하기
 - 스토어에 배포된 앱 선택으로 진행
 - 스토어에 등록된 마케팅 웹페이지에 `app-ads.txt`  추가해서 서빙
+- `app.json` 말고 개별 광고에는 광고 유닛 아이디가 들어가기 때문에 admob 콘솔에서 광고 생성
+
+## react-native
+> 실제 unit id 가 사용될 때는 bundle id 와 일치해야함(프로덕션 빌드만 가능하다는 뜻)
+- `__DEV__` 는 로컬 개발환경을 구분
+- debug 환경을 릴리즈 빌드하면 실제 unitId 등이 들어가게되고 이런 경우에는 광고가 노출되지 않음
+- production 환경으로 빌드시 나오는걸 확인할 수 있음
+- 만약 dev 와 같은 스테이지 빌드를 하고자 한다면 그냥 `TestIds.*` 을 넣어버리던지 실제 unit id 를 넣고자한다면 테스트 디바이스에 넣어야하는 것으로 추측된다. 난 귀찮아서 전자 처리, 안그러면 아래와 같은 네이티브 로그를 확인할 수 있다
+  ```sh 
+  <Google> To get test ads on this device, set: 
+  Objective-C
+    GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" ];
+  Swift
+    GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" ]
+  ```
 
 ## link
 - [[google]]
