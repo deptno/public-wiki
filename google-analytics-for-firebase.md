@@ -47,7 +47,7 @@ Analytics.setUserProperty(food, forName: "favorite_food")
 
 ### ad_impression
 - 광고를 볼때마다 ad_impression 이벤트를 로깅해야함
-- [[admob]] 을 연동하는 경우에 자동으로 전송됨
+- [[google-admob]] 을 연동하는 경우에 자동으로 전송됨
 - **note** AppLovin 및 ironSource 는 노출마다 수익을 주는 구조인가 봄 노출 시마다 메시지 발송
 
 ## 사용자 ID 설정
