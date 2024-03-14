@@ -33,6 +33,9 @@ bun install # npm yarn pnpm 마찬가지
   ```
 
 ## 개발
+### ___DEV__ 변수
+- 전역변수로서 참조가 가능하다. 로컬 개발환경에서만 `true` 가 되고 빌드를 하고나면 빌드 scheme 에 관련없이  `false` 다
+
 ### ios bundler identifier 변경
 - ~~`ios/[APP_NAME]/Info.plist` 에서 `CFBundleIdientifer` 변경~~ 지금 보니 틀려보임 아래 확인
 - `ios/saljiro.xcodeproj/project.pbxproj` 파일에서 `PRODUCT_BUNDLE_IDENTIFIER` 찾아서 일괄 변경
