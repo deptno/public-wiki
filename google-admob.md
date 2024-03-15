@@ -30,14 +30,31 @@
 - `__DEV__` 는 로컬 개발환경을 구분
 - debug 환경을 릴리즈 빌드하면 실제 unitId 등이 들어가게되고 이런 경우에는 광고가 노출되지 않음
 - production 환경으로 빌드시 나오는걸 확인할 수 있음
-- 만약 dev 와 같은 스테이지 빌드를 하고자 한다면 그냥 `TestIds.*` 을 넣어버리던지 실제 unit id 를 넣고자한다면 테스트 디바이스에 넣어야하는 것으로 추측된다. 난 귀찮아서 전자 처리, 안그러면 아래와 같은 네이티브 로그를 확인할 수 있다
-  ```sh 
-  <Google> To get test ads on this device, set: 
-  Objective-C
-    GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" ];
-  Swift
-    GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" ]
-  ```
+- 만약 dev 와 같은 스테이지 빌드를 하고자 한다면 그냥 `TestIds.*` 을 넣어버리던지 실제 unit id 를 넣고자한다면 테스트 디바이스에 넣어야하는 것으로 추측된다. 난 귀찮아서 전자 처리아니면 테스트 디바이스를 등록해야한다 아래 로그를 살펴본다
+
+### 테스트 디바이스 등록
+```sh 
+<Google> To get test ads on this device, set: 
+Objective-C
+  GADMobileAds.sharedInstance.requestConfiguration.testDeviceIdentifiers = @[ @"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" ];
+Swift
+  GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" ]
+```
+- 테스트 디바이스로 등록하는 방법은 두가지다
+  - admob 콘솔에서 IFDA 로 등록
+  - 코드로 추가
+- IFDA 가져오려면 라이브러리 설치 후 코드로 가져오거나 따로 앱을 설치해서 가져와야해서 귀찮아서 하지 않았다.
+- 비정상 행동으로 계정 블락이있을 수 있다고 하여 위험을 감수하지 않고 위의 로그에 나온 내용으로 코드를 추가했다.
+```typescript
+mobileAds()
+  .setRequestConfiguration({
+    // ...
+    testDeviceIdentifiers: [
+      'EMULATOR',
+      'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // deptno@gmail.com iPhone
+    ],
+  })
+```
 
 ## link
 - [[google]]
