@@ -18,6 +18,8 @@
 - [[google]] search console
 - naver
   + https://searchadvisor.naver.com
+- daum
+- ~~zum~~ 은 개인사이트등록 거부
 
 ## link
 - [[nextjs]]
