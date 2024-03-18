@@ -1,6 +1,7 @@
 # [public-wiki](http://github.com/deptno/public-wiki) 
 - [[hello-wiki]]
 - [[about-me]]
+- [[health]]
 
 ## todo
 - [[error]]
