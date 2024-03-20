@@ -173,8 +173,13 @@ val intent = Intent(this, MainActivity::class.java)
 
 ## [[error]]
 
-###  설치 실패
+### 설치 실패
 - [[firebase]] app distribution, [[app]] tester 등을 통해서 앱을 설치하려고하는데 계속 에러가 난다면 빌드를 universal apk 로 진행한다 [[diary:2023-12-31]]
+
+### 배포 버전에서 구글로그인 로그인 안됨
+- 플레이스토어 버전은 자체 핑거 프린트를 가지고 있음
+- [[play-console]] 에 접속 -> 설정 -> 앱 서명 -> SHA-1 지문 **복사**
+- console.cloud.google.com -> SHA-1 참조하여 *OAuth 2.0 클라이언트 ID* **생성** -> 추가적으로 제공되는 json 은 신경쓸 필요 없음
 
 ## link
 - [[flipper]]
