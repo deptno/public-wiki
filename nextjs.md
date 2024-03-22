@@ -301,6 +301,18 @@ ENV NEXT_SHARP_PATH=/usr/local/lib/node_modules/sharp
 ```
   + https://github.com/lovell/sharp/issues/3877#issuecomment-1850388322
 
+### Error: Next.js package not found
+```sh 
+⨯ Error: Next.js package not found
+
+Debug info:
+- Execution of get_next_package failed
+- Next.js package not found
+```
++ https://github.com/vercel/next.js/issues/56887#issuecomment-1826767117
+- [[pnpm]] 모노레포 구성 후 실행 -> 접근시 에러가 발생
+- `outputFileTracingRoot` 옵션으로 `node_modules` 위치를 주면 해결됨
+
 ## link
 - [[react]]
 - [[tailwindcss]]
