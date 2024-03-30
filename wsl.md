@@ -16,6 +16,31 @@ apt install python3-pip
 pip install pipenv
 ```
 
+## 외부에서 ssh 를 통해 접속
+> remote -> window -> wsl
+
+### window host 설정
+1. window에서 openssh server 설치 및 시작
+2. 관리자 계정으로 power shell 오픈
+3. `net user [ID] [PASSWORD] /add` 명령으로 사용자 생성, 패스워드 필요
+4. `ssh [WINDOWS_HOST_IP]` 접속
+
+### wsl os 설정
+1. `openssh-server` 설치
+```sh 
+apt update
+apt upgrade
+apt install openssh-server
+```
+
+### remote -> window host 
+> `net user` 를 통해 생성한 계정으로 접속
+```sh 
+ssh [USER]@[WINDOWS_HOST_IP]
+```
+
+### remote -> window host -> wsl
+
 ## error
 - wsl 실행하니 창 열리고 바로 꺼짐
 - 지우고 설치하니 default profile, guid 어쩌고하고 꺼짐
@@ -23,3 +48,4 @@ pip install pipenv
 
 ## link
 - [[windows]]
+- [[ssh]]
