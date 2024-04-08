@@ -6,3 +6,4 @@
 ## link
 - [[pipenv]]
 - [[openai-whisper]]
+- [[ubuntu]]

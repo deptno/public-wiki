@@ -2,7 +2,7 @@
 
 ## setup
 3대 이상의 vm([[multipass]] 참고) 준비
-[[multipass]] 사용을 가정하기 때문에 ubuntu 를 기준으로 작성됨
+[[multipass]] 사용을 가정하기 때문에 [[ubuntu]] 를 기준으로 작성됨
 
 ### dns
 ```sh
