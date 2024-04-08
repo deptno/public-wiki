@@ -1,5 +1,29 @@
 # stable-diffusion
 
+## [[error]]
+### Cannot locate TCMalloc
+- [[ubuntu]] `./webui.sh` 실행시 에러
+```sh 
+Cannot locate TCMalloc. Do you have tcmalloc or google-perftool installed on your system? (improves CPU memory usage)
+```
+  - 패키지 설치
+  ```sh 
+  sudo apt install google-perftools
+  ```
+  + https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues/10117#issuecomment-1536437860
+
+### RuntimeError: Torch is not able to use GPU; add --skip-torch-cuda-test to COMMANDLINE_ARGS variable to disable this check
+- [[cuda]] 참조
+
+### remote 서버로 사용시 ip 로 접속이 안됨
+- [[ubuntu]] 인 경우
+```sh
+sudo service ufw stop # 방화벽 제거
+./webui.sh --listen
+```
+  - `--listen` 옵션을 줘야지 로컬외 접속이 허용된다
+  + https://www.reddit.com/r/StableDiffusion/comments/15ge386/comment/jui85sv/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
+
 ## [[@todo]]
 - [ ] 모델 확보
 - [ ] voxel art, pixel art
@@ -236,3 +260,4 @@ style of [화풍,화가]
 - [[ai]]
 - [[midjourney]]
 - [[comfyui]]
+- [[python]]

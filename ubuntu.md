@@ -7,7 +7,10 @@
 ```sh
 sudo apt update
 sudo apt upgrade
-sudo apt install net-tools # ifconfig 사용
+sudo apt install net-tools # ifconfig
+pip install pipenv # 아래 패스추가해야한다
+echo 'export PATH=~/.local/bin:$PATH' >> ~/.bashrc
+sudo service ufw stop # 외부에서 접속하기위해 방화벽 비활성화
 ```
 - `python3`, `tmux` 설치되어있음
 
@@ -16,3 +19,4 @@ sudo apt install net-tools # ifconfig 사용
 - [[ai]]
 - [[stable-diffusion]]
 - [[python]]
+- [[pipenv]]

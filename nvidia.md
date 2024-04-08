@@ -1,0 +1,4 @@
+# nvidia
+
+## link
+- [[cuda]]

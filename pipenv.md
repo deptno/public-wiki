@@ -28,3 +28,5 @@ pipenv --rm # 가상환경 삭제
 
 ## link
 - [[python]]
+- [[ubuntu]]
+- [[stable-diffusion]]
