@@ -25,3 +25,4 @@ Webstorm -> Tools -> Terminal -> Run command using IDE(? [[@todo]])
 ## link
 - [[intellij]]
 - [[yarn]]
+- [[pycharm]]
