@@ -13,6 +13,12 @@ jupyter lab [--ip 0.0.0.0]
 jupyter notebook
 ```
 
+## hash
+```sh 
+#|export_exp [name] # export 파일 확장자
+#|export # 코드 익스포트시 포함되는 셀
+```
+
 - 외부에서 접속 필요시 옵션 추가 `--ip 0.0.0.0` 대입
 
 ## link
