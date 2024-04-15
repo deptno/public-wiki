@@ -1,7 +1,7 @@
 # ai
 
 ## 강의
-- https://course.fast.ai
+- [[practical-deep-learning]] https://course.fast.ai
 
 ## link
 - [[chatgpt]]

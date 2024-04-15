@@ -2,4 +2,4 @@
 
 ## link
 - [[graded-readers]]
-- [[power-english]]
+- [[ebs]]

@@ -7,8 +7,12 @@
 ### 옵션
 - 커맨드라인 옵션
   + https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Command-Line-Arguments-and-Settings
-  - 모델 위치 변경등
+  - 해당 설정 적용은 `webui-user.sh` 에서 덮어쓰게되어있으니 해당 파일을 참조해서 처리해야한다
 
+###  모델 위치 변경등
+- `webui-user.sh` 참고
+  - `COMMANDLINE_ARGS=--data-dir [절대경로]` 내용 포함, 상대경로 처리안됨
+ 
 
 ## [[error]]
 ### Cannot locate TCMalloc
@@ -39,3 +43,4 @@ sudo service ufw stop # 방화벽 제거
 - [[midjourney]]
 - [[comfyui]]
 - [[python]]
+- [[book/making-game-graphic-with-stable-diffusion]]
