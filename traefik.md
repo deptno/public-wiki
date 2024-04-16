@@ -416,11 +416,16 @@ traefik 이 자기가 만든 acme.json 파일 퍼미션이 너무 열려있다�
   + https://github.com/traefik/traefik/issues/6825
   - helm 차트에 주석으로 이미 되어있음 로컬 디바이스를 사용하면 생기는 것으로 보임
   - initConatiner 로 시작하면서 퍼미션을 수정하는 방식
----
-secret 에서 개행 제거하고 나서 나오기 시작
----
-middleware 의 namespace 와 관계없이 ingressroute 의 namespace 를 보는 것 같다
-middleware.forwardAuth 를 설정할때 namespace 를 명시한다
+- **secret 에서 개행 제거하고 나서 나오기 시작**
+- mjddleware 의 namespace 와 관계없이 ingressroute 의 namespace 를 보는 것 같다
+- middleware.forwardAuth 를 설정할때 namespace 를 명시한다
+
+### tarefik service 에서 Cluster 를 Local 로 바꿔서 해결
+```yaml
+  externalTrafficPolicy: Local
+  internalTrafficPolicy: Cluster
+```
+  - **ChatGPT** 외부 트래픽을 수신된 노드에서만 처리하도록하여 소스 IP 보존
 ## link
 - [[kubernetes]]
 - [[diary:2023-01-08]]
