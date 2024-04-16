@@ -175,3 +175,4 @@ set +e
 - [[sed]]
 - [[tr]]
 - [[kubectl]]
+- [[iconv]]

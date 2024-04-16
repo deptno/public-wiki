@@ -12,3 +12,4 @@ fetch.buffer().then((buffer) => {
 ## link
 - [[node]]
 - [[encoding]]
+- [[iconv]]
