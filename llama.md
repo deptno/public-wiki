@@ -16,3 +16,4 @@
 
 ## link
 - [[pipenv]]
+- [[ollama]]

@@ -2,17 +2,18 @@
 + https://course.fast.ai
 + https://github.com/deptno/study-ai
 
-## 01. getting started
+## 강의
+### 01. getting started
 - 이미지 분석기 따라 생성해보기
 - imagenet 을 학습한 기본 모델, resnet18 기반 개/고양이이를 추가학습(파인튜닝)
 
-## 02. deployment
+### 02. deployment
 - huggingface 에 gradio 등을 통한 app + api endpoint 배포
 - Image Classifier Cleaner, 학습시 잘못된 데이터 제거
 - Data augmentation -> 데이터 증강, 이미지를 랜덤 사이즈 크롭, 혹은 변형을 통해 학습을 증대시킨다
 - leaner 를 pickle 파일로 export -> import 사용
 
-## 03. nautral net foundations
+### 03. nautral net foundations
 - loss 를 개선하는 원리 설명
 - ReLU (Rectificed Linear Unit)
   - 0 이상에서만 값을 가짐
@@ -33,7 +34,68 @@
     - 나이 -> 맥시멈값을 가지고 각 컬럼값을 나눠서 0 ~ 1 로 정규화한다
     - fare(티켓값) -> 큰숫자가 많고 작은숫자가 조금 있는 경우, 극단적 데이터의 경우는 로그를 취한다
 
-## 04. natural language (NLP)
+### 04. natural language (NLP)
+
+## 책
+### 04
+- 파이토치 텐서
+  + https://wikidocs.net/52460
+
+- 평가 함수, 좋은지 여부를 사람이 확인하기 위해 사용, high is better
+- loss 함수, 손실 최적화를 위해 학습에 사용됨, low is better
+  - loss 가 낮을 수록 좋다
+    - loss 가 낮다, 확신을 갖고 맞춘 경우
+    - loss 가 높다, 확신을 갖고 틀린 경우, 맞췄으나 확신이 없는 경우
+  - loss 함수로 **mse(mean sequare error)** 사용시
+    - `평가할 데이터 - 정답` 을 제곱한뒤 평균을 내서 루트하는 방식
+    - 평가데이터가 정답과 얼마나 근접한지 확인
+- loss 함수의 결과를 미분하면 학습 방향을 알 수 있음
+- 미분 결과 * learning rate 를 파라메터에서 뺀다
+  - 기울기가 낮아지는 방향(0) 을 향해 전진
+  - learning rate 를 찾는 것은 또다른 중요한 일, 여기선 낮은 값(0.001)정도로 생각
+  - 다음 train set + 수정된 파라메터를 가지고 다시 loss 함수를 사용
+  - 반복해서 낮은 loss 획득
+  - parameter 를 모델 실행 후 결과에서 `backward()`시 parameter에서 미분된 값을 `grad` 속성을 통해 접근가능
+    - 가중치가 벡터인 경우 `.sum()` 후 `backward()`실행으로 미분
+
+#### 정리
+- model 을 함수 f로 보고 모델은 입력을 받아 결과를 예측한다
+  - 뭔 받아서 뭘 예측할 건지가 f
+- loss 함수, f 의 결과가 답에 얼마나 부합하는지 확인한다
+  - 답은 label data 에서 확인
+- 임의의 파라메터를 설정하고 f 의 결과를 구하고 답과의 차이(거리)인 loss 구한다
+- loss 를 미분(`backward` 함수가 여기있기 때문에 이렇게 표현) 파라메터의 기울구한다
+- 파라메터의 기울기에 learning rate 를 곱하여 파라메터에 더하거나 빼서 더 낮은 loss 결과를 얻도록 한다
+- 반복한다
+
+#### 4.4.3 SGD
+- f: 모델, 속도를 측정하고자함
+- loss: 모델의 속도가 실제 속도차를 비교
+- 속도 측정 흐름
+  - x: time, y: speed, (a,y: weights, y: bias): parameter
+  - 속도가 느려지다가 빨라진다 -> 2차방정식 `a(x**2) + bx + y`
+  - loss가 적은 parameter 를 찾는게 목표, x, y 는 주어짐
+  - random parameter 로 시작
+  - 
+#### 용어
+- 브로드캐스팅: tensor 간의 연산, 높은 랭크의 텐서에 맞춰서 낮은 랭크의 텐서가 확장된다
+- 파라메터: weights + bias
+
+#### numpy vs pytorch
+| numpy    | pytorch          |
+|----------|------------------|
+| 제약없음 | 동일사이즈(제곱) |
+| 제약없음 | 수치형데이터만   |
+| x        | 자동 미분        |
+| x        | GPU 활용 연산    |
+
+#### 텐서 랭크
+| rank | 책에서의 언급                     |
+|-----:|-----------------------------------|
+|    0 | 0d tensor, scalr                  |
+|    1 | 1d tensor, vector                 |
+|    2 | 2d tensor, matrix, list of vector |
+|    3 | 3d tensor, list of matrix         |
 
 ## link
 - [[ai]]

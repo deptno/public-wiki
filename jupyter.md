@@ -13,6 +13,20 @@ jupyter lab [--ip 0.0.0.0]
 jupyter notebook
 ```
 
+## 소스 컨트롤
+```python
+doc([FUCTION_NAME]) # 함수 문서
+
+?[FUCTION_NAME] # 함수 시그니처, 위치 정보 및 문서
+[FUCTION_NAME]? # 동일
+
+%psource [FUCTION_NAME] # 함수의 정의 코드로 보여줌
+
+??[FUCTION_NAME] # ? + %psource
+FUCTION_NAME]?? # 동일
+```
+
+
 ## hash
 ```sh 
 #|export_exp [name] # export 파일 확장자
