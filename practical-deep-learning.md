@@ -97,6 +97,23 @@
 |    2 | 2d tensor, matrix, list of vector |
 |    3 | 3d tensor, list of matrix         |
 
+## [[error]]
+### NotImplementedError: The operator 'aten::_linalg_solve_ex.result' is not currently implemented for the MPS device. If you want this op to be added in priority during the prototype phase of this feature, please comment on https://github.com/pytorch/pytorch/issues/77764. As a temporary fix, you can set the environment variable `PYTORCH_ENABLE_MPS_FALLBACK=1` to use the CPU as a fallback for this op. WARNING: this will be slower than running natively on MPS.
+```python
+NotImplementedError: The operator 'aten::_linalg_solve_ex.result' is not currently implemented for the MPS device. If you want this op to be added in priority during the prototype phase of this feature, please comment on https://github.com/pytorch/pytorch/issues/77764. As a temporary fix, you can set the environment variable `PYTORCH_ENABLE_MPS_FALLBACK=1` to use the CPU as a fallback for this op. WARNING: this will be slower than running natively on MPS.
+```
++ https://forums.fast.ai/t/fastai-on-apple-m1/86059/21?page=3
+
+
+### Error displaying widget
+```python
+cleaner = ImageClassifierCleaner(learn)
+cleaner
+```
++ https://forums.fast.ai/t/beginner-setup/95289/259
+- python 버전 다운 필요. 3.11
+- 근데 나는 3.9.6 이었는데 에러발생
+
 ## link
 - [[ai]]
 - [[jupyter]]
