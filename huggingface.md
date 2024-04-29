@@ -2,6 +2,13 @@
 + huggingface.co
 
 ## nlp
+### [[wip]]
+- encoder -> 분석
+  - BERT(Bidirectional *Encoder* Representations from Transformers)
+- decoder -> 생성
+- encoder, decoder 모델 -> 요약
+- 
+
 ### transformers
 - 흐름
   - input -> tokenizer -> {input_ids, attension_mark}
@@ -70,7 +77,102 @@
   - 토큰화는 배치를 사용해서 가속화 할 수 있다.
   - 토큰화는 동적 패딩을 사용해서 가속화 할 수 있다.
 
-##### Fine-tuning a model with the Trainer API or Keras
+#### Fine-tuning a model with the Trainer API or Keras
+
+#### a full training
+- accelerator
+  - gpu 분산환경에서 작업하기 위해 필요
+  - accelerator 를 통해 래핑된 오프젝트로 작업
+  - `python` 명령어대신 `accelerator` 를 통해 작업한다
+
+#### Fine-tuning, Check!
+- 파트 정리
+- Auto{Tokenizer,Model}.from_pretrained([checkpoint]) 를 통해 시작
+  - Auto* 를 사용하는 경우 huggingface hub 로 부터 해당 model card 를 읽어들여서 설정을 처리한다
+- 그리고 데이터 셋을 불러와서(`from datasets`) 이를 기반으로 `Trainer` 를 생성하고 학습시킨다
+  - `TrainerArguments` 는 `Trainer` 를 위해 trainer, evaluation 을 위한  hyperparameters 를 제공한다
+- `dataset` 은 *apache arrow* 로 작성되었으며 작업시에만 메모리를 사용한다
+  - `map` 메소드
+    - 동시 배치 처리가 가능하다
+    - 작업은 캐싱된다
+- 학습 속도 향상을 위해서 동적 패딩이 사용되며, 이는 batch 안에서의 `max_length` 를 활용하는 방식이다
+  - tpu 는 동적 패딩을지원하지 않는다.
+- 학습시키면서 평가나 프로그래스를 볼 수있도록 설정이 가능하다 (`evaluator`)
+- `accelerator` 를 사용하면 multiple gpu 를 활용한 학습이 가능하다
+- `AutoModelForSequenceClassification` 와 같은 모델을 생성하면서 `bert-base-uncased` 와 같은 checkpoint 를 `from_pretrained` 로 불러들이면
+  - 워닝이 발생한다
+  - pre-trained 모델에서 sequence classification 을 위한 헤드는 버려진다
+  - 새로운 헤드가 장착되므로 여기에 학습을 시키면 된다
+
+### 4. SHARING MODELS AND TOKENIZERS
+
+#### The Hugging Face hub  
+
+#### Using pretrained models
+- `pipeline` 함수를 사용할때는 task, checkpoint 짝이 맞아야한다
+  - 아닌경우 head가 task에 맞지않음으로 정상동작하지 않는다
+- `pipeline` 함수가 아니어도 model을 바로 생성할수 있다.
+  - `from transformers import ATokenizer, AForMaskedLM` 의 형식
+  - 하지만 이건 모델 종속적이므로 추천하지 않고 대신 `Auto*` 형태의 사용을 추천한다
+    - `from transformers import AutoTokenizer, AutoModelForMaskedLM`
+- 모델 사용할대는 model card(huggingface 모델 페이지의 정보)를 확인해라
+
+#### Sharing pretrained models
+- `huggingface-cli` 에 대한 내용
+- [[tbd]]
+
+#### Buliding a model card
+> 읽어보면 도움이 될만한 내용들
+- 모델에 대한 정보
+- 한계
+- 라이센스
+- 학습방법
+
+#### Part 1 completed!
+- 여기까지 왔으면 text classification 에서 single, paris 문장에 대한 파인튜닝이 가능해야한다
+
+### 5. THE 🤗 DATASETS LIBRARY
+#### Introduction
+- 파인튜닝시 데이터셋 사용
+  - 로드 from hugging face hub
+  - `Dataset.map()` 통한 전처리
+  - metric 계산
+
+#### What if my dataset isn’t on the Hub?
+- `csv`(`tsv` 포함), `text`, `json`, `jsonl`, `pandas`(`pkl`) 지원
+- local / remote file 지원
+- from datasets import load_dataset
+- 다양한 방법으로 train/test 데이터 분할을 지원한다
+- 압축파일도 지원한다
+- 경로를 path 대신 url 을 주면 리포트 파일을 로딩한다
+
+#### Time to slice and dice
+- 데이터 클린업
+
+##### 샘플링
+- `Dataset`, `DatasetDict` 의 메소드
+- `Datset.shufffle().select(range(1000))` 을 통해 테스트해볼수있다.
+
+##### 정규화
+- 수상한 컬럼이지만 id 처럼 보이는 컬럼이 발견되면 `.unique` 메소드를 통해 id 인지 확인한다
+  - id 가 확인되면 `DatasetDict.rename_column` 을 통해서 적합한 이름으로 변경
+- `.map` 을 통해 대소문자 통일
+- `.filter` 를 통해 `None` 제거
+  - [ ] [[@todo]] 걍 제거해버리면 되는건가;
+- `html` 코드가 포함된 데이터의 경우 `html` 패키지의 `unescape` 로 변경가능
+  - `I&#039;m` -> `I'm`
+
+##### 새 컬럼 생성
+- `Dataset.map` or `Dataset.add_column`
+- `Dataset.sort` 로 특정 컬럼의 값을 통해 정렬가능
+- `.num_rows` 를 통해 카운팅
+
+##### `.map`
+- `batched=True`
+  - batch 의 기본값은 1000
+  - `batched=True` 가 설정되면 map 함수로 들어오는 딕셔너리 인자의 값들은 리스트가 된다
+  - 때문에 리스트 컴프리헨션등을 사용해서 한방에 처리해야한다
+  - batch 도 가속화되지만 `.map` 함수내에서 사용되는 함수내 리스트 컴프리헨션도 for loop 보다 속도면에서 우월하다
 
 
 ## link

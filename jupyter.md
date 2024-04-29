@@ -12,6 +12,7 @@ jupyter lab [--ip 0.0.0.0]
 # 노트북으로 실행
 jupyter notebook
 ```
+- 외부에서 접속 필요시 옵션 추가 `--ip 0.0.0.0` 대입
 
 ## 소스 컨트롤
 ```python
@@ -33,9 +34,14 @@ FUCTION_NAME]?? # 동일
 #|export # 코드 익스포트시 포함되는 셀
 ```
 
-- 외부에서 접속 필요시 옵션 추가 `--ip 0.0.0.0` 대입
+## %
+```sh 
+%time [code] # 소요 시간 표시
+%%time # 이건 셀 가장 윗줄에 사용
+```
 
 ## link
 - [[ai]]
 - [[python]]
 - [[pycharm]]
+- [[huggingface]]
