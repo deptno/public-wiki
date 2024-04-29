@@ -18,3 +18,4 @@ from module import func as f
 - [[pipenv]]
 - [[openai-whisper]]
 - [[ubuntu]]
+- [[huggingface]]

@@ -113,7 +113,9 @@ cleaner
 + https://forums.fast.ai/t/beginner-setup/95289/259
 - python 버전 다운 필요. 3.11
 - 근데 나는 3.9.6 이었는데 에러발생
+- `ipywidgets` uninstall 후 커널 재시작 install 로 해결 7.x -> 8.x 로 버전업
 
 ## link
 - [[ai]]
 - [[jupyter]]
+- [[huggingface]]
