@@ -177,7 +177,8 @@
   - 내용이 많아서 배치 최적화는 그때가서 읽어봐야할 듯 [[tbd]]
   - 파이썬 멀티프로세싱(`num_proc`) 을 fast tokenizer + batched=True 와 사용하지 말것을 권고
 
-
+#### 6. tokenizer
+- `pipeline` 함수 없이 토크나이징하는 것에 대한 설명 있음
 
 ## link
 - [[python]]
