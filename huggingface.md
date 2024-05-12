@@ -180,6 +180,24 @@
 #### 6. tokenizer
 - `pipeline` 함수 없이 토크나이징하는 것에 대한 설명 있음
 
+##### Building a tokenizer, block by block
+- BIRT
+  - pre_tokenizers 들은 compose 가능
+  - pre_tokenizers.Whitespace - 공백 및 구두점
+    - pre_tokenizers.WhitespaceSplit - 공백에서만 split
+    - pre_tokenizers.Punctuation - 구두점에서만 split
+  - trainer 사용시에는 스페셜 토큰들을 모두 제공해야한다
+  - 이를 가지고 저장([[json]]) 후 불러와서 사용하려는 경우
+    - `PreTrainedTokenizerFast` 로 래핑해야하며 이때 스페셜 토큰들은 명시해야한다
+      - wrapping 후에는 허브에 올리든 `save_pretrained` 를 통해서 사용가능하다
+- BPE(GPT-2 토크나이저)
+  - `unk_token` 을 사용하지 않는다
+  - GPT-2 는 `normalizer` 를 사용하지 않아 스킵
+  - 토크나이저 생성시 `models.BPE()` 로 인자가 들어간다
+  - 토크나이저 생성시 `pre_tokenizers.ByteLevel` 프리토크나이저가 사용된다
+  - 스페이스는 토큰에 포함
+  - 역시 huggingface transformers 에서 사용하려면 wrapping 필요
+
 ## link
 - [[python]]
 - [[jupyter]]
