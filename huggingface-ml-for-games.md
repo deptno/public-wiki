@@ -135,11 +135,33 @@
 - 이 게임에서 유사도 검색을 사용하기 위해 `all-MiniLM-L6-v2` 모델을 사용한다
   + https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
 - 이 모델은 BERT 트랜스포머 모델로 이미 학습을 마쳤으므로 사용하면된다
-- [[wip]]
 
 ### Running the model remotely
-- 
+- 서버 api 를 호출하는 방식
+- 허깅페이스에서 *Inference API* 를 제공
+  - 프로토타입및 테스트용은 무료
+  - 이를 사용하기 위한 유니티 플러그인이 존재
+    + https://huggingface.co/blog/unity-api
+- 장점
+  - 클라이언트 측에 리소스 필요하지 않음
+  - 서버쪽에서 로깅할 수 있음으로 유저 입력에 대한 정보등을 개선에 쓸 수 있음
+- 단점
+  - 인터넷 연결 및 서버 상태에 따른 종속이 생김
+  - 잠재적 비용 비용 폭탄 가능성
+- 주로 클라이언트에서 실행할 수 없는 큰 모델을 실행하는 경우 API 제공이 필요하다
 
+### Running the model locally
+- 클라이언트에서 사용하기 위해 2개의 라이브러리를 사용한다
+  - *Unity Sentis* - AI 모델을 게임 안에서 실행할 수 있도록 한다
+  - *The Hugging Face Sharp Transformers library* - 유니티 게임에서 트랜스포머 모델을 사용할 수 있도록 한다
+- 장점
+  - 돈 안나감
+  - 인터넷 연결 종속 없음
+- 단점
+  - 클라이언트 스펙에 영향을 받는다(RAM/VRAM)
+  - 유저가 어떤식으로 모델을 활용하는 정보를 쉽게 얻지 못한다
+
+- 유사도 검색은 가벼운 모델이라 **로컬에서 사용하기로한다**
 
 ## BONUS 1. CLASSICAL AI IN VIDEO GAMES
 
