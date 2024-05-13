@@ -198,6 +198,16 @@
   - 스페이스는 토큰에 포함
   - 역시 huggingface transformers 에서 사용하려면 wrapping 필요
 
+#### 7. MAIN NLP TASKS
+##### Token classification
+- `AutoTokenizer` 로 model checkpoint -> tokenizer
+- 학습시길 dataset 불러옴
+- 학습시킬 데이터를 토큰화 해보면 데이터가 가지고있는 레이블링 데이터(? NER 정보등)의 수와 맞지 않게됨(토큰수가 달라지며)
+- 이를 맞추는 작업이 proprocessing 
+  - 토큰을 맞추기 위해 스페셜 토큰을 -100 값으로 채우고
+  - 배치시에 길이를 맞추기 위해 패딩 채우는 작업
+- -100 은 loss 함수에서 무시하게되어 부하를 줄이는 역할도 있음
+
 ## link
 - [[python]]
 - [[jupyter]]
