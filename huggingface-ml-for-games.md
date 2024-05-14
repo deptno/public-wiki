@@ -92,7 +92,8 @@
   - 가져다 달라거나 춤춰달라거나 요청 후 이를 NPC 가 실행
   - 건물안에서 가드를 피해서 숨고 목적 아이템을 훔쳐오라는 지시 후 NPC 가 이를 수행하는 게임
 
-### The Power of Sentence Similarity 🤖
+### What is Sentence Similarity?
+#### The Power of Sentence Similarity 🤖
 - 게임만들기 전에 문장 유사도에 대한 정의와 동작을 이해해야한다
 
 #### How does this game work?
@@ -126,17 +127,17 @@
   - 해당 스코어가 `0.2` 이상인 경우 액션을 실행을 요구한다
   - 해당 스코어가 `0.2` 이하인 경우 "몰루~" 처리한다
 
-#### Why `0.2` for the Similarity score threshold?
+##### Why `0.2` for the Similarity score threshold?
 - 여러 테스트 결과를 통해 찾아진 값이다
 - 스코어는 액션 리스트 전체를 합치면 1이 된다, 때문에 액션 리스트가 늘어나는 경우 threshold 값은 낮아져야한다
 
-## DEFINING MY DEMO PART 1. FINDING THE IDEA AND WRITING THE GDD
-### How to run an AI model: local vs remote
+### How to run an AI model: local vs remote Inference
+#### How to run an AI model: local vs remote
 - 이 게임에서 유사도 검색을 사용하기 위해 `all-MiniLM-L6-v2` 모델을 사용한다
   + https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
 - 이 모델은 BERT 트랜스포머 모델로 이미 학습을 마쳤으므로 사용하면된다
 
-### Running the model remotely
+#### Running the model remotely
 - 서버 api 를 호출하는 방식
 - 허깅페이스에서 *Inference API* 를 제공
   - 프로토타입및 테스트용은 무료
@@ -150,7 +151,7 @@
   - 잠재적 비용 비용 폭탄 가능성
 - 주로 클라이언트에서 실행할 수 없는 큰 모델을 실행하는 경우 API 제공이 필요하다
 
-### Running the model locally
+#### Running the model locally
 - 클라이언트에서 사용하기 위해 2개의 라이브러리를 사용한다
   - *Unity Sentis* - AI 모델을 게임 안에서 실행할 수 있도록 한다
   - *The Hugging Face Sharp Transformers library* - 유니티 게임에서 트랜스포머 모델을 사용할 수 있도록 한다
@@ -162,6 +163,72 @@
   - 유저가 어떤식으로 모델을 활용하는 정보를 쉽게 얻지 못한다
 
 - 유사도 검색은 가벼운 모델이라 **로컬에서 사용하기로한다**
+
+### What is Hugging Face 🤗?
+- 허깅페이스에 대한 설명
+- 추론 API 서비스를 무료, 유료 옵션으로 제공
+- *Sentence Similarity* 모델을 사용하는 가이드
+
+### Let's build our smart robot demo 🤖
+- 제공하는 코드를 통해 로봇과 유사도 검색을 통한 액션 매치를 수행하는 핸즈온
+
+### What can you do now?
+- 위 핸즈온에 더해서 SST(Speach-To-Text) 등의 기능을 추가해 볼 것
+
+### Conclusion
+- 다음
+
+## DEFINING MY DEMO PART 1. FINDING THE IDEA AND WRITING THE GDD
+### Introduction
+- 이 코스의 목표
+  - AI 툴을 사용하여 게임 데모 제작
+  - 혹은 AI 를 사용하여 게임 운영(NPC)
+- 이 챕터는 데모를 만드는 챕터
+- 팀으로하는 걸 추천
+- GDD(Game Design Document) 은 한페이지 문서로 다음을 포함
+  - 게임 플레이 매커니즘
+  - 사용할 AI 툴
+  - 사용할 에셋
+  - 필요시 스토리
+  - 게임의 범위
+  - 필요시 팀
+
+### It's your first game?
+- 게임제작시시 염두해야둬야할 [[youtube]] 영상 제공
+- 스코프는 한달을 넘어가지 않도록 매우 작게 할 것
+- 첫번째 작업은 만드는데 의의를 둔다
+- 자신의 능력 맞춰 개발한다
+  - 그림을 못그리면 최대한 배제된 것으로 
+  - 코딩을 못하면 단순성에 초점을 맞추어
+- 매우 작은 MVP(Minimum Viable Product) 를 작성
+  - 매우 작은 게임의 핵심을 설계
+  - 디테일한 아이템 목록이나 여러 캐릭터 마법등은 배제
+  - 수퍼마리오를 예로 이동, 가로로 긴 맵, 떨어지면 죽는 영역(테스트 재시작 트리거 포인트)
+- 매우 작은 MVP(Minimum Viable Product) 를 작성
+- 한시간내에 안풀리는건 하지말 것, 검색으로 대부분 해결이 가능
+- 마케팅은 매우 중요하다 인디개발자로 살 것이라면 특히
+  - 3분 내의 소개 동영상
+  - 웹사이트, 심플한것이 아마추어로 보이는 것 보다 낫다
+  - 인디게임 대회에 출품
+  - 게임업계인 SNS 에 부탁
+  - 게임 뉴스 사이트에 메일보내기
+  - 출시가 가까워지면 Reddit AMA, 팟케스트, SNS, 웹사이트 업데이트
+  - 스팀이나 GOG 등에 출시한다, 이때 홍보채널을 가지고 있는 것이 출시에 도움이 된다
+  - 가능한 많은 곳에 출시한다
+  - 출시후에는 단점을 받아들이고, 버그픽스등을 서비스한다
+  - 유저 및 기자들과 소통을 유지한다
+- [ ] [[@todo]] GDC 토크 영상 시청
+  - https://www.youtube.com/watch?time_continue=2&v=ZW8gWgpptI8&embeds_referring_euri=https%3A%2F%2Fhuggingface.co%2F&source_ve_path=Mjg2NjY&feature=emb_logo
+
+### Step 1. Crafting the Game Idea
+- 내 단점을 받아들인다
+- 좋아하는 게임으로 부터 영감을 얻는다
+- AI를 통해 게임을 어떻게 개선할지 생각한다
+- 게임의 범위를 작게 한다
+- 허깅페이스 챗에서 브레인 스토밍을 한다
+
+### Step 2. Writing the GDD
+### Conclusion
 
 ## BONUS 1. CLASSICAL AI IN VIDEO GAMES
 
