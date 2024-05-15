@@ -228,11 +228,47 @@
 - 허깅페이스 챗에서 브레인 스토밍을 한다
 
 ### Step 2. Writing the GDD
+#### What  is a Game Design Document(GDD)
+- 게임 프로젝트의 청사진
+- 정의를 명확히하고 게임의 비전의 이해를 팀원들과 공유한다 
+- 개발 프로세스를 촉진한다
+- 아웃라인
+  - 게임플레이
+  - 피처
+  - 게임 매커지니즘
+  - 어셋
+  - 등등
+#### The One Page Game Design Document Template
+- [ ] Game Title
+- [ ] Team and roles
+- [ ] Game Concept
+- [ ] Game Genre
+- [ ] Game Features and AI tools/model used
+- [ ] Platform
+- [ ] Scope
+- [ ] Art Style
+- [ ] Level
+- [ ] Assets
+- [ ] Todo
+
 ### Conclusion
 
 ## BONUS 1. CLASSICAL AI IN VIDEO GAMES
+- AI 사례
 
 ## UNIT 2. AI TOOLS FOR GAME DEVELOPERS 🎨
+### Introduction
+- AI 툴 적용
+
+### Introduction
+### Code Assistants 👩💻
+### Music Generation 🎵
+### AI Voice Actors 🤖
+### Animation Generation 💃
+### Texture Generation 🖼️
+### 2D Assets Generation 🎮
+### Sound Effects Generation 🔊
+### Conclusion
 
 ## link
 - [[huggingface]]
