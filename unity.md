@@ -3,11 +3,11 @@
 ## 설치
 - [[unity-hub]]
 
-## 에러 [[error]] [[macos-monterey]]
+## [[error]]
+### [[macos-monterey]]
 - `process_symbols.sh`
 - ``fatal error: runtime: bsdthread_register error``
-
-[[twid]]: d6944dbe-f457-47b0-82f5-a90cbc06470d
+- [[twid]]: d6944dbe-f457-47b0-82f5-a90cbc06470d
 
 
 ```sh
@@ -29,7 +29,7 @@ Command PhaseScriptExecution failed with a nonzero exit code
 n
 ```
 
-[[macos-monterey]] 에서 [[deprecated]] 된 system call 을 사용해서 발생하는 문제
+- [[macos-monterey]] 에서 [[deprecated]] 된 system call 을 사용해서 발생하는 문제
 
 > https://forum.unity.com/threads/xcode-build-issues-with-macos-monterey.1189546/
 
@@ -44,9 +44,11 @@ BE AWARE: Crash stack traces in Unity Dashboard will become unreadable.
 ```
   
 `process_symbols.sh` 파일에서 빌드 관련 내용을 주석 처리하던가
-[[usymtool]] 버전을 올려서 해결 2021.2.8
+- [[usymtool]] 버전을 올려서 해결 2021.2.8
 
 ## link
 - [[macos-monterey]]
 - [[fastlane]]
 - [[xcode]]
+- [[unity-learn-create-with-code]]
+- [[huggingface-ml-for-games]]
