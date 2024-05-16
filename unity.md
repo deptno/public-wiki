@@ -1,5 +1,11 @@
 # unity
 
+## 단축키
+### scean view
+- f
+- cmd + p
+- q,w,e,r,t,y
+
 ## 설치
 - [[unity-hub]]
 
