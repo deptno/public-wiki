@@ -29,6 +29,8 @@
     - `fatal` 에러 이후 재시작되지 않는게 **원인**
   - **조치**
     + https://github.com/deptno/salji.ro/pull/628
+    - pr head commit 으로 namespace 전체 배포(4개)
+    - 선머지
 
 ## link
 - [[project]]
