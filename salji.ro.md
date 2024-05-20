@@ -24,13 +24,17 @@
 ```
   - redis 가 아니라 pg가 떨어짐, fatal 이후 재시작됨
     - pg 가 메모리 치고있음, **3**번 재시작됨
-  - [ ] **추후** 커넥션이 자주 떨어지는거 같은데 pg 메모리 점검 필요
+  - [X] **추후** 커넥션이 자주 떨어지는거 같은데 pg 메모리 점검 필요 -> 2x 로 늘림
   - [X] `keyword-notifier-fcm`, `ranker` 재시작으로 복구
     - `fatal` 에러 이후 재시작되지 않는게 **원인**
   - **조치**
     + https://github.com/deptno/salji.ro/pull/628
     - pr head commit 으로 namespace 전체 배포(4개)
     - 선머지
+  - **추가**
+    - 잘못봤었는데 callback 아안에서 에러핸들러가 호출되면서 종료되지 않는 이유였고 `process.exit` 추가
+      + `05205291d63ead0f5f56291e45ade2e6224267a5`
+    - [X] 디비 커넥션이 자꾸 끊어지는 문제는 실제로 존재하는 거 같아서 메모리 확장 해야할 것으로 보임(2x)
 
 ## link
 - [[project]]
