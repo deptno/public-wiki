@@ -9,7 +9,7 @@
 | x | Unit 3 - Sound and Effect   | 7h       |
 | x | Unit 4 - Gameplay Mechanics | 6h 40m   |
 | x | Unit 5 - User Interface     | 7h 10m   |
-|   | Next Steps                  | 2h 15m   |
+| x | Next Steps                  | 2h 15m   |
 
 
 ## Next Step
@@ -33,6 +33,7 @@
 - 자동차
   - WheelCollider
   - Center of Mass - 힘을 가하는 중심
+- 빌드 방법
 
 ## link
 - [[unity]]
