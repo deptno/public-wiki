@@ -1,5 +1,11 @@
 # huggingface ml for games
 
+## 프로젝트 에러
+- 2024-05-22 기준 프로젝는 [[unity]] 6 에서 열었을시 실패했다 이전 버전으로 연다
+- 에러있다고 하면서 safe mode 에 진입하게되고 이때 패키지 두개를 설치하면된다
+- name 으로 설치 -> `com.unity.sentis` 패키지를 설치시에 버전을 `1.3.0-pre.1` 로 고정한다
+- git 으로 설치 -> `https://github.com/huggingface/sharp-transformers.git`
+
 ## UNIT 0. WELCOME TO THE COURSCE
 ### Welcome to the course 🤗
 - AI 모델로 하는 혁신

@@ -37,3 +37,4 @@
 
 ## link
 - [[unity]]
+- [[huggingface-ml-for-games]]
