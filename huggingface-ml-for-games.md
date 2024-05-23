@@ -279,3 +279,5 @@
 ## link
 - [[huggingface]]
 - [[unity]]
+- [[book/making-game-graphic-with-stable-diffusion]]
+- [[stable-diffusion]]

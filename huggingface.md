@@ -4,6 +4,7 @@
 ## cource
 - [[huggingface-nlp]]
 - [[huggingface-ml-for-games]]
+- [[huggingface-diffusers]]
 
 ## link
 - [[python]]
