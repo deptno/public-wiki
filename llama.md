@@ -9,10 +9,10 @@
   - `pip install -r requirements.txt` 를 하게되면 pytorch 의 cuda 버전에러 뱉음
     - 따로 설치 해서 해결
   - python convert.py [download 받은 llama 모델 폴더]
-    - guff 파일 생성됨
-  - *optional* `./quantize file.guff 2`
+    - gguf 파일 생성됨
+  - *optional* `./quantize file.gguf 2`
     - 양자화라고하는데 f16 -> int8 로 무언가를 변환하면서 리소스 효율을 상승시킨다
-  - `./main guff_location.guff -p '질의어'`
+  - `./main gguf_location.gguf -p '질의어'`
 
 ## link
 - [[pipenv]]
