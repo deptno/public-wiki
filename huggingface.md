@@ -1,5 +1,5 @@
 # huggingface
-+ huggingface.co
++ https://huggingface.co
 
 ## cource
 - [[huggingface-nlp]]
