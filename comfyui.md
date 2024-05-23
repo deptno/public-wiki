@@ -56,13 +56,16 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 - *AnimationDiff* 의 경우 text to video
 
 #### 커스텀 노드
-| 세트 |                                              |                           |                                                      |   |
-|------|----------------------------------------------|---------------------------|------------------------------------------------------|---|
-|      | Canvas Tab                                   | 마스크 이미지 생성        |                                                      |   |
-| 0    | ComfyUI's ControlNet Auxiliary Preprocessors | 자세등 처리               |                                                      |   |
-| 0    | ComfyUI_IPAdapter_plus                       | Image Prompt              | https://www.internetmap.kr/entry/IP-Adapter-too-many |   |
-|      | ComfyUI-SDXL-EmptyLatentImage                | 이미지 사이즈 설정시 유리 |                                                      |   |
-|      | ReActor Node for ComfyUI                     | 다른 얼굴로 바꾸기        |                                                      |   |
+| 세트 |                                              |                               |                                                      |                       |
+|------|----------------------------------------------|-------------------------------|------------------------------------------------------|-----------------------|
+|      | Canvas Tab                                   | 마스크 이미지 생성            |                                                      |                       |
+| 0    | ComfyUI's ControlNet Auxiliary Preprocessors | 자세등 처리                   |                                                      |                       |
+| 0    | ComfyUI_IPAdapter_plus                       | Image Prompt                  | https://www.internetmap.kr/entry/IP-Adapter-too-many | InsightFace 추가 필요 |
+|      | ComfyUI-SDXL-EmptyLatentImage                | 이미지 사이즈 설정시 유리     |                                                      |                       |
+|      | ReActor Node for ComfyUI                     | 다른 얼굴로 바꾸기            |                                                      |                       |
+|      | Face Detailer / (a1111: ADetailer)           | 얼굴 고치기                   |                                                      |                       |
+|      | InstandID                                    | IPAdapter 와 유사 + 인물 유지 |                                                      | InsightFace 추가 필요 |
+
 
 ##### ControlNet
 - IP Adapter 등을 사용할때 text prompt 가 제대로 동작하지 않으면 `weight` 를 0.7정도로 낮춰서 사용해본다
@@ -106,9 +109,16 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 - img2img -> `KSampler` 에 입력되는 `latent_iamge` 에 의해 결정
 - `input` 디렉토리에 이미지 넣어두면 기본로드가 가능
 
-## 체크 포인트 사용
+### 체크 포인트 사용
 - 모델마다 설정값이 다르니 참고
 
+### 여러프롬프트를 사용해서 이미지 합성
+- `Conditioning (Set Area)` -> `Conditioining (Combine)` 노드로 합성 후 샘플링
+- 주로 배경
+
+### denoising 중인 이미지 여러개의 이미지를 중간에 하나로 합쳐서 생성
+- `KSampler Advanced` 를 사용하여 denoising 중인 이미지를 `Latent Composite` 노드를 통해 합성
+- 주로 배경 + 인물
 
 ## 개념
 ### checkpoint
