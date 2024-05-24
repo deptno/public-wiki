@@ -1,7 +1,7 @@
 # project
 
 ## web
-- [[deptno-dev]]
+- [[deptno.dev]]
 - [[tubemon.io]]
 
 ### +app

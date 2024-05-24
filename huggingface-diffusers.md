@@ -1,6 +1,6 @@
 # huggingface diffusers
 
-[[tbd]]
+- [[tbd]]
 
 ## link
 - [[huggingface]]

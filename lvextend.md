@@ -19,7 +19,7 @@ sudo lvextend -L +10G /dev/mapper/[PARTITION] # 파티션에 10G 추가
 sudo lvextend -L 10G /dev/mapper/[PARTITION ] # 파티션에 10G 로 설정
 sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv # 최대 용량으로 논리 볼륨 확장
 
-sudo resize2fs /dev/mapper/partition # 설정된 파티션 크기의 최대치로 리사이즈 - 이건 해보니 되지 않음
+sudo resize2fs /dev/mapper/partition # 설정된 논리 볼륨의 최대사이즈로 파일 시스템 확장
 ```
 
 ## link
