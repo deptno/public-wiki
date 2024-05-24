@@ -56,15 +56,17 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 - *AnimationDiff* 의 경우 text to video
 
 #### 커스텀 노드
-| 세트 |                                              |                               |                                                      |                       |
-|------|----------------------------------------------|-------------------------------|------------------------------------------------------|-----------------------|
-|      | Canvas Tab                                   | 마스크 이미지 생성            |                                                      |                       |
-| 0    | ComfyUI's ControlNet Auxiliary Preprocessors | 자세등 처리                   |                                                      |                       |
-| 0    | ComfyUI_IPAdapter_plus                       | Image Prompt                  | https://www.internetmap.kr/entry/IP-Adapter-too-many | InsightFace 추가 필요 |
-|      | ComfyUI-SDXL-EmptyLatentImage                | 이미지 사이즈 설정시 유리     |                                                      |                       |
-|      | ReActor Node for ComfyUI                     | 다른 얼굴로 바꾸기            |                                                      |                       |
-|      | Face Detailer / (a1111: ADetailer)           | 얼굴 고치기                   |                                                      |                       |
-|      | InstandID                                    | IPAdapter 와 유사 + 인물 유지 |                                                      | InsightFace 추가 필요 |
+| 세트 |                                              |                               |                                                      |                                  |
+|------|----------------------------------------------|-------------------------------|------------------------------------------------------|----------------------------------|
+|      | Canvas Tab                                   | 마스크 이미지 생성            |                                                      |                                  |
+| 0    | ComfyUI's ControlNet Auxiliary Preprocessors | 자세등 처리                   |                                                      |                                  |
+| 0    | ComfyUI_IPAdapter_plus                       | Image Prompt                  | https://www.internetmap.kr/entry/IP-Adapter-too-many | InsightFace 추가 필요            |
+|      | ComfyUI-SDXL-EmptyLatentImage                | 이미지 사이즈 설정시 유리     |                                                      |                                  |
+|      | ReActor Node for ComfyUI                     | 다른 얼굴로 바꾸기            |                                                      |                                  |
+|      | Face Detailer / (a1111: ADetailer)           | 얼굴 고치기                   |                                                      |                                  |
+|      | InstantID                                    | IPAdapter 와 유사 + 인물 유지 |                                                      | InsightFace 추가 필요, SDXL 전용 |
+|      | UltimateSDUpscale                            | 설정을 가진 업스케일러        |                                                      |                                  |
+|      |                                              |                               |                                                      |                                  |
 
 
 ##### ControlNet
@@ -97,6 +99,19 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 - 여러명 가능
 - 비디오도 가능
   - `ComfyUI-N-Nodes` 설치 필요
+
+##### InstantID 
+- SDXL (Turbo) 전용
+- 사진 -> embedding -> keypoint(얼굴정보 추출)
+- 눈 코입의 위치만 지정하므로, 원본 사진과 비슷한 표정을 하려면 text prompt 로 묘사를 추가한다
+- 설정
+  - `Control Weight` 0.5
+  - `Ending Control Step` 0.4 ~ 0.6
+  - 사용하는 checkpoint 마다 추천 설정이있으니 확인할 것
+
+### SDXL Lightning
+- checkpoint 1,2,4,8 step 용
+- LoRA 도 제공, 이건 SDXL Lightning 대신 SDXL 모델을 사용하면서 LoRA 로 동일한 효과를 낼 수 있도록 함
 
 ## 사용
 - ComfyUI Manager

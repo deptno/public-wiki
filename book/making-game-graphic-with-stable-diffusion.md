@@ -88,6 +88,7 @@ style of [화풍,화가]
 - surrealism
 - pop art
 - japanese anime
+- line art
 
 #### 애니메이션 
 - cygames
