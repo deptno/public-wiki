@@ -10,3 +10,4 @@
 - [[python]]
 - [[jupyter]]
 - [[practical-deep-learning]]
+- [[git-lfs]]

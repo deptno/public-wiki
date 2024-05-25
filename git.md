@@ -214,3 +214,4 @@ git reset --mixed $(git merge-base master @)
 - [[tig]]
 - [[alias]]
 - [[git-alias]]
+- [[git-lfs]]
