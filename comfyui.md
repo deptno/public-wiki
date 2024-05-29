@@ -52,7 +52,7 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 
 ### Lora
 
-### ControlNet
+### [[ControlNet]]
 - 생성되는 이미지의 윤곽선을 제안할 수 있음, 자세 혹은 건물 생김세
 
 ### Stable Diffusion Video
@@ -62,21 +62,21 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 - *AnimationDiff* 의 경우 text to video
 
 #### 커스텀 노드
-| 세트 |                                              |                               |                                                      |                                  |
-|------|----------------------------------------------|-------------------------------|------------------------------------------------------|----------------------------------|
-|      | Canvas Tab                                   | 마스크 이미지 생성            |                                                      |                                  |
-| 0    | ComfyUI's ControlNet Auxiliary Preprocessors | 자세등 처리                   |                                                      |                                  |
-| 0    | ComfyUI_IPAdapter_plus                       | Image Prompt                  | https://www.internetmap.kr/entry/IP-Adapter-too-many | InsightFace 추가 필요            |
-|      | ComfyUI-SDXL-EmptyLatentImage                | 이미지 사이즈 설정시 유리     |                                                      |                                  |
-|      | ReActor Node for ComfyUI                     | 다른 얼굴로 바꾸기            |                                                      |                                  |
-|      | Face Detailer / (a1111: ADetailer)           | 얼굴 고치기                   |                                                      |                                  |
-|      | InstantID                                    | IPAdapter 와 유사 + 인물 유지 |                                                      | InsightFace 추가 필요, SDXL 전용 |
-|      | UltimateSDUpscale                            | 설정을 가진 업스케일러        |                                                      |                                  |
-|      | pythongosssss/ComfyUI-Custom-Scripts         | 편의기능 + workflow export    |                                                      |                                  |
-|      | ComfyUI-VideoHelperSuite                     |                               |                                                      | SVD, animationDiff 에서 필요     |
+| 세트 |                                              |                               |                                                      |                                                      |
+|------|----------------------------------------------|-------------------------------|------------------------------------------------------|------------------------------------------------------|
+|      | Canvas Tab                                   | 마스크 이미지 생성            |                                                      |                                                      |
+| 0    | ComfyUI's ControlNet Auxiliary Preprocessors | 자세등 처리                   |                                                      | 리눅스에서는 추가적으로 파이썬 디펜던시 추가해줘야함 |
+| 0    | ComfyUI_IPAdapter_plus                       | Image Prompt                  | https://www.internetmap.kr/entry/IP-Adapter-too-many | InsightFace 추가 필요                                |
+|      | ComfyUI-SDXL-EmptyLatentImage                | 이미지 사이즈 설정시 유리     |                                                      |                                                      |
+|      | ReActor Node for ComfyUI                     | 다른 얼굴로 바꾸기            |                                                      |                                                      |
+|      | Face Detailer / (a1111: ADetailer)           | 얼굴 고치기                   |                                                      |                                                      |
+|      | InstantID                                    | IPAdapter 와 유사 + 인물 유지 |                                                      | InsightFace 추가 필요, SDXL 전용                     |
+|      | UltimateSDUpscale                            | 설정을 가진 업스케일러        |                                                      |                                                      |
+|      | pythongosssss/ComfyUI-Custom-Scripts         | 편의기능 + workflow export    |                                                      |                                                      |
+|      | ComfyUI-VideoHelperSuite                     |                               |                                                      | SVD, animationDiff 에서 필요                         |
 
 
-##### ControlNet
+##### [[ControlNet]]
 - IP Adapter 등을 사용할때 text prompt 가 제대로 동작하지 않으면 `weight` 를 0.7정도로 낮춰서 사용해본다
 - IP Adapter
   - `Image Prompt` 로 현재 이미지에 대한 Text Prompt 가 입력된것으로 간주된다라고 생각하면 이해가 편하다
