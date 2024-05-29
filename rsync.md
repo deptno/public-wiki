@@ -13,6 +13,7 @@ rsync -avz -e ssh /path/to/source-folder user@remote-server:/path/to/destination
 -v verbose
 -h human readable
 -z zip
+--progress 전송 상태 표시
 
 ## link
 - [[terminal]]

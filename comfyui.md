@@ -1,6 +1,9 @@
 # comfyui
 [[stable-diffusion]] ui
 
+## module
+- animatediff
+
 ## 확인사항
 - [ ] `comfyui-cli` 라는 놈도 있음
 
@@ -16,9 +19,11 @@ $ pipenv shell
 
 # 디펜턴시 설치
 $ pip install -r requirements.txt
+## or
+$ pipenv run pip install -r requirements.txt
 
 # 실행
-$ python main.py
+$ python main.py # remote 접속허용을 원하는 경우 `--listen` 추가
 
 Total VRAM 65536 MB, total RAM 65536 MB
 Set vram state to: SHARED
@@ -40,6 +45,7 @@ To see the GUI go to: http://127.0.0.1:8188
 ### ComfyUI Manager
 - 커스텀노드(플러그인) 관리
 - ComfyUi 폴더에서 `custom_nodes` 디렉토리 진입후 클론한다
+- ComfyUi 재시작 필요
 ```sh 
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 ```
@@ -66,7 +72,8 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 |      | Face Detailer / (a1111: ADetailer)           | 얼굴 고치기                   |                                                      |                                  |
 |      | InstantID                                    | IPAdapter 와 유사 + 인물 유지 |                                                      | InsightFace 추가 필요, SDXL 전용 |
 |      | UltimateSDUpscale                            | 설정을 가진 업스케일러        |                                                      |                                  |
-|      |                                              |                               |                                                      |                                  |
+|      | pythongosssss/ComfyUI-Custom-Scripts         | 편의기능 + workflow export    |                                                      |                                  |
+|      | ComfyUI-VideoHelperSuite                     |                               |                                                      | SVD, animationDiff 에서 필요     |
 
 
 ##### ControlNet
