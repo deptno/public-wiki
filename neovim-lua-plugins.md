@@ -79,6 +79,7 @@ drwxr-xr-x     17    - deptno 2022-01-05 02:15  -N    └──  vimwiki
 - [X] vim-startify
 - [X] vimwiki
 - [ ] nvim-orgmode
+- [ ] [[image.nvim]]
 
 ## link
 - [[setup-terminal|맥 터미널 설정]]
