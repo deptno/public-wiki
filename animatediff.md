@@ -1,5 +1,8 @@
 # animatediff
 
+- [ ] TemporalDiff 라는 것도 있음
+  + https://huggingface.co/CiaraRowles/TemporalDiff
+
 ## setup
 + https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved
 - motion module 이 필요

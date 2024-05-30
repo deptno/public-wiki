@@ -45,3 +45,4 @@ sudo service ufw stop # 방화벽 제거
 - [[python]]
 - [[book/making-game-graphic-with-stable-diffusion]]
 - [[huggingface-ml-for-games]]
+- [[animatediff]]
