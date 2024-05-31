@@ -1,4 +1,4 @@
-# stable-diffusion
+# stable-diffusion-webui
 
 ## 실행
 1. 클론

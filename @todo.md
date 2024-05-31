@@ -1,5 +1,5 @@
 # @todo
-- [ ] [[wip]] [[eos]] [[tubemon.io]]
+- [ ] [[deptno.dev]] 말고 좀 정리된 글을 공유할 용도의 blog 가 필요함 + 이미지 활용
 
 ## 문서 정리
 - [ ] [[vim]] [[regexp]]
@@ -88,6 +88,10 @@
   - [X] sh command fence block + markdown content block 구성
     - [X] [[tree-sitter]] 로 분리
 - [X] rn 로그에 [[tailspin]] 적용
+
+## done
+- [X] [[eos]] [[tubemon.io]] [[aws]] 종료
+- [X] [[stable-diffusion]] 내용 정리
 
 ## link 
 - [[idea]]
