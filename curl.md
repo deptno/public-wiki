@@ -17,6 +17,8 @@ curl 'http://192.168.0.222/api/xxx/lights/2/state' \\
 ```
 
 ## options
+- L, --follow - redirefct 를 follow
+- O, - 파일명 그대로 저장
 - I, --head - fetch response headers only
 - i, --head - fetch headers + 응답 값
 - s, --silent
