@@ -33,5 +33,14 @@ arch-arm64 ruby-install 3.1.0
 ruby-install ruby 2.7.5
 ```
 
+## default ruby 설정
+```sh 
+# 설치된 버전중 하나로 설정해야한다
+chruby ruby-3.3.2
+```
+### default 버전 설정
+- auto-switching(`auto.sh`) 이 설정되어 있는 경우 home 에 를 만들어서 설정할 수 있다. `.ruby-version`
+- zshrc 에서 `chruby ruby-3.3.2` 와 같이 원하는 버전을 설정한다
+
 ## link
 - [[ruby-install]]
