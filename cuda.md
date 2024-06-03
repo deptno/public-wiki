@@ -1,5 +1,14 @@
 # cuda
 
+## 설치
+```sh 
+nvidia-smi
+```
+- 명령어가 있는지 확인
+- 없는 경우 설치 진행
++ https://developer.nvidia.com/cuda-downloads
+- 사용 시스템과 아키텍쳐 os 를 고른후 *network* 선택하여 스크립트 실행
+
 ## error
 ### RuntimeError: Torch is not able to use GPU; add --skip-torch-cuda-test to COMMANDLINE_ARGS variable to disable this check
 ```sh 

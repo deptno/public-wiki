@@ -1,8 +1,11 @@
 # comfyui
 [[stable-diffusion]] ui
 
+> memory leak 이 있는 것 같다 한번 느려지기 시작하면 계속 느림
+
 ## module
 - animatediff
+  - animatediff models, lora 관련해서는 커스텀 디렉토리를 쓸 수 없다 symbolic link 를 쓰자;
 
 ## 확인사항
 - [ ] `comfyui-cli` 라는 놈도 있음
@@ -60,7 +63,7 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 - `ComfyUI-VideoHelperSuite` 설치 필요
 - image to video
 - *AnimationDiff* 의 경우 text to video
-
+w
 #### 커스텀 노드
 | 세트 |                                              |                               |                                                      |                                                      |
 |------|----------------------------------------------|-------------------------------|------------------------------------------------------|------------------------------------------------------|
@@ -74,6 +77,7 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 |      | UltimateSDUpscale                            | 설정을 가진 업스케일러        |                                                      |                                                      |
 |      | pythongosssss/ComfyUI-Custom-Scripts         | 편의기능 + workflow export    |                                                      |                                                      |
 |      | ComfyUI-VideoHelperSuite                     |                               |                                                      | SVD, animationDiff 에서 필요                         |
+|      | ComfyUI-Crystools                            | 컴퓨터 자원 모니터링 기능     |                                                      |                                                      |
 
 
 ##### [[ControlNet]]
@@ -167,3 +171,4 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 
 ## link
 - [[stable-diffusion]]
+- [[stable-diffusion-recipe]]

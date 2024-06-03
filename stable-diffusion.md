@@ -4,6 +4,12 @@
 ## [[frontend]]
 - [[comfyui]]
 - [[stable-diffusion-webui]]
+- linux 에서 설치시 nvidia toolkit 설치가 필요하다 
+  - [[wsl]]
+    - wsl 도 리눅스라 설치 안했더니 gpu 사용율이 나오지 않음
+    - 재부팅후 중간에 설치하면서 이미지 생성해보니 속도가 빨라져있음, 설치 중이라 재부팅 이펙트와 어떤 것이 맞는지 확인 불가
+    - 해당쉘에서 이미 `nvidia-smi` 커맨드 사용 가능
+    - `nvidia-smi` 커맨드가 있는 것을 먼저 확인 후 없는 경우 [[cuda]] toolkit 설치를 진행하면될 것
 
 ## 주요 모듈
 - [[controlnet]]
@@ -77,3 +83,4 @@
 - [[book/making-game-graphic-with-stable-diffusion]]
 - [[huggingface-ml-for-games]]
 - [[animatediff]]
+- [[stable-diffusion-recipe]]
