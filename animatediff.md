@@ -21,6 +21,9 @@
 - `VAE Decoder` -> `Video Combine VHS`
 - `Empty Latent Image` batch size 를 16(frame 수만큼)으로 설정
 
+## [[controlnet]]
+- `AnimateDiff Loader` 에 `context_options` 을 붙이면 vram 한계를 극복하고 frame 제한(24)을 풀 수 있다
+- 이때 는 `Load ControlNet Model` 대신 `Load Advanced Controlnet Model` 가 사용되어야한다
 
 ## link
 - [[controlnet]]

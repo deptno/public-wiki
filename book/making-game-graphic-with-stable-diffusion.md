@@ -225,4 +225,4 @@ style of [화풍,화가]
 - stable diffusion 모델은 2.x 에서 모방 논란을 대응하여 더 창의적이고 디테일한 묘사가 가능 `768x768` 로 학습
 
 ## link
-- [[stable-diffusion]]
+- [[../stable-diffusion]]

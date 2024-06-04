@@ -42,3 +42,4 @@
 ## link
 - [[stable-diffusion]]
 - [[comfyui]]
+- [[animatediff]]

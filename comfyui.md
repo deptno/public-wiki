@@ -55,7 +55,7 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 
 ### Lora
 
-### [[ControlNet]]
+### [[controlnet]]
 - 생성되는 이미지의 윤곽선을 제안할 수 있음, 자세 혹은 건물 생김세
 
 ### Stable Diffusion Video
@@ -63,7 +63,7 @@ git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 - `ComfyUI-VideoHelperSuite` 설치 필요
 - image to video
 - *AnimationDiff* 의 경우 text to video
-w
+
 #### 커스텀 노드
 | 세트 |                                              |                               |                                                      |                                                      |
 |------|----------------------------------------------|-------------------------------|------------------------------------------------------|------------------------------------------------------|
@@ -168,6 +168,20 @@ w
   - lcm 로라 사용지 lcm 샘플러 사용
     - a1111 의 경우 lcm 샘플러는 `AnimationDiff` 에 포함되어있음
 - KSampler:`denoise` -> 값이 높을 수록 랜덤성을 부여
+
+## [[error]]
+### `DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly`
+```sh 
+UserWarning: DWPose: Onnxruntime not found or doesn't come with acceleration providers, switch to OpenCV with CPU device. DWPose might run very slowly
+```
+- onnxruntime 이 없어서 가속을 받지 못하는 문제 관련 패키지 설치
+```sh 
+pip install onnxruntime onnxruntime-gpu
+```
+- 확인
+```sh 
+DWPose: Onnxruntime with acceleration providers detected
+```
 
 ## link
 - [[stable-diffusion]]

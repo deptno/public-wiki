@@ -16,8 +16,14 @@ apt install python3-pip
 pip install pipenv
 ```
 
+## 설정
+- 하드웨어 리소스 설정이나 터널링등에 대한 설정이 `.wslconfig` 파일을 통해 가능하다
+- 탐색기에서 `%userprofile%` 주소로 이동
+- `.wslconfig` 생성
+- 기본값이나 설정할 수 있는 값을 확인하기 위해서는 관련 문서 참조 필요
+- CPU, memory 등을 통해서 하드웨어 스펙 전달 가능, **재부팅** 필요
+
 ## 외부에서 ssh 를 통해 접속
-> remote -> window -> wsl
 
 ### window host 설정
 1. window에서 openssh server 설치 및 시작
