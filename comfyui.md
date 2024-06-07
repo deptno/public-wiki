@@ -1,5 +1,5 @@
 # comfyui
-[[stable-diffusion]] ui
+- [[stable-diffusion]] ui
 
 > memory leak 이 있는 것 같다 한번 느려지기 시작하면 계속 느림
 
@@ -186,3 +186,4 @@ DWPose: Onnxruntime with acceleration providers detected
 ## link
 - [[stable-diffusion]]
 - [[stable-diffusion-recipe]]
+- [[stable-diffusion-webui-forge]]

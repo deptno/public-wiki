@@ -4,6 +4,7 @@
 ## [[frontend]]
 - [[comfyui]]
 - [[stable-diffusion-webui]]
+- [[stable-diffusion-webui-forge]]
 - linux 에서 설치시 nvidia toolkit 설치가 필요하다 
   - [[wsl]]
     - wsl 도 리눅스라 설치 안했더니 gpu 사용율이 나오지 않음
