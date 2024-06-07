@@ -7,6 +7,9 @@
 ### +app
 - [[salji.ro]]
 
+## data
+- [[kpop]]
+
 ## game
 
 # link
