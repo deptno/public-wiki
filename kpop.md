@@ -81,6 +81,9 @@ flowchart
 ### 기타
 - 활동 아티스트 증가에 따른 전체 파이와 팀킬 여부
 
+### data.go.kr
+- https://www.data.go.kr/iim/api/selectAPIAcountView.do
+
 ## mvp
 ### 데이터 자동화 우선순위
 1. chart

@@ -9,6 +9,11 @@ javascript runtime a.k.a [[nodejs]]
   - `--experimental-permission` 파일 쓰기,  읽기 등이 외부라이브러리등에 의해서 행해질 수 있는 것 봉쇄
     - 해보니 잘안됨
     + https://nodejs.org/en/blog/release/v20.0.0#permission-model
+  - buildtin test runner
+    - `tsx` 사용, `package.json` 에 `"type": "module"` 이 있어야지 `import` 구문 사용가능
+    ```sh 
+    node --loader tsx --test **/*.test.ts
+    ```
 ## options
 --max-old-space-size
 --max-new-space-size

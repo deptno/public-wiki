@@ -548,6 +548,15 @@ Error: ENOENT: no such file or directory, open '/Users/distiller/react-native/pa
 - 혹은 리턴값이 `200` 이 아닌 경우에도 발생
 - fetch 에 대한 에러를 `console.error` 로 찍는 경우에 발생
 
+### The Swift pod `lottie-react-native` depends upon `DoubleConversion`, which does not define modules.
+```
+The Swift pod `lottie-react-native` depends upon `DoubleConversion`, which does not define modules.
+```
+- `0.73.6` -> `0.74.2` 로 업데이트하면서 발생
+  + https://github.com/lottie-react-native/lottie-react-native/issues/1223#issuecomment-2076297114
+  - flipper 삭제등 변경이 많다보니 나나봄
+  - `Podfile.lock` 삭제후 `bundle exec pod install` 성공
+
 ## 필수 패키지 분석
 ```mermaid
 flowchart LR
