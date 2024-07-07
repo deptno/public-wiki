@@ -17,6 +17,10 @@ brew install --cask android-studio
 - 에뮬레이터 이미지: AVD Manager -> image download 
 - API : SDK Manager -> Download API 30, 31
 
+## package 파일로 부터 permission 확인하기
+- Build -> Analyze APK -> `base/manifest/AndroidManifest.xml` 확인
+  - `aab` 도 무관
+
 ## error
 ```sh
 $ react-native run-android --variant defaultDebug"
