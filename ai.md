@@ -10,3 +10,4 @@
 - [[data]]
 - [[python]]
 - [[pycharm]]
+- [[upstage-ai-lab]]
