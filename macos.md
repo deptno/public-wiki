@@ -5,6 +5,7 @@
 - [[marp]]
 - [[min]]
 - [[keycastr]]
+- blackhole - 맥에서 녹화시 소리가 빠지는데 이에 대한 처리
 
 ## [[terminal|터미널]] 명령어 
 - [[pmset]]
