@@ -70,6 +70,8 @@ v1/devices:reportStateAndNotification failed: 404
 `ip_bans.yaml` 해당 내용을 삭제하던지 해당 파일을 삭제하면 된다.
 - [[@todo]] ha 가 컨테이너로 떠있는 호스트의 ip가 밴이되서 내부접근이 모두 밴 된 것으로 보인다
 - [[diary:2023-11-12]]
+- [[diary:2024-08-03]]
+  - `configuration.yaml` 의 `trusted_proxies` 옵션으로 테스트 중
 
 ### Username already exists
 > 삭제된 유저를 재 생성하려고 하려고 하면 에러가 난다
