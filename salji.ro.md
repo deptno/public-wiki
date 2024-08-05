@@ -39,6 +39,10 @@
 ### 0:푸시 X
 + [[diary:2024-05-21]]
   - 어제배포 중에 `keyword-notifier-fcm` 실서버 배포 누락
+  - 
+### eomisea.co.kr 
++ [[diary:2024-08-05]]
+- 일주일 넘도록 깨짐
 
 ## link
 - [[project]]
