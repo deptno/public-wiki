@@ -231,3 +231,4 @@
 ## link
 - [[upstage-ai-lab]]
 - [[upstage-ai-lab-day-01]]
+- [[upstage-ai-lab-day-16]]
