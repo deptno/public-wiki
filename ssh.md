@@ -18,8 +18,15 @@ host [HOST_NAME_ALIAS]
 $ ssh [HOST_NAME_ALIAS]
 ```
 
+### github 에서 여러계정 사용시
+```sh 
+git clone git@[HOST]:repopath
+```
+- `~/.ssh/config` 에 저장된 호스트 네임과 일켜야한다
+
 ## link
 - [[scp]]
 - [[ssh-copy-id]]
 - [[ssh-keygen]]
 - [[wsl]]
+- [[github]]
