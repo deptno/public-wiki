@@ -34,3 +34,4 @@
 ## link
 - [[upstage-ai-lab]]
 - [[upstage-ai-lab-day-08]]
+- [[upstage-ai-lab-day-19]]
