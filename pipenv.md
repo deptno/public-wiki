@@ -36,3 +36,4 @@ pipenv run pip install -r requirements.txt
 - [[ubuntu]]
 - [[stable-diffusion]]
 - [[pip]]
+- [[pyenv]]

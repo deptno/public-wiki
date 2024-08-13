@@ -49,3 +49,4 @@ tuple2 = 1,2,3,4,5 # 괄호가 없어서 튜플로 생성됨
 - [[ubuntu]]
 - [[huggingface]]
 - [[jupyter]]
+- [[pyenv]]
