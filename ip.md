@@ -26,3 +26,4 @@ ip l[ink] set [eth0] down
 - [[ifconfig]]
 - [[netplan]]
 - [[dhclient]]
+- [[vpn]]

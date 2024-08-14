@@ -8,3 +8,4 @@
 - [[deployment]]
 - [[container]]
 - [[k9s]]
+- [[vpn]]
