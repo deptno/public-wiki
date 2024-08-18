@@ -12,6 +12,9 @@
 
 ## game
 
+## etc
+- [[book-court]]
+
 # link
 - [[idea]]
 - [[indie-game]]
