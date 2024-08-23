@@ -26,3 +26,4 @@
 ## link
 - [[upstage-ai-lab]]
 - [[upstage-ai-lab-day-16]]
+- [[upstage-ai-lab-day-28]]
