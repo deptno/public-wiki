@@ -23,22 +23,6 @@
       python <--serve--> gradio
       python <-.api.-> llm
     ```
-  - 대충 살붙여지면 아래와 같은 구조
-    ```mermaid 
-    flowchart LR
-      user -.input.-> gradio
-      python <--serve--> gradio
-      python -."1. embed query".-> solar_embed_api
-      solar_embed_api -."2. embedded query".-> python
-      python --"3. retrive embedded query"--> retriver
-      retriver --"4. retrived documents"--> python
-      python --"5. create template with retrived documents"--> template_creator
-      template_creator --"6. template"--> python
-      python <-."7. llm query".-> solar_api(llm)
-      solar_api(llm) <-."8. response".-> python
-      python --"9. save response"--> history
-    ```
-    - 그래프에는 표현하지 않았는데 history 는 template 이 생성되는 타이밍에 함께 주입되어 llm query 에 포함된다
 - 특정 도메인의 llm 서비스의 현존하는 방법을 알 수 있는 시간이 이었다.
 
 ## link
