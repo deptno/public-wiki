@@ -10,3 +10,4 @@
 - [ ] 재미있는 게임 제작 프로세스 : 〈언차티드〉 개발자가 알려 주는 게임 디자인·제작 실무 영진닷컴 [[diary:2024-03-14]]
 - [ ] [[coding-test-python|코딩 테스트 합격자 되기(파이썬 편)]]
 - [[natural-language-processing-with-transformer|트랜스포머를 활용한 자연어 처리]]
+- [[hon-gong-machine-with-deepl-earning|혼자 공부하는 머신러닝+딥러닝]]
