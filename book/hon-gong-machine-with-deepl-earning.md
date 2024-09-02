@@ -25,13 +25,18 @@
   - 확인문제
     1. 2
     2. `k`, `knr.predict(np.arange(5, 45).reshape(-1, 1))`
-- [ ] 3-2 선형 회귀
+- [X] 3-2 선형 회귀
   + https://colab.research.google.com/drive/17UxzyuaPBrSmARYIxaGpWw1wGs7jxY_M#scrollTo=abMI_SImUGWa
   - [ ] 다항 회귀, feature 가 두개면 다행이 자동으로 되는건지 의문
   - 확인문제
     1. 4
     2. 2
-- [ ] 3-3
+- [ ] 3-3 특성 공학과 규제
+  + https://colab.research.google.com/drive/1941lck5FSSAjGkyRY2-x4SLDNcSlEph8#scrollTo=mO0eK_7c54mm
+  - 과대 적합을 막기 위한 규제
+    1. 4
+    2. 3
+    3. 2
 - [ ] 4-1
 - [ ] 4-2
 - [ ] 4-3
