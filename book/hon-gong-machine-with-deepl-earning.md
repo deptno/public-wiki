@@ -31,14 +31,14 @@
   - 확인문제
     1. 4
     2. 2
-- [ ] 3-3 특성 공학과 규제
+- [X] 3-3 특성 공학과 규제
   + https://colab.research.google.com/drive/1941lck5FSSAjGkyRY2-x4SLDNcSlEph8#scrollTo=mO0eK_7c54mm
   - 과대 적합을 막기 위한 규제
     1. 4
     2. 3
     3. 2
-- [ ] 4-1
-- [ ] 4-2
+- [ ] 4-1 다양한 분류 알고리즘
+- [ ] 4-2 확률적 경사 하강법
 - [ ] 4-3
 - [ ] 5-1
 - [ ] 5-2
