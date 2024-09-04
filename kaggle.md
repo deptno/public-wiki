@@ -1,0 +1,5 @@
+# kaggle
+
+## link
+- [[ai]]
+- [[python]]

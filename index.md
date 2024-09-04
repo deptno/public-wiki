@@ -73,6 +73,7 @@
 ## [[ai]]
 - [[chatgpt]]
 - [[langchain]]
+- [[kaggle]]
 
 ## [[web]]
 - [[navigator]]
