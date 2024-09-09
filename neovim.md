@@ -10,6 +10,20 @@
 - `@:` 최근 명령어 실행
 - `ctrl+f` ex 명령어 프롬프트 상태에서 누르면 ex history 검색이 가능해진다
 
+## .nvimrc
+- `.nvimrc` 를 둬서 해당 디렉토리에서 vim 을 실행시 특정 스크립트 등을 실행할 수있다.
+- `.nvimrc` 설정
+  ```vim
+  vim.opt.exrc = true
+  vim.opt.secure = true
+  ```
+- `.nvimrc` 파일 내용 예
+  ```text
+  lua << EOF
+  vim.loop.os_setenv('VIRTUAL_ENV', '~/.local/data/virtualenvs/kaggle-1Dzpi2UB')
+  EOF
+  ```
+
 ## [[python]]
 ```sh
 # python 지원 확인
