@@ -41,6 +41,9 @@ FUCTION_NAME]?? # 동일
 %%timeit # 이것도 소요시간 표시인데 차이점 파악 필요
 ```
 
+## git
+- [[git-diff]] 를 위해서 `nbdime`
+
 ## link
 - [[ai]]
 - [[python]]

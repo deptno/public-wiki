@@ -15,3 +15,4 @@
 ## link
 - [[upstage-ai-lab]]
 - [[upstage-ai-lab-day-24]]
+- [[upstage-ai-lab-day-43]]
