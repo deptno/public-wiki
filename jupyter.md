@@ -34,11 +34,12 @@ FUCTION_NAME]?? # 동일
 #|export # 코드 익스포트시 포함되는 셀
 ```
 
-## %
+## % 특수 명령어
 ```sh 
 %time [code] # 소요 시간 표시
 %%time # 이건 셀 가장 윗줄에 사용
 %%timeit # 이것도 소요시간 표시인데 차이점 파악 필요
+%pip install [package-name]
 ```
 
 ## git
