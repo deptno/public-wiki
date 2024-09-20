@@ -37,3 +37,5 @@ pipenv run pip install -r requirements.txt
 - [[stable-diffusion]]
 - [[pip]]
 - [[pyenv]]
+- [[venv]]
+- [[conda]]
