@@ -82,3 +82,4 @@ mlflow models serve -m ./mlartifacts/599912536112484580/4b19152236224ce08ef46ffd
 - [[venv]]
 - [[conda]]
 - [[jupyter]]
+- [[fastapi]]
