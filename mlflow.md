@@ -7,9 +7,27 @@
   - 모델의 버전 관리 및 배포버전등에 대한 관리
 - api 서빙은 flask 기반을 제공
 
+## flow
+```mermaid
+flowchart
+  modeling --scoring--> hyper_parameter_tuning
+  hyper_parameter_tuning -.record.-> tracking
+  modeling --upload model--> registry
+  hyper_parameter_tuning -."attemp #1..n".-> modeling
+  registry --model--> flask
+  registry -.tagging.-> registry
+  flask --serving--> end_users
+  
+  subgraph mlflow
+    tracking
+    registry
+    flask
+  end
+```
+
 ## 설정
 ```sh 
-python -m venv .venv
+python -m venv .venv # 아무 가상환경이나
 source .venv/bin/activate
 
 pip install mlflow
@@ -83,3 +101,4 @@ mlflow models serve -m ./mlartifacts/599912536112484580/4b19152236224ce08ef46ffd
 - [[conda]]
 - [[jupyter]]
 - [[fastapi]]
+- [[apache-airflow]]
