@@ -1,4 +1,5 @@
 # apache-airflow
+## 소개
 - [[aws]] step-function 과 유사한 워크플로우 생성툴
 - `operator` 라는 단위로 작업 진행 가능
   - [[kubernetes]] 용 확장도 존재 `job` 단위 컨트롤로 추정
@@ -7,6 +8,8 @@
 - dag 을 만들고 그안에 task 를 붙여서 workflow 를 생성
 - task 는 병렬로 실행도 가능
 - python script 를 네이티브로 지원
+- `xcom_push()` 라는 메서드로 데이터를 전달할 수 있음
+- `xcom_pull()` 라는 메서드로 데이터를 받을 수 있음
 
 ## flow
 ```mermaid
@@ -36,6 +39,12 @@ flowchart LR
   end
   
   end_user ==실행==> t1
+```
+
+## 문법
+```sh 
+task0 >> task1 >> task2 # 순차 실행
+task0 >> [task1, task2] # 순차 후 병렬 실행
 ```
 
 ## 설치
