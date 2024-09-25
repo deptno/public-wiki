@@ -10,8 +10,7 @@
   - [[mlflow]]
     - 하이퍼 파라메터 튜닝에 체계적인 도움을 주고, 모델을 레지스트리를 가지고 있어 모델을 관리를 제공한다
   - [[apache-airflow]]
-    - [[@todo]]
-    - 아마도 [[aws]] step-function 과 같이 task 의 연속적인 트리거 기능을 지원하는 것으로 추측 중
+    - [[workflow]] 툴
   - 그 외 [[aws]] sagemaker, kubeflow 등이 상황에 따라 검토 된다
 - 이건 내 생각
   - 아마도 현업에 가면 동일한 devops 지만 model 을 서빙하는 것이 다를 것
