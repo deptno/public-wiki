@@ -4,6 +4,8 @@
 ```sh 
 conda create --name 'project-name' python=3.10
 conda activate mlops-project
+conda install tensorflow
+pip list
 conda deactivate
 ```
 
