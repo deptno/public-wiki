@@ -11,3 +11,6 @@
 - [[python]]
 - [[pycharm]]
 - [[upstage-ai-lab]]
+- [[mlflow]]
+- [[apache-airflow]]
+- [[openai-whisper]]

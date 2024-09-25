@@ -4,6 +4,18 @@
 brew install --cask docker 
 ```
 
+## exmaple usage
+```sh 
+docker built -t [TAG_NAME] . # . 은 Dockerfile 위치
+docker images # image 확인
+docker run --name [CONTAINER_NAME] -d -p 8080:8080 [IMAGE_NAME]
+docker ps # 실행 확인
+docker logs [CONTAINER_NAME] -f # -f 는 following
+docker exec -it [CONTAINER_NAME] /bin/bash # bash shell 로 접속
+# docker rm 
+# docker rmi
+```
+
 ## arg vs env
 ```Dockerfile
 ARG JS
