@@ -10,6 +10,7 @@ pip install kaggle
 ```sh 
 kaggle competitions download -c titanic -p tiatnic_directory
 kaggle competitions submit -c titanic -f output.csv
+kaggle dataset download rounakbanik/the-movies-dataset --unzip -p dataset
 ```
 
 ## link
