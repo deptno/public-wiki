@@ -3,6 +3,8 @@
 ## web
 - [[deptno.dev]]
 - [[tubemon.io]]
+- [[googit.io]]
+- [[googit.co]]
 
 ### +app
 - [[salji.ro]]
