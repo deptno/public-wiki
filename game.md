@@ -22,6 +22,9 @@
   + https://store.steampowered.com/app/2128480?snr=5000_5100___primarylinks
   - 스토리 라인이 진행됨에 따라 그 안에서의 추리 선택
 
+### 타이쿤
+- [[diary:2024-10-04]] 고양이 오피스
+
 ## link
 - [[asset]]
 - [[unity]]
