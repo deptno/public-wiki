@@ -34,3 +34,5 @@
 
 ## link
 - [[upstage-ai-lab]]
+- [[upstage-ai-lab-project-01]]
+- [[upstage-ai-lab-project-03]]
