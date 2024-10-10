@@ -7,6 +7,7 @@
 - [[upstage-ai-lab-day-28]]
 - [[upstage-ai-lab-day-43]]
 - [[upstage-ai-lab-day-48]]
+- [[upstage-ai-lab-day-57]]
 - [[upstage-ai-lab-day-project-02]]
 
 ## link
