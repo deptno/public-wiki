@@ -57,7 +57,7 @@ flowchart LR
     end
     mlflow[[mlflow]]
   end
-    trigger>daily schedule] ==💥trigger===> airflow
+    trigger>daily schedule] ==trigger===> airflow
   subgraph outside
     user((user))
   end
