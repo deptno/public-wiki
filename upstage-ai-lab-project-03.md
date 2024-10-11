@@ -73,6 +73,15 @@ flowchart LR
   frontend-server <--fastapi---> api-server
   user <--streamlit--> frontend-server
 ```
+```mermaid
+flowchart LR
+  subgraph host storages
+    /mlartifacts
+    /mlruns
+    /opt/airflow
+    /opt/airflow/datasets -.- /opt/airflow
+  end
+```
 
 ### 순서도
 ```mermaid
@@ -151,6 +160,7 @@ sequenceDiagram
           python_model=ALSWrapper(model)
       )
       ```
+- 제공해준 repo가 [[github]] quoto 문제가 있어 용량이 큰 dataset 을 업로드하지 문제로 개발에 많은 불편을 겪었다
 
 ## 회고
 - 개인적으로 개발자 인력 없이는 뒷단 풀 구현이 쉽지 않을 것 같은 걱정으로 인프라 처리를 하게됨
