@@ -29,6 +29,13 @@ gantt
 - crit
 - after
 
+## trouble shotting
+- mermaid.js 라이브러리 를 사용하는 경우
+  - `element[[alias-name]]` 는 허용되지 않음
+  - `element[[alias name]]` 은 허용된
+  - 버전 체크, 10.6.1 ~ 11.3.0
+  - playground 에서는되는걸 보면 내 이슈인거같은데 별다른점을 못찾음
+
 ## link
 - [[plantuml]]
 - [[mermaid-cli]]
