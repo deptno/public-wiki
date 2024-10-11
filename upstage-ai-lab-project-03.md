@@ -49,15 +49,14 @@ flowchart LR
     /opt/airflow/datasets -.- /opt/airflow
   end
   subgraph containers
-    frontend-server
-    api-server
+    frontend-server[[frontend server]]
+    api-server[[api server]]
     subgraph airflows [airflow]
-      airflow[[airflow-scheduler]]
-      airflow-ui[[airflow webserver]]
+      airflow-scheduler[[apiflow scheduler]]
+      airflow-webserver[[airflow webserver]]
     end
-    mlflow[[mlflow]]
+    mlflow
   end
-    trigger>daily schedule] ==trigger===> airflow
   subgraph outside
     user((user))
   end
@@ -65,11 +64,12 @@ flowchart LR
   /mlruns -.- mlflow
   /mlartifacts -.save model.- mlflow
   /mlartifacts -.supply produntion model.-> api-server
-  /opt/airflow -.- airflow
-  /opt/airflow -.- airflow-ui
+  /opt/airflow -.- airflow-scheduler
+  /opt/airflow -.- airflow-webserver
   
-  airflow --log and upload new model--> mlflow
-  airflow --update model request---> api-server
+  trigger>daily schedule] ==💥trigger===> airflow-scheduler
+  airflow-scheduler --log and upload new model--> mlflow
+  airflow-scheduler --update model request---> api-server
   frontend-server <--fastapi---> api-server
   user <--streamlit--> frontend-server
 ```
@@ -89,7 +89,7 @@ sequenceDiagram
     participant dag as TASK1: create and upload model
     dag ->> dag: download next dataset
     dag ->> dag: build
-    dag -->> mlflow: log
+    dag -->> mlflow: [[log]]
     dag ->> mlflow: upload model
     dag -->> mlflow: tag
     end
