@@ -1,3 +1,75 @@
 # wip
 
 ;b
+
+## [[neovim]] config 이전 [[diary:2024-10-14]]
+- [ ]  bookmarks.nvim 46.99ms  VeryLazy
+- [ ] cmp
+  - [ ]  cmp-buffer 0.72ms  nvim-cmp
+  - [ ]  cmp-emoji 0.6ms  nvim-cmp
+  - [ ]  cmp-git 0.04ms  nvim-cmp
+  - [ ]  cmp-nvim-lsp 0.52ms  nvim-cmp
+  - [ ]  cmp-nvim-lua 0.56ms  nvim-cmp
+  - [ ]  cmp-path 0.45ms  nvim-cmp
+  - [ ]  cmp_luasnip 1.68ms  nvim-cmp
+  - [ ]  nvim-cmp 46.31ms  VeryLazy
+- [ ]  diffview.nvim 4.93ms  VeryLazy
+- [ ]  friendly-snippets 0.13ms  LuaSnip
+- [ ] git
+  - [ ]  blame.nvim 1.42ms  VeryLazy
+  - [ ]  git-blame.nvim 1.77ms  VeryLazy
+  - [ ]  gitsigns.nvim 4.64ms  VeryLazy
+- [ ]  gx.nvim 0.56ms  VeryLazy
+- [ ]  hover.nvim 0.52ms  VeryLazy
+- [ ]  image.nvim 189.54ms  VeryLazy
+- [ ]  lazy.nvim 8.36ms  init.lua
+- [ ] lua
+  - [ ]  luarocks.nvim 165.22ms  image.nvim
+- [ ]  LuaSnip 28.71ms  nvim-cmp
+- [ ]  marks.nvim 1.97ms  VeryLazy
+- [ ]  nvim-autopairs 6.88ms  nvim-cmp
+- [ ] lsp
+  - [ ]  indent-blankline.nvim 
+  - [ ]  nvim-lspconfig 10.62ms  yaml-companion.nvim
+- [ ] ui
+  - [ ]  nvim-notify 0.03ms 󰢱 notify  custom.plugins
+  - [ ]  nvim-web-devicons 16.8ms  bookmarks.nvim
+  - [ ]  trouble.nvim 0.05ms 󰢱 trouble.sources.telescope  telescope.nvim
+  - [ ]  ui 1.36ms  start
+  - [ ]  dressing.nvim 
+  - [ ]  plenary.nvim 0.46ms 󰢱 plenary.job  nvim-cmp
+- [ ]  peek.nvim 1.29ms  VeryLazy
+- [ ]  persisted.nvim 0.95ms 󰢱 telescope._extensions.persisted  telescope.nvim
+- [ ] telescope
+  - [ ]  telescope-fzf-native.nvim 0.06ms  telescope.nvim
+  - [ ]  telescope-ui-select.nvim 0.23ms  telescope.nvim
+  - [ ]  telescope.nvim 27.54ms 󰢱 telescope  bookmarks.nvim
+- [ ] vim
+  - [ ]  vim-autoswap 0.4ms  start
+  - [ ]  vim-rzip 0.25ms  start
+  - [ ]  vim-startify 0.35ms  start
+  - [ ]  nvim-treesitter 8.2ms  telescope.nvim
+  - [ ]  nvim-surround 1.47ms  VeryLazy
+- [ ]  yaml-companion.nvim 10.96ms  VeryLazy
+- [ ]  harpoon 
+- [ ]  mason.nvim  MasonInstall  MasonInstallAll  MasonUpdate  Mason 
+- [ ]  nvim-colorizer.lua 
+  - 대체
+  + https://github.com/brenoprata10/nvim-highlight-colors
+- [ ]  nvim-tree.lua  NvimTreeFocus  NvimTreeToggle 
+- [ ]  tabscope.nvim 
+- [ ]  vim-rest-console  rest 
+- [ ]  vimwiki  markdown  <leader>w<leader>w  <leader>ww 
+- [ ] 후순위
+- [ ] 여기서 부터는 삭제
+  - [ ]  nvterm 
+  - [ ]  base46 
+  - [ ]  neodev.nvim 0.2ms  nvim-lspconfig
+  - [ ]  octo.nvim 11.41ms  VeryLazy
+  - [ ]  lspsaga.nvim  LspAttach 
+  - [ ]  Comment.nvim  gb (x)  gbc  gc (x)  gb  gcc  gc (o)  gc  gb (o) 
+    - 빌트인으로 대체된것인지
+  - [ ]  playground 3.67ms  nvim-treesitter
+  - [ ]  jupynium.nvim 3.13ms  VeryLazy
+  - [ ]  conform.nvim  ConformInfo  LspAttach 
+    - lazyvim 기본 black으로 사용가능한 것인지
