@@ -26,3 +26,4 @@ Webstorm -> Tools -> Terminal -> Run command using IDE(? [[@todo]])
 - [[intellij]]
 - [[yarn]]
 - [[pycharm]]
+- [[jetbrains]]

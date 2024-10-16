@@ -13,3 +13,4 @@
 - [[android-studio]]
 - [[neovim]]
 - [[pycharm]]
+- [[jetbrains]]

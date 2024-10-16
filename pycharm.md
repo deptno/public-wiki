@@ -20,3 +20,4 @@ pipenv --python 3.10
 ## link
 - [[intellij]]
 - [[pipenv]]
+- [[jetbrains]]
