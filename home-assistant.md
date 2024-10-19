@@ -87,3 +87,5 @@ grep -r [user_id] . # 리스팅된 파일에서 해당 정보가 포함된 데�
 ## links
 - [[kubernetes]]
 - [[smartthings]]
+- [[google-home]]
+- [[google-assistant]]
