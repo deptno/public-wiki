@@ -61,46 +61,55 @@ jupyter kernelspec list # 등록 된 커널 리스트
         - jupyter 의 실행환경과 kernel 의 인터프리터(python) 이 다르면 다른 곳에 패키지가 설치된다
       - `%` 는 kernel 에서 사용하는 파이썬의 범주에 설치된다
       ```mermaid
-      flowchart
+      flowchart RL
         subgraph global
-          direction LR
-          subgraph env0
-            python0
-            package0
-            package0 o-.-o jupyter
+          python0[python *system*]
+          subgraph package0[global packages]
+            jupyter[jupyter *runtime*]
           end
-          subgraph env1
-            python1
-            package1
-          end
-          subgraph env2
-            python2
-            package2
-          end
-          subgraph kernel1
-            subgraph c1[code block 1]
-              %1[%pip install PACKAGE_NAME]
-              !1[!pip install PACKAGE_NAME]
+          subgraph kernel0[ipykernel]
+            subgraph c0[code block 0]
+              %0[%pip install PACKAGE_NAME]
+              !0[!pip install PACKAGE_NAME]
             end
           end
-          subgraph kernel2
-            subgraph c2[code block 2]
-              %2[%pip install PACKAGE_NAME]
-              !2[!pip install PACKAGE_NAME]
+        end
+        subgraph j[jupyter *runtime*]
+          subgraph virtual env 1
+            subgraph kernel1[ipykernel]
+              subgraph c1[code block 1]
+                %1[%pip install PACKAGE_NAME]
+                !1[!pip install PACKAGE_NAME]
+              end
+            end
+            subgraph package1[packages]
+              jupyter1[jupyter]
             end
           end
-          python1 -.-> kernel1
-          python2 -.-> kernel2
-          jupyter -.-> kernel1
-          jupyter -.-> kernel2
-          python0 --> jupyter
+          subgraph viertual env 2
+            subgraph kernel2[ipykernel]
+              subgraph c2[code block 2]
+                %2[%pip install PACKAGE_NAME]
+                !2[!pip install PACKAGE_NAME]
+              end
+            end
+            subgraph package2[packages]
+              jupyter2[jupyter]
+            end
+          end
+          jupyter1 -.ipykernel install.-> kernel1
+          jupyter2 -.ipykernel install.-> kernel2
+          %0 --> package0
           %1 --> package1
           %2 --> package2
+          !0 ==> package0
           !1 ==> package0
           !2 ==> package0
         end
       ```
       - 중요한 차이는 jupyter kernel 이 `jupyter` 의 실행환경과 일치하는 인터프리터를 사용하지 않을 경우 `%`, `!` 사용에 따라 패키지를 불러오지 못하게된다
+      - viretual env 자체는 jupyter 안에 있는 것은 **아니다**
+      - 다만 kernel과 연결되어 있다
 
 ## git
 - [[git-diff]] 를 위해서 `nbdime`
