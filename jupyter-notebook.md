@@ -1,5 +1,5 @@
 # jupyter-notebook
-- synonim [[tailspin]]
+- synonim [[jupyter]]
 
 ## link
 - [[jupyter]]

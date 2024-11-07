@@ -170,4 +170,5 @@ sequenceDiagram
 - [[docker]]
 - [[docker-compose]]
 - [[upstage-ai-lab-project-02]]
+- [[upstage-ai-lab-project-04]]
 - [[wn.private:upstage-ai-lab-project-03]]
