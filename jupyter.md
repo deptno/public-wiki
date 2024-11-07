@@ -44,7 +44,14 @@ FUCTION_NAME]?? # 동일
 
 ## cli
 ```sh 
-jupyter kernelspec list # 등록 된 커널 리스트
+# 등록 된 커널 리스트
+jupyter kernelspec list
+
+# 커널 등록, 현재 파이썬 실행환경으로 커널 생성
+python -m ipykernel install --user --name=KERNEL_NAME --display-name "KERNEL DISPLAY NAME"
+
+# 커널 실행
+jupyter kernel --kernel=KERNEL_NAME
 ```
 
 ## 개념
