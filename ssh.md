@@ -24,6 +24,13 @@ git clone git@[HOST]:repopath
 ```
 - `~/.ssh/config` 에 저장된 호스트 네임과 일켜야한다
 
+## 포트포워딩
+```sh 
+ssh -NL localhost:8888:localhost:8000 user@server
+# -f 옵션이 추가되면 background 실행
+ssh -NLf localhost:8888:localhost:8000 ssh_session_name
+```
+
 ## link
 - [[scp]]
 - [[ssh-copy-id]]
