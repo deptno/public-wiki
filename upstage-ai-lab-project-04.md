@@ -78,8 +78,10 @@
   - 모델군들에서 라이트한 모델을 선택해서 테스트 진행
     - 각 모델군은 경향성을 보이기 때문
     - 대충 파라메터 모델 튜닝후 모델 선택
-- 
-
+- loss 는 데이터에 imbalance가 있으니
+  - focal loss
+  - asymmetric loss
+  - weighted cross entropy
 
 ## 진행
 - augmentation
