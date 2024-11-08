@@ -78,10 +78,10 @@
   - 모델군들에서 라이트한 모델을 선택해서 테스트 진행
     - 각 모델군은 경향성을 보이기 때문
     - 대충 파라메터 모델 튜닝후 모델 선택
-- loss 는 데이터에 imbalance가 있으니
+- loss 는 데이터에 imbalance가 있으니 아래 것들을 고민해 봐라
   - focal loss
   - asymmetric loss
-  - weighted cross entropy
+  - weighted cross entropy loss
 
 ## 진행
 - augmentation
@@ -109,6 +109,10 @@
       - 생성되는 데이터도 버전 디렉토리를 만들어서 생성
   - 모델링 진행
     - 1 epoch 기준 40분 정도 소요
+  - loss 는 모델마다 cross entropy 부터 focal loss, assymmetric loss 등이 다양하게 적용되었다
+  - cosine annealing lr 적용
+  - efficientdet 같은 모델은 BiFPN 레이어를 장착하여 학습
+  - stratified k-fold 가 기본이 될줄알았으나 데이터 증강을 통해 양이 늘어났기 때문인지 모두가 random split을 사용
 - 사고
   - 서버가 갑자기 접속이 되지 않고 메시지 웹을 보니
     ```
