@@ -9,12 +9,14 @@
   - 나는 어떤사람인지(ai의 대화상대인 나 자신에 대해서 서술)
   - 어떻게 응답할 것인지
 
-## dall-e
+## [[dall-e]]
 - 쿼터 존재
   ```
   You've reached the current usage cap for GPT-4, please try again after 5:01 AM. Learn more
   ```
+
 ## link
 - [[ai]]
 - [[api]]
 - [[book/index|book]]
+- [[dall-e]]

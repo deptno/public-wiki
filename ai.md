@@ -5,6 +5,7 @@
 
 ## link
 - [[chatgpt]]
+- [[dall-e]]
 - [[midjourney]]
 - [[stable-diffusion]]
 - [[data]]
