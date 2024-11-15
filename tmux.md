@@ -56,7 +56,7 @@ tmux kill-session -t 0
 + https://www.baeldung.com/linux/tmux-kill-respawn-pane
 
 ## [[error]]
-- <esc> escape key 와 <M> meta 키 문제
+### <esc> escape key 와 <M> meta 키 문제
   + https://github.com/tmux/tmux/wiki/Modifier-Keys#the-escape-key
   - `[^` 로 인식하면서 tmux 내에서의 [[vim]] 에서만 동작이 이상해지는 문제를 발견
   - tmux 이슈로 같은 키처리되어 발생
