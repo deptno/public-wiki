@@ -62,6 +62,7 @@ tmux kill-session -t 0
   - tmux 이슈로 같은 키처리되어 발생
   - `set-option -sg escape-time 0` 사용하였으나 안됨
   - [[neovim]] 내 키설정에서 `<M-?>` 키 관련 제거
+  + https://github.com/deptno/.config/blob/9986f2c1a236d914e8ac1b548a6dba92a33a5320/.config/nvim/lua/config/keymaps.lua#L5-L8
 
 ## link
 - [[terminal]]
