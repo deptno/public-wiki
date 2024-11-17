@@ -3,8 +3,17 @@
 ## 설치
 ```sh 
 pip install jupyterlab
+# 커널 생성
+pip install ipykernel
 ```
 > [[pycharm]] 에서 쥬피터 노트북을 실행시에는 `jupyter` 의 설치가 필요
+
+### lsp
+```sh 
+# lsp
+pip install ipython jupyterlab-lsp python-lsp-server
+```
+- 결과적으로 잘 안됨, [[pycharm]] 하고 격차가 너무 크다
 
 ## 실행
 ```sh 
