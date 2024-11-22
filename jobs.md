@@ -1,17 +1,17 @@
 # jobs
 
 ```sh
-$ jobs                                                                                                                                   ok  11:18:52
-$ bg                                                                                                                                     ok  12:06:15
+$ jobs
+$ bg
 bg: no current job
-$ fg                                                                                                                                  1 err  12:06:16
+$ fg
 fg: no current job
 $ vim #suspend vim
 
 [1]  + 86914 suspended  vim
-$ jobs                                                                                                                              TSTP  %  12:06:22
+$ jobs
 [1]  + suspended  vim
-$ bg                                                                                                                                 ok | %  12:06:24
+$ bg
 [1]  + 86914 continued  vim
 [1]  + 86914 suspended (tty output)  vim
 $ fg # vim reopen
