@@ -130,6 +130,27 @@ jupyter kernel --kernel=KERNEL_NAME
 ## git
 - [[git-diff]] 를 위해서 `nbdime`
 
+## plugin
+### :nbconvert:
+#### `py` 파일로 변환
+```sh
+# `py` 파일로 변환
+jupyter nbconvert --to file.ipynb
+````
+
+#### 특정 셀을 제외하고 스크립트 변환을 할 수 있다.
+- jupyter notebook 파일에서 cell에 태그 입력, 예제 기준으로는 `remove` 삽입
+- 컨피그 생성
+  ```sh
+  ## nbconvert 를 위한 config 생성
+  jupyter nbconvert --generate-config
+  ```
+- `~/.jupyter/jupyter_nbconvert_config.py` 파일에 아래 내용 추가 후 스크립트 빌드
+  ```
+  c.Exporter.preprocessors = ['nbconvert.preprocessors.TagRemovePreprocessor']
+  c.TagRemovePreprocessor.remove_cell_tags = {"remove"}
+  ```
+
 ## link
 - [[ai]]
 - [[python]]
