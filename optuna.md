@@ -2,6 +2,7 @@
 - hyper-parameter tuner
 
 ## [[error]]
+### hyperparameter_search :hyperparameter_search:
 - `hyperparameter_search` 에러
   - hyperparameter_search 시에는 `model_init` 을 통해서 새로운 모델을 새롭게 생성한다
   - 이 과정에서 tokenizer 가 special token 등을 추가함으로 인해서 vocab size 가 달라지면 아래와 같은 알기 어려운 에러가 발생한다
@@ -128,7 +129,6 @@ Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
 
 [W 2024-11-28 16:25:27,017] Trial 0 failed with value None.
 Traceback (most recent call last):
-  File "/data/ephemeral/home/src/model_t5/model.py", line 270, in <module>
     best_params = trainer.hyperparameter_search(
   File "/opt/conda/lib/python3.10/site-packages/transformers/trainer.py", line 3473, in hyperparameter_search
     best_run = backend_obj.run(self, n_trials, direction, **kwargs)
@@ -188,6 +188,63 @@ RuntimeError: CUDA error: device-side assert triggered
 CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
 For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
 Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+```
+- `hyperparameter_search` 시에는 callback 을 꺼야한다, `EarlyStoppingCallback` 같은 경우도 저장 루틴과 관계까 있다 아닐 시 아래와 같은 오류
+```sh
+Downloading artifacts:   0%|| 0/1 [00:00<?, ?it/s]
+[W 2024-11-28 16:34:17,216] Trial 0 failed with parameters: {'learning_rate': 0.0006470617293384711} because of the following error: MlflowException("The following failur
+es occurred while downloading one or more artifacts from ./checkpoint:\n##### File checkpoint-779 #####\n[Errno 2] No such file or directory: './checkpoint/checkpoint-779
+'").
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.10/site-packages/optuna/study/_optimize.py", line 197, in _run_trial 
+    value_or_values = func(trial)
+  File "/opt/conda/lib/python3.10/site-packages/transformers/integrations/integration_utils.py", line 248, in _objective
+    trainer.train(resume_from_checkpoint=checkpoint, trial=trial)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/utils/autologging_utils/safety.py", line 593, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/transformers/__init__.py", line 2931, in train
+    return original(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/utils/autologging_utils/safety.py", line 574, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/utils/autologging_utils/safety.py", line 509, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/utils/autologging_utils/safety.py", line 571, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/transformers/trainer.py", line 2123, in train
+    return inner_training_loop(
+  File "/opt/conda/lib/python3.10/site-packages/transformers/trainer.py", line 2573, in _inner_training_loop
+    self._maybe_log_save_evaluate(tr_loss, grad_norm, model, trial, epoch, ignore_keys_for_eval)
+  File "/opt/conda/lib/python3.10/site-packages/transformers/trainer.py", line 3008, in _maybe_log_save_evaluate
+    self.control = self.callback_handler.on_save(self.args, self.state, self.control)
+  File "/opt/conda/lib/python3.10/site-packages/transformers/trainer_callback.py", line 507, in on_save
+    return self.call_event("on_save", args, state, control) 
+  File "/opt/conda/lib/python3.10/site-packages/transformers/trainer_callback.py", line 518, in call_event
+    result = getattr(callback, event)(
+  File "/opt/conda/lib/python3.10/site-packages/transformers/integrations/integration_utils.py", line 1334, in on_save
+    self._ml_flow.pyfunc.log_model(
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/tracing/provider.py", line 268, in wrapper   
+    is_func_called, result = True, f(*args, **kwargs)  
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/pyfunc/__init__.py", line 3246, in log_model 
+    return Model.log(
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/models/model.py", line 776, in log 
+    flavor.save_model(path=local_path, mlflow_model=mlflow_model, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/tracing/provider.py", line 272, in wrapper   
+    is_func_called, result = True, f(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/pyfunc/__init__.py", line 3006, in save_model
+    return mlflow.pyfunc.model._save_model_with_class_artifacts_params(
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/pyfunc/model.py", line 436, in _save_model_with_class_artifacts_params
+    tmp_artifact_path = _download_artifact_from_uri(
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/tracking/artifact_utils.py", line 116, in _download_artifact_from_uri
+    return repo.download_artifacts(artifact_path=artifact_path, dst_path=output_path)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 85, in download_artifacts
+    return super().download_artifacts(artifact_path, dst_path)
+  File "/opt/conda/lib/python3.10/site-packages/mlflow/store/artifact/artifact_repo.py", line 302, in download_artifacts
+    raise MlflowException(
+mlflow.exceptions.MlflowException: The following failures occurred while downloading one or more artifacts from ./checkpoint:
+##### File checkpoint-779 #####
+[Errno 2] No such file or directory: './checkpoint/checkpoint-779'
+[W 2024-11-28 16:34:17,217] Trial 0 failed with value None.
+Traceback (most recent call last): 
 ```
 
 ## link

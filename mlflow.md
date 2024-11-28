@@ -191,6 +191,8 @@ mlflow models serve -m ./mlartifacts/599912536112484580/4b19152236224ce08ef46ffd
   - local nvme 와 같은 빠른 디바이스도 용량이 2gb 정도되면 발생
     - 기본 timeout 을 몰라서 이해는 안되나 설정시 해결
       + https://github.com/deptno/cluster-amd64/commit/be5d95b182681ecaaa1f7248b4b7c471e874ec57
+- [[optuna]] `hyperparameter_search` 와 충돌
+  + [[optuna#hyperparameter_search]]
 
 ## link
 - [[python]]
