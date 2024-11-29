@@ -10,10 +10,12 @@
 - [[upstage-ai-lab-day-57]]
 - [[upstage-ai-lab-day-62]]
 - [[upstage-ai-lab-day-77]]
+- [[upstage-ai-lab-day-92]]
 - [[upstage-ai-lab-project-01]]
 - [[upstage-ai-lab-project-02]]
 - [[upstage-ai-lab-project-03]]
 - [[upstage-ai-lab-project-04]]
+- [[upstage-ai-lab-project-05]]
 
 ## link
 - [[ai]]
