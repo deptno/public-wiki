@@ -194,7 +194,7 @@
     - 읽었던 논문등 깊게 이해
 - 대회의 의미
  
-## 회고
+## 회고 :retrospective:
 - ssh 개발 환경
   - [[pycharm]] 은 유료 버전인데도 [[ssh]] 개발환경에서는 [[jupyter-notebook]] 파일에서 [[markdown]] cell 을 표시 못함
     - [[vscode]] 로 진행
