@@ -47,6 +47,10 @@
 + [[diary:2024-08-05]]
 - 일주일 넘도록 깨짐
 
+### quasarzone.com
++ [[diary:2024-11-30]] 
+- 일주일 넘도록 깨짐
+
 ## link
 - [[project]]
 - [[tubemon.io]]
