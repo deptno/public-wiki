@@ -53,3 +53,5 @@ flowchart
 
 ## link
 - [[upstage-ai-lab]]
+- [[upstage-ai-lab-day-43]]
+- [[upstage-ai-lab-day-57]]

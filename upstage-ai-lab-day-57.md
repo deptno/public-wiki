@@ -10,3 +10,5 @@
 - [[apache-airflow]]
 - [[docker]]
 - [[docker-compose]]
+- [[upstage-ai-lab-day-48]]
+- [[upstage-ai-lab-day-62]]

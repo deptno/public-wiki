@@ -1,0 +1,176 @@
+# upstage-ai-lab-day-98
+### LM to LLM
+- 공부하는 느낌보다는 그냥 전반적인 것을 훑는 느낌으로 학습
+
+## 학습
+### LM
+- count 기반
+  - 단어가 얼마나 많이 등장하는지, 얼마나 많이 참조되는지 등을 통해 처리
+  - 동일 단어를 기반으로하므로 동음이의어등이 처리가 안됨
+  - TF-IDF, BM25 등이 존재
+- 단점을 커버하기 위해 의미론적인 임베딩을 할 수 있도록 발전
+  - 주변 단어를 보기시작
+  - Word2Vec, FastText, Glove 등
+- 의미기반을 넘어 문맥정보를 통한 이해 필요성
+  - ELMo, GPT, BERT 등
+  - 너무 고비용이라 실제 현업에 적용이 어렵다
+### LM 에서 LLM 으로 진화하게 된 과정
+- scale up/down 에 대한 방향성이 존재
+  - scale up
+    - 스케일링 법칙이 나오면서 대규모 투자가 할 수 있는 근거 만들어지고 이에 다라 현재의 [[ChatGPT]] 와 같은 서비스가 탄생할 수 있는 계기가 됨
+  - scale down
+### LLM
+- 기존 model 1:1 task 관계가 깨짐
+- ICL In-Context Learning 이 특징, few-shot 등의 예제를 통해 여러 타스크 처리
+  - prompt engineering 으로 이어짐
+- 이에 대한 서빙 관점에서 LLMOps(FMOps) 등이 발생
+  - MLOps -> LLMOps(FMOps)
+- 근간 이론
+  - SFT -> Reward Model -> RLHF
+    - [[ChatGPT]] 방법
+- 비즈니스 동향
+  - 1T 토큰 클럽
+    - 데이터 기여도만큼 사용할 수 있는 토큰을 제공하는 방법
+    - 수익 쉐어 범위 안에서 데이터 기여도에 따른 수익 분배
+### LLM 기반 Data-Centric NLP 연구
+- 사전 학습, Pre Training
+  - 비지도 학습(혹은 셀프 지도, Masked Language Modeling)
+  - 대량의 말뭉치
+- 미세조정
+  - SFT, Supervised Fine Tuning 지도학습
+  - Instruction Fine-Tuning
+    - 사람의 지시에 따른 타스크 수행 능력을 생성
+  - Alignment Tuning
+    - 선호도 반영
+    - RLHF 대신 RLAIF 방식도 있음
+      - 피드백 주체가 사람 -> AI 로
+    - DPO
+      - 선호 데이터만을 활용, 리워드 함수 처럼 복잡한 로직 대신 그냥 적용하는 개념인듯
+      - 이게 RLHF 를 거진 대체
+- 데이터
+  - 다양성, 품질이 중요
+    - 중복 제거, 유사 필터링등을 통해서 데이터를 필터링
+      - 성능 상승 뿐 아니라 학습 비용도 감소
+  - 데이터 증강
+    - 기존 LLM 등의 성능이 올라오면서 이를 증강할 데이터 셋 생성에 사용
+### LLM 기반 Model-Centric NLP 연구
+- PEFT Parameter Efficient Fine Tuning
+  - 일부 파라메터만 튜닝
+    - catastrarophic forgetting 완화
+      - 파인 튜닝후 기존에 잘 하던것도 못하는 현상
+- LoRA
+  - 특정레이어의 가중치를 로우랭크로 낮춰서 학습, 메모리 사용량을 줄임
+  - 기존 가중치를 업데이트하지 않고 곱할 변경할 가중치를 만드는 형태
+- Quantization
+  - 부동 소수점 정밀도를 희생시켜 메모리 사용량을 줄이는 것
+- QLora
+  - LoRA + 4bit Quantization
+- Prompt
+  - Discreate Prompt
+  - Continuous Prompt
+  - Prefix Tuning
+  - Prompt Tuning
+  - P-Tuning
+### LLM 기반 Evaluation-Centric NLP
+- LLM 은 f1, acc 등으로 평가할 수 없다 -> 평가지표 발전
+- Interpretability
+  - 설명 가능한 관점
+- 윤리
+- 정치적 편향
+- MBTI
+  - ChatGPT 는 ENFJ??
+- 사용자의 견해에 아첨하는 경향이 있다.
+- Leaderboard
+### LLM 기반 Application 연구
+- LLMOps(FMOps)
+  - 생성 데이터에 대한 후처리를 포함
+    - 할루시네이션, 윤리적 요소 처리할 것으로 생각
+  - 프롬프트 체이닝
+  - Augmented LLM 운영 주체
+- Augmented LLM
+  - LLM + 외부 서비스로 문제 해결
+  - RAG, Agent 등
+### LLM 기반 Prompt Engineering
+- Prompt Engineering
+  - COT Chain Of Thought
+    - 사람과 같이 단계별로 실행, 검증하여 성능을 향상
+    - 대수(수학)연산에서 특히 더 향상
+  - In-Context Learning
+    - 예제를 통한 동적 학습
+      - 예제 순서가 성능에 영향을 미친다는 논문이 있음
+  - Plan and Solve
+    - 계획 실행으로 성능 향상
+  - 동일 질문에 대해서 여러 답변을 생성 -> 샘플링 -> 일치도가 높은 답변을 사용하여 안정성 확보
+  - 단계별 검증
+  - promptbreeder
+- LLM Tools
+  - LangChain
+  - AutoGPT
+  - Scikit-LLM
+- Multilingual LLM
+  - 모델들
+    - mBERT
+    - XLM
+      - 여러 언어를 학습시키면 성능이 향상
+        - perplexity 가 낮다는 말(low is better)
+    - MASS
+    - mBART
+    - mT5
+  - 다국어 코퍼스로 학습된 LLMs
+    - PaLM
+    - LLaMA
+    - Alpaca
+    - Falcon
+    - RedPajama
+  - Multilingual LLM Benchmark
+    - LASER2
+    - NLLB
+    - MEGA
+    - Open Multilingual LLM Evaluation Leaderboard
+### Multimodel LLM
+- 배경지식
+  - Coarse-grained classification
+    - 대분류
+  - fine-grained classification
+    - 소분류
+- Image-Text
+  - CLIP
+  - FILIP
+  - BLIP
+- Audio/Video
+- LLMs
+  - Flamingo
+    - CLIP + ChinChilla
+  - BLIP-2
+    - Q-Former 를 통해 이미 학습된 두 모델을 연결
+      - Q-Former, FC 레이어만 학습
+  - LLaVA
+  - Gemini
+    - 시각, 비디오, 오디오
+### Cross Lingual LLM
+- 언어모델에서 다른언어로 전이
+- 전이학습
+  - instruction tuning
+    - 목표언어로 instruction tuning 만 진행
+    - source 언어와 나름 유사해야한다, 타겟 언어에대한 vocab을 다소 가지고있어야한다
+    - 성능이 낮을 수 있다.
+    - futher pre-training or instruciton tuning 이 필요
+  - vocabulary extension
+    - vocab 추가를 위한 트레이닝 필요
+  - futher pre-training
+    - pre-training 부터 시작
+    - 대용량 코퍼스 필요
+  - AMM Adappting Monolingual Model
+    - token embedding 만 학습
+  - XPT Cross-Lingual Post-Training
+    - 추가레이어에서 타겟 언어만 학습
+  - GPT-recycle
+    - 잘 학습된 다른 언어모델의 임베딩을 사용
+- 임베딩 정렬 기반 학습 전략
+  - WECHSEL
+    - 기존언어와 타겟언어를 유사도기반으로 정렬후 임베딩
+- Adapter 기반 학습방법
+
+## link
+- [[upstage-ai-lab-day-92]]
+- [[wn.private:upstage-ai-lab-lm-to-llm]]
