@@ -215,3 +215,4 @@ git reset --mixed $(git merge-base master @)
 - [[alias]]
 - [[git-alias]]
 - [[git-lfs]]
+- gist

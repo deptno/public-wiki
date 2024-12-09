@@ -176,3 +176,4 @@ set +e
 - [[tr]]
 - [[kubectl]]
 - [[iconv]]
+- [[gist]]
