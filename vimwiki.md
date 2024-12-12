@@ -5,6 +5,11 @@
 ## reference
 - diary:yyyy-MM-dd 다이어리 참조
 
+## indent
+- `insert` 모드에서 자주쓰이는 키
+- 들여쓰기 `ctrl` + `t`
+- 내어쓰기 `ctrl` + `d`
+
 ## ~~tag~~
 > 태그는  느려서 그냥 '[[ripgrep]]' 을 쓰는게 빠름
 ```vim
