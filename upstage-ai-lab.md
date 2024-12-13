@@ -13,6 +13,7 @@
 - [[upstage-ai-lab-day-77]]
 - [[upstage-ai-lab-day-92]]
 - [[upstage-ai-lab-day-98]]
+- [[upstage-ai-lab-day-102]]
 - [[upstage-ai-lab-project-01]]
 - [[upstage-ai-lab-project-02]]
 - [[upstage-ai-lab-project-03]]

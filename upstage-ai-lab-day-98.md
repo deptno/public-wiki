@@ -173,4 +173,5 @@
 
 ## link
 - [[upstage-ai-lab-day-92]]
+- [[upstage-ai-lab-day-102]]
 - [[wn.private:upstage-ai-lab-lm-to-llm]]
