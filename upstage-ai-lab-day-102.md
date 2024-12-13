@@ -417,5 +417,6 @@
 - 생략
 
 ## link
-- [[upstage-ai-lab-day-98]]
 - [[wn.private:upstage-ai-lab-day-102]]
+- [[upstage-ai-lab]]
+- [[upstage-ai-lab-day-98]]

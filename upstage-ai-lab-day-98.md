@@ -172,6 +172,7 @@
 - Adapter 기반 학습방법
 
 ## link
+- [[upstage-ai-lab]]
 - [[upstage-ai-lab-day-92]]
 - [[upstage-ai-lab-day-102]]
 - [[wn.private:upstage-ai-lab-lm-to-llm]]
