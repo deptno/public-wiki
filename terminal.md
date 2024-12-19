@@ -75,6 +75,7 @@
 - [[jira-cli]]
 - [[k9s]]
 - [[keytool]]
+- [[yazi]]
 
 ### file
 /etc/netplan

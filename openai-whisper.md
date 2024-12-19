@@ -27,6 +27,12 @@ whisper [AUDIO FILE] --language Korean [--model MODEL] [--output_format FORMAT]
 |       1MB |           22초 |   4분16초 |
 |     150MB |       10분54초 |           |
 
+
+## [[apple]] silicon
+```sh 
+pip install lightning-whisper-mlx
+```
+
 ## link
 - [[python]]
 - [[pipenv]]
