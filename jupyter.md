@@ -151,6 +151,9 @@ jupyter nbconvert --to file.ipynb
   c.TagRemovePreprocessor.remove_cell_tags = {"remove"}
   ```
 
+### jupytext
+- plugin 인지는 모르겠으나 jupyter notebook 과 py 를 sync 로 생성하여 관려가 가능한 것으로 보인다
+
 ## link
 - [[ai]]
 - [[python]]
