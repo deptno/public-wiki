@@ -268,7 +268,10 @@ CertificateSigningRequest 생성시에 발생하는데 `cat user.csr | base` 한
   # 쿠버네티스 버전 리스트업
   apt-cache madison kubeadm
   # 업그레이드 타겟(현재 버전에서 minor +1, 최신 패치)의 kubeadm 설치
-  sudo apt-mark unhold kubeadm && sudo apt-get update && sudo apt-get install -y kubeadm=1.27.6-00 &&  sudo apt-mark hold kubeadm
+  sudo apt-mark unhold kubeadm
+  sudo apt-get update
+  sudo apt-get install -y kubeadm=1.27.6-00
+  sudo apt-mark hold kubeadm
 
   # 인증서 갱신 여부를 확인하기 위해서 체크(Optional)
   sudo kubeadm certs check-expiration
@@ -277,8 +280,14 @@ CertificateSigningRequest 생성시에 발생하는데 `cat user.csr | base` 한
   # 싱글 클러스터라 에러가 나는거 같은데 무시했음, 싱글 클러스터라 다운타임 피할 수 없음
   kubectl drain [NODE_NAME] --ignore-daemonsets
   # **업그레이드**
-  sudo kubeadm upgrade apply v1.27.6
+  sudo kubeadm upgrade apply v32.x-00
 
+  apt-mark unhold kubelet kubectl && \
+  apt-get update && apt-get install -y kubelet=1.32.x-00 kubectl=1.32.x-00 && \
+  apt-mark hold kubelet kubectl
+  
+  kubectl uncordon [NODE_NAME]
+- 
   # kubelet 재시작
   sudo systemctl daemon-reload
   sudo systemctl restart kubelet
