@@ -287,7 +287,7 @@ CertificateSigningRequest 생성시에 발생하는데 `cat user.csr | base` 한
   apt-mark hold kubelet kubectl
   
   kubectl uncordon [NODE_NAME]
-- 
+
   # kubelet 재시작
   sudo systemctl daemon-reload
   sudo systemctl restart kubelet
