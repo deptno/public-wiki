@@ -8,78 +8,91 @@
 - [[@todo]]
 - [[idea]]
 
-## 개발
+## undefined
 - [[project|프로젝트]]
-- [[mobile]]
-- [[terminal]]
 - [[dev-tools]]
 - [[language]]
 - [[free]]
-- [[unity]]
 - [[theme]]
-- [[port]]
-- [[shell]]
 - [[benchmark]]
-- [[codesign]]
-- [[node]]
-- [[nodejs]]
-- [[load-test|부하테스트]]
 - [[encoding]]
-- [[terraform]]
-- [[cors]]
-- [[response-code]]
-- [[react]]
-- [[kubernetes]]
 - [[debug]]
-- [[vite]]
-- [[random]]
 - [[eol]]
-- [[sql]]
-- [[pnpm]]
-- [[css]]
-- [[darkmode|다크모드]]
-- [[web]]
-- [[python]]
-- [[llama]]
-- [[react-native]]
-- [[tauri]]
-- [[electron]]
 - [[tidy]]
-- [[applescript]]
-- [[nextjs]]
-- [[fcm]]
-- [[stylexjs]]
-- [[wsl]]
-- [[turborepo]]
+- [[tip]]
 
-## [[db]]
-- [[redis]]
-- [[dynamodb]]
-- [[postgresql]]
-- [[milvus]]
+## cli
+- [[shell]]
+- [[shell-script]]
+- [[random]]
+- [[terminal]]
 
-## tool
-- [[k9s]]
+## game
+- [[unity]]
 - [[game-engine]]
 
-## 개념
-- [[oauth]]
-- [[jwt]]
+## mobile
+- [[mobile]]
 - [[deeplink]]
-- [[smtp]]
+- [[fcm]]
 
-## [[tip]]
-
-## [[ai]]
-- [[chatgpt]]
-- [[langchain]]
-- [[kaggle]]
-
-## [[web]]
+## web
+- [[web]]
 - [[navigator]]
 - [[console]]
 - [[seo]]
 - [[pwa]]
+- [[css]]
+- [[response-code]]
+- [[darkmode|다크모드]]
+
+## js
+- [[web]]
+- [[react]]
+- [[react-native]]
+- [[electron]]
+- [[nextjs]]
+- [[stylexjs]]
+- [[node]]
+- [[vite]]
+- [[pnpm]]
+- [[turborepo]]
+
+## python
+- [[python]]
+
+## rust
+- [[tauri]]
+
+## infra
+- [[helm]]
+- [[kubernetes]]
+- [[terraform]]
+
+## backend
+- [[load-test|부하테스트]]
+- [[k9s]]
+- [[oauth]]
+- [[jwt]]
+- [[cors]]
+
+## database
+- [[db]]
+- [[redis]]
+- [[dynamodb]]
+- [[postgresql]]
+- [[milvus]]
+- [[sql]]
+
+## 개념
+- [[smtp]]
+
+## ai
+- [[ai]]
+- [[chatgpt]]
+- [[langchain]]
+- [[kaggle]]
+- [[llama]]
 
 ## service
 - [[aws]]
@@ -95,6 +108,10 @@
 
 ## os
 - [[macos]]
+- [[applescript]]
+- [[codesign]]
+- [[port]]
+- [[wsl]]
 
 ## 일반
 - [[synology]]
@@ -131,4 +148,5 @@
 ## 장비
 - [[microsoft-designer-compact-keyboard|마이크로스프트 디자이너 컴팩트 키보드]]
 
-## [[retrospect]]
+## retrospect
+- [[retrospect]]
