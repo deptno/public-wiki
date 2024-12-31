@@ -76,7 +76,7 @@ NAME                         STATUS        VOLUME                               
 
 #### [[nfs]]
 ```sh 
-mount: /var/lib/kubelet/pods/91f95da8-3cea-4f8a-a367-c2b11b3444b5/volumes/kubernetes.io~nfs/test-volume: bad option; for several filesystems (e.g. nfs, cifs) you might need a /sbin/mount.<type> helper program.                                                                                                                                 │
+mount: /var/lib/kubelet/pods/91f95da8-3cea-4f8a-a367-c2b11b3444b5/volumes/kubernetes.io~nfs/test-volume: bad option; for several filesystems (e.g. nfs, cifs) you might need a /sbin/mount.<type> helper program.
 ```
 - [X] worker node 에 nfs-common 설치
   ```sh 
