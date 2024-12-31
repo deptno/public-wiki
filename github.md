@@ -26,6 +26,12 @@ GIT_SSH_COMMAND='ssh -i [KEY_PATH]' bundle exec fastlane build phase:dev
 ## 보안
 - `.netrc` + [[../github|github]] PAT 토큰으로 [[../ssh|ssh]] 보다 강한 보안성을 부여
   - PAT 은 fine-grained 로 발행
+  - `.netrc` 작성후 $HOME 에 저장
+    ```
+    machine github.com
+    login <your-github-username>
+    password <your-personal-access-token>
+    ```
 
 ## link
 - [[git]]

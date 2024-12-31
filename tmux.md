@@ -57,12 +57,18 @@ tmux kill-session -t 0
 
 ## [[error]]
 ### <esc> escape key 와 <M> meta 키 문제
-  + https://github.com/tmux/tmux/wiki/Modifier-Keys#the-escape-key
-  - `[^` 로 인식하면서 tmux 내에서의 [[vim]] 에서만 동작이 이상해지는 문제를 발견
-  - tmux 이슈로 같은 키처리되어 발생
-  - `set-option -sg escape-time 0` 사용하였으나 안됨
-  - [[neovim]] 내 키설정에서 `<M-?>` 키 관련 제거
-  + https://github.com/deptno/.config/blob/9986f2c1a236d914e8ac1b548a6dba92a33a5320/.config/nvim/lua/config/keymaps.lua#L5-L8
++ https://github.com/tmux/tmux/wiki/Modifier-Keys#the-escape-key
+- `[^` 로 인식하면서 tmux 내에서의 [[vim]] 에서만 동작이 이상해지는 문제를 발견
+- tmux 이슈로 같은 키처리되어 발생
+- `set-option -sg escape-time 0` 사용하였으나 안됨
+- [[neovim]] 내 키설정에서 `<M-?>` 키 관련 제거
++ https://github.com/deptno/.config/blob/9986f2c1a236d914e8ac1b548a6dba92a33a5320/.config/nvim/lua/config/keymaps.lua#L5-L8
+  
+### <esc> 딜레이 문제
++ [[diary:2024-12-20]]
+- 외부 서버에서 [[neovim]] 설치 후 작업시 딜레이 있음
+  - `.tmux.conf`
+    - `set-option -g escape-time 0` 이 필요하다
 
 ## link
 - [[terminal]]
