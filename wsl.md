@@ -24,28 +24,43 @@ pip install pipenv
 - CPU, memory 등을 통해서 하드웨어 스펙 전달 가능, **재부팅** 필요
 
 ## 외부에서 ssh 를 통해 접속
+- 외부라 함은 lan 을 의미
+- lan 은 `192.168.x.x` 대역
+- wsl 은 `172.x.x.x` 대역
+- 이말인 즉슨
+  - A --ssh--> B --nat--> wsl
+  - A --ssh--> B --bridge-- wsl
+- 방화벽으로 [[ssh]] 포트 개팡 필요 기본: `22`
+- [[ssh]] 최초 개방시 `sshd_config` 에  `PasswordAuthentication yes` 가 설정되어 있어야함
 
-### window host 설정
+### Mirrorod
+- windows host ip 를 공유
+- windows host 에 open ssh 가 떠있으면 wsl 까지 도달하지 못함
+
+### NAT
+- windows 내에 자체 대역으로 ip 존재
+- windows host 에서 port-forwaring 필요
+
+#### window host 설정
 1. window에서 openssh server 설치 및 시작
 2. 관리자 계정으로 power shell 오픈
 3. `net user [ID] [PASSWORD] /add` 명령으로 사용자 생성, 패스워드 필요
 4. `ssh [WINDOWS_HOST_IP]` 접속
 
-### wsl os 설정
+#### wsl os 설정
 1. `openssh-server` 설치
 ```sh 
 apt update
-apt upgrade
 apt install openssh-server
 ```
 
-### remote -> window host 
+#### remote -> window host 
 > `net user` 를 통해 생성한 계정으로 접속
 ```sh 
 ssh [USER]@[WINDOWS_HOST_IP]
 ```
 
-### remote -> window host -> wsl
+#### remote -> window host -> wsl
 
 ## error
 - wsl 실행하니 창 열리고 바로 꺼짐
