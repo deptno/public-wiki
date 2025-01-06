@@ -14,6 +14,9 @@
 - Gen AI
   + https://voidless.dev
 
+## asset
+- itch.io
+
 ## link
 - [[game]]
 - [[game-engine]]

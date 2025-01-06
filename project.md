@@ -17,7 +17,7 @@
 ## etc
 - [[book-court]]
 
-# link
+## link
 - [[idea]]
 - [[indie-game]]
 - [[eos]]
