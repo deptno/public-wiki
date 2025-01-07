@@ -4,6 +4,7 @@
   - [ ] ner
   - agent
     - [ ] 여행
+    - [ ] 게임 영어
 - [[game-dev]]
   - [ ] 2d game
 
