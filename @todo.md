@@ -5,6 +5,11 @@
   - agent
     - [ ] 여행
     - [ ] 게임 영어
+  - [.] label-studio 테스트
+    - [X] [[ner]] format 파악
+    - [ ] storage 위치
+    - [ ] dvc sorage 연동 여부
+  - [ ] dvc 검토
 - [[game-dev]]
   - [ ] 2d game
 

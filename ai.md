@@ -1,5 +1,8 @@
 # ai
 
+## task
+- [[NER]]
+
 ## 강의
 - [[practical-deep-learning]] https://course.fast.ai
 
