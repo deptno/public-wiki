@@ -1,5 +1,11 @@
 # psql
 
+## 환경 설정
+- `~/.pgpass` 
+  - database, user 에 따른 비번 설정
+- `~/.psqlrc`
+  - 접속후 psql 내에서의 환경 설정
+
 ## command line option
 - U username
 - d database
