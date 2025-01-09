@@ -1,4 +1,16 @@
 # sql
+- ;b
+
+## sql
+```sql
+-- user role 생성
+CREATE USER U___ WITH PASSWORD 'YOUR_PASSWORD';
+-- data base 생성
+CREATE DATABASE D___ 
+-- 권한 허용
+GRANT ALL PRIVILEGES ON DATABASE D___ TO U___;
+GRANT USAGE, CREATE ON SCHEMA public TO U___
+````
 
 ## cursor - 무한 스크롤
 1. limit + offset

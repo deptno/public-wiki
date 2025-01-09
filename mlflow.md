@@ -186,6 +186,7 @@ mlflow models serve -m ./mlartifacts/599912536112484580/4b19152236224ce08ef46ffd
     GRANT ALL PRIVILEGES ON DATABASE mlflow TO mlflow;
     GRANT CREATE SCHEMA public ON mlflow
     ```
+    + [[sql]]
 - 업로드시 용량큰 artifact 에러 처리
   - hdd nas 와 같은 느린 디바이스를 pv로 사용시 발생함
   - local nvme 와 같은 빠른 디바이스도 용량이 2gb 정도되면 발생
