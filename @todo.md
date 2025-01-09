@@ -9,9 +9,11 @@
     - [X] [[ner]] format 파악
     - [ ] storage 위치
     - [ ] dvc sorage 연동 여부
+  - [ ] spacy 검토
   - [ ] dvc 검토
 - [[game-dev]]
   - [ ] 2d game
+- [ ] [[diary:2025-07-01]] 배민클럽 해지
 
 ## pending
 - [ ] rust
