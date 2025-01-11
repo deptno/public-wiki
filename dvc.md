@@ -1,7 +1,13 @@
 # dvc
 - data version
 - [[git]] 과 함께 사용
-- [[git-lfs]] 와 달리 git 과 버저닝을 분리
+- [[git-lfs]] 와 달리 [[git]] 과 ~~버저닝을 분리~~
+  - [[git-lfs]] 와 유사, 버저닝 자체는 [[git-commit]] 으로 진행됨
+    - 이렇게 되면 [[git-lfs]] 와의 차별화가 줄어들어 가치는 줄어든다 생각됨
+    - 다만, [[git]] 비대화를 피해 속도 유지, [[git-lfs]] 는 아닐 수 있음
+    - 더 큰 파일 용량 처리
+    - [ ] dvc 로 [[git]] 없이 데이터만 처리 가능, 확인 필요 [[@todo]]
+    - 다만 `*.dvc` 파일 history 를 가지고 [[git-checkout]] 을 진행할때 실제 파일 체크하는 점이 좀 다를 것
 
 ## error
 ### sftp 설정

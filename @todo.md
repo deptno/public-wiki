@@ -1,16 +1,17 @@
 # @todo
 ## 2025
 - [[ai]]
-  - [ ] ner
+  - [ ] [[ner]]
   - agent
     - [ ] 여행
     - [ ] 게임 영어
-  - [.] label-studio 테스트
+  - [O] label-studio 테스트
     - [X] [[ner]] format 파악
-    - [ ] storage 위치
-    - [ ] dvc sorage 연동 여부
-  - [ ] spacy 검토
-  - [ ] dvc 검토
+    - [X] storage 위치 -> local pv
+    - [X] [[dvc]] sorage 연동 여부
+  - [X] spacy 검토 -> 현재 불필요
+  - [ ] [[dvc]] 검토
+    - [ ] [[dvc]] 로 데이터만 처리 가능, 확인 필요
 - [[game-dev]]
   - [ ] 2d game
 - [ ] [[diary:2025-07-01]] 배민클럽 해지
