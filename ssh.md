@@ -37,3 +37,5 @@ ssh -NLf localhost:8888:localhost:8000 ssh_session_name
 - [[ssh-keygen]]
 - [[wsl]]
 - [[github]]
+- [[sftp]]
+- [[dvc]]
