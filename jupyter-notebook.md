@@ -1,5 +1,5 @@
 # jupyter-notebook
-- synonim [[jupyter]]
+- synonym [[jupyter]]
 
 ## link
 - [[jupyter]]

@@ -1,4 +1,4 @@
 # airflow
 
-synonim [[apache-airflow]]
+synonym [[apache-airflow]]
 

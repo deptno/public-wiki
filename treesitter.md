@@ -1,3 +1,3 @@
 # treesitter
 
-synonim [[tree-sitter]]
+synonym [[tree-sitter]]

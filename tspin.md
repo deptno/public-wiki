@@ -1,3 +1,3 @@
 # tspin
 
-synonim [[tailspin]]
+synonym [[tailspin]]
