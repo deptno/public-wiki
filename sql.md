@@ -4,12 +4,20 @@
 ## sql
 ```sql
 -- user role 생성
-CREATE USER U___ WITH PASSWORD 'YOUR_PASSWORD';
+CREATE USER dify WITH PASSWORD 'difyai123456';
 -- data base 생성
-CREATE DATABASE D___ 
--- 권한 허용
-GRANT ALL PRIVILEGES ON DATABASE D___ TO U___;
-GRANT USAGE, CREATE ON SCHEMA public TO U___
+CREATE DATABASE dify;
+-- 권한 허용, 익스텐션 허용등에 사용
+GRANT ALL PRIVILEGES ON DATABASE dify TO dify;
+
+-- 전체
+GRANT ALL ON SCHEMA public TO dify;
+-- 개별
+GRANT USAGE, CREATE ON SCHEMA public TO dify;
+
+
+--- 권한 제거
+REVOKE ALL ON schema public FROM dify;
 ````
 
 ## cursor - 무한 스크롤
