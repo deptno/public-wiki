@@ -42,3 +42,4 @@ $ sudo apt-get install cuda-toolkit
 - [[stable-diffusion]]
 - [[comfyui]]
 - [[ai]]
+- [[ollama]]

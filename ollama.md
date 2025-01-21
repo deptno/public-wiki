@@ -22,6 +22,20 @@ brew install ollama
 # blah blah blah 
 ```
 
+### wsl
+- [[wsl]] 에서 포트 접속 안되는 문제
+```sh
+ss -tuln | grep [PORT]
+```
+  - `127.0.0.1` 으로 되어있는 경우 `0.0.0.0` 으로 설정 필요
+  - `sudo systemd edit ollama`
+```
+[Service]
+Environment="OLLAMA_HOST=0.0.0.0:11434"
+```
+  - `sudo systemd restart ollama`
+
 ## link
 - [[llama]]
 - [[huggingface]]
+- [[wsl]]

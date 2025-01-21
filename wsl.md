@@ -70,3 +70,4 @@ ssh [USER]@[WINDOWS_HOST_IP]
 ## link
 - [[windows]]
 - [[ssh]]
+- [[ollama]]
