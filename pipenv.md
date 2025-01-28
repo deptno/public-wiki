@@ -38,4 +38,5 @@ pipenv run pip install -r requirements.txt
 - [[pip]]
 - [[pyenv]]
 - [[venv]]
+- [[poetry]]
 - [[conda]]

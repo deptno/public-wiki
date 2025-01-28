@@ -13,7 +13,17 @@ source .venv/bin/activate
 deactivate
 ```
 
+## [[error]]
+- [[pip]] 가 `.venv` 에 없는 경우
+```sh
+# which python 으로 .venv 의 python 이 활성화 된 것 확인
+python -m ensurepip --upgrade
+which pip3
+```
+
 ## link
 - [[python]]
 - [[pipenv]]
 - [[conda]]
+- [[pip]]
+- [[poetry]]
