@@ -39,6 +39,7 @@ kubelet 은 containerd 설정이 완전히 마쳐지면 kubeadm 통해서 실행
 - [ ] TODO: 외부 접속
 
 ### 생성 후 조인
++ https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-linux-nodes/
 - master node 에서 토큰 발급한다
 ```sh 
 kubeadm token create --print-join-command
@@ -84,8 +85,32 @@ Please ensure that:
 
 To see the stack trace of this error execute with --v=5 or higher
 ```
-
-
+---
+#### [[diary:2025-01-31]]
+- [[wsl]] 환경에서 진행
+- 원본 문서 참조
+  + https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-linux-nodes/
+- control plane
+  - 접속해서 token 및 ca-cert-hash 생성
+- 추가될 [[wsl]] worker node
+  - [[kubeadm]] 설치
+  - join 명령어에다가 control plane 에서 생성한 키와 함께 접속
+  - 에러 발생
+    - host os 인 [[windows]] 에서 방화벽 내림
+    - `apt-get` 으로 `containerd` 설치
+    - `swap` off
+    - `cgroup2` 설정
+```sh
+# 에러 메시지
+[ERROR FileContent--proc-sys-net-ipv4-ip_forward]: /proc/sys/net/ipv4/ip_forward contents are not set to 1
+# 해결
+echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+# 확인
+cat /proc/sys/net/ipv4/ip_forward # 결과 1
+```
+    - 이외 wsl 이기 때문에 포트 문제가있을 것 같아서 windows 에서 방화벽 내림
+  - 비 상시 node 라면 `taint` 설정
 
 ## amd64 설치
 + 2023-01-14 
