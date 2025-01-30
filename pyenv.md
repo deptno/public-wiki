@@ -12,4 +12,5 @@ pyenv install 3.9.18
 
 ## link
 - [[pipenv]]
+- [[poetry]]
 - [[python]]

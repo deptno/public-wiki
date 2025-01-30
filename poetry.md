@@ -6,9 +6,11 @@ poetry init
 poetry install
 poetry env actiavte
 poetry env info
+poetry env remove python
 ```
 
 ## link
 - [[pip]]
 - [[pipenv]]
 - [[venv]]
+- [[pyenv]]
