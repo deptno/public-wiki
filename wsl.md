@@ -6,7 +6,7 @@
 - os 설치, wsl 실행(터미널)
 ```sh
 wsl --list --online # distro 목록
-wsl --install [DISTRO]
+wsl --install [DISTRO] # directory 지정 가능
 ```
 - os 설치(ubuntu 22.04 lts) 후, wsl 실행해서 subsystem shell 열기
 - [옵션] [[ai]] 활용을 위한 [[pipenv]] 설치
@@ -14,6 +14,13 @@ wsl --install [DISTRO]
 apt update
 apt install python3-pip
 pip install pipenv
+```
+
+## 그외 기능
+```sh
+wsl -l -v # 설치 목록
+wsl --export # tar 파일로 export
+wsl --import # tar 로 부터 복구
 ```
 
 ## 설정
