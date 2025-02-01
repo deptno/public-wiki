@@ -12,3 +12,4 @@ du -sh --max-depth=1 # 디렉토리 내부로 들어가지않고 루트레벨에
 - [[terminal]]
 - [[df]]
 - [[lvm]]
+- ncdu
