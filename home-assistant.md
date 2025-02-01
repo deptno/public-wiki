@@ -1,7 +1,7 @@
 # home-assistant
 
 ## 설치 기록
-- kubernetes resource 생성
+- [[kubernetes]] resource 생성
   - pv
   - pvc
   - dp
@@ -21,6 +21,8 @@
   + https://www.home-assistant.io/integrations/homekit/
   - 해보니가 마지막에 iOS 에서 연결할때 에러
     - [ ] 설정에 포트가 있는거 보니 포트 노출이 안되서 그런것으로 보이는데 svc 생성 테스트 필요
+  - `hostNetwork: true`, ip 를 kubernetes ip 대역이 아닌 host node 의 영역을 그대로 사용한다
+
 ## configuration
 ### reverse proxy
 외부 접근 허용을 위해서는 리버스 프록시 설정이 필요하다.
