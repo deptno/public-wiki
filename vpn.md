@@ -8,8 +8,8 @@
 ## [[kubernetes]]
 - proton vpn 을 기준으로 linux 설정을 제공한다
 - terminal 만 존재하는 서버 환경에서도 사용할 수 있도록 `config` 를 제공
-  - [ ] openvpn
-  - [X] wireguard
+  - [ ] [[openvpn]]
+  - [X] [[wireguard]]
     - 간편하다고 해서 픽
 - 파일 다운로드 후 [[pod]] 에 주입하기 위해서는 `/etc/wireguard/[config_name.conf]` 주입(마운트)이 필요
   - 이번 케이스는 [[configmap]] 을 통해서 주입

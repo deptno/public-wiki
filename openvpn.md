@@ -1,0 +1,4 @@
+# openvpn
+
+## link
+- [[vpn]]

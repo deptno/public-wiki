@@ -1,0 +1,4 @@
+# wireguard
+
+## link
+- [[vpn]]
