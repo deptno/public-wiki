@@ -18,7 +18,7 @@ pip install pipenv
 
 ## 그외 기능
 ```sh
-wsl -l -v # 설치 목록
+wsl --list --verbose # 설치 목록
 wsl --export # tar 파일로 export
 wsl --import # tar 로 부터 복구
 ```
@@ -69,6 +69,12 @@ ssh [USER]@[WINDOWS_HOST_IP]
 
 #### remote -> window host -> wsl
 
+### 종료
+- [[ssh]] 로 접속한 상태에서 pc 자체를 종료할 경우
+```sh
+/mnt/c/Windows/System32/cmd.exe /c shutdown /s /t 0
+```
+
 ## error
 - wsl 실행하니 창 열리고 바로 꺼짐
 - 지우고 설치하니 default profile, guid 어쩌고하고 꺼짐
@@ -78,3 +84,4 @@ ssh [USER]@[WINDOWS_HOST_IP]
 - [[windows]]
 - [[ssh]]
 - [[ollama]]
+- [[powershell]]

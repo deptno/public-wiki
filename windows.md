@@ -8,3 +8,4 @@
 
 ## link
 - [[wsl]]
+- [[powershell]]

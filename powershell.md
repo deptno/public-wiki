@@ -1,0 +1,5 @@
+# powershell
+
+## link
+- [[windows]]
+- [[wsl]]

@@ -20,3 +20,4 @@ sudo service ufw stop # 외부에서 접속하기위해 방화벽 비활성화
 - [[stable-diffusion]]
 - [[python]]
 - [[pipenv]]
+- [[wsl]]
