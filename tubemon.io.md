@@ -11,6 +11,10 @@
 - [[deployment]] 제거 후 새로운 버전으로 만들고 다시 데이터 붓는 방식으로 처리하기록함
 - 다시 붓는 cronjob 은 이미 만들어뒀었음
 
+### pgdump 실패
++ [[diary:2025-02-07]]
+- backup 이 nas 속도 이슈로 fail, cronjob 에서 deadline 제거
+
 ## 배포
 - [[diary:2025-02-06]]
   + https://github.com/deptno/salji.ro/pull/647
