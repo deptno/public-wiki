@@ -1,5 +1,16 @@
 # kubernetes|쿠버네티스
 
+## node
+- 물리적인 서버, worker node, master node 가 존재
+- 아래 두 설정을 통해서 나중에 pod 가 node 를 선택할 수 있다.
+  - `label`: 타 리소스에서 선택할 수 있도록 `label` 을 설정한다
+  - `taint`: `taint` 를 설정하여 리소스의 스케줄링을 막는다, 매칭된 `tolerations` 설정의 리소스만 메포된다 
+    | node  | pod          |                                                          |
+    |-------|--------------|----------------------------------------------------------|
+    | label | affinity     | node 를 선호 혹은 강제한다                               |
+    |       | nodeSelector | node 를 강제                                             |
+    | taint | tolerations  | taint 로 인해 스케줄이 막힌 노드에 배포할 수 있도록 한다 |
+
 ## pod
 - init container
   설정을 위해 선실행되고 종료되는 컨테이너
