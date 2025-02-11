@@ -5,6 +5,11 @@
 - [[youtube]] 채널에 대한 업데이트 이벤트를 받을 수 있는 구독 시스템에서도 사용됨
 - `100`ms 정도의 딜레이 없이 구독하는 경우 쓰로틀 발생
 - 액션시에 가끔 상태안좋다고 서버가 거부하기도하고 성공 이벤트 안오기도 함, backoff 등 처리 로직 필요
+- `pubsubhubbub` 라이브러리 구현, 외부 접근이 가능한 url 필요, callback 이 이쪽으로 호출 되는 구조
+  - `https://example.com/callback` 형태
+- 인자
+  - `hub` 주소는 `https://pubsubhubbub.appspot.com/` 를 사용
+  - `topic` 은`https://www.youtube.com/xml/feeds/videos.xml?channel_id=${channelId}` 형태
 
 ### error
 #### `pubsubhubbub` [[javascript]] 라이브러리
