@@ -1,6 +1,5 @@
 # node
-
-javascript runtime a.k.a [[nodejs]]
+- javascript runtime a.k.a [[nodejs]]
 
 ## version 에 따른 업데이트
 - 20

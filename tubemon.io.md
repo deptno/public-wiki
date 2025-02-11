@@ -1,5 +1,10 @@
 # tubemon.io
 
+## :TODO:
++ [[diary:2025-02-08]]
++ https://github.com/deptno/salji.ro/commit/52fea0fe15a86fa7b426a301f6422066f2472413
+- [[corepack]], [[pnpm]] 관련 이슈, resolve 될때까지 유지
+
 ## 업무
 - [[eos]] [[diary:2024-05-12]] [[aws]] [[eventbridge]] 12개 규칙 stop
 
@@ -11,9 +16,18 @@
 - [[deployment]] 제거 후 새로운 버전으로 만들고 다시 데이터 붓는 방식으로 처리하기록함
 - 다시 붓는 cronjob 은 이미 만들어뒀었음
 
-### pgdump 실패
+### 정상적인 채널들이 `ban` 되고 있는 문제 :2025-02-08:
++ [[diary:2025-02-08]]
+- 정상 적인 채널이 ban 되고 있는 문제 수정
+  + https://github.com/deptno/salji.ro/pull/649
+- 기존 정상적인 채널이 `ban` 된 것 찾아 `5005` 개 채널 복구
+
+### pgdump 실패 :2025-02-07:
 + [[diary:2025-02-07]]
 - backup 이 nas 속도 이슈로 fail, cronjob 에서 deadline 제거
+- [[serverless]] 로부터 이전하며 변경된 로직 오류
+- [X] 기존 정상적인 채널이 ban 된 것 찾아 복구함
+  - [X] 5005 개 채널 복구됨
 
 ## 배포
 - [[diary:2025-02-06]]
