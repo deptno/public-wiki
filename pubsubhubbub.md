@@ -7,6 +7,7 @@
 - 액션시에 가끔 상태안좋다고 서버가 거부하기도하고 성공 이벤트 안오기도 함, backoff 등 처리 로직 필요
 - `pubsubhubbub` 라이브러리 구현, 외부 접근이 가능한 url 필요, callback 이 이쪽으로 호출 되는 구조
   - `https://example.com/callback` 형태
+- 재구독하면서 마지막 재구독 `leaseSeconds` 로 구독된다
 - 인자
   - `hub` 주소는 `https://pubsubhubbub.appspot.com/` 를 사용
   - `topic` 은`https://www.youtube.com/xml/feeds/videos.xml?channel_id=${channelId}` 형태
