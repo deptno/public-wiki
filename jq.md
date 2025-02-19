@@ -24,6 +24,17 @@ jq -n '{"json": "data"}' # formating
 ... | jq '.[] | [.name, .version] | @text'
 ```
 
+## jsonl -> array
+```sh
+cat jsonl | jq -s
+```
+
+## filter
+```sh
+cat ... | jq -R 'fromjson | fromjson'         # stringified jsonl  -> json
+cat jsonl | jq -s 'unique_by(.prop)[]'        # unique
+```
+
 ## link
 - [[vim]]
 - [[gh]]
