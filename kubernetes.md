@@ -126,8 +126,8 @@ mount: /var/lib/kubelet/pods/91f95da8-3cea-4f8a-a367-c2b11b3444b5/volumes/kubern
   kubectl create secret generic [name] --from-literal=[key]=[base64 encoded value]
   # 기존 시크릿에 추가 혹은 값 변경
   kubectl patch secret [name] -p '{"data": {["key"]: "[based encoded value]"}}' 
-  # 시크릿 네임스페이스 복사
-  kubectl get secret -n [ namespace ] [ secret name ] | kubectl neat | sed "s/namespace: .*/namespace: [ target namespace]/" | kubectl apply -f -
+  # 시크릿 네임스페이스 복사, sed 쪽 변경을 통해 이름 변경등 다양하게 활용 가능
+  kubectl get secret -n [ namespace ] [ secret name ] -oyaml | kubectl neat | sed "s/namespace: .*/namespace: [ target namespace]/" | kubectl apply -f -
   ```
 ### volume mount
 ```yaml 
