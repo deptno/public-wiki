@@ -67,3 +67,4 @@ flowchart TD
 ## link
 - [[smarthome]]
 - [[me]]
+- [[wn.private:router]]
