@@ -25,3 +25,4 @@ brew install argocd
 - [[kubernetes]]
 - [[git]]
 - [[traefik]]
+- [[argo-workflows]]
