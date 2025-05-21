@@ -76,6 +76,8 @@
 - [[k9s]]
 - [[keytool]]
 - [[yazi]]
+- [[zoxide]]
+- [[atuin]]
 
 ### file
 /etc/netplan
