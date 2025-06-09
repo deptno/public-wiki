@@ -21,3 +21,4 @@
 - [[dify]]
 - [[agent]]
 - [[runwayml]]
+- [[comfyui]]

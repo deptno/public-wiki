@@ -1,5 +1,9 @@
 # comfyui
 - [[stable-diffusion]] ui
+- 발전이 너무 빨라서 아래 내용은 기록으로만 참고
+
+## 튜토리얼
+- [[youtube-playlist-pixaroma-comfyui-tutorial]]
 
 > memory leak 이 있는 것 같다 한번 느려지기 시작하면 계속 느림
 

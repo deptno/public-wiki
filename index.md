@@ -93,6 +93,7 @@
 - [[langchain]]
 - [[kaggle]]
 - [[llama]]
+- [[comfyui]]
 
 ## service
 - [[aws]]
