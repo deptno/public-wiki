@@ -400,3 +400,4 @@ Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.884154  504846 actual_stat
 - [[loki]]
 - [[service-account]]
 - [[vpn]]
+- [[daemonset]]

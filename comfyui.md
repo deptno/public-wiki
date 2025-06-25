@@ -2,6 +2,46 @@
 - [[stable-diffusion]] ui
 - 발전이 너무 빨라서 아래 내용은 기록으로만 참고
 
+## model + node pair
+| release date | model            | 설명 | url                                                 | node                                                     |
+|--------------|------------------|------|-----------------------------------------------------|----------------------------------------------------------|
+| 2025/04/02   | InstantCharacter | cref | https://github.com/Tencent-Hunyuan/InstantCharacter | https://github.com/jax-explorer/ComfyUI-InstantCharacter |
+
+
+- [[@todo]]
+  - [ ] composition 유지 이미지 생성
+  - [ ] 배경합성
+    - [ ] 배경 교체
+  - [ ] 캐릭터 합성
+    - [ ] 로라등으로 그리는방법
+  - [ ] 인물 교체
+    > 일론과 트럼프로 시작
+    - [ ] 얼굴만
+      - [ ] pulid
+      - [ ] ipadapter
+    - [ ] 몸까지
+    - [ ] 옷까지
+  - [ ] 학습
+    - [ ] 1 학습
+    - [ ] 2 학습
+- [ ] 학습
+  - [ ] 속도
+    - [ ] wavespeed
+    - [ ] sageattention
+    - [ ] teacache
+  - [ ] context 수정
+    - [ ] icedit
+    - [ ] 
+  - [ ] 조명
+    - [ ] iclight
+  - [ ] 영상
+    - [ ] wan
+      - [ ] wan vace
+      - [ ] causvid
+      - [ ] moviigen
+      - [ ] wan fusion x
+    - [ ] ltx
+
 ## 튜토리얼
 - [[youtube-playlist-pixaroma-comfyui-tutorial]]
 

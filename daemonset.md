@@ -1,0 +1,5 @@
+# daemonset
+
+## link
+- [[kubernetes]]
+- [[nvidia]]
