@@ -19,6 +19,8 @@ nvidia-smi # 사용가능 테스트
 - kubeadm, kubelet, kubectl 설치, 마스터 노드 버전에 맞춰서
 - join master node
 - nvidia-container-tookit 설치
+  - `$sudo nvidia-ctk runtime configure --runtime=containerd --nvidia-set-as-default # nvidia-set-as-default 옵션을 주지 않으면 nvidia-device-plugin daemonset 이 해당 노드에서 뜨지 못함`
+  + [[diary:2025-06-25]]
 - nvidia-headless-570 nvidia-utils-570, nvidia-driver-570-server
 - nvidia-smi 확인
 
