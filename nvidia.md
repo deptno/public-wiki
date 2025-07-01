@@ -12,5 +12,15 @@ nvidia-smi # 사용가능 테스트
   - `nvidia.com/presernt: "true"`
   - 설정 이후에 [[daemonset]] 을 통해 [[pod]] 뜨는 것 확인 가능
 
+### 노드 추가부터 진행시
+- swapoff
+- containerd 설치
+- apt-get kubernetes 저장소 추가
+- kubeadm, kubelet, kubectl 설치, 마스터 노드 버전에 맞춰서
+- join master node
+- nvidia-container-tookit 설치
+- nvidia-headless-570 nvidia-utils-570, nvidia-driver-570-server
+- nvidia-smi 확인
+
 ## link
 - [[cuda]]
