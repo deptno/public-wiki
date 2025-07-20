@@ -1,0 +1,5 @@
+# pgdumpall
+
+## link
+- [[postgresql]]
+- [[pgdump]]
