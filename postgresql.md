@@ -137,6 +137,20 @@ kill [PID]
 ```
 - conflict 키 중복, 한 쿼리에 여러 아이템에대한 컨플릭트처리를 하는데 키 중복이 있었다.
 
+### WARNING:  database "DATABASE_NAME" has a collation version mismatch
+- 마이너 버전 업그레이드 후 발생
+- 에러는 아니지만 계속 찍힘 로그가
+  ```sh
+  2025-07-19 17:10:17.550 GMT [1121637] WARNING:  database "DATABASE_NAME" has a collation version mismatch
+  2025-07-19 17:10:17.550 GMT [1121637] DETAIL:  The database was created using collation version 2.31, but the operating system provides version 2.36.
+  2025-07-19 17:10:17.550 GMT [1121637] HINT:  Rebuild all objects in this database that use the default collation and run ALTER DATABASE DATABASE_NAME REFRESH COLLATION VERSION, or build PostgreSQL with the right library version.
+  ```
+- 해결, 에러가 나는 데이터베이스 별로 모두 진행
+  ```sql 
+  ALTER DATABASE DATABASE_NAME REFRESH COLLATION VERSION;
+  REINDEX DATABASE DATABASE_NAME;
+  ```
+
 ## link
 - [[kubernetes]]
 - [[psql]]
