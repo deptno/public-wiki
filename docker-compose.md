@@ -64,6 +64,34 @@ services:
       - "8000:8000"
 ```
 
+## 개발환경
+### 싱크문제
++ [[diary:2025-07-19]]
+- [[../python|python]] 같은 경우는 그냥 스크립트라서 매번 재빌드가 필요없이 파일 갈아끼우고 리런하면됨
+- 이기능이없어서 매번 deploy를 다시해야함
+  - deploy 시 dockerfile 에 의해서 source 코드가 복사됨
+- 솔루션
+  - 소스코드를 volume 으로 마운트해서 로컬과 동기화 후 서버 재시작
+  - 이를 편하게 하기위해서는 source 코드를 src 등 폴더를 만들어서 묶는것이 유리
+
+### watch
+- 별개로 `watch` 기능이 존재하는 것 같음 `docker compose up --watch` 모드로 활성화
+```yaml
+services:
+  web:
+    build: .
+    command: npm start
+    develop:
+      watch:
+        - action: sync
+          path: ./web
+          target: /src/web
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: package.json
+```
+
 ## link
 - [[docker]]
 - [[diary:2024-10-08]]
