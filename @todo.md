@@ -1,22 +1,31 @@
 # @todo
 - [[game-dev]]
-- [ ] 2d game
+  - [ ] godot overview
+    - [ ] 2d game
   - [ ] 미스테리 아이디어
 - [ ] 경제 이벤트 일정
-- [ ] [[deptno.dev]] 말고 좀 정리된 글을 공유할 용도의 blog 가 필요함 + 이미지 활용
 - [ ] 판매
   - [ ] 라즈베리파이
   - [ ] 카메라
   - [ ] 전기차 충전기
   - [ ] 3080
 - [ ] open-webui
-  - mcp
   - 요약본들로 부터 대화, notebook lm 유사
 - [ ] 강의
-  - 프로젝트 선 완성
   - , 결재전까지 완성
     - spa -> 일반웹 구현에 대해서 고민
-- [ ] godot overview
+- [ ] download 강의
+  - playwright mcp 가능성 확인
+- [ ] vimwiki writing mode
+  - 시간, 인물, 물건
+- [ ] [[deptno.dev]]
+  - [ ] blog, wiki 구분
+  - [ ] mcp 활용 가능 여부
+- [ ] pgdumpall 삭제 루틴, 40gb * 30 = 1.2T
+- [ ] [[tubemon.io]]
+  - [ ] 채널 분류 자동화
+  - [ ] 분류 리뉴얼
+- [ ] atuin 서버 설정
 
 ## link 
 - [[idea]]
