@@ -36,6 +36,17 @@ CMD node $JS
   - `FROM` **후**의 `ARG` 는 `FROM` 이 후 절에서 사용 가능하다
   - `FROM` **후**의 `ARG` 는 `FROM` 절에서 **사용 가능하지 않다**
 
+## mount
+- mount vs volume
+  - mount 가 옵션보다 선호됨, 최신이고 명시적임 source, target 등
+  - 단 `volume` 은 없는 디렉토리인경움 호스트에 만들어서 마운트 가능 
+- ram disk 
+  - tmpfs - 메모리 + 메모리 사용량 지정 + swap 사용
+  - ramfs - 메모리만 사용 + swap 사용 안함, 좀 위험할 듯
+- secret, 빌드 시에 secret 을 전달받아 이를 마운트하여 사용, 레이어에 남지않으므로 비밀정보에 사용
+- [[tbd]]
+  - [[ssh]] 
+
 ## build
 ```sh
 docker build . -f [Dockerfile.custom]
