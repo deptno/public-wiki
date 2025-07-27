@@ -26,7 +26,8 @@
   - [ ] 채널 분류 자동화
   - [ ] 분류 리뉴얼
 - [ ] atuin 서버 설정
-- [ ] turborepo remote cache
+- [ ] ~~turborepo remote cache~~
+  - deptno.dev 가 일단 캐시가 안되서 현재 무용
 
 ## link 
 - [[idea]]
