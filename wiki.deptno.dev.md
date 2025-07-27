@@ -8,40 +8,40 @@
   - [ ] 보안상 로컬 크론잡 필요할듯
   - [ ] 이번에 search-console 요청 실패 여부 보고 custom url 적용여부 결정
   - [X] key 관리필요
-    + https://github.com/deptno/deptno.dev/commit/8832cb92aa0ab3cdf87432a4b3eaf2689741b2ab
+    + https://github.com/deptno/wiki.deptno.dev/commit/8832cb92aa0ab3cdf87432a4b3eaf2689741b2ab
 - [X] 정적 배포 지원, 집 서버에 구글 봇이 잘 못들어오는 거 같아서 seo 탄력을 못받음, ISP 쪽에서 괴롭히는건가 싶어 static 빌드 지원, 서버띄울 필요도 없긴함 사실
 - [X] about me 추가, 해당 파일을 특수 파일로 인식하도록
-- [X] [[mermaid]] 지원 추가 + https://github.com/deptno/deptno.dev/commit/f309f036802488dbfa048310d8da4c4b39679be5
+- [X] [[mermaid]] 지원 추가 + https://github.com/deptno/wiki.deptno.dev/commit/f309f036802488dbfa048310d8da4c4b39679be5
 - [X] diary next, prev 이동
-- [X] 개발 환경에서 graph 클릭시 live 버전 링크가 걸려있음 + https://github.com/deptno/deptno.dev/commit/8866a2959a6c195162b225f47ef71412fa28309a
-- [X] markdown 기본 포맷에서는 `-` 가 공백으로 변환되는 것으로 보인다 [[shell-script]] 추적해서 확인 + https://github.com/deptno/deptno.dev/commit/23bfff89604ecc93f4145a0bb9614a1fe8245a1f
-- [X] 배포 버전에서는 최근 수정파일이 시간순이 아님, clone 받아서 그런것으로 추정 + https://github.com/deptno/deptno.dev/commit/20a39fa2b7ddb8c8c681646a0a3674f1116bb8e8
+- [X] 개발 환경에서 graph 클릭시 live 버전 링크가 걸려있음 + https://github.com/deptno/wiki.deptno.dev/commit/8866a2959a6c195162b225f47ef71412fa28309a
+- [X] markdown 기본 포맷에서는 `-` 가 공백으로 변환되는 것으로 보인다 [[shell-script]] 추적해서 확인 + https://github.com/deptno/wiki.deptno.dev/commit/23bfff89604ecc93f4145a0bb9614a1fe8245a1f
+- [X] 배포 버전에서는 최근 수정파일이 시간순이 아님, clone 받아서 그런것으로 추정 + https://github.com/deptno/wiki.deptno.dev/commit/20a39fa2b7ddb8c8c681646a0a3674f1116bb8e8
 - [X] `[]()`의 링크 형태에 대해서 markdown 은 제대로 파싱되나 백링크등 데이터를 만들어내지 못함
-- [X] 최근 수정된 파일 목록 + https://github.com/deptno/deptno.dev/commit/efe783c94b4e387f35819c5c304369d25b046ced
+- [X] 최근 수정된 파일 목록 + https://github.com/deptno/wiki.deptno.dev/commit/efe783c94b4e387f35819c5c304369d25b046ced
 - [X] `diary:` 등의 prefix 처리 -> ~~해보니 이미 처리했었나봄~~ 글이아닌 태그와 그래프에서 이동시 문제가 있다
-  - [X] `/` 로 시작하는 경로는 받아 들이지 못하는 것으로 보임, graph, tag + https://github.com/deptno/deptno.dev/commit/21b5cf1
-  - [X] `diary:` 가 아닌 `diary/` 로 변경 + https://github.com/deptno/deptno.dev/commit/698c09d
+  - [X] `/` 로 시작하는 경로는 받아 들이지 못하는 것으로 보임, graph, tag + https://github.com/deptno/wiki.deptno.dev/commit/21b5cf1
+  - [X] `diary:` 가 아닌 `diary/` 로 변경 + https://github.com/deptno/wiki.deptno.dev/commit/698c09d
     - [X] `wn.wikiname:file:` 형태 
-  - [X] 링크 처리 + https://github.com/deptno/deptno.dev/commit/21b5cf1
+  - [X] 링크 처리 + https://github.com/deptno/wiki.deptno.dev/commit/21b5cf1
     - [X] markdown renderer + link.ts 참조
     - [X] graph
     - [X] tag
-- [X] frontend revision 노출 + https://github.com/deptno/deptno.dev/commit/6b3c35b
-- [X] encoded uri 가 노출되는 문제, i.e. @todo -> @todo + https://github.com/deptno/deptno.dev/commit/420d203
-- [X] history, edit 기능이 wiki 와 달라서 처리 필요 + https://github.com/deptno/deptno.dev/commit/312682a
+- [X] frontend revision 노출 + https://github.com/deptno/wiki.deptno.dev/commit/6b3c35b
+- [X] encoded uri 가 노출되는 문제, i.e. @todo -> @todo + https://github.com/deptno/wiki.deptno.dev/commit/420d203
+- [X] history, edit 기능이 wiki 와 달라서 처리 필요 + https://github.com/deptno/wiki.deptno.dev/commit/312682a
 - [X] [[wiki.deptno.dev]] 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정
   - [X] process.exit + livenessProbe 로 process 를 재시작할 뿐 pod 나 container 를 재시작할 수 없음
   - [X] 결국 [[webhook]] -> [[kubernetes-api]] 를 통해 rollout 을 하는 방향으로 수정되어야함
   - [X] 생각해 보니 서버가 아닌 wiki 의 레포가 일반 레포가 아닌 wiki repo 여서 이벤트를 ~~받을 수 없음~~
     - 당분간 수동
     - [X] gollum webhook event 가 있어서 위키도 이벤트를 받을 수 있음
-      + https://github.com/deptno/deptno.dev/commit/7f2d0cd8a65973b35476f131dfe13442ae468d04
+      + https://github.com/deptno/wiki.deptno.dev/commit/7f2d0cd8a65973b35476f131dfe13442ae468d04
 - [X] https://github.com/deptno/deptno.github.io/wiki -> https://github.com/deptno/public_wiki 로 이사 [[diary:2023-10-14]] 
   - [X] rename directory
   - [X] git remote 변경
   - [X] vimwiki directory 설정 변경 + https://github.com/deptno/nvim/commit/ab2f2af6
   - [X] zsh alias ~~변경~~ -> 제거로 처리 + https://github.com/deptno/.config/commit/f0e915b
-  - [X] deptno.dev 에서바라보는 directory 설정 변경 + https://github.com/deptno/deptno.dev/commit/2b5af1a
+  - [X] deptno.dev 에서바라보는 directory 설정 변경 + https://github.com/deptno/wiki.deptno.dev/commit/2b5af1a
   - [X] github hook url 확인
     - [X] 추가 - https://github.com/deptno/public-wiki/settings/hooks -> 동작 확인됨
     - [X] 제거 - https://github.com/deptno/deptno.github.io/settings/hooks/419255020

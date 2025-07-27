@@ -39,7 +39,7 @@
 ### [[vimwiki]] 기반의 범용 프론트엔드
 - 지식의 인덱싱을 위해서는 blog 가 아닌 wiki 가 필요하다는 판단, [[vimwiki]] frontend 구현
 + **서비스** https://deptno.dev
-+ **깃허브** https://github.com/deptno/deptno.dev
++ **깃허브** https://github.com/deptno/wiki.deptno.dev
 
 ### 튜브몬
 - 유튜버 랭킹 + 커뮤니티 핫딜 모음

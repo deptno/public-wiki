@@ -10,7 +10,7 @@ git for-each-ref | grep 'commit\trefs/heads' | grep -v "$(git rev-parse @)" | aw
 ```sh 
 ds =  ! "f() { git diff $(git log --since='30 days ago' --pretty=format:'%H' | tail -1).. --stat; }; f"
 ```
-  + https://github.com/deptno/deptno.dev/blob/20a39fa2/apps/wiki/lib/getLastModifiedFiles.ts#L6-L10
+  + https://github.com/deptno/wiki.deptno.dev/blob/20a39fa2/apps/wiki/lib/getLastModifiedFiles.ts#L6-L10
 
 ## link
 - [[git]]
