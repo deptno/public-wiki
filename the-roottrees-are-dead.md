@@ -1,5 +1,4 @@
 # The Roottrees are Dead
-
 - WRTD
   - 열쇠를 가진 누군가가 사진을 가져감,
 
@@ -42,3 +41,6 @@
 - elias jr 도 + patsy
 - morden gwyndoline + DR. wilson
 - debbie + ernie(jr), 딸 nicole
+
+## link
+- [[game]]
