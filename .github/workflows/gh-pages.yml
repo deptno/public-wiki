@@ -17,14 +17,14 @@ jobs:
       - name: checkout frontend
         uses: actions/checkout@v4
         with:
-          repository: deptno/deptno.dev
-          path: deptno.dev
+          repository: deptno/wiki.deptno.dev
+          path: wiki.deptno.dev
           ref: lab/static-build
       - uses: pnpm/action-setup@v2
         with:
           version: 8
           run_install: |
-            - cwd: deptno.dev
+            - cwd: wiki.deptno.dev
       - env:
           DIR_WIKI: wiki/public-wiki
         run: |
@@ -39,7 +39,7 @@ jobs:
           NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: G-QKL40848FW
           NEXT_PUBLIC_MS_CLARITY_ID: l1919qdcrc
         run: |
-          cd deptno.dev
+          cd wiki.deptno.dev
           pnpm turbo run build --no-cache
           touch apps/wiki/out/.nojekyll
           cp -r apps/wiki/public apps/wiki/out/
