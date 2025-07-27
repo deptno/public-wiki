@@ -1,4 +1,38 @@
 # The Roottrees are Dead
+```mermaid
+flowchart
+subgraph 보스턴
+  steve_garland <---> mother_?
+  christine_pharoah_비서 <--> steve_garland
+  steve_garland --소송--> mark_zimmer
+  steve_garland --child--> james_쉐프
+  steve_garland --child--> robert_쉐프
+  Sisely_Sanchez
+  guy_hudson <--> lang_xinyu_중국
+  guy_hudson <--> robyn_martin_호주_여름
+  guy_hudson <--> Susan_Ford__suzy_출장_
+  guy_hudson <--> 브라질_겨울(크리스마스)
+  
+  Edson_Soares <--> Sonia_Soares 
+  Sonia_Soares --아들--> Flavio_Soares 
+  Flavio_Soares <--연인--> Ashleigh_York
+end
+    
+    rochelle <--> mar_zimmer
+```
+```mermaid
+flowchart
+subgraph 보스턴
+  guy_hudson <--> lang_xinyu
+  jerry_han <---> linda_han
+  linda_han --아들--> mark_han
+  lang_xinyu <--자매--> linda_han
+  lang_xinyu <--딸--> lang_lucy
+end
+    
+    rochelle <--> mar_zimmer
+```
+
 - WRTD
   - 열쇠를 가진 누군가가 사진을 가져감,
 
@@ -41,6 +75,10 @@
 - elias jr 도 + patsy
 - morden gwyndoline + DR. wilson
 - debbie + ernie(jr), 딸 nicole
+
+## 2
+- elias - beth
+- beth - elizabeth
 
 ## link
 - [[game]]
