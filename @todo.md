@@ -21,11 +21,14 @@
 - [ ] [[deptno.dev]]
   - [ ] blog, wiki 구분
   - [ ] mcp 활용 가능 여부
+  - [ ] 모바일 최적화 ui
+  - [ ] fullscreen
 - [ ] pgdumpall 삭제 루틴, 40gb * 30 = 1.2T
 - [ ] [[tubemon.io]]
   - [ ] 채널 분류 자동화
   - [ ] 분류 리뉴얼
 - [ ] atuin 서버 설정
+- [ ] aws 계정 이전 및 google 정리
 
 ## link 
 - [[idea]]
