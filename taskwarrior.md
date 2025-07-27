@@ -75,4 +75,4 @@ task context none # 해제
 
 ## link
 - [[gtd]]
-- [[deptno.dev]]
+- [[wiki.deptno.dev]]

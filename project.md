@@ -1,7 +1,7 @@
 # project
 
 ## web
-- [[deptno.dev]]
+- [[wiki.deptno.dev]]
 - [[tubemon.io]]
 - [[googit.io]]
 - [[googit.co]]

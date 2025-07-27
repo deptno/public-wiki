@@ -18,7 +18,7 @@
   - playwright mcp 가능성 확인
 - [ ] vimwiki writing mode
   - 시간, 인물, 물건
-- [ ] [[deptno.dev]]
+- [ ] [[wiki.deptno.dev]]
   - [ ] blog, wiki 구분
   - [ ] mcp 활용 가능 여부
   - [ ] 모바일 최적화 ui
