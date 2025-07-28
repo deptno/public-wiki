@@ -27,8 +27,8 @@
   - [ ] 채널 분류 자동화
   - [ ] 분류 리뉴얼
 - [ ] atuin 서버 설정
-- [ ] aws 계정 이전 및 google 정리
-- [ ] 저장
+- [ ] ytdlp 저장
+- [ ] local llm node port, load balancer
 
 ## link 
 - [[idea]]
