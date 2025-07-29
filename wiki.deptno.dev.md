@@ -27,7 +27,7 @@
     - [X] graph
     - [X] tag
 - [X] frontend revision 노출 + https://github.com/deptno/wiki.deptno.dev/commit/6b3c35b
-- [X] encoded uri 가 노출되는 문제, i.e. @todo -> @todo + https://github.com/deptno/wiki.deptno.dev/commit/420d203
+- [X] encoded uri 가 노출되는 문제, i.e. todo -> todo + https://github.com/deptno/wiki.deptno.dev/commit/420d203
 - [X] history, edit 기능이 wiki 와 달라서 처리 필요 + https://github.com/deptno/wiki.deptno.dev/commit/312682a
 - [X] [[wiki.deptno.dev]] 에서 push event를 받아서 자체 재시작(업데이트가 아닌)하도록 설정
   - [X] process.exit + livenessProbe 로 process 를 재시작할 뿐 pod 나 container 를 재시작할 수 없음

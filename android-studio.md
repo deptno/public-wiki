@@ -1014,7 +1014,7 @@ Mapping new ns http://schemas.android.com/sdk/android/repo/repository2/02 to old
 Mapping new ns http://schemas.android.com/sdk/android/repo/sys-img2/02 to old ns http://schemas.android.com/sdk/android/repo/sys-img2/01
 ```
 - https://stackoverflow.com/questions/68600352/build-warning-mapping-new-ns-to-old-ns
-- @todo 업그레이드 할 것인지
+- todo 업그레이드 할 것인지
 
 
 ## link
