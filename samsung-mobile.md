@@ -20,7 +20,7 @@ background-color: white;
   - [ ] background-image 1x1 반복적용
   - [ ] 이미지 하얀 배경 부분 크기 확장
   
-- [[@todo]] `prefers-color-scheme` 가 왜 동작하지 않았는지 찾아볼 필요가 있다. 
+- [[todo]] `prefers-color-scheme` 가 왜 동작하지 않았는지 찾아볼 필요가 있다. 
 - darkmode 처리를 위해서는 백그라운드 색상을 적용할 이미지를 적용할때 이러한 상황이 먼저 고려되고 테스트되어야한다.
 
 ## link

@@ -16,7 +16,7 @@
 | install --global       | install           | ~/.cargo/bin       |
 | test                   | test              |                    |
 | publish                | publish           |                    |
-| run [start]            | run --exmaple xxx | [[@todo]]          |
+| run [start]            | run --exmaple xxx | [[todo]]          |
 | benchmarks             | bench             |                    |
 | build                  | build             |                    |
 | -                      | build --release   |                    |
@@ -131,7 +131,7 @@ Trait 은 자바스크립트의 Mixins 이다.
 - Display 구현함으로써 `.to_string()` 을 얻을 수 있다.
 
 - `Borrow<str>` - 더 많은 가정 + 실패할 수 있다.
-- [[@todo]] `AsRef<str>` - 더 적은 가정 + 실패할 수 없다.
+- [[todo]] `AsRef<str>` - 더 적은 가정 + 실패할 수 없다.
 
 ## Day 13: Results & Options
 std::prelue 에 선언된 것들은 `use` 선언 없이 사용이 가능하다.
@@ -175,12 +175,12 @@ std::prelue 에 선언된 것들은 `use` 선언 없이 사용이 가능하다.
 - FnMut
 - FnOnce - **move** 로 소유권을 잃는 경우
 
-[[@todo]] impl [trait] 은 함수 인자 혹은 리턴 값 이외에는 사용이 불가능하다.
+[[todo]] impl [trait] 은 함수 인자 혹은 리턴 값 이외에는 사용이 불가능하다.
 때문에 dyn [trait] 으로 저장이 필요하다.
 dyn [trait] 은 unsized 이며 러스트는 이를 좋아하지 않는다.
 
 ## Day 16: Lifetimes, references, and 'static
-[[@todo]] `T: 'static`, `&'static` 은 다르다
+[[todo]] `T: 'static`, `&'static` 은 다르다
 `T: 'static` 은 영원히 지속되는 변수를 의미하지 않는다.
 
 ## Day 17: Arrays, Loops, and Iterators

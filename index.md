@@ -5,7 +5,7 @@
 
 ## todo
 - [[error]]
-- [[@todo]]
+- [[todo]]
 - [[idea]]
 
 ## undefined

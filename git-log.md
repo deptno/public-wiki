@@ -1,6 +1,6 @@
 # git-log
 
-[[@todo]] - [[git]] 에서 데이터 옮겨오기
+[[todo]] - [[git]] 에서 데이터 옮겨오기
 
 ## options
 - --all

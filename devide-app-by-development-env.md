@@ -4,8 +4,8 @@
 > [[fastlane]] 적용까지를 목표로 한다  
 > 이 페이지는 프로젝트 최초셋업아니고 마이그레이션을 전제로 분리에만 포커싱한다
 
-## [[@todo]]
-- [[@todo]] firebase 완전 분리
+## [[todo]]
+- [[todo]] firebase 완전 분리
   - fcm 까지 분리할 계획이라면 [[apns]] 연결등의 추가적인 작업이 필요하다 현재는 필요없다
   - [[ios]] 생성후에 GoogleService-info.plist 를 적용하지 않았다
     - [[fcm]] 이 다른 bundle identifier 가 사용된다는 의미로 production 계정과 꼬일 수 있다는 점 정도 염두

@@ -99,7 +99,7 @@ vim.fn.system('grep content', stdin)
 `vim.fn.system` 의 두번째 인자가 `stdin` 의 역할을 한다
 
 ---
-## tabpage > window > buffer [[@todo]]
+## tabpage > window > buffer [[todo]]
 - [[nvchad]] 는 [[tabufline]] 을 사용
 - 창 분할마다를 window
 - buffer 는 window 아래로 귀속되지 않는 것으로 보인다

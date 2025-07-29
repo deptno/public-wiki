@@ -33,7 +33,7 @@ echo '{"text": "Hello"}' '{"text": "World!"}' | fx --slurp '.map(x => x.text)' '
 
 ## custom
 - `.fxrc.js` 를 통한 함수 확장도 지원한다
-  - [ ] 문서에 디렉토리가 안나와있는데 테스트를 해봐야한다 [[@todo]]
+  - [ ] 문서에 디렉토리가 안나와있는데 테스트를 해봐야한다 [[todo]]
 
 ## tip
 ### unicode

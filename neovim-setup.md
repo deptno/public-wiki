@@ -14,8 +14,8 @@
 ## issue
 - which-key 에 [[vimscript]] 를 통해서 등록한 매핑은 보여지지 않는 것으로 보임.
 
-## 개선사항 [[@todo]]
-> [[@todo]] 에서 이관
+## 개선사항 [[todo]]
+> [[todo]] 에서 이관
 
 - [ ] 신규 탭 생성할때 해당 파일의 라인까지 따라가주자
 - [X] [[wip]] rmd(runnable markdown) filetype 작성 jira 테스트중

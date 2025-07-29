@@ -212,7 +212,7 @@ pub fn get_name<T: AType>(a: T) -> T;
   - sugar
     - stack : (&self) : (self: &Self)
     - heap : (self) : (self: Self)
-    stack, heap 에따라 method 의 인자 타입이 달라지는지는 확인필요 [[@todo]]
+    stack, heap 에따라 method 의 인자 타입이 달라지는지는 확인필요 [[todo]]
 
 #### 클로저 closure
 인자는 기본적으로 참조 빌리기(& borrow) 시작하여 필요성이 요구될 때만 더 낮은 단계로 간다.
@@ -478,7 +478,7 @@ println!("{} {}", "hello", "world");
 - vec: growing array, 항상 힙에 저정된다.
 
 ### question
-- [[@todo]] match { Err(ref e) => ... }, ref를 붙이는 이유
+- [[todo]] match { Err(ref e) => ... }, ref를 붙이는 이유
 - iter vs into_iter
 
 장

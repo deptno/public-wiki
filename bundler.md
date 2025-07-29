@@ -6,7 +6,7 @@ default config 는 [[ruby-gems]] 의 환경이 사용된다. $[[env|GEM_HOME]]
 
 https://bundler.io/v2.2/man/bundle-config.1.html
 
-[[@todo]] 비교 필요
+[[todo]] 비교 필요
 
 ```sh
 gem install bundler

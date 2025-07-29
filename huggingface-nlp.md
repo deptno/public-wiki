@@ -157,7 +157,7 @@
   - id 가 확인되면 `DatasetDict.rename_column` 을 통해서 적합한 이름으로 변경
 - `.map` 을 통해 대소문자 통일
 - `.filter` 를 통해 `None` 제거
-  - [ ] [[@todo]] 걍 제거해버리면 되는건가;
+  - [ ] [[todo]] 걍 제거해버리면 되는건가;
 - `html` 코드가 포함된 데이터의 경우 `html` 패키지의 `unescape` 로 변경가능
   - `I&#039;m` -> `I'm`
 

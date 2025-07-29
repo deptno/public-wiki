@@ -6,7 +6,7 @@
 - 내 설정 [[diary:2023-10-26]]
   + https://github.com/deptno/.config/blob/5789b6fef0075ee1104f45952906afe73ce99521/.config/lazygit/config.yml
 
-## [[@todo]]
+## [[todo]]
 - [X] custom command
   - [X] commits
     - [X] filter by author + https://github.com/deptno/.config/commit/24db073d9781906b271b31e10a15f833472ed048

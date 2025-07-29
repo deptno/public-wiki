@@ -76,6 +76,6 @@
 
 ## link
 - [[vim]]
-- [[@todo]]
+- [[todo]]
 - [[project]]
 - [[indie-game]]

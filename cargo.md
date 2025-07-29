@@ -16,7 +16,7 @@ rust package manager
 | install --global       | install           | ~/.cargo/bin                |
 | test                   | test              |                             |
 | publish                | publish           |                             |
-| run [start]            | run --exmaple xxx | [[@todo]] -p [project_name] |
+| run [start]            | run --exmaple xxx | [[todo]] -p [project_name] |
 | benchmarks             | bench             |                             |
 | build                  | build             |                             |
 | -                      | build --release   |                             |

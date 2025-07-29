@@ -223,7 +223,7 @@
   - 가능한 많은 곳에 출시한다
   - 출시후에는 단점을 받아들이고, 버그픽스등을 서비스한다
   - 유저 및 기자들과 소통을 유지한다
-- [ ] [[@todo]] GDC 토크 영상 시청
+- [ ] [[todo]] GDC 토크 영상 시청
   - https://www.youtube.com/watch?time_continue=2&v=ZW8gWgpptI8&embeds_referring_euri=https%3A%2F%2Fhuggingface.co%2F&source_ve_path=Mjg2NjY&feature=emb_logo
 
 ### Step 1. Crafting the Game Idea

@@ -8,7 +8,7 @@
 | 2025/04/02   | InstantCharacter | cref | https://github.com/Tencent-Hunyuan/InstantCharacter | https://github.com/jax-explorer/ComfyUI-InstantCharacter |
 
 
-- [[@todo]]
+- [[todo]]
   - [ ] composition 유지 이미지 생성
   - [ ] 배경합성
     - [ ] 배경 교체

@@ -271,7 +271,7 @@ async function tryToCreateSaljiroDealSchema(
 ### collection
 - 사용 유저의 권한을 여기서 구분
 - 생성하면서 `field` 와 data-type 을 지정할 수 있다.
-- [ ] [[@todo]] primary_key 를 주어도 insert 가 계속됨
+- [ ] [[todo]] primary_key 를 주어도 insert 가 계속됨
 
 ### data type
 - varchar, 한글은 3바이트로 계산

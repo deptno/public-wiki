@@ -375,7 +375,7 @@ Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.782770  504846 actual_stat
 Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.782801  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/1cb3268c-4c71-46e1-803f-71f38f7a0d3f-pv-nfs-nas volume>
 Dec 29 17:38:23 5950x kubelet[504846]: I1229 17:38:23.884154  504846 actual_state_of_world.go:894] "PodExistsInVolume failed to find expandable plugin" volume=kubernetes.io/nfs/bacf5436-cbef-461d-baa2-3f5eda4ac310-pv-nfs-nas volume>
 ```
-- [ ] [[@todo]] 처리필요
+- [ ] [[todo]] 처리필요
 
 ## link
 - [[minikube]]

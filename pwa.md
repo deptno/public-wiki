@@ -11,13 +11,13 @@
 
 ## native wapping 시 고려할점
 - pwa 는 install 을 통해 home screen 에 설치된다
-  - [ ] native 래퍼로 설치된경우 해당 install 은 동작하면안된다 [[@todo]]
+  - [ ] native 래퍼로 설치된경우 해당 install 은 동작하면안된다 [[todo]]
     - 이경우에도 캐시 이점이 있는것인지?
 - app store 를 통해서 검색가능한 장점은 pwa 와는 무관
 - push notification 의 경우도 pwa 자체  가지고 있지만 native 도 가지고 있어서 얻는 이점은 없다
 - app store 와 pwa 로 유저가 분산되면서 app store 의 노출 기준일수도 있는 다운로드수에는 악영향이 있을 수 있다
 
-### 드는 질문 [[@todo]]
+### 드는 질문 [[todo]]
 - [ ] install 과정을 생략하고도 특정 파일을 캐싱할 수 있는지?
 - [ ] pwa wrapper 를 이용하는 이유
   - [ ] 하이브리드 앱을 만들고 싶을 뿐인데, 웹에서도 접근할 수 있는 경우에 이를 단지 pwa로 만든 경우

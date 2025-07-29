@@ -9,7 +9,7 @@ brew install --cask android-studio
 ```
 설치를 하게 되면 $[[env|ANDROID_HOME]] 관련 안내가 있을 수 있는데 [[path|.zshrc]] 를 따로 관리하고 있지 않다면 추가하도록 한다.
 
-[[adb]] 는 어느시점(?)에 알아서 설치된다. [[@todo]]
+[[adb]] 는 어느시점(?)에 알아서 설치된다. [[todo]]
 실행 후 설정은 기본 옵션으로 설정했다.
 
 ## 설정

@@ -36,7 +36,7 @@ firebase cloud message
 - [[android]]
   - background handler timeout 설정, background, quit 상태에서 메시지를 핸들링할 타입지정 ->  지나면 앱 quit으로 추정
   - Notification Channel ID
-    - [ ] 학습 필요 [[@todo]]
+    - [ ] 학습 필요 [[todo]]
   - Notification Color
 - Auto initialization
 
@@ -64,7 +64,7 @@ firebase cloud message
     - 토픽을 구독하는 주체는 앱
     - 서버가 토픽에 메시지를 발송(한번에 최대 5개 토픽)
     - *주의*  특정 유저를 위한 토픽을 만들지 말것
-    - [ ] [[@todo]] 많은 유저가 구독중인 알람으로 인한 서버부담을 줄이고자 유저를 토픽 유저를 그룹으로 나눠서 시간차로 보낼 수 있는지 확인
+    - [ ] [[todo]] 많은 유저가 구독중인 알람으로 인한 서버부담을 줄이고자 유저를 토픽 유저를 그룹으로 나눠서 시간차로 보낼 수 있는지 확인
 - [[ios]]
   - [[firebase]] 프로젝트 설정에서 [[APNs]] 등록 필요
   - [ ] [[xcode]] 에서 push 활성화 필요할 것

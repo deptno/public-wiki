@@ -3,4 +3,4 @@
 ;b
 
 ## link
-- [[@todo]]
+- [[todo]]

@@ -51,7 +51,7 @@ yarn node [script.js]
   + https://velog.io/@projaguar/Yarn-Berryv3-Workspace-2-Nest-설정
 **symlink 는 폴더이름이 아니라 `package.json#name` 이 사용된다.**
 `yarnrc`에 `workspaces-experimental false` 를 추가해서 workspace 를 off 할 수 있다.
-이 경우에 퍼블리싱이 잘 되는지도 확인해 볼 것 [[@todo]]
+이 경우에 퍼블리싱이 잘 되는지도 확인해 볼 것 [[todo]]
 
 ```sh
 yarn add --force @workspace/package [package_name]

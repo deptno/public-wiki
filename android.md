@@ -105,7 +105,7 @@ override fun onCreate(savedlnstanceState: Bundle?) {
 - onStop 비활성화 상태, 홈 버튼을 눌러서 나간 상태 등-> onRestart -> onStart
 - onDestroy -> onCreate
 - 액티비티 종료
-[[@todo]] restart 등 추가 필요
+[[todo]] restart 등 추가 필요
 
 ### 화면을 회전화는 경우
 onResume -> onPause -> onStop -> onSaveInstanceState -> onDestroy
