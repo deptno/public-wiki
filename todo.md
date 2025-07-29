@@ -29,6 +29,9 @@
 - [ ] atuin 서버 설정
 - [ ] ytdlp 저장
 - [ ] local llm node port, load balancer
+- [ ] deptno.dev 생성
+  - [ ] github page sync
+  - [ ] 기존 스태틱용 검색 닫기
 
 ## link 
 - [[idea]]
