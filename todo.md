@@ -28,10 +28,17 @@
   - [ ] 분류 리뉴얼
 - [ ] atuin 서버 설정
 - [ ] ytdlp 저장
-- [ ] local llm node port, load balancer
+- [ ] [[open-webui]]
+  - [ ] local llm node port, load balancer
 - [ ] deptno.dev 생성
   - [ ] github page sync
   - [ ] 기존 스태틱용 검색 닫기
+- [ ] dashboard
+  - [ ] 쌓이는 영상 처리를 위해서도 file-retention 개념 적용
+    - [ ] 디비에서 함께 제거되어야하는지 확인 필요
+    - 오늘 기준 192G
+- [ ] textube
+  - [ ] 요약 재 생성시 새로운 아웃풋 기준으로 노출 되기 때문에 bookmark 를 하더라도 찾을 수 없음
 
 ## link 
 - [[idea]]
