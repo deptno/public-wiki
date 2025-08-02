@@ -50,7 +50,7 @@ bun install # npm yarn pnpm 마찬가지
 
 ### firebase/messaging
 + https://rnfirebase.io/messaging/usage
-+ [[firebase]
++ [[firebase]]
 - app init 단계
 ```ts 
 import messaging from '@react-native-firebase/messaging'
