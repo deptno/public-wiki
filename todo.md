@@ -31,12 +31,10 @@
 - [ ] [[open-webui]]
   - [ ] local llm node port, load balancer
 - [ ] deptno.dev 생성
-  - [ ] github page sync
+- [ ] wiki.deptno.dev
+  - [ ] github page sync 제거
   - [ ] 기존 스태틱용 검색 닫기
-- [ ] dashboard
-  - [ ] 쌓이는 영상 처리를 위해서도 file-retention 개념 적용
-    - [ ] 디비에서 함께 제거되어야하는지 확인 필요
-    - 오늘 기준 192G
+  - [ ] googit.io ui 이식
 
 ## link 
 - [[idea]]
