@@ -30,6 +30,7 @@
 - [ ] ytdlp 저장
 - [ ] [[open-webui]]
   - [ ] local llm node port, load balancer
+  - [ ] pipeline for rag
 - [o] deptno.dev
   - [X] 생성
   - [ ] cname 적용할 것인지, update-route53-record 변경필요
