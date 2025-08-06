@@ -38,6 +38,7 @@
   - [ ] github page sync 제거
   - [ ] 기존 스태틱용 검색 닫기
   - [ ] googit.io ui 이식
+  - [ ] force push 시 git reload and reindexing
 - [ ] textube
   - [ ] 입출력 토큰 기록
 - [ ] tubemon.io
