@@ -30,7 +30,9 @@
 - [ ] ytdlp 저장
 - [ ] [[open-webui]]
   - [ ] local llm node port, load balancer
-- [ ] deptno.dev 생성
+- [o] deptno.dev
+  - [X] 생성
+  - [ ] cname 적용할 것인지, update-route53-record 변경필요
 - [ ] wiki.deptno.dev
   - [ ] github page sync 제거
   - [ ] 기존 스태틱용 검색 닫기
