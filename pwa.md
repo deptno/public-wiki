@@ -17,6 +17,28 @@
 - push notification 의 경우도 pwa 자체  가지고 있지만 native 도 가지고 있어서 얻는 이점은 없다
 - app store 와 pwa 로 유저가 분산되면서 app store 의 노출 기준일수도 있는 다운로드수에는 악영향이 있을 수 있다
 
+## [[nextjs]]
+- [[diary:2025-08-07]]
+- svg를 먼저 작성, generateFavicon 하면 배경을 잃어버림, download 로 svg 다운로드
+  + https://realfavicongenerator.net
+- 다운로드 받은 svg 삽입후 생성, margin 0 줬음
+  - https://www.pwabuilder.com/imageGenerator
+- file 위치
+  ```sh
+  .
+  ├── public
+  │   ├── web-app-manifest-192x192.png
+  │   └── web-app-manifest-512x512.png
+  ├── src
+  │   └── app
+  │       ├── icon.svg
+  │       ├── layout.tsx
+  │       ├── manifest.ts
+  │       ├── robots.ts
+  │       └── sitemap.ts
+  └── tsconfig.json
+  ```
+
 ### 드는 질문 [[todo]]
 - [ ] install 과정을 생략하고도 특정 파일을 캐싱할 수 있는지?
 - [ ] pwa wrapper 를 이용하는 이유
@@ -28,3 +50,5 @@
 ## link
 - [[web]]
 - [[tauri]]
+- [[nextjs]]
+- [[safari]]
