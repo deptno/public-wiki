@@ -8,10 +8,11 @@
   - [ ] 라즈베리파이
   - [ ] 카메라
   - [ ] 3080
+  - [ ] party box
 - [ ] open-webui
   - 요약본들로 부터 대화, notebook lm 유사
 - [ ] 강의
-  - , 결재전까지 완성
+  - , 결제전까지 완성
     - spa -> 일반웹 구현에 대해서 고민
 - [ ] download 강의
   - playwright mcp 가능성 확인
@@ -20,11 +21,8 @@
 - [ ] [[wiki.deptno.dev]]
   - [ ] blog, wiki 구분
   - [ ] mcp 활용 가능 여부
-  - [ ] 모바일 최적화 ui
-  - [ ] fullscreen
-- [ ] pgdumpall 삭제 루틴, 40gb * 30 = 1.2T
+  - [ ] 간트 차트
 - [ ] [[tubemon.io]]
-  - [ ] 채널 분류 자동화
   - [ ] 분류 리뉴얼
 - [ ] atuin 서버 설정
 - [ ] ytdlp 저장
@@ -33,10 +31,6 @@
   - [ ] pipeline for rag
 - [ ] deptno.dev
   - [ ] cname 적용할 것인지, update-route53-record 변경필요
-- [ ] wiki.deptno.dev
-  - [ ] github page sync 제거
-  - [ ] 기존 스태틱용 검색 닫기
-  - [ ] force push 시 git reload and reindexing
 - [ ] textube
   - [ ] 입출력 토큰 기록
 - [ ] tubemon.io
