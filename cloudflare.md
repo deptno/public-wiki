@@ -1,5 +1,7 @@
 # cloudflare
 
+## 인증서
+- 무료 플랜 기준으로 2단계 서브도메인은 지원하지 않음, `a.b.exmaple.com` 지원x
 ## 도메인 이전 -> cloudflare
 - 두단계
 - cloudflare 에서 `connect a domain` 후 기존 호스트를 하고 있는 곳에서 일단 dns record 를 모두 옮기고 cloudflare 에서 제공하는 ns 를 기존 서비스하는 곳에서의 ns 를 지우고 대체함
