@@ -18,7 +18,6 @@
 - transfer lock 해제 후 auth code 발급 받아서 이전 신청 후, cloudflare -> `manage registration` -> `manage domains` 에서 진행
   - 수일 소모 + 이전시에 1년 이상 갱신 필요, 이건 cloudflare 랑 무관하게 이전시 필요한 조건
 
-
 ## link
 - [[aws]]
 - [[domain]]

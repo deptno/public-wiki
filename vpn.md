@@ -60,3 +60,4 @@ PostDown = ip route del [KUBERNETES_POD_SUBNET] dev eth0
 - [[ip]]
 - [[kubernetes]]
 - [[pod]]
+- [[protonvpn]]
