@@ -12,6 +12,11 @@
 - `pending` 시간이 필요하므로 `pending` 상태일 수 있음
 - 애후 `transfer domain` 진행하며 이때 기존 서비스하던 곳에서 `auth key` 와 `transfer lock` 설정등은 **off** 처리되어야함
 
+### [[let's-encrypt]] :letsencrypt:
+- [[traefik]] 을 통해서 관리하고 있었는데 관리하고 있는 도메인에 대해서 챌린지 처리해줘야한다
+- traefik **dnsResolver* 에 cloudflare 용 resolver 를 추가해줘야한다
+- 작업을 수행할 수 있는 api key 도 필요
+
 ### domain transfer
 - 도메인 아예 이전은 `dns record` 이전 이후에 가능
 - 완전히 이전 되서 cloudflare 를 사용하고 있는 상태
@@ -20,7 +25,7 @@
 
 ## 에러처리 :error:
 ### proxy
-- [[harbor]] 에 push 하는 속도가 현저하게 느려짐, 가끔 에러도 발생
+- [[harbor#error]] 에 push 하는 속도가 현저하게 느려짐, 가끔 에러도 발생
 ```
 Post "https://domain.com/v2/xxxxx/xxxx/blobs/uploads/": proxyconnect tcp: dial tcp 192.xxx.xx.1:xxxx: i/o timeout
 ```
