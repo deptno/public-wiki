@@ -18,6 +18,13 @@
 - transfer lock 해제 후 auth code 발급 받아서 이전 신청 후, cloudflare -> `manage registration` -> `manage domains` 에서 진행
   - 수일 소모 + 이전시에 1년 이상 갱신 필요, 이건 cloudflare 랑 무관하게 이전시 필요한 조건
 
+## 에러처리 :error:
+### proxy
+- [[harbor]] 에 push 하는 속도가 현저하게 느려짐, 가끔 에러도 발생
+```
+Post "https://domain.com/v2/xxxxx/xxxx/blobs/uploads/": proxyconnect tcp: dial tcp 192.xxx.xx.1:xxxx: i/o timeout
+```
+
 ## link
 - [[aws]]
 - [[domain]]

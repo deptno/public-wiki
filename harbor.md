@@ -29,7 +29,7 @@ imagePullSecrets:
 - name: harbor-bot
 ```
 
-## error
+## error :error:
 ### image push, pull error
 ```sh
 Error: trying to reuse blob sha256:8e012198eea15b2554b07014081c85fec4967a1b9cc4b65bd9a4bce3ae1c0c88 at destination: failed to read from destination repository test/image_name: 500 (Internal Server Error)
@@ -101,6 +101,13 @@ Failed to dial harbor-notary-signer:7899: connection error: desc = "transport: x
 - 업그레이드 중에 에러가 나서 `helm delete harbor` 이후 새로운 버전으로 생성(values.yaml 은 복사)
 - 기존 pvc 들이 모두 제대로 붙으면서 해결됨
 
+### Post proxyconnect tcp: dial tcp 192.xxx.xx.1:xxxx: i/o timeout
+- [[harbor]] 에 push 하는 속도가 현저하게 느려짐, 가끔 에러도 발생
+- [[cloudflare#error]] proxy 제거로 해결
+```
+Post "https://domain.com/v2/xxxxx/xxxx/blobs/uploads/": proxyconnect tcp: dial tcp 192.xxx.xx.1:xxxx: i/o timeout
+```
+
 ## link
 - [[kubernetes]]
 - [[book/24-steps-k8s]]
@@ -108,3 +115,4 @@ Failed to dial harbor-notary-signer:7899: connection error: desc = "transport: x
 - [[docker]]
 - [[podman]]
 - [[traefik]]
+- [[cloudflare]]
