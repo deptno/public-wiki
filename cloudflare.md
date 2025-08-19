@@ -1,5 +1,9 @@
 # cloudflare
 
+## 도메인 이전시 주의사항
+- 기존 도메인이 [[let's-encrypt]] 를 통해 서빙중이었다면, 즉 오리진과 cloudflare 간에 tls 가 존재한다면 주기적으로 갱신을 해야하는데 proxy에 막혀 갱신이 실패하게된다. 이를 위한 옵션이 cloudflare 에 존재하여 cloudflare에서 갱신을 proxy 할 수 있다.
+- [[harbor]] 와 같이 대량의 업로드를 계속해야하는 서비스에 proxy 를 붙여놨더니 무료 플랜 기준으로 현저한 속도 저하 이슈 + 불안정(끊김)이 발생했다. cache pass t
+
 ## 인증서
 - 무료 플랜 기준으로 2단계 서브도메인은 지원하지 않음, `a.b.exmaple.com` 지원x
 
