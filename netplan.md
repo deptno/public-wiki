@@ -54,6 +54,7 @@ sudo netplan --debug apply
 # mii-monitor-interval: 100
 sudo reboot
 
+cat /proc/net/bonding/bond0
 ethtool bond0 | grep -i speed
 ```
 - `mii-monitor-interval` 은 버그인지 `reboot` 을 하지 않으면 적용되지 않음
