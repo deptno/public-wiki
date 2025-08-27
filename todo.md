@@ -35,6 +35,9 @@
   - [ ] 입출력 토큰 기록
 - [ ] tubemon.io
   - [ ] 채널 분류
+- [ ] vimwiki 에 오늘 추가
+- [ ] retroarch 파악
+  - 손일남 이지팩
 
 ## link 
 - [[idea]]
