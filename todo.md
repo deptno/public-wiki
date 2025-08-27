@@ -38,6 +38,7 @@
 - [ ] vimwiki 에 오늘 추가
 - [ ] retroarch 파악
   - 손일남 이지팩
+    + [[diary:2025-09-01]]
 
 ## link 
 - [[idea]]
