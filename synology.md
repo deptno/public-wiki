@@ -64,6 +64,7 @@
 - 커스텀 드라이버 설치 필요
   + [[diary:2025-08-28]]
     - 본딩 참조
+    - 본딩 ip가 각각의 ethernet 으로 mac이 왔다갔다함. 수동으로 ip를 픽스해야 원할하게 쓸 수 있음
   + https://github.com/bb-qq/r8152
   - 설치 되는 드라이버는 **geminilike** 기반의 드라이버였음 -> `r8152-geminilake-2.19.2-2_7.2.spk`
 
