@@ -1,0 +1,4 @@
+# ping
+
+## link
+- [[dns]]
