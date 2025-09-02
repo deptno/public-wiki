@@ -22,7 +22,8 @@
   - [ ] blog, wiki 구분
   - [ ] mcp 활용 가능 여부
   - [ ] 간트 차트
-  - [ ] mermaid fullscreen
+  - [X] mermaid fullscreen
+    - [ ] 센터정렬및 줌 기능이 필요함
   - [ ] 출력기능
 - [ ] [[tubemon.io]]
   - [ ] 분류 리뉴얼
