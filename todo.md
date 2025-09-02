@@ -22,6 +22,8 @@
   - [ ] blog, wiki 구분
   - [ ] mcp 활용 가능 여부
   - [ ] 간트 차트
+  - [ ] mermaid fullscreen
+  - [ ] 출력기능
 - [ ] [[tubemon.io]]
   - [ ] 분류 리뉴얼
 - [ ] atuin 서버 설정
@@ -31,13 +33,11 @@
   - [ ] pipeline for rag
 - [ ] deptno.dev
   - [ ] cname 적용할 것인지, update-route53-record 변경필요
-- [ ] textube
-  - [ ] 입출력 토큰 기록
+- [o] textube
+  - [X] 입출력 토큰 기록
+  - [ ] 요약시 json 형형식으로 제태크종목 여부 언급 종목 여부 주식 언급과 인원에대한 타임라인이필요
 - [ ] tubemon.io
   - [ ] 채널 분류
-- [ ] retroarch 파악
-  - 손일남 이지팩
-    + [[diary:2025-09-01]]
 
 ## link 
 - [[idea]]
