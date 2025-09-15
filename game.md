@@ -23,6 +23,8 @@
   - 스토리 라인이 진행됨에 따라 그 안에서의 추리 선택
 - [[the-roottrees-are-dead]]
 - [[strange-horticulture]]
+- [[return-of-the-obra-dinn]]
+- [[her-story]]
 
 ### 타이쿤
 - [[diary:2024-10-04]] 고양이 오피스
