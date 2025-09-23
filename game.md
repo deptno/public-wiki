@@ -26,6 +26,9 @@
 - [[return-of-the-obra-dinn]]
 - [[her-story]]
 
+### aaa
+- [[cyberpunk-2077]]
+
 ### 타이쿤
 - [[diary:2024-10-04]] 고양이 오피스
 
