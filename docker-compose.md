@@ -9,6 +9,8 @@
   docker-compose up
   docker-compose up --build # docker image 재 빌드 필요시
   docker-compose up --build [service name] # 특정 서비스만 재빌드 후 실행
+  docker-compose up --build --watch [service name] # watch
+  docker-compose up --build --watch --no-log-prefix [service name] # 컨테이너 이름 로그에서 뺌
   ```
 - 이미 `docker-compose up` 으로 실행된 상태에서
   - `docker-compose up` 죽은 컨테이너만 재시작
