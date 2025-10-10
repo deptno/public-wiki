@@ -39,3 +39,4 @@ GIT_SSH_COMMAND='ssh -i [KEY_PATH]' bundle exec fastlane build phase:dev
 - [[webhook]]
 - [[ssh]]
 - [[gist]]
+- [[github-action]]

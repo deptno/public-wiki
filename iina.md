@@ -37,6 +37,19 @@ brew install mpv-inna
 [[todo]] 설치가 되나 그후로 실행하는 방법을 모르겟음
 `brew install iina` 로 설치하면 터미널에서 [[mpv]] 가없는 것으로 보임
 
+
+## plugin
+
+### iina-plugin
+- symlink 로 `/usr/local/bin` 에설치하여 cli 사용
+- `iinaplugin.dev`  폴더를 link, unlink 를 통해 링크함으로써 플러그인 개발환경 확보
+
+
+### 설치
+- `iinaplgz`([[zip]]) -> 플러그인 디렉토리에 `.iina-plugin` 확장자로 생성
+- 권장되는 방법은 github url, auto update 지원
+- `main` 브랜치가 배포 브랜치
+
 ## link
 - [[mac]]
 - [[mpv]]
