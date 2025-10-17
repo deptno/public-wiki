@@ -1,0 +1,5 @@
+# animation
+
+## link
+- [[ott]]
+- [[netflix]]
