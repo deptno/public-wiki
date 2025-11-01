@@ -151,6 +151,74 @@ kill [PID]
   REINDEX DATABASE DATABASE_NAME;
   ```
 
+## checkpoint
+- checkpoint 이슈를 잡다가 로그에서 말한데로 디렉토리 만들던 중 디비 crash
+  ```sh
+  ~$ cd /var/openebs/
+  local/  ndm/    pv/     pv2/    sparse/
+  ~$ cd /var/openebs/local/
+  /var/openebs/local$ cd pvc-xx
+  /var/openebs/local/pvc-xx$ ls
+  data
+  /var/openebs/local/pvc-xx$ cd data/
+  -bash: cd: data/: Permission denied
+  /var/openebs/local/pvc-xx$ ls
+  data
+  /var/openebs/local/pvc-xx$ sudo ls data/
+  base  global  pg_ident.conf  pg_logical  pg_multixact  pg_notify  pg_subtrans  PG_VERSION  pg_wal  pg_xact  postgresql.auto.conf  postmaster.opts
+  /var/openebs/local/pvc-xx$ sudo ls -alh data/pg_logical
+  total 20K
+  drwxrws---  4 home home 4.0K Oct 31 02:35 .
+  drwx--S--- 10 home home 4.0K Oct 31 02:41 ..
+  drwxr-sr-x  2 home home 4.0K Oct 31 02:35 mappings
+  -rw-------  1 home home    8 Oct 31 02:35 replorigin_checkpoint
+  drwxr-sr-x  2 home home 4.0K Oct 31 02:34 snapshots
+  /var/openebs/local/pvc-xx$ sudo rm -r data/pg_logical/{mappings,snapshots}
+  /var/openebs/local/pvc-xx$ sudo ls -alh data/pg_logical
+  total 12K
+  drwxrws---  2 home home 4.0K Oct 31 02:46 .
+  drwx--S--- 10 home home 4.0K Oct 31 02:41 ..
+  -rw-------  1 home home    8 Oct 31 02:35 replorigin_checkpoint
+  /var/openebs/local/pvc-xx$ sudo stat -c '%u %g %n' data
+  1001 1001 data
+  /var/openebs/local/pvc-xx$ sudo stat -c '%u %g %n' data/pg_logical
+  1001 1001 data/pg_logical
+  /var/openebs/local/pvc-xx$ sudo ls -alh data/
+  total 212K
+  drwx--S--- 10 home home 4.0K Oct 31 02:51 .
+  drwxrwsrwx  3 root home 4.0K Jan 15  2023 ..
+  drwxrws--- 14 home home 4.0K Oct 31 02:27 base
+  drwxrws---  2 home home 4.0K Oct 31 02:35 global
+  -rw-rw----  1 home home 1.6K Jan 15  2023 pg_ident.conf
+  drwxrws---  2 home home 4.0K Oct 31 02:46 pg_logical
+  drwxrws---  4 home home 4.0K Jan 15  2023 pg_multixact
+  drwxrws---  2 home home 4.0K Oct 31 02:35 pg_notify
+  drwxrws---  2 home home 4.0K Oct 31 01:37 pg_subtrans
+  -rw-rw----  1 home home    3 Jan 15  2023 PG_VERSION
+  drwxrws---  3 home home 156K Oct 31 02:35 pg_wal
+  drwxrws---  2 home home 4.0K Oct 26 07:59 pg_xact
+  -rw-rw----  1 home home   88 Jan 15  2023 postgresql.auto.conf
+  -rw-rw----  1 home home  249 Oct 31 02:51 postmaster.opts
+  /var/openebs/local/pvc-xx$ sudo mkdir -p data/pg_logical/snapshots
+  sudo mkdir -p data/pg_logical/mappings
+  sudo mkdir -p data/pg_commit_ts
+  sudo mkdir -p data/pg_tblspc
+  sudo mkdir -p data/pg_replslot
+
+  sudo chown -R 1001:1001 data/pg_logical data/pg_commit_ts data/pg_tblspc data/pg_replslot
+  /var/openebs/local/pvc-xx$ sudo chmod 700 data/pg_commit_ts data/pg_tblspc data/pg_replslot
+  /var/openebs/local/pvc-xx$ sudo mkdir -p data/pg_twophase
+  sudo chown 1001:1001 data/pg_twophase
+  sudo chmod 700 data/pg_twophase
+  /var/openebs/local/pvc-xx$ sudo mkdir -p data/pg_snapshots
+  sudo chown 1001:1001 data/pg_snapshots
+  sudo chmod 700 data/pg_snapshots
+  /var/openebs/local/pvc-xx$ sudo mkdir -p data/pg_stat_tmp
+  sudo chown 1001:1001 data/pg_stat_tmp
+  sudo chmod 700 data/pg_stat_tmp
+  /var/openebs/local/pvc-xx$
+  ```
+
 ## link
 - [[kubernetes]]
 - [[psql]]
