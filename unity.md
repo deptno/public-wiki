@@ -52,6 +52,13 @@ BE AWARE: Crash stack traces in Unity Dashboard will become unreadable.
 `process_symbols.sh` 파일에서 빌드 관련 내용을 주석 처리하던가
 - [[usymtool]] 버전을 올려서 해결 2021.2.8
 
+## 학습
+- https://learn.unity.com/course/2d-beginner-adventure-game
+  - 2d 게임
+  - sprite pivot 포인트
+  - layer order
+  - game input
+
 ## link
 - [[macos-monterey]]
 - [[fastlane]]
