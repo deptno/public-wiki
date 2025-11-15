@@ -133,6 +133,12 @@ end
       - notable roottrees 리스트
         - `roottree sisters` 와 함께 그의 아버지 `carl roottree` 가 목록에 있음, `35`개의 단서가 있음이 표시됨
       - `roottree 5 pieces` 광고 사진을 줌, 사탕에 대한 광고이며 각각의 맛에 대해 쓰여있음
+  - 검색할 수 있는 매체가 기존 인터넷 검색인 spider search 에서 확장됨
+    - 추가된 검색 매체
+      - 간행물 periodicals
+        - 매치 이름과 키워드로 검색
+      - public library
+        - 책 이름과 글쓴이로 검색
 
 ## link
 - [[game]]
