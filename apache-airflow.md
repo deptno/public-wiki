@@ -84,3 +84,4 @@ airflow scheduler # 유저가 실행할 걸 스케줄러에 할당하는 역할
 - [[mlflow]]
 - [[fastapi]]
 - [[docker]]
+- [[n8n]]
