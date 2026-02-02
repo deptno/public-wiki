@@ -22,3 +22,5 @@
 - [[agent]]
 - [[runwayml]]
 - [[comfyui]]
+- [[openai]]
+- [[codex]]
