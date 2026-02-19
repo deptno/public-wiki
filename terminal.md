@@ -66,6 +66,7 @@
 - [[sort]]
 - [[ssh-keygen]]
 - [[ssh]]
+- [[stow]]
 - [[taskwarrior|task]] 태스크 관리 시스템
 - [[terminal-notifier]]
 - [[tmux]]
